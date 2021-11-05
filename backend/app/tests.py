@@ -1,5 +1,5 @@
 """
-Tests for the [BOILERPLATE] web app.
+Tests for the PLAYING CARDS web app.
 """
 # pylint: disable-msg=C0116
 # ignoring pylint's `missing-function-docstring` errors
