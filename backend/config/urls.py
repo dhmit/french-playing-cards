@@ -25,7 +25,8 @@ except (ImportError, ModuleNotFoundError):
 urlpatterns = [
     # Django admin page
     path('admin/', admin.site.urls),
-
     # API endpoints
-    path('', views.index)
+    path('', views.index),
+    path('example/', views.example),
+    path('example/<example_id>', views.example),
 ]

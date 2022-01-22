@@ -21,11 +21,12 @@ class Card(models.Model):
     type = models.CharField(max_length=30, null=True)
     back_notes = models.CharField(max_length=30, null=True)
     url = models.URLField(max_length=200, null=True)
+    image = models.FilePathField(path="app/images/", null=True)
 
 
 class Deck(models.Model):
     # auto id generated
-    name = models.CharField(max_length=300, null=True)
+    name = models.CharField(max_length=300, null=True)  # for the purposes of searching
     period = models.CharField(max_length=1, null=True)
     # period is either B, D, or A (before, during, after revolution)
 
