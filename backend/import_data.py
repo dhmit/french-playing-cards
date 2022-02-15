@@ -18,10 +18,11 @@ def populateDB(fileName, deck_name, deck_period):
     deck_DataFrame = pd.read_excel("app/data/" + fileName)
     deck_dic = deck_DataFrame.to_dict(orient="records")
 
-    print("Creating deck named " + deck_name + "...")
     # create and save the deck
     deck_instance = Deck(name=deck_name, period=deck_period)
     deck_instance.save()
+    print("Created deck named " + deck_name + " and id of " + str(deck_instance.id) + "...")
+
     for entry in deck_dic:
         # store some of the column values in variables for easier concatenation
         card_name = entry['Card']
@@ -40,33 +41,19 @@ def populateDB(fileName, deck_name, deck_period):
                     end_date=entry["End Date"], maker=entry["Maker"],
                     town=entry["Town"], type=entry["Type"], back_notes=entry["Back notes?"],
                     url=entry["BnF URL"],
-                    image=deck_period+'/' + deck_name + '/' + card_name+suit_name + "." +
-                          one_or_two + '.jpeg')
+                    image=deck_period + '/' + deck_name + '/' + card_name+suit_name +
+                            "." + one_or_two + '.jpeg')
         card.save()
-        print ("Created card " + card.db_id)
+        print ("Created card " + card.db_id + " with id of " + str(card.id))
         print("-------")
     print("End of printing cards.")
 
 
 if __name__ == "__main__":
-
-    # for i in range(6, 620):
-    #     print(i)
-    #     if (i < 146 or i > 193) and (i < 326 or i > 349):
-    #         card = Card.objects.get(id=i)
-    #         card.title = card.title.lower()
-    #         card.maker = card.maker.lower()
-    #         card.town = card.town.lower()
-    #         card.type = card.type.lower()
-    #         card.back_notes = card.back_notes.lower()
-    #         # print(os.path.join('app/images', card.image))  # print out full image pathway
-    #         card.save()
-    #
-    # for i in range(4, 41):
-    #     print(i)
-    #     if (i < 10 or i > 14) and i != 19 and i != 20 and i != 22 and i != 24 and i != 25 and i != 26 and i != 30 and i != 31 and i !=33:
-    #         deck = Deck.objects.get(id=i)
-    #         deck.name = deck.name.lower()
-
-
     print("Success")
+
+
+
+
+
+

@@ -24,7 +24,8 @@ context = {
 }
 """
 from django.shortcuts import render
-
+from .models import Card
+from .models import Deck
 
 def index(request):
     """
@@ -55,4 +56,19 @@ def example(request, example_id=None):
         },
         'component_name': 'ExampleId'
     }
+    return render(request, 'index.html', context)
+
+
+def results(request):
+    """
+    Results page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Results page'
+        },
+        'component_name': 'Results'
+    }
+
     return render(request, 'index.html', context)
