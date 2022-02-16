@@ -1,19 +1,18 @@
-import django
-import os
 import pandas as pd
 from app.models import Card
 from app.models import Deck
 
-"""
-Populates the database.
-    Parameters:
-        fileName (str): name of the Excel CSV file
-        deck_name (str): name of the Deck, also used for DB ID and image directory
-        deck_period (str): either B (before), D (during), or A (after)
-    Returns:
-        None
-"""
+
 def populateDB(fileName, deck_name, deck_period):
+    """
+    Populates the database.
+        Parameters:
+            fileName (str): name of the Excel CSV file
+            deck_name (str): name of the Deck, also used for DB ID and image directory
+            deck_period (str): either B (before), D (during), or A (after)
+        Returns:
+            None
+    """
     print("Reading Excel CSV file...")
     deck_DataFrame = pd.read_excel("app/data/" + fileName)
     deck_dic = deck_DataFrame.to_dict(orient="records")
@@ -41,19 +40,13 @@ def populateDB(fileName, deck_name, deck_period):
                     end_date=entry["End Date"], maker=entry["Maker"],
                     town=entry["Town"], type=entry["Type"], back_notes=entry["Back notes?"],
                     url=entry["BnF URL"],
-                    image=deck_period + '/' + deck_name + '/' + card_name+suit_name +
-                            "." + one_or_two + '.jpeg')
+                    image=deck_period + '/' + deck_name + '/' + card_name + suit_name +
+                          "." + one_or_two + '.jpeg')
         card.save()
-        print ("Created card " + card.db_id + " with id of " + str(card.id))
+        print("Created card " + card.db_id + " with id of " + str(card.id))
         print("-------")
     print("End of printing cards.")
 
 
 if __name__ == "__main__":
     print("Success")
-
-
-
-
-
-

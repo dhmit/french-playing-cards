@@ -7,6 +7,9 @@ from django.db import models
 
 
 class Card(models.Model):
+    """
+    The Card model
+    """
     # auto id generated
     deck = models.ForeignKey('Deck', null=True, on_delete=models.DO_NOTHING)
     db_id = models.CharField(max_length=30, null=True)
@@ -25,14 +28,18 @@ class Card(models.Model):
 
 
 class Deck(models.Model):
+    """
+    The Deck model
+    """
     # auto id generated
     name = models.CharField(max_length=300, null=True)  # for the purposes of searching
     period = models.CharField(max_length=1, null=True)
+
     # period is either B, D, or A (before, during, after revolution)
 
     def __str__(self):
         # this just prints a helpful string in python console.
         # Can be whatever you need (like printing the name if it exists)
         if self.name:
-            return "%s: %s" % (self.id, self.name)
-        return "%s" % self.id
+            return f"{self.id}: {self.name}"
+        return f"{self.id}"

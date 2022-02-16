@@ -1,6 +1,3 @@
-from app.models import Card
-from app.models import Deck
-
 """
 This file defines the entire search function.
 Search function overview:
@@ -12,201 +9,208 @@ the relevant Card objects should be returned in, 3. How to deal with multiple-wo
 ** Assume for now that inputs are always 1 word with no space chars ***
 """
 
-"""
-Searches through database for relevant results.
-    Parameters:
-        input (str): The user's input (most likely submitted via a form in frontend)
-    Returns:
-        results (collection): The collection (list?) of relevant Card objects
-"""
-def search(input):
-    input = input.lower()
-    recto_verso = get_recto_verso(input)
-    card = get_card(input)
-    suit = get_suit(input)
-    title = get_title(input)
-    date = get_date(input)
-    maker = get_maker(input)
-    town = get_town(input)
-    type = get_type(input)
-    back_notes = get_back_notes(input)
-    deck_name = get_deck_name(input)
-    period = get_deck_period(input)
+from app.models import Card
+from app.models import Deck
 
-    results = (recto_verso | card | suit | title | date | maker | town | type | back_notes | \
-              deck_name | period).distinct()
+
+def search(input_text):
+    """
+    Searches through database for relevant results.
+        Parameters:
+            input_text (str): The user's input_text (most likely submitted via a form in frontend)
+        Returns:
+            results (collection): The collection (list?) of relevant Card objects
+    """
+
+    input_text = input_text.lower()
+    recto_verso = get_recto_verso(input_text)
+    card = get_card(input_text)
+    suit = get_suit(input_text)
+    title = get_title(input_text)
+    date = get_date(input_text)
+    maker = get_maker(input_text)
+    town = get_town(input_text)
+    input_type = get_type(input_text)
+    back_notes = get_back_notes(input_text)
+    deck_name = get_deck_name(input_text)
+    period = get_deck_period(input_text)
+
+    results = (recto_verso | card | suit | title | date | maker | town | input_type | back_notes | \
+               deck_name | period).distinct()
     return results
 
 
-"""
-Helper function: CARD RECTO/VERSO
-Given a user input, function returns a QuerySet of any Card objects
-that are recto/verso
-    Parameters:
-        input (str): The user's input
-    Returns:
-        results (collection): The collection of relevant Card objects
-"""
-def get_recto_verso(input):
-    input = input.lower()
-    if "front" in input or "recto" in input or "face" in input:
+def get_recto_verso(input_text):
+    """
+    Helper function: CARD RECTO/VERSO
+    Given a user input_text, function returns a QuerySet of any Card objects
+    that are recto/verso
+        Parameters:
+            input_text (str): The user's input_text
+        Returns:
+            results (collection): The collection of relevant Card objects
+    """
+
+    input_text = input_text.lower()
+    if "front" in input_text or "recto" in input_text or "face" in input_text:
         return Card.objects.filter(recto_or_verso='R')
-    if "back" in input or "verso" in input:
+    if "back" in input_text or "verso" in input_text:
         return Card.objects.filter(recto_or_verso='V')
     return Card.objects.none()
 
 
-"""
-Helper function: CARD CARD
-Given a user input, function returns a QuerySet of any Card objects
-with that card (Ace, Jack, Queen, King)
-    Parameters:
-        input (str): The user's input
-    Returns:
-        results (collection): The collection of relevant Card objects
-"""
-def get_card(input):
-    input = input.lower()
-    if 'ace' in input or input == 'a':
+def get_card(input_text):
+    """
+    Helper function: CARD CARD
+    Given a user input_text, function returns a QuerySet of any Card objects
+    with that card (Ace, Jack, Queen, King)
+        Parameters:
+            input_text (str): The user's input_text
+        Returns:
+            results (collection): The collection of relevant Card objects
+    """
+    input_text = input_text.lower()
+    if 'ace' in input_text or input_text == 'a':
         return Card.objects.filter(card='A')
-    if 'jack' in input or input == 'j':
+    if 'jack' in input_text or input_text == 'j':
         return Card.objects.filter(card='J')
-    if 'queen' in input or input == 'q':
+    if 'queen' in input_text or input_text == 'q':
         return Card.objects.filter(card='Q')
-    if 'king' in input or input == 'k' :
+    if 'king' in input_text or input_text == 'k':
         return Card.objects.filter(card='K')
     else:
         return Card.objects.none()
 
 
-"""
-Helper function: CARD SUIT
-Given a user input, function returns a QuerySet of any Card objects
-with that suit (clubs, diamonds, hearts, spades)
-    Parameters:
-        input (str): The user's input
-    Returns:
-        results (collection): The collection of relevant Card objects
-"""
-def get_suit(input):
-    input = input.lower()
-    if 'club' in input or 'clover' in input or input == 'c':
+def get_suit(input_text):
+    """
+    Helper function: CARD SUIT
+    Given a user input_text, function returns a QuerySet of any Card objects
+    with that suit (clubs, diamonds, hearts, spades)
+        Parameters:
+            input_text (str): The user's input_text
+        Returns:
+            results (collection): The collection of relevant Card objects
+    """
+    input_text = input_text.lower()
+    if 'club' in input_text or 'clover' in input_text or input_text == 'c':
         return Card.objects.filter(suit='C')
-    if 'diamond' in input or input == 'd':
+    if 'diamond' in input_text or input_text == 'd':
         return Card.objects.filter(suit='D')
-    if 'heart' in input or input == 'h':
+    if 'heart' in input_text or input_text == 'h':
         return Card.objects.filter(suit='H')
-    if 'spade' in input or input == 's':
+    if 'spade' in input_text or input_text == 's':
         return Card.objects.filter(suit='S')
     else:
         return Card.objects.none()
 
 
-# TODO: how to make this helper function more sophisticated - not very flexible
-"""
-Helper function: CARD TITLE
-Given a user input, function returns a QuerySet of any Card objects
-with that title
-    Parameters:
-        input (str): The user's input
-    Returns:
-        results (collection): The collection of relevant Card objects
-"""
-def get_title(input):
-    input = input.lower()
-    return Card.objects.filter(title__contains=input)
+def get_title(input_text):
+    # TODO: how to make this helper function more sophisticated - not very flexible
+    """
+    Helper function: CARD TITLE
+    Given a user input_text, function returns a QuerySet of any Card objects
+    with that title
+        Parameters:
+            input_text (str): The user's input_text
+        Returns:
+            results (collection): The collection of relevant Card objects
+    """
+    input_text = input_text.lower()
+    return Card.objects.filter(title__contains=input_text)
 
 
-"""
-Helper function: CARD DATE
-Given a user input, function returns a QuerySet of any Card objects made on that date / Card objects
-where the start_date/end_date range includes the inputted date
-    Parameters:
-        input (int): The user's input
-    Returns:
-        results (collection): The collection of relevant Card objects
-"""
-def get_date(input):
-    if input.isnumeric():
-        input = int(input)
-        return Card.objects.filter(start_date__lte=input, end_date__gte=input)
+def get_date(input_text):
+    """
+    Helper function: CARD DATE
+    Given a user input_text, function returns a
+    QuerySet of any Card objects made on that date / Card objects
+    where the start_date/end_date range includes the input_textted date
+        Parameters:
+            input_text (int): The user's input_text
+        Returns:
+            results (collection): The collection of relevant Card objects
+    """
+    if input_text.isnumeric():
+        input_text = int(input_text)
+        return Card.objects.filter(start_date__lte=input_text, end_date__gte=input_text)
     return Card.objects.none()
 
 
-"""
-Helper function: CARD MAKER
-Given a user input, function returns a QuerySet of any Card objects made by that maker
-    Parameters:
-        input (int): The user's input
-    Returns:
-        results (collection): The collection of relevant Card objects
-"""
-def get_maker(input):
-    input = input.lower()
-    return Card.objects.filter(maker__contains=input)
+def get_maker(input_text):
+    """
+    Helper function: CARD MAKER
+    Given a user input_text, function returns a QuerySet of any Card objects made by that maker
+        Parameters:
+            input_text (str): The user's input_text
+        Returns:
+            results (collection): The collection of relevant Card objects
+    """
+    input_text = input_text.lower()
+    return Card.objects.filter(maker__contains=input_text)
 
 
-"""
-Helper function: CARD TOWN
-Given a user input, function returns a QuerySet of any Card objects from that town
-    Parameters:
-        input (int): The user's input
-    Returns:
-        results (collection): The collection of relevant Card objects
-"""
-def get_town(input):
-    input = input.lower()
-    return Card.objects.filter(town__contains=input)
+def get_town(input_text):
+    """
+    Helper function: CARD TOWN
+    Given a user input_text, function returns a QuerySet of any Card objects from that town
+        Parameters:
+            input_text (int): The user's input_text
+        Returns:
+            results (collection): The collection of relevant Card objects
+    """
+    input_text = input_text.lower()
+    return Card.objects.filter(town__contains=input_text)
 
 
-"""
-Helper function: CARD TYPE
-Given a user input, function returns a QuerySet of any Card objects of that type
-    Parameters:
-        input (int): The user's input
-    Returns:
-        results (collection): The collection of relevant Card objects
-"""
-def get_type(input):
-    input = input.lower()
-    return Card.objects.filter(type__contains=input)
+def get_type(input_text):
+    """
+    Helper function: CARD TYPE
+    Given a user input_text, function returns a QuerySet of any Card objects of that type
+        Parameters:
+            input_text (int): The user's input_text
+        Returns:
+            results (collection): The collection of relevant Card objects
+    """
+    input_text = input_text.lower()
+    return Card.objects.filter(type__contains=input_text)
 
 
-"""
-Helper function: CARD BACK NOTES
-Given a user input, function returns a QuerySet of any Card objects with those back notes
-(typographical letters, library card catalogue, or call and response)
-    Parameters:
-        input (int): The user's input
-    Returns:
-        results (collection): The collection of relevant Card objects
-"""
-def get_back_notes(input):
-    if "typographical" in input or "letter" in input:
+def get_back_notes(input_text):
+    """
+    Helper function: CARD BACK NOTES
+    Given a user input_text, function returns a QuerySet of any Card objects with those back notes
+    (typographical letters, library card catalogue, or call and response)
+        Parameters:
+            input_text (int): The user's input_text
+        Returns:
+            results (collection): The collection of relevant Card objects
+    """
+    if "typographical" in input_text or "letter" in input_text:
         return Card.objects.filter(back_notes="typographical letters")
-    if "library" in input or "card" in input or "catalogue" in input:
+    if "library" in input_text or "card" in input_text or "catalogue" in input_text:
         return Card.objects.filter(back_notes="library card catalogue")
-    if "call" in input or "response" in input:
+    if "call" in input_text or "response" in input_text:
         return Card.objects.filter(back_notes="call and response")
     else:
         return Card.objects.none()
 
 
-"""
-Helper function: DECK NAME
-Given a user input that is the name of a deck, function returns a QuerySet of any Card objects
-part of that deck
-    Parameters:
-        input (str): The user's input
-    Returns:
-        results (collection): The collection of relevant Card objects
+def get_deck_name(input_text):
+    """
+    Helper function: DECK NAME
+    Given a user input_text that is the name of a deck, function returns a QuerySet of any
+    Card objects part of that deck
+        Parameters:
+            input_text (str): The user's input_text
+        Returns:
+            results (collection): The collection of relevant Card objects
 
-Search through database of cards: get the Deck object that has the given name, then filter results
-for Cards that belong to that Deck
-"""
-def get_deck_name(input):
-    input = input.lower()
-    decks = Deck.objects.filter(name__contains=input)
+    Search through database of cards: get the Deck object that has the given name, then filter
+    results for Cards that belong to that Deck
+    """
+    input_text = input_text.lower()
+    decks = Deck.objects.filter(name__contains=input_text)
     if decks.count() == 0:
         return Card.objects.none()
 
@@ -216,22 +220,22 @@ def get_deck_name(input):
     return results
 
 
-"""
-Helper function: DECK PERIOD
-Given a user input, function returns a QuerySet of any Card objects
-part of the matching period (B, D, or A)
-    Parameters:
-        input (str): The user's input
-    Returns:
-        results (collection): The collection of relevant Card objects
-"""
-def get_deck_period(input):
-    input = input.lower()
-    if 'before' in input or 'pre' in input:
+def get_deck_period(input_text):
+    """
+    Helper function: DECK PERIOD
+    Given a user input_text, function returns a QuerySet of any Card objects
+    part of the matching period (B, D, or A)
+        Parameters:
+            input_text (str): The user's input_text
+        Returns:
+            results (collection): The collection of relevant Card objects
+    """
+    input_text = input_text.lower()
+    if 'before' in input_text or 'pre' in input_text:
         decks = Deck.objects.filter(period='B')
-    elif 'after' in input or 'post' in input:
+    elif 'after' in input_text or 'post' in input_text:
         decks = Deck.objects.filter(period='A')
-    elif 'during' in input or 'revolution' in input:
+    elif 'during' in input_text or 'revolution' in input_text:
         decks = Deck.objects.filter(period='D')
     else:
         decks = Deck.objects.none()  # empty QuerySet if there are no results
@@ -245,15 +249,16 @@ def get_deck_period(input):
     return results
 
 
-"""
-Helper function for main testing
-Print the db IDs of all Cards in the results QuerySet
-    Parameters:
-        collection (collection): The collection of Cards to print
-    Returns:
-        None
-"""
 def printResults(collection):
+    """
+    Helper function for main testing
+    Print the db IDs of all Cards in the results QuerySet
+        Parameters:
+            collection (collection): The collection of Cards to print
+        Returns:
+            None
+    """
+
     num_results = 0
     for card in collection:
         num_results += 1
@@ -261,7 +266,7 @@ def printResults(collection):
     print("\n", num_results, "matching results", "\n")
 
 
-""" Main function for testing """
+# """ Main function for testing """
 if __name__ == "__main__":
     # results0 = get_recto_verso("ReCto")
     # printResults(results0)
@@ -305,7 +310,7 @@ if __name__ == "__main__":
     # results12 = get_back_notes('call')
     # printResults(results12)
 
-    """ *** Testing search function now *** """
+    # """ *** Testing search function now *** """
 
     # search1 = search('vErsO')
     # printResults(search1)
