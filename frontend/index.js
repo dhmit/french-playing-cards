@@ -16,7 +16,7 @@ const COMPONENTS = {
     ErrorNotFoundComponent,
     ExampleId,
     Home,
-    Results,
+    Results
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];
