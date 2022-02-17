@@ -24,8 +24,7 @@ context = {
 }
 """
 from django.shortcuts import render
-from .models import Card
-from .models import Deck
+
 
 def index(request):
     """
