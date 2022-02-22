@@ -1,5 +1,6 @@
 import React from "react";
 import {MultiSelect} from "react-multi-select-component";
+import CardSearch from "./CardSearch";
 
 const periods = [{label: "Pre-Revolutionary"}, {label: "Revolutionary"},
     {label: "Post-Revolutionary"}];
@@ -17,45 +18,10 @@ const makers = [{label: "Unknown"}, {label: "Cordier"}, {label: "Della Bella"},
     {label: "Gatteaux"}, {label: "J-L David"}, {label: "Isidore Patrois"}];
 
 const Home = () => {
-
     return (
         <>
-            <h2>17th-19th Century French Playing Cards</h2>
-            <p>Filter search by selecting the features of the cards you want to see:</p>
-            <br/>
-
-            <p>Time period</p>
-            <MultiSelect
-                options={periods}
-            />
-            <br/>
-
-            <p>Card</p>
-            <MultiSelect options={cards}/>
-            <br/>
-
-            <p>Suit</p>
-            <MultiSelect options={suits}/>
-            <br/>
-
-            <p>Front or back</p>
-            <MultiSelect options={rectoVerso}/>
-            <br/>
-
-            <p>Back Notes</p>
-            <MultiSelect options={backNotes}/>
-            <br/>
-
-            <p>Town</p>
-            <MultiSelect options={towns}/>
-            <br/>
-
-            <p>Maker</p>
-            <MultiSelect options={makers}/>
-            <br/>
-
-            <button>Search</button>
-
+            <CardSearch/>
+            {/*    Add card display component here */}
         </>
 
     );

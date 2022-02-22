@@ -23,7 +23,9 @@ context = {
     'component_name': 'ExampleId'
 }
 """
+import json
 from django.shortcuts import render
+from django.http import JsonResponse
 
 
 def index(request):
@@ -59,15 +61,6 @@ def example(request, example_id=None):
 
 
 def results(request):
-    """
-    Results page
-    """
-
-    context = {
-        'page_metadata': {
-            'title': 'Results page'
-        },
-        'component_name': 'Results'
-    }
-
-    return render(request, 'index.html', context)
+    # filters = json.loads(request.GET.get('0'))
+    # TODO: run filters through db, get cards
+    return JsonResponse({"data": "nothing to see here yet" })
