@@ -25,6 +25,8 @@ context = {
 """
 from django.shortcuts import render
 from django.http import JsonResponse
+from .models import *
+import json
 
 
 def index(request):
@@ -60,6 +62,10 @@ def example(request, example_id=None):
 
 
 def results(request):
-    # filters = json.loads(request.GET.get('0'))
     # TODO: run filters through db, get cards
-    return JsonResponse({"data": "nothing to see here yet" })
+    filters = json.loads(request.GET.get('0'))
+    # period = json.loads(request.GET.get('periods').get(0))
+    # deck = Deck.objects.filter(period=period)
+    # cards = Card.objects.filter(deck=deck)
+    return JsonResponse({"data": "nothing to see here yet"})
+    # return render(request, 'index.html', {'cards': cards})

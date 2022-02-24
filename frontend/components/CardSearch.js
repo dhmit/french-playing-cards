@@ -49,7 +49,8 @@ export default class CardSearch extends React.Component {
     }
 
     handleSearch = () => {
-        console.log("clicked search!", JSON.stringify(this.state.selected));
+        console.log("clicked search!");
+        console.log(JSON.stringify(this.state.selected));
         axios.get("/results", {params: JSON.stringify(this.state.selected)})
             .then((results) => {
                 console.log("results from axios", results);
