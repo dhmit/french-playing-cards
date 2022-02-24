@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import Select from "react-select";
-import {MultiSelect} from "react-multi-select-component";
 
 export default class CardSearch extends React.Component {
     state = {
