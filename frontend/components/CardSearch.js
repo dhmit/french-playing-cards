@@ -37,23 +37,31 @@ export default class CardSearch extends React.Component {
     state = {
         options: options,
         periods: [],
-        selectedItems: []
+        selected: {
+            periods: [],
+            cards: [],
+            suits: [],
+            rectoVerso: [],
+            backNotes: [],
+            towns: [],
+            makers: []
+        }
     }
 
     handleSearch = () => {
-        console.log("clicked search!");
-        /*let results = {
-            periods: ["B"]
-        };*/
-        axios.get("/results", {params: JSON.stringify(this.state.selectedItems)})
+        console.log("clicked search!", JSON.stringify(this.state.selected));
+        axios.get("/results", {params: JSON.stringify(this.state.selected)})
             .then((results) => {
                 console.log("results from axios", results);
             });
     }
 
-    handleChange = (selectedItems) => {
-        console.log(selectedItems);
-        this.setState({selectedItems});
+    handleChange = (selectedItems, context) => {
+        // deep copy the state object to be able to modify it
+        let stateToModify = JSON.parse(JSON.stringify(this.state.selected));
+        // overwrite only the choice that was just updated
+        stateToModify[context["name"]] = selectedItems;
+        this.setState({selected: stateToModify});
     }
 
     render() {
@@ -64,69 +72,71 @@ export default class CardSearch extends React.Component {
 
             <p>Time period</p>
             <Select
+                name={"periods"}
                 isMulti
-                value = {this.state.selectedItems}
-                options = {this.state.options.periods}
-                onChange = {this.handleChange}
-
-                // id={"periods"}
-                // selectedItems={this.state.selectedItems}
-                // onChange={this.handleSelectChange}
-                // options={this.state.options.periods}
+                value={this.state.selected.periods}
+                options={options.periods}
+                onChange={this.handleChange}
             />
             <br/>
 
             <p>Card</p>
             <Select
                 isMulti
-                value = {this.state.selectedItems}
-                options = {this.state.options.cards}
-                onChange = {this.handleChange}
+                name={"cards"}
+                value={this.state.selected.cards}
+                options={options.cards}
+                onChange={this.handleChange}
             />
             <br/>
 
             <p>Suit</p>
             <Select
                 isMulti
-                value = {this.state.selectedItems}
-                options = {this.state.options.suits}
-                onChange = {this.handleChange}
+                name={"suits"}
+                value={this.state.selected.suits}
+                options={options.suits}
+                onChange={this.handleChange}
             />
             <br/>
 
             <p>Front or back</p>
             <Select
                 isMulti
-                value = {this.state.selectedItems}
-                options = {this.state.options.rectoVerso}
-                onChange = {this.handleChange}
+                name={"rectoVerso"}
+                value={this.state.selected.rectoVerso}
+                options={options.rectoVerso}
+                onChange={this.handleChange}
             />
             <br/>
 
             <p>Back Notes</p>
             <Select
                 isMulti
-                value = {this.state.selectedItems}
-                options = {this.state.options.backNotes}
-                onChange = {this.handleChange}
+                name={"backNotes"}
+                value={this.state.selected.backNotes}
+                options={options.backNotes}
+                onChange={this.handleChange}
             />
             <br/>
 
             <p>Town</p>
             <Select
                 isMulti
-                value = {this.state.selectedItems}
-                options = {this.state.options.towns}
-                onChange = {this.handleChange}
+                name={"towns"}
+                value={this.state.selected.towns}
+                options={options.towns}
+                onChange={this.handleChange}
             />
             <br/>
 
             <p>Maker</p>
             <Select
                 isMulti
-                value = {this.state.selectedItems}
-                options = {this.state.options.makers}
-                onChange = {this.handleChange}
+                name={"makers"}
+                value={this.state.selected.makers}
+                options={options.makers}
+                onChange={this.handleChange}
             />
             <br/>
 
