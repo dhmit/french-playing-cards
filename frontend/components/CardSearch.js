@@ -2,24 +2,40 @@ import React from "react";
 import axios from "axios";
 import Select from "react-select";
 
+const options = {
+    periods: [{label: "Pre-Revolutionary", value: "Pre-Revolutionary"},
+        {label: "Revolutionary", value: "Revolutionary"},
+        {label: "Post-Revolutionary", value: "Post-Revolutionary"}],
+    cards: [{label: "Ace", value: "Ace"}, {label: "King", value: "King"},
+        {label: "Queen", value: "Queen"}, {label: "Jack", value: "Jack"}],
+    suits: [{label: "Hearts", value: "Hearts"}, {label: "Clubs", value: "Clubs"},
+        {label: "Diamonds", value: "Diamonds"}, {label: "Spades", value: "Spades"}],
+    rectoVerso: [{label: "Front", value: "Front"}, {label: "Back", value: "Back"}],
+    backNotes: [{label: "None", value: "None"},
+        {label: "Library Card Catalogue", value: "Library Card Catalogue"},
+        {label: "Call and Response", value: "Call and Response"},
+        {label: "Typographical Letters", value: "Typographical Letters"}],
+    towns: [{label: "Unknown", value: "Unknown"}, {label: "Paris", value: "Paris"},
+        {label: "Auvergne", value: "Auvergne"}, {label: "Grenoble", value: "Grenoble"},
+        {label: "Toulouse", value: "Toulouse"}, {label: "Montauban", value: "Montauban"},
+        {label: "Lyon", value: "Lyon"}, {label: "Montpellier", value: "Montpellier"},
+        {label: "Avignon", value: "Avignon"}],
+    makers: [{label: "Unknown", value: "Unknown"}, {label: "Cordier", value: "Cordier"},
+        {label: "Della Bella", value: "Della Bella"},
+        {label: "Antoine Reynaud", value: "Antoine Reynaud"}, {label: "Vidal", value: "Vidal"},
+        {label: "Ressy", value: "Ressy"}, {label: "J. Minot", value: "J. Minot"},
+        {label: "Lepautre", value: "Lepautre"}, {label: "Bézu", value: "Bézu"},
+        {label: "Gayant", value: "Gayant"}, {label: "Dugourc", value: "Dugourc"},
+        {label: "Pinaut", value: "Pinaut"}, {label: "Gatteaux", value: "Gatteaux"},
+        {label: "J-L David", value: "J-L David"}, {
+            label: "Isidore Patrois",
+            value: "Isidore Patrois"
+        }]
+};
+
 export default class CardSearch extends React.Component {
     state = {
-        options: {
-            periods: [{label: "Pre-Revolutionary"}, {label: "Revolutionary"},
-                    {label: "Post-Revolutionary"}],
-            cards: [{label: "Ace"}, {label: "King"}, {label: "Queen"}, {label: "Jack"}],
-            suits: [{label: "Hearts"}, {label: "Clubs"}, {label: "Diamonds"}, {label: "Spades"}],
-            rectoVerso: [{label: "Front"}, {label: "Back"}],
-            backNotes: [{label: "None"}, {label: "Library Card Catalogue"}, {label: "Call and" + " Response"},
-                        {label: "Typographical Letters"}],
-            towns: [{label: "Unknown"}, {label: "Paris"}, {label: "Auvergne"}, {label: "Grenoble"},
-                    {label: "Toulouse"}, {label: "Montauban"}, {label: "Lyon"}, {label: "Montpellier"},
-                    {label: "Avignon"}],
-            makers: [{label: "Unknown"}, {label: "Cordier"}, {label: "Della Bella"},
-                    {label: "Antoine Reynaud"}, {label: "Vidal"}, {label: "Ressy"}, {label: "J. Minot"},
-                    {label: "Lepautre"}, {label: "Bézu"}, {label: "Gayant"}, {label: "Dugourc"}, {label: "Pinaut"},
-                    {label: "Gatteaux"}, {label: "J-L David"}, {label: "Isidore Patrois"}]
-        },
+        options: options,
         periods: [],
         selectedItems: []
     }
