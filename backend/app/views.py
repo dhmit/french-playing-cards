@@ -23,7 +23,6 @@ context = {
     'component_name': 'ExampleId'
 }
 """
-import json
 from django.shortcuts import render
 from django.http import JsonResponse
 
