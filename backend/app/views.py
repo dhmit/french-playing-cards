@@ -25,7 +25,8 @@ context = {
 """
 from django.shortcuts import render
 from django.http import JsonResponse
-from .models import *
+from .models import Card
+from .models import Deck
 import json
 
 
@@ -63,9 +64,24 @@ def example(request, example_id=None):
 
 def results(request):
     # TODO: run filters through db, get cards
-    filters = json.loads(request.GET.get('0'))
-    # period = json.loads(request.GET.get('periods').get(0))
-    # deck = Deck.objects.filter(period=period)
-    # cards = Card.objects.filter(deck=deck)
-    return JsonResponse({"data": "nothing to see here yet"})
-    # return render(request, 'index.html', {'cards': cards})
+    dic = {}
+    keys = request.GET.keys()  # keys, like 'period' or 'cards'
+    for key in keys:
+        dic[key] = str(request.GET.get(key))  # request.GET.get(key) is value of key
+
+    cards = Card.objects.filter(card='A')
+    cards_list = list(cards)
+
+    return JsonResponse({"cards": cards_list})
+
+    # context = {
+    #     'page_metadata': {
+    #         'title': 'Results page'
+    #     },
+    #     'component_props': {
+    #         'card_results': cards
+    #     },
+    #     'component_name': 'Results'
+    # }
+    #
+    # return render(request, 'index.html', context)

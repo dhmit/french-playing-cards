@@ -3,15 +3,15 @@ import axios from "axios";
 import Select from "react-select";
 
 const options = {
-    periods: [{label: "Pre-Revolutionary", value: "Pre-Revolutionary"},
-        {label: "Revolutionary", value: "Revolutionary"},
-        {label: "Post-Revolutionary", value: "Post-Revolutionary"}],
-    cards: [{label: "Ace", value: "Ace"}, {label: "King", value: "King"},
-        {label: "Queen", value: "Queen"}, {label: "Jack", value: "Jack"}],
-    suits: [{label: "Hearts", value: "Hearts"}, {label: "Clubs", value: "Clubs"},
-        {label: "Diamonds", value: "Diamonds"}, {label: "Spades", value: "Spades"}],
-    rectoVerso: [{label: "Front", value: "Front"}, {label: "Back", value: "Back"}],
-    backNotes: [{label: "None", value: "None"},
+    periods: [{label: "Pre-Revolutionary", value: "B"},
+        {label: "Revolutionary", value: "D"},
+        {label: "Post-Revolutionary", value: "A"}],
+    cards: [{label: "Ace", value: "A"}, {label: "King", value: "K"},
+        {label: "Queen", value: "Q"}, {label: "Jack", value: "J"}],
+    suits: [{label: "Hearts", value: "H"}, {label: "Clubs", value: "C"},
+        {label: "Diamonds", value: "D"}, {label: "Spades", value: "S"}],
+    rectoVerso: [{label: "Front", value: "R"}, {label: "Back", value: "V"}],
+    backNotes: [{label: "None", value: ""},
         {label: "Library Card Catalogue", value: "Library Card Catalogue"},
         {label: "Call and Response", value: "Call and Response"},
         {label: "Typographical Letters", value: "Typographical Letters"}],
@@ -50,8 +50,22 @@ export default class CardSearch extends React.Component {
 
     handleSearch = () => {
         console.log("clicked search!");
-        console.log(JSON.stringify(this.state.selected));
-        axios.get("/results", {params: JSON.stringify(this.state.selected)})
+        // console.log(JSON.stringify(this.state.selected));
+
+        let selected = {};
+        for (let item in this.state.selected) {
+            if (this.state.selected[item].length) {
+                selected[item] = [];
+                this.state.selected[item].map((obj) => {
+                   selected[item].push(obj.value);
+                });
+                selected[item] = JSON.stringify(selected[item]);
+            }
+        }
+
+        console.log("Selected: ", selected);
+
+        axios.get("/results", {params: selected})
             .then((results) => {
                 console.log("results from axios", results);
             });
