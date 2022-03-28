@@ -59,7 +59,8 @@ export default class CardSearch extends React.Component {
                 this.state.selected[item].map((obj) => {
                    selected[item].push(obj.value);
                 });
-                selected[item] = JSON.stringify(selected[item]);
+                // selected[item] = JSON.stringify(selected[item]);
+                selected[item] = selected[item];
             }
         }
 
@@ -79,6 +80,18 @@ export default class CardSearch extends React.Component {
         this.setState({selected: stateToModify});
     }
 
+    displayCardResults() {
+        if (this.state.periods.length === 0) {
+            return null;
+        }
+        // x = ['A', 'B']
+        // y = x.map(el => {
+        //     return el + 'hi'
+        // })
+        // y = ['Ahi', 'Bhi']
+        // this.state.periods.map
+    }
+
     render() {
         return <>
             <h2>17th-19th Century French Playing Cards</h2>
@@ -86,6 +99,8 @@ export default class CardSearch extends React.Component {
             <br/>
 
             <p>Time period</p>
+            {/*TESTING: display image from pathway*/}
+            <img src={"../backend/app/static/D/ESC/AC.1.jpeg"} alt={"Picture not" + " displaying"}/>
             <Select
                 name={"periods"}
                 isMulti
@@ -156,6 +171,8 @@ export default class CardSearch extends React.Component {
             <br/>
 
             <button onClick={this.handleSearch}>Search</button>
+
+            {this.displayCardResults()}
         </>;
     }
 }

@@ -69,7 +69,7 @@ def results(request):
     for key in keys:
         dic[key] = str(request.GET.get(key))  # request.GET.get(key) is value of key
 
-    cards = Card.objects.filter(card='A')
+    cards = Card.objects.filter(card='A').values()
     cards_list = list(cards)
 
     return JsonResponse({"cards": cards_list})

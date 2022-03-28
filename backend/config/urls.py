@@ -29,5 +29,6 @@ urlpatterns = [
     path('', views.index),
     path('example/', views.example),
     path('example/<example_id>', views.example),
-    path('results/', views.results)
+    path('results/', views.results),
+
 ]
