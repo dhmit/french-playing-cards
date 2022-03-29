@@ -63,12 +63,12 @@ def example(request, example_id=None):
 
 
 def results(request):
-    # TODO: run filters through db, get cards
     dic = {}
     keys = request.GET.keys()  # keys, like 'period' or 'cards'
     for key in keys:
         dic[key] = str(request.GET.get(key))  # request.GET.get(key) is value of key
 
+    # TODO: filter through database; the filter statement below is just for testing
     cards = Card.objects.filter(card='A').values()
     cards_list = list(cards)
 
