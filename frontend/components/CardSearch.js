@@ -11,10 +11,10 @@ const options = {
     suits: [{label: "Hearts", value: "H"}, {label: "Clubs", value: "C"},
         {label: "Diamonds", value: "D"}, {label: "Spades", value: "S"}],
     rectoVerso: [{label: "Front", value: "R"}, {label: "Back", value: "V"}],
-    backNotes: [{label: "None", value: ""},
-        {label: "Library Card Catalogue", value: "Library Card Catalogue"},
+    backNotes: [{label: "None", value: "nan"},
+        {label: "Library Card Catalogue", value: "Library card catalogue"},
         {label: "Call and Response", value: "Call and Response"},
-        {label: "Typographical Letters", value: "Typographical Letters"}],
+        {label: "Typographical Letters", value: "Typographical letters"}],
     towns: [{label: "Unknown", value: "Unknown"}, {label: "Paris", value: "Paris"},
         {label: "Auvergne", value: "Auvergne"}, {label: "Grenoble", value: "Grenoble"},
         {label: "Toulouse", value: "Toulouse"}, {label: "Montauban", value: "Montauban"},
@@ -50,7 +50,7 @@ export default class CardSearch extends React.Component {
 
     handleSearch = () => {
         console.log("clicked search!");
-        // console.log(JSON.stringify(this.state.selected));
+        console.log(JSON.stringify(this.state.selected));
 
         let selected = {};
         for (let item in this.state.selected) {
@@ -66,9 +66,11 @@ export default class CardSearch extends React.Component {
 
         console.log("Selected: ", selected);
 
-        axios.get("/results", {params: selected})
+        axios.get("/results", {params: JSON.stringify(selected)})
             .then((results) => {
                 console.log("results from axios", results);
+                // iterate through results, finding correct image URL for each card
+                // make sure unique card img name + any other info is sent from backend
             });
     }
 
@@ -81,9 +83,11 @@ export default class CardSearch extends React.Component {
     }
 
     displayCardResults() {
-        if (this.state.periods.length === 0) {
-            return null;
-        }
+
+
+        // if (this.state.periods.length === 0) {
+        //     return null;
+        // }
         // x = ['A', 'B']
         // y = x.map(el => {
         //     return el + 'hi'
@@ -100,7 +104,7 @@ export default class CardSearch extends React.Component {
 
             <p>Time period</p>
             {/*TESTING: display image from pathway*/}
-            <img src={"../backend/app/static/D/ESC/AC.1.jpeg"} alt={"Picture not" + " displaying"}/>
+            {/*<img src={"../backend/app/static/D/ESC/AC.1.jpeg"} alt={"Picture not" + " displaying"}/>*/}
             <Select
                 name={"periods"}
                 isMulti
