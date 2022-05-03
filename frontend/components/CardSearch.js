@@ -187,6 +187,7 @@ export default class CardSearch extends React.Component {
 
             <br/>
             <br/>
+            <br/>
             <ul>{this.state.searchResults}</ul>
         </>;
     }
