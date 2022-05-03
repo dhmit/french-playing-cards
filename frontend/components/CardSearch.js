@@ -45,7 +45,8 @@ export default class CardSearch extends React.Component {
             backNotes: [],
             towns: [],
             makers: []
-        }
+        },
+        searchResults: []
     }
 
     handleSearch = () => {
@@ -57,7 +58,7 @@ export default class CardSearch extends React.Component {
             if (this.state.selected[item].length) {
                 selected[item] = [];
                 this.state.selected[item].map((obj) => {
-                   selected[item].push(obj.value);
+                    selected[item].push(obj.value);
                 });
                 // selected[item] = JSON.stringify(selected[item]);
                 selected[item] = selected[item];
@@ -69,6 +70,14 @@ export default class CardSearch extends React.Component {
         axios.get("/results", {params: JSON.stringify(selected)})
             .then((results) => {
                 console.log("results from axios", results);
+                let cardItems = results.data.cards.map((card, idx) => {
+                        return <li key={idx}>
+                            <p>{card[0]}</p>
+                            <img src={"../images/" + card[1]}/>
+                        </li>;
+                    }
+                );
+                this.setState({searchResults: cardItems});
                 // iterate through results, finding correct image URL for each card
                 // make sure unique card img name + any other info is sent from backend
             });
@@ -101,6 +110,8 @@ export default class CardSearch extends React.Component {
             <h2>17th-19th Century French Playing Cards</h2>
             <p>Filter search by selecting the features of the cards you want to see:</p>
             <br/>
+
+            {this.state.searchResults}
 
             <p>Time period</p>
             {/*TESTING: display image from pathway*/}

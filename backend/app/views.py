@@ -68,16 +68,13 @@ def example(request, example_id=None):
 def results(request):
     # de-stringify
     dic = json.loads(request.GET.get('0'))  # res is a dictionary
-    print(type(dic))
-    print(dic)
+    # print(type(dic))
+    # print(dic)
     # keys = request.GET.keys()  # keys, like 'periods' or 'cards'
     #
     # print(request.GET)
     # print(keys)  # testing statement to see what keys look like
-
-    # dic = {}  # is it necessary transpose the request into a dictionary?
-    # for key in keys:
-    #     dic[key] = str(request.GET.get(key))  # request.GET.get(key) is value of key
+    # request.GET.get(key) is value of key
 
     # if the user didn't query for anything in particular:
     if len(dic) == 0:
