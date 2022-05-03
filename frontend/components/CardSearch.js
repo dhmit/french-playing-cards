@@ -73,7 +73,7 @@ export default class CardSearch extends React.Component {
                 let cardItems = results.data.cards.map((card, idx) => {
                         return <li key={idx}>
                             <p>{card[0]}</p>
-                            <img src={"../images/" + card[1]}/>
+                            <img src={'/static/img/' + card[1]}/>
                         </li>;
                     }
                 );
@@ -110,8 +110,6 @@ export default class CardSearch extends React.Component {
             <h2>17th-19th Century French Playing Cards</h2>
             <p>Filter search by selecting the features of the cards you want to see:</p>
             <br/>
-
-            {this.state.searchResults}
 
             <p>Time period</p>
             {/*TESTING: display image from pathway*/}
@@ -187,7 +185,9 @@ export default class CardSearch extends React.Component {
 
             <button onClick={this.handleSearch}>Search</button>
 
-            {this.displayCardResults()}
+            <br/>
+            <br/>
+            <ul>{this.state.searchResults}</ul>
         </>;
     }
 }
