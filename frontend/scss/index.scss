@@ -1,2 +1,91 @@
 @import '~normalize.css';
 @import './global.scss';
+
+.tab-list {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
+}
+
+.tab-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+    background-color: white;
+    border: solid #ccc;
+    border-width: 1px 1px 0 1px;
+}
+
+button {
+    border-width: medium;
+    width: 8%;
+}
+
+button:hover {
+    background-color: #787878;
+    color: white;
+}
+
+.CardImage {
+    width: 50%;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    display: inline-block;
+    flex: 0 0 30%; /* flex-grow, flex-shrink, flex-basis */
+    padding: 2%;
+}
+
+#CardOutline {
+    padding: 5%;
+}
+
+span {
+    font-style: italic;
+}
+
+#Note {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+#Logos {
+    display: flex;
+    //flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    margin-top: 10%;
+    margin-bottom: 1%;
+    background-color: #e6e6e6;
+}
+
+#BnF_logo {
+    width: 20%;
+    height: 20%;
+    margin-right: 5%;
+}
+
+#DH_logo {
+    width: 20%;
+    height: 20%;
+    margin-right: 5%;
+}
+
+#Performant_logo {
+    width: 8%;
+    height: 8%;
+}

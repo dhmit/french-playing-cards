@@ -342,5 +342,8 @@ if __name__ == "__main__":
     # search10 = search('letter')
     # printResults(search10)  # expect cards with back notes typographical letters
 
-    search_results = search('clubs')
-    printResults(search_results)
+    # search_results = search('clubs')
+    # printResults(search_results)
+
+
+

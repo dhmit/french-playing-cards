@@ -6,8 +6,10 @@ import Base from "./components/global/Base";
 import ErrorNotFoundComponent from "./components/ErrorNotFoundComponent";
 import ExampleId from "./components/ExampleId";
 import Home from "./components/Home";
-import Results from "./components/Results";
 import CardSearch from "./components/CardSearch";
+import Tabs from "./components/Tabs";
+import Tab from "./components/Tab";
+
 const COMPONENT_PROPS_RAW = document.getElementById("component_props").text;
 const COMPONENT_NAME_RAW = document.getElementById("component_name").text;
 const COMPONENT_PROPS = JSON.parse(COMPONENT_PROPS_RAW);
@@ -17,8 +19,9 @@ const COMPONENTS = {
     ErrorNotFoundComponent,
     ExampleId,
     Home,
-    Results,
-    CardSearch
+    CardSearch,
+    Tabs,
+    Tab
 };
 
 const PreselectedComponent = COMPONENTS[COMPONENT_NAME || "ErrorNotFoundComponent"];

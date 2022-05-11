@@ -76,12 +76,6 @@ def results(request):
     # print(keys)  # testing statement to see what keys look like
     # request.GET.get(key) is value of key
 
-    # if the user didn't query for anything in particular:
-    if len(dic) == 0:
-        result = Card.objects.all().values()
-        result = list(result)
-        return JsonResponse({"cards": result})
-
     # otherwise:
     result = Card.objects.none()
 
@@ -204,9 +198,14 @@ def results(request):
                     add_on = add_on | Card.objects.filter(maker=town)
             result = old_result & add_on
 
+    # if the user didn't query for anything in particular:
+    if len(dic) == 0:
+        result = Card.objects.all()
+
     final_result = []
     for card in result:
-        final_result.append([card.title, card.image])
+        final_result.append([card.title, card.image, card.card, card.suit, card.start_date,
+                             card.end_date, card.maker, card.town, card.back_notes])
     return JsonResponse({'cards': final_result})
 
     # result = result.values()
