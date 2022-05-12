@@ -275,12 +275,27 @@ export default class CardSearch extends React.Component {
 
                 <div label="Credits">
                     <h3>Jeffrey Ravel</h3>
+                    <p><a href={'https://history.mit.edu/people/jeffrey-s-ravel/'}>Jeffrey S.
+                        Ravel</a> is Professor of History at MIT. He is writing a book about
+                        French playing cards from 1650 to 1850; this web site offers users a chance
+                        to explore this history.</p>
                     <br/>
-                    <h4>Alyssa Choi</h4>
+                    <h3>Anastasia Aizman</h3>
+                    <p>Anastasia Aizman is the Developer and Creative Technologist for MIT’s
+                        <a href={'https://digitalhumanities.mit.edu/'}> Programs in the Digital
+                            Humanities</a>. Before coming to MIT, she worked at
+                        Harvard’s <a href={'https://lil.law.harvard.edu/'}>Library Innovation
+                            Lab</a>. She has provided advice and technical
+                        support for this project.</p>
                     <br/>
-                    <h4>Nyana Wright</h4>
+                    <h3>Alyssa Choi</h3>
+                    <p>Alyssa Choi is a sophomore at Wellesley College majoring in Computer Science
+                        and minoring in Women and Gender Studies.
+                        She will be interning at Microsoft this summer.</p>
                     <br/>
-                    <h4>Anastasia Aizman</h4>
+                    <h3>Nyana Wright</h3>
+                    <p>INSERT BIO HERE</p>
+                    <br/>
                 </div>
 
             </Tabs>
