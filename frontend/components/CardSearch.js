@@ -106,7 +106,7 @@ export default class CardSearch extends React.Component {
 
                         const styles = {
                             border: '2px solid rgba(0, 0, 0, 0.1)',
-                            borderRadius: '10%',
+                            // borderRadius: '10%',
                             padding: '10%'
                         };
 
