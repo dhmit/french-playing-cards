@@ -14,6 +14,7 @@ CONFIG_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BACKEND_DIR = os.path.dirname(CONFIG_DIR)
 MIGRATIONS_DIR = os.path.join(os.path.dirname(CONFIG_DIR), 'app/migrations')
 SETTINGS_DIR = os.path.join(CONFIG_DIR, 'settings')
+# DB should live in backend/db.sqlite3
 DB_PATH = os.path.join(BACKEND_DIR, 'db.sqlite3')
 PROJECT_ROOT = os.path.dirname(BACKEND_DIR)
 
@@ -82,7 +83,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BACKEND_DIR, 'db.sqlite3'),
+        'NAME': DB_PATH,
     }
 }
 
@@ -128,7 +129,6 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 # where collectstatic looks for static files
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'build'),
     os.path.join(PROJECT_ROOT, 'assets'),
 )
 
@@ -142,12 +142,14 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://localhost:8000',
     'http://localhost:8080',
+    'http://45.55.60.82'
 ]
 
 # Django webpack loader settings
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': './assets/bundles/',
+        # resolves to static/bundles/
+        'BUNDLE_DIR_NAME': 'bundles/',
         'STATS_FILE': os.path.join(PROJECT_ROOT, 'webpack-stats.json'),
     }
 }

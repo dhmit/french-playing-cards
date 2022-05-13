@@ -28,6 +28,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+assets/bundles/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -98,6 +99,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+backend/config/settings/dev.py
 
 # Spyder project settings
 .spyderproject
@@ -127,7 +129,8 @@ dmypy.json
 .idea/runConfigurations
 
 # dependencies
-frontend/node_modules
+frontend/node_modules/
+node_modules/
 /.pnp
 .pnp.js
 
@@ -156,4 +159,5 @@ webpack-stats.json
 # Google authentication byproducts
 token.pickle
 
-node_modules
+# sockfiles
+gunicorn.socket

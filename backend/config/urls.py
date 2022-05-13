@@ -19,7 +19,7 @@ from django.urls import path
 
 try:
     from ..app import views
-except (ImportError, ModuleNotFoundError):
+except (ValueError, ImportError, ModuleNotFoundError):
     from app import views
 
 urlpatterns = [
