@@ -49,4 +49,11 @@ def populateDB(fileName, deck_name, deck_period):
 
 
 if __name__ == "__main__":
+    dauphine = Deck.objects.get(id=6)
+    for card in dauphine:
+        if card.recto_or_verso == 'R':
+            one_or_two = '1'
+        else:
+            one_or_two = '2'
+        card.image = 'B/Dauphine/' + card.card + card.suit + '.' + one_or_two + '.jpeg'
     print("Success")
