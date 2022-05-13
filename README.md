@@ -1,2 +1,2 @@
 # PLAYING CARDS
-You can use this to start a new project
+Can access at http://45.55.60.82/
