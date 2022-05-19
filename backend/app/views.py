@@ -118,17 +118,32 @@ def results(request):
 
     # front or back
     if 'rectoVerso' in dic:
+        # # for rv in dic['rectoVerso']:
+        # #     result = result & Card.objects.filter(recto_or_verso=rv)
+        # if not result.exists():
+        #     for rv in dic['rectoVerso']:
+        #         result = result | Card.objects.filter(recto_or_verso=rv)
+        # else:
+        #     old_result = result
+        #     add_on = Card.objects.none()
+        #     for rv in dic['rectoVerso']:
+        #         add_on = add_on | Card.objects.filter(recto_or_verso=rv)
+        #     result = old_result & add_on
+
+        # New version: attempting to fix the search function issues
         # for rv in dic['rectoVerso']:
         #     result = result & Card.objects.filter(recto_or_verso=rv)
         if not result.exists():
             for rv in dic['rectoVerso']:
                 result = result | Card.objects.filter(recto_or_verso=rv)
         else:
-            old_result = result
-            add_on = Card.objects.none()
+            # old_result = result
+            # add_on = Card.objects.none()
+            # for rv in dic['rectoVerso']:
+            #     add_on = add_on | Card.objects.filter(recto_or_verso=rv)
+            # result = old_result & add_on
             for rv in dic['rectoVerso']:
-                add_on = add_on | Card.objects.filter(recto_or_verso=rv)
-            result = old_result & add_on
+                result = result & Card.objects.filter(recto_or_verso=rv)
 
     # back notes
     if 'backNotes' in dic:
@@ -138,7 +153,8 @@ def results(request):
         if not result.exists():
             for back_note in dic['backNotes']:
                 if back_note == 'Unknown':
-                    result = result | Card.objects.filter(back_notes='Unknown') | Card.objects.filter(
+                    result = result | Card.objects.filter(
+                        back_notes='Unknown') | Card.objects.filter(
                         back_notes="nan")
                 else:
                     result = result | Card.objects.filter(back_notes=back_note)
@@ -147,7 +163,8 @@ def results(request):
             add_on = Card.objects.none()
             for back_note in dic['backNotes']:
                 if back_note == 'Unknown':
-                    add_on = add_on | Card.objects.filter(back_notes='Unknown') | Card.objects.filter(
+                    add_on = add_on | Card.objects.filter(
+                        back_notes='Unknown') | Card.objects.filter(
                         back_notes="nan")
                 else:
                     add_on = add_on | Card.objects.filter(back_notes=back_note)

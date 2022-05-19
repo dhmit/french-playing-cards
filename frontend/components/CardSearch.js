@@ -303,9 +303,19 @@ export default class CardSearch extends React.Component {
             </Tabs>
 
             <span id={'Logos'}>
-                <img id={'BnF_logo'} src={'/static/img/bnf_logo.jpg'}/>
-                <img id={'DH_logo'} src={'/static/img/dh_logo.png'}/>
-                <img id={'Performant_logo'} src={'/static/img/performant-logo.png'}/>
+                <a id={'BnF_container'}
+                   href={'https://www.bnf.fr/en/bibliotheque-nationale-de-france-catalogue-general'}>
+                    <img id={'BnF_logo'} src={'/static/img/bnf_logo.jpg'}/>
+                </a>
+                <a id={'MIT_container'} href={'https://www.mit.edu/'}>
+                    <img id={'MIT_logo'} src={'/static/img/MIT-modern-logo.jpg'}/>
+                </a>
+                <a id={'DH_container'} href={'https://digitalhumanities.mit.edu/'}>
+                    <img id={'DH_logo'} src={'/static/img/dh_logo.png'}/>
+                </a>
+                <a id={'Performant_container'} href={'https://www.performantsoftware.com/'}>
+                    <img id={'Performant_logo'} src={'/static/img/performant-logo.png'}/>
+                </a>
             </span>
 
 
