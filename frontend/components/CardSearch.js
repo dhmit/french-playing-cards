@@ -296,7 +296,7 @@ export default class CardSearch extends React.Component {
                     <h3>Nyana Wright</h3>
                     <p>Nyana Wright is a sophomore at Wellesley College majoring in Mathematics.
                         This summer she will intern at SDG Impact Japan, a sustainable investment
-                        firm.</p>
+                        firm. [tester code here]</p>
                     <br/>
                 </div>
 
