@@ -16,11 +16,13 @@ Including another URL configuration
 """
 from django.contrib import admin
 from django.urls import path
+from app.views import index, about, manufacture, material, fronts, backs, envelopes, iconography, search, games, bibliography
 
 try:
     from ..app import views
 except (ValueError, ImportError, ModuleNotFoundError):
     from app import views
+
 
 urlpatterns = [
     # Django admin page
@@ -31,4 +33,15 @@ urlpatterns = [
     path('example/<example_id>', views.example),
     path('results/', views.results),
 
+    path('', index, name='home'),
+    path('about', about, name='about'),
+    path('manufacture', manufacture, name='manufacture'),
+    path('material-aspects', material, name='material'),
+    path('fronts', fronts, name='fronts'),
+    path('backs', backs, name='backs'),
+    path('envelopes', envelopes, name='envelopes'),
+    path('iconography', iconography, name='iconography'),
+    path('search', search, name='search'),
+    path('games', games, name='games'),
+    path('bibliography', bibliography, name='bibliography')
 ]

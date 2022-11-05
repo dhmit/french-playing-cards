@@ -1,5 +1,3 @@
-
-
 {% load render_bundle from webpack_loader %}
 
 <!DOCTYPE html>
@@ -19,7 +17,7 @@
 
     <body>
         <ul class="nav">
-            <li><a href="{% url 'home' %}"">Home</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'about' %}">About</a></li>
             <li><a href="{% url 'manufacture' %}">Manufacture</a></li>
             <li><a href="{% url 'material' %}">Material Aspects</a></li>
@@ -30,15 +28,6 @@
             <li><a href="{% url 'games' %}">Play Games!</a></li>
             <li><a href="{% url 'bibliography' %}">Bibliography</a></li>
         </ul>
-
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="app_root">
-            <p>Hello world!</p>
-        </div>
-
-        {{component_props|json_script:"component_props"}}
-        {{component_name|json_script:"component_name"}}
-        {% render_bundle 'index' 'js' %}
 
     </body>
 </html>

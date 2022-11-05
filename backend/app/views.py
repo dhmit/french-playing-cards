@@ -40,12 +40,152 @@ def index(request):
 
     context = {
         'page_metadata': {
-            'title': 'Home page'
+            'title': 'Home | French Playing Cards'
         },
         'component_name': 'Home'
     }
 
     return render(request, 'index.html', context)
+
+def about(request):
+    """
+    About page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'About | French Playing Cards'
+        },
+        'component_name': 'about'
+    }
+
+    return render(request, 'about.html', context)
+
+def manufacture(request):
+    """
+    Manufacture page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Manufacture | French Playing Cards'
+        },
+        'component_name': 'manufacture'
+    }
+
+    return render(request, 'manufacture.html', context)
+
+def material(request):
+    """
+    Material aspects page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Material Aspects | French Playing Cards'
+        },
+        'component_name': 'material'
+    }
+
+    return render(request, 'material.html', context)
+
+def fronts(request):
+    """
+    Fronts page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Fronts | French Playing Cards'
+        },
+        'component_name': 'fronts'
+    }
+
+    return render(request, 'fronts.html', context)
+
+def backs(request):
+    """
+    Backs page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Backs | French Playing Cards'
+        },
+        'component_name': 'backs'
+    }
+
+    return render(request, 'backs.html', context)
+
+def envelopes(request):
+    """
+    Envelopes page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Envelopes | French Playing Cards'
+        },
+        'component_name': 'envelopes'
+    }
+
+    return render(request, 'envelopes.html', context)
+
+def iconography(request):
+    """
+    Face card iconography page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Face Card Iconography | French Playing Cards'
+        },
+        'component_name': 'iconography'
+    }
+
+    return render(request, 'iconography.html', context)
+
+def search(request):
+    """
+    Search page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Search Database | French Playing Cards'
+        },
+        'component_name': 'search'
+    }
+
+    return render(request, 'search.html', context)
+
+def games(request):
+    """
+    Play games page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Play Games! | French Playing Cards'
+        },
+        'component_name': 'games'
+    }
+
+    return render(request, 'games.html', context)
+
+def bibliography(request):
+    """
+    Bibliography page
+    """
+
+    context = {
+        'page_metadata': {
+            'title': 'Bibliography | French Playing Cards'
+        },
+        'component_name': 'bibliography'
+    }
+
+    return render(request, 'bibliography.html', context)
 
 
 def example(request, example_id=None):
