@@ -1,3 +1,28 @@
 #main-container {
   padding: 1em 2em;
 }
+
+.nav {
+  margin: auto;
+  margin-top: 1%;
+  background-color: white;
+  position: -webkit-sticky; /* Safari compatability*/
+  position: sticky;
+  border: 1px solid black;
+}
+
+.nav a {
+  color: #707070;
+  display: block;
+  padding: 10px;
+  margin: 0px 10px;
+}
+
+.nav a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.nav li {
+  display: inline;
+}
