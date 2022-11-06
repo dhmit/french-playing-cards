@@ -18,26 +18,11 @@
     </head>
 
     <body>
-        <ul class="nav">
-            <li><a href="{% url 'home' %}"">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'manufacture' %}">Manufacture</a></li>
-            <li><a href="{% url 'material' %}">Material Aspects</a></li>
-            <li><a href="{% url 'fronts' %}">Fronts</a></li>
-            <li><a href="{% url 'backs' %}">Backs</a></li>
-            <li><a href="{% url 'envelopes' %}">Envelopes</a></li>
-            <li><a href="{% url 'iconography' %}">Face Card Iconography</a></li>
-            <li><a href="{% url 'games' %}">Play Games!</a></li>
-            <li><a href="{% url 'bibliography' %}">Bibliography</a></li>
-        </ul>
-
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="app_root">
-            <p>Hello world!</p>
+            <p>Loading...</p>
         </div>
 
-        {{component_props|json_script:"component_props"}}
-        {{component_name|json_script:"component_name"}}
         {% render_bundle 'index' 'js' %}
 
     </body>

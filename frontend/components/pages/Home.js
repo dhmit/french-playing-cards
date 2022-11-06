@@ -1,7 +1,6 @@
 import React from "react";
-import CardSearch from "./CardSearch";
-import Select from "react-select";
-import Tabs from "./Tabs";
+import CardSearch from "../CardSearch";
+import Tabs from "../Tabs";
 
 
 const Home = () => {

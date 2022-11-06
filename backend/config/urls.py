@@ -28,7 +28,6 @@ urlpatterns = [
     # Django admin page
     path('admin/', admin.site.urls),
     # API endpoints
-    path('', views.index),
     path('example/', views.example),
     path('example/<example_id>', views.example),
     path('results/', views.results),
@@ -37,11 +36,11 @@ urlpatterns = [
     path('about', about, name='about'),
     path('manufacture', manufacture, name='manufacture'),
     path('material-aspects', material, name='material'),
-    path('fronts', fronts, name='fronts'),
-    path('backs', backs, name='backs'),
-    path('envelopes', envelopes, name='envelopes'),
+    path('material-aspects/fronts', fronts, name='fronts'),
+    path('material-aspects/backs', backs, name='backs'),
+    path('material-aspects/envelopes', envelopes, name='envelopes'),
     path('iconography', iconography, name='iconography'),
-    path('search', search, name='search'),
+    path('iconography/search', search, name='search'),
     path('games', games, name='games'),
     path('bibliography', bibliography, name='bibliography')
 ]

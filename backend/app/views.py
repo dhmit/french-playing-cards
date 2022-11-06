@@ -59,7 +59,7 @@ def about(request):
         'component_name': 'about'
     }
 
-    return render(request, 'about.html', context)
+    return render(request, 'index.html', context)
 
 def manufacture(request):
     """
@@ -73,7 +73,7 @@ def manufacture(request):
         'component_name': 'manufacture'
     }
 
-    return render(request, 'manufacture.html', context)
+    return render(request, 'index.html', context)
 
 def material(request):
     """
@@ -87,7 +87,7 @@ def material(request):
         'component_name': 'material'
     }
 
-    return render(request, 'material.html', context)
+    return render(request, 'index.html', context)
 
 def fronts(request):
     """
@@ -101,7 +101,7 @@ def fronts(request):
         'component_name': 'fronts'
     }
 
-    return render(request, 'fronts.html', context)
+    return render(request, 'index.html', context)
 
 def backs(request):
     """
@@ -115,7 +115,7 @@ def backs(request):
         'component_name': 'backs'
     }
 
-    return render(request, 'backs.html', context)
+    return render(request, 'index.html', context)
 
 def envelopes(request):
     """
@@ -129,7 +129,7 @@ def envelopes(request):
         'component_name': 'envelopes'
     }
 
-    return render(request, 'envelopes.html', context)
+    return render(request, 'index.html', context)
 
 def iconography(request):
     """
@@ -143,7 +143,7 @@ def iconography(request):
         'component_name': 'iconography'
     }
 
-    return render(request, 'iconography.html', context)
+    return render(request, 'index.html', context)
 
 def search(request):
     """
@@ -157,7 +157,7 @@ def search(request):
         'component_name': 'search'
     }
 
-    return render(request, 'search.html', context)
+    return render(request, 'index.html', context)
 
 def games(request):
     """
@@ -171,7 +171,7 @@ def games(request):
         'component_name': 'games'
     }
 
-    return render(request, 'games.html', context)
+    return render(request, 'index.html', context)
 
 def bibliography(request):
     """
@@ -185,7 +185,7 @@ def bibliography(request):
         'component_name': 'bibliography'
     }
 
-    return render(request, 'bibliography.html', context)
+    return render(request, 'index.html', context)
 
 
 def example(request, example_id=None):
