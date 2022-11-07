@@ -8,23 +8,37 @@
   background-color: white;
   position: -webkit-sticky; /* Safari compatability*/
   position: sticky;
-  border: 1px solid black;
+  border: 1px solid #707070;
+}
+
+.nav li {
+  display: inline;
 }
 
 .nav a {
   color: #707070;
-  display: block;
+  display: inline-block;
   padding: 10px;
   margin: 0px 10px;
 }
 
 .nav a:hover {
-  color: black;
+  color: #353535;
   text-decoration: none;
 }
 
-.nav li {
-  display: inline;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #707070;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 #Logos {
