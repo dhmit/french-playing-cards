@@ -137,8 +137,91 @@ export default class CardSearch extends React.Component {
 
     render() {
         return <>
+        <div label="Search Page">
+                    <p>Filter search by selecting the features of the cards you want to see:</p>
+                    <br/>
 
+                    <p>Time period</p>
+                    <Select
+                        name={"periods"}
+                        isMulti
+                        value={this.state.selected.periods}
+                        options={options.periods}
+                        onChange={this.handleChange}
+                    />
+                    <br/>
 
+                    <p>Card</p>
+                    <Select
+                        isMulti
+                        name={"cards"}
+                        value={this.state.selected.cards}
+                        options={options.cards}
+                        onChange={this.handleChange}
+                    />
+                    <br/>
+
+                    <p>Suit</p>
+                    <Select
+                        isMulti
+                        name={"suits"}
+                        value={this.state.selected.suits}
+                        options={options.suits}
+                        onChange={this.handleChange}
+                    />
+                    <br/>
+
+                    <p>Front or back</p>
+                    <Select
+                        isMulti
+                        name={"rectoVerso"}
+                        value={this.state.selected.rectoVerso}
+                        options={options.rectoVerso}
+                        onChange={this.handleChange}
+                    />
+                    <br/>
+
+                    <p>Back Notes</p>
+                    <Select
+                        isMulti
+                        name={"backNotes"}
+                        value={this.state.selected.backNotes}
+                        options={options.backNotes}
+                        onChange={this.handleChange}
+                    />
+                    <br/>
+
+                    <p>Town</p>
+                    <Select
+                        isMulti
+                        name={"towns"}
+                        value={this.state.selected.towns}
+                        options={options.towns}
+                        onChange={this.handleChange}
+                    />
+                    <br/>
+
+                    <p>Maker</p>
+                    <Select
+                        isMulti
+                        name={"makers"}
+                        value={this.state.selected.makers}
+                        options={options.makers}
+                        onChange={this.handleChange}
+                    />
+                    <br/>
+
+                    <button onClick={this.handleSearch}>Search</button>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div id={'CardResults'}>
+                        <p id={'Note'}>To view an card image in greater detail, right click on it
+                            and select 'Open Image in New Tab'</p>
+                        <ul>{this.state.searchResults}</ul>
+                    </div>
+                </div>
         </>
             ;
     }

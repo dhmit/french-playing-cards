@@ -1,6 +1,142 @@
 @import '~normalize.css';
 @import './global.scss';
 
+h2 {
+    text-align: center;
+    padding: 3%;
+}
+
+#HomeImage {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+#HomeBlurb {
+    text-align: center;
+    font-size: 150%;
+    font-weight: 200;
+    line-height: 150%;
+}
+
+#MaterialImgContainer {
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+#MaterialMascot {
+    width: 25%;
+    opacity: 0.25;
+}
+
+#MaterialsBlurb {
+    text-align: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150%;
+    font-weight: 200;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#MaterialsMenu {
+    display: flex;
+}
+
+.MaterialsMenuItem {
+    text-align: center;
+
+    p {
+        font-size: 150%;
+        font-weight: 200;
+        
+        a {
+            color: #787878;
+        }
+    }
+
+    img {
+        width: 50%;
+    }
+}
+
+#MaterialSubpageIntro {
+    display: flex;
+    margin-bottom: 12%;
+
+    img {
+        width: 25%;
+        margin-left: 3%;
+        margin-right: 5%;
+    }
+
+    p {
+        margin-top: 3%;
+        margin-right: 3%;
+        font-size: 150%;
+        font-weight: 200;
+    }
+}
+
+.FrontsItem {
+    margin-left: 3%;
+    margin-right: 3%;
+
+    h3 {
+        text-decoration: underline;
+    }
+
+    h4 {
+        text-decoration: underline;
+    }
+
+    .FrontsItemContents {
+        padding-left: 3%;
+        padding-right: 3%;
+        margin-top: 3%;
+        margin-bottom: 9%;
+
+        p {
+            font-size: 125%;
+            font-weight: 300;
+            margin-bottom: 3%;
+        }
+
+        .FrontsItemImages {
+            display: flex;
+            justify-content: center;
+
+            .FrontsItemImageCaption {
+                margin-left: 3%;
+                margin-right: 3%;
+                width: 30%;
+                text-align: center;
+                img {
+                    width: 50%;
+                    object-fit: scale-down;
+                    margin-bottom: 3%;
+                }
+                p {
+                    font-size: 80%;
+                }
+            }
+        }
+    }
+
+    #SourceFooter {
+        text-align: center;
+        font-weight: 300;
+    }
+}
+
 .tab-list {
     margin-top: 3%;
     margin-bottom: 3%;

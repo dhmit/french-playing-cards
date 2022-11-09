@@ -15,6 +15,7 @@ import Iconography from "./components/pages/Iconography";
 import Search from "./components/pages/DatabaseSearch";
 import Games from "./components/pages/Games";
 import Bibliography from "./components/pages/Bibliography";
+import CardSearch from "./components/CardSearch";
 
 const router = createBrowserRouter([
     {
