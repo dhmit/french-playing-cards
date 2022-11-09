@@ -1,19 +1,28 @@
 import React from "react";
+import {BrowserRouter, NavLink} from 'react-router-dom';
 
 const Nav = () => {
 
+    let activeStyle = {
+        color: "black",
+    };
+
     return (
         <ul className="nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/manufacture">Manufacture</a></li>
-            <li><a href="/material-aspects">Material Aspects</a></li>
-            <li><a href="/material-aspects/fronts">Fronts</a></li>
-            <li><a href="/material-aspects/backs">Backs</a></li>
-            <li><a href="/material-aspects/envelopes">Envelopes</a></li>
-            <li><a href="/iconography">Face Card Iconography</a></li>
-            <li><a href="/games">Play Games!</a></li>
-            <li><a href="/bibliography">Bibliography</a></li>
+            <li><NavLink to="/" style={({ isActive }) => isActive ? activeStyle : undefined}>Home</NavLink></li>
+            <li><NavLink to="/about" style={({ isActive }) => isActive ? activeStyle : undefined}>About</NavLink></li>
+            <li><NavLink to="/manufacture" style={({ isActive }) => isActive ? activeStyle : undefined}>Manufacture</NavLink></li>
+            <div className="dropdown">
+                <li className="dropdown"><NavLink to="/material-aspects" style={({ isActive }) => isActive ? activeStyle : undefined}>Material Aspects</NavLink></li>
+                <div className="dropdown-content">
+                    <li><NavLink to="/material-aspects/fronts" style={({ isActive }) => isActive ? activeStyle : undefined}>Fronts</NavLink></li>
+                    <li><NavLink to="/material-aspects/backs" style={({ isActive }) => isActive ? activeStyle : undefined}>Backs</NavLink></li>
+                    <li><NavLink to="/material-aspects/envelopes" style={({ isActive }) => isActive ? activeStyle : undefined}>Envelopes</NavLink></li>
+                </div>
+            </div>
+            <li><NavLink to="/iconography" style={({ isActive }) => isActive ? activeStyle : undefined}>Face Card Iconography</NavLink></li>
+            <li><NavLink to="/games" style={({ isActive }) => isActive ? activeStyle : undefined}>Play Games!</NavLink></li>
+            <li><NavLink to="/bibliography" style={({ isActive }) => isActive ? activeStyle : undefined}>Bibliography</NavLink></li>
         </ul>
     );
 };
