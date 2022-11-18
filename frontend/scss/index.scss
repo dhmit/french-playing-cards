@@ -68,7 +68,7 @@ h2 {
     }
 }
 
-#MaterialSubpageIntro {
+#FrontsIntro {
     display: flex;
     margin-bottom: 12%;
 
@@ -137,6 +137,76 @@ h2 {
     }
 }
 
+#IconographyIntro {
+    display: block;
+    margin-bottom: 12%;
+    text-align: center;
+
+    img {
+        width: 25%;
+        margin-left: 3%;
+        margin-right: 5%;
+    }
+
+    h3 {
+        margin-top: 3%;
+        margin-right: 3%;
+        font-size: 150%;
+        font-weight: 200;
+    }
+}
+
+#SearchPage {
+    h3 {
+        text-align: center;
+        margin-top: 3%;
+        margin-right: 3%;
+        font-size: 150%;
+        font-weight: 300;
+        color: #707070;
+    }
+}
+
+.SearchBarPair {
+    display: flex;
+    column-gap: 5%;
+    justify-content: center;
+
+    .SearchBar {
+        display: block;
+        width: 45%;
+    }
+}
+
+#SearchButton {
+    text-align: center;
+    margin-top: 3%;
+}
+
+#CardResults {
+
+    .CardImage {
+        width: 50%;
+    }
+    
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    li {
+        display: inline-block;
+        flex: 0 0 30%; /* flex-grow, flex-shrink, flex-basis */
+        padding: 2%;
+    }
+    
+    #CardOutline {
+        padding: 5%;
+    }
+}
+
 h2 {
     text-align: center;
     color: #707070;
@@ -182,27 +252,6 @@ button {
 button:hover {
     background-color: #787878;
     color: white;
-}
-
-.CardImage {
-    width: 50%;
-}
-
-ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-// li {
-//     display: inline-block;
-//     flex: 0 0 30%; /* flex-grow, flex-shrink, flex-basis */
-//     padding: 2%;
-// }
-
-#CardOutline {
-    padding: 5%;
 }
 
 span {

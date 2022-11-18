@@ -137,10 +137,12 @@ export default class CardSearch extends React.Component {
 
     render() {
         return <>
-        <div label="Search Page">
-                    <p>Filter search by selecting the features of the cards you want to see:</p>
+        <div id='SearchPage' label="Search Page">
+                    <h3>Filter search by selecting the features of the cards you want to see:</h3>
                     <br/>
 
+                    <div className='SearchBarPair'>
+                    <div className='SearchBar'>
                     <p>Time period</p>
                     <Select
                         name={"periods"}
@@ -149,8 +151,9 @@ export default class CardSearch extends React.Component {
                         options={options.periods}
                         onChange={this.handleChange}
                     />
-                    <br/>
+                    </div>
 
+                    <div className='SearchBar'>
                     <p>Card</p>
                     <Select
                         isMulti
@@ -159,8 +162,11 @@ export default class CardSearch extends React.Component {
                         options={options.cards}
                         onChange={this.handleChange}
                     />
-                    <br/>
-
+                    </div>
+                    </div>
+                    
+                    <div className='SearchBarPair'>
+                    <div className='SearchBar'>
                     <p>Suit</p>
                     <Select
                         isMulti
@@ -169,8 +175,9 @@ export default class CardSearch extends React.Component {
                         options={options.suits}
                         onChange={this.handleChange}
                     />
-                    <br/>
+                    </div>
 
+                    <div className='SearchBar'>
                     <p>Front or back</p>
                     <Select
                         isMulti
@@ -179,8 +186,11 @@ export default class CardSearch extends React.Component {
                         options={options.rectoVerso}
                         onChange={this.handleChange}
                     />
-                    <br/>
+                    </div>
+                    </div>
 
+                    <div className='SearchBarPair'>
+                    <div className='SearchBar'>
                     <p>Back Notes</p>
                     <Select
                         isMulti
@@ -189,8 +199,9 @@ export default class CardSearch extends React.Component {
                         options={options.backNotes}
                         onChange={this.handleChange}
                     />
-                    <br/>
+                    </div>
 
+                    <div className='SearchBar'>
                     <p>Town</p>
                     <Select
                         isMulti
@@ -199,8 +210,11 @@ export default class CardSearch extends React.Component {
                         options={options.towns}
                         onChange={this.handleChange}
                     />
-                    <br/>
+                    </div>
+                    </div>
 
+                    <div className='SearchBarPair'>
+                    <div className='SearchBar'>
                     <p>Maker</p>
                     <Select
                         isMulti
@@ -209,9 +223,12 @@ export default class CardSearch extends React.Component {
                         options={options.makers}
                         onChange={this.handleChange}
                     />
-                    <br/>
+                    </div>
+                    </div>
 
-                    <button onClick={this.handleSearch}>Search</button>
+                    <div id='SearchButton'>
+                        <button id='SearchButton' onClick={this.handleSearch}>Search</button>
+                    </div>
 
                     <br/>
                     <br/>

@@ -5,7 +5,7 @@ const Fronts = () => {
     <>
         <h2> Fronts: The Queen of Hearts </h2>
 
-        <div id='MaterialSubpageIntro'>
+        <div id='FrontsIntro'>
         <img src={'/static/img/misc/mascot.jpg'}/>
         <p id='FrontsBlurb'>
             Most French playing cards before the nineteenth century were manufactured using stencils. 
