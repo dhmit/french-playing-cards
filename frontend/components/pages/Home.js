@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
     return (
     <>
-        <h2> An Overview of French Playing Cards, 1650-1850 </h2>
+        <h2 className="page-header"> An Overview of French Playing Cards, 1650-1850 </h2>
 
         <span id="Collage">
             <img id="HomeImage" src={'/static/img/misc/homepageImg.png'}/>

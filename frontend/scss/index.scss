@@ -1,9 +1,17 @@
 @import '~normalize.css';
 @import './global.scss';
 
-h2 {
+span {
+    font-style: italic;
+}
+
+.page-header {
     text-align: center;
-    padding: 3%;
+    margin-top: 1.5%;
+    padding: 2.5%;
+    font-style: normal;
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
 }
 
 #HomeImage {
@@ -11,7 +19,7 @@ h2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3%;
+    margin-top: 2%;
     margin-bottom: 5%;
 }
 
@@ -25,8 +33,8 @@ h2 {
 #MaterialImgContainer {
     position: relative;
     text-align: center;
-    margin-top: 5%;
-    margin-bottom: 10%;
+    margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 #MaterialMascot {
@@ -54,23 +62,23 @@ h2 {
 .MaterialsMenuItem {
     text-align: center;
 
-    p {
-        font-size: 150%;
-        font-weight: 200;
-        
-        a {
+    a {
+        p {
+            font-size: 150%;
+            font-weight: 200;
             color: #787878;
+            text-decoration: underline;
         }
-    }
 
-    img {
-        width: 50%;
+        img {
+            width: 50%;
+        }
     }
 }
 
 #FrontsIntro {
     display: flex;
-    margin-bottom: 12%;
+    margin-bottom: 8%;
 
     img {
         width: 25%;
@@ -79,8 +87,9 @@ h2 {
     }
 
     p {
-        margin-top: 3%;
+        margin-top: 2%;
         margin-right: 3%;
+        padding-top: 1%;
         font-size: 150%;
         font-weight: 200;
     }
@@ -89,6 +98,7 @@ h2 {
 .FrontsItem {
     margin-left: 3%;
     margin-right: 3%;
+    color: #707070;
 
     h3 {
         text-decoration: underline;
@@ -101,13 +111,14 @@ h2 {
     .FrontsItemContents {
         padding-left: 3%;
         padding-right: 3%;
-        margin-top: 3%;
+        margin-top: 0.5%;
         margin-bottom: 9%;
 
         p {
             font-size: 125%;
             font-weight: 300;
             margin-bottom: 3%;
+            text-align: left;
         }
 
         .FrontsItemImages {
@@ -123,6 +134,7 @@ h2 {
                     width: 50%;
                     object-fit: scale-down;
                     margin-bottom: 3%;
+                    height: 300px;
                 }
                 p {
                     font-size: 80%;
@@ -252,10 +264,6 @@ button {
 button:hover {
     background-color: #787878;
     color: white;
-}
-
-span {
-    font-style: italic;
 }
 
 #Note {

@@ -2,7 +2,7 @@ import React from "react";
 
 const Bibliography = () => {
     return (
-        <h2> Bibliography page </h2>
+        <h2 className="page-header"> Bibliography page </h2>
 
     );
 };

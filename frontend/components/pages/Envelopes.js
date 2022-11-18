@@ -2,7 +2,7 @@ import React from "react";
 
 const Envelopes = () => {
     return (
-        <h2> Envelopes page </h2>
+        <h2 className="page-header"> Envelopes page </h2>
 
     );
 };

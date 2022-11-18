@@ -3,7 +3,7 @@ import React from "react";
 const Fronts = () => {
     return (
     <>
-        <h2> Fronts: The Queen of Hearts </h2>
+        <h2 className="page-header"> Fronts: The Queen of Hearts </h2>
 
         <div id='FrontsIntro'>
         <img src={'/static/img/misc/mascot.jpg'}/>
@@ -77,7 +77,6 @@ const Fronts = () => {
                 </p>
                 <br/>
                 <h4>A. Genuises, Liberties, Equalities</h4>
-                <br/>
                 <p>
                     In Spring 1793, Urbain Jaume and Jean-Démosthène Dugourc took out a patent on 
                     a new face card design that converted Kings to “Genuises,” Queens to “Liberties,” 
@@ -117,7 +116,6 @@ const Fronts = () => {
 
             <br/>
             <h4>B.  SVB, ESC, and Bézu Decks</h4>
-                <br/>
                 <p>
                     Three other notable revolutionary designs were the Sages, Vertus, Braves deck (wise ones, virtuous ones, 
                     brave ones), now labeled SVB; the Eléments, Saisons, Cultivateurs deck (Platonic elements, seasons of the year, 

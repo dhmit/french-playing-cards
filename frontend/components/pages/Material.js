@@ -3,7 +3,7 @@ import React from "react";
 const Material = () => {
     return (
     <>
-        <h2> Material Aspects </h2>
+        <h2 className="page-header"> Material Aspects </h2>
 
         <div id="MaterialImgContainer">
         <img id="MaterialMascot" src={'/static/img/misc/mascot.jpg'}/>
@@ -20,18 +20,24 @@ const Material = () => {
 
         <div id='MaterialsMenu'>
             <div className='MaterialsMenuItem'>
-                <p> <a href='material-aspects/fronts'> Fronts </a> </p>
-                <img src={'/static/img/materials/materialsFronts.jpeg'}/>
+                <a href='material-aspects/fronts'> 
+                    <p> Fronts </p>
+                    <img src={'/static/img/materials/materialsFronts.jpeg'}/>
+                </a>
             </div>
 
             <div className='MaterialsMenuItem'>
-                <p> <a href='material-aspects/backs'> Backs </a> </p>
-                <img src={'/static/img/materials/materialsBacks.jpeg'}/>
+                <a href='material-aspects/backs'>
+                    <p> Backs </p>
+                    <img src={'/static/img/materials/materialsBacks.jpeg'}/>
+                </a> 
             </div>
 
             <div className='MaterialsMenuItem'>
-                <p> <a href='material-aspects/envelopes'> Envelopes </a> </p>
-                <img src={'/static/img/materials/materialsEnvelopes.jpeg'}/>
+                <a href='material-aspects/envelopes'> 
+                    <p> Envelopes </p>
+                    <img src={'/static/img/materials/materialsEnvelopes.jpeg'}/>
+                </a> 
             </div>
         </div>
     </>

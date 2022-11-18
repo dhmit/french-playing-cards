@@ -2,7 +2,7 @@ import React from "react";
 
 const Manufacture = () => {
     return (
-        <h2> Manufacture page </h2>
+        <h2 className="page-header"> Manufacture page </h2>
 
     );
 };
