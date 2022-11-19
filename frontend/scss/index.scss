@@ -86,26 +86,33 @@ span {
     height: 90%;
 }
 
-#FrontsIntro {
+.material-subpage-intro {
     display: flex;
+    margin: auto;
     margin-bottom: 8%;
 
     img {
         width: 25%;
-        margin-left: 3%;
-        margin-right: 5%;
+        height: 25%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
     }
 
     p {
         margin-top: 2%;
-        margin-right: 3%;
+        margin-right: 1.5%;
+        margin-left: 1.5%;
         padding-top: 1%;
         font-size: 150%;
         font-weight: 200;
     }
 }
 
-.FrontsItem {
+#back-intro {
+    width: 22%;
+}
+
+.material-subpage-item {
     margin-left: 3%;
     margin-right: 3%;
     color: #707070;
@@ -118,7 +125,7 @@ span {
         text-decoration: underline;
     }
 
-    .FrontsItemContents {
+    .material-subpage-item-contents {
         padding-left: 3%;
         padding-right: 3%;
         margin-top: 0.5%;
@@ -131,17 +138,16 @@ span {
             text-align: left;
         }
 
-        .FrontsItemImages {
+        .material-subpage-item-images {
             display: flex;
             justify-content: center;
 
-            .FrontsItemImageCaption {
+            .material-subpage-item-image-caption {
                 margin-left: 3%;
                 margin-right: 3%;
                 width: 30%;
                 text-align: center;
                 img {
-                    width: 50%;
                     object-fit: scale-down;
                     margin-bottom: 3%;
                     height: 300px;
@@ -158,6 +164,10 @@ span {
                     font-size: 80%;
                 }
             }
+        }
+
+        .back-caption {
+            font-size: 90%;
         }
     }
 
