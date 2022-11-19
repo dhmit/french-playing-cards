@@ -1,4 +1,5 @@
 import React from "react";
+import ImagePopup from "../ImagePopup";
 
 const Fronts = () => {
 
@@ -42,19 +43,19 @@ const Fronts = () => {
                 </p>
                 <div className='FrontsItemImages'>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/old-regime/paris.jpeg'}/>
+                    <ImagePopup src='/static/img/materials/fronts/old-regime/paris.jpeg'/>
                     <p>
                         Paris. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (7)
                     </p>
                 </div>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/old-regime/guyenne.jpeg'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/old-regime/guyenne.jpeg'}/>
                     <p>
                     Guyenne.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (3, 82)                    
                     </p>
                 </div>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/old-regime/dauphine.jpeg'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/old-regime/dauphine.jpeg'}/>
                     <p>
                     Dauphiné.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (2, 40)    
                     </p> 
@@ -95,20 +96,20 @@ const Fronts = () => {
 
                 <div className='FrontsItemImages'>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/revolution/Jaume.Rev.1.JPEG'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/revolution/Jaume.Rev.1.JPEG'}/>
                     <p>
                     Jaume and Dugourc original design.  “Freedom of Religion.” Source: Bibliothèque nationale de France, RESERVE BOITE ECU-KH-204 (6).
                     </p>
                 </div>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/revolution/Sigogne.Rev.JPEG'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/revolution/Sigogne.Rev.JPEG'}/>
 
                     <p>
                     Jaume and Dugourc variant.  “Freedom of the Press.” Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 154).                    
                     </p>
                 </div>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/revolution/Jaume.Rustic.JPEG'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/revolution/Jaume.Rustic.JPEG'}/>
                     <p>
                     Old Regime “Liberty” modification. Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (4, 102).    
                     </p> 
@@ -131,19 +132,19 @@ const Fronts = () => {
 
                 <div className='FrontsItemImages'>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/svb-esc-bezu/SVB.1.JPEG'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/svb-esc-bezu/SVB.1.JPEG'}/>
                     <p>
                     SVB.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-204 (1).
                     </p>
                 </div>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/svb-esc-bezu/ESC.1.JPEG'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/svb-esc-bezu/ESC.1.JPEG'}/>
                     <p>
                     ESC.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5BIS, 164).                    
                     </p>
                 </div>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/svb-esc-bezu/Bezu.1.jpg'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/svb-esc-bezu/Bezu.1.jpg'}/>
                     <p>
                     Bézu. Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-204-BOITE FOL.    
                     </p> 
@@ -168,19 +169,19 @@ const Fronts = () => {
                 </p>
                 <div className='FrontsItemImages'>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/napoleon/David.JPEG'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/napoleon/David.JPEG'}/>
                     <p>
                         David.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, PET FOL-KH-34 (C, 28).
                     </p>
                 </div>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/napoleon/Gatteaux.JPEG'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/napoleon/Gatteaux.JPEG'}/>
                     <p>
                         Gatteaux.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (7BIS, 326).                    
                     </p>
                 </div>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/napoleon/Houbigant.jpg'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/napoleon/Houbigant.jpg'}/>
                     <p>
                     Houbigant.  Source:  British Library, 1896,0501.1292.1-12.    
                     </p> 
@@ -200,19 +201,19 @@ const Fronts = () => {
                 </p>
                 <div className='FrontsItemImages'>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/1815-1848/1830.Barricades.JPEG'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/1815-1848/1830.Barricades.JPEG'}/>
                     <p>
                         The Revolution of 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (10, 399-400).
                     </p>
                 </div>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/1815-1848/1830.Barricades.JPEG'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/1815-1848/1830.Barricades.JPEG'}/>
                     <p>
                         The Revolution of 1848.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (A, 7)-BOITE ECU.                    
                     </p>
                 </div>
                 <div className='FrontsItemImageCaption'>
-                    <img src={'/static/img/materials/fronts/1815-1848/Cartomancy.JPEG'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/1815-1848/Cartomancy.JPEG'}/>
                     <p>
                     Cartomancy, between 1814 and 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (3, 29)-BOITE ECU.    
                     </p> 

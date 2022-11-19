@@ -76,6 +76,16 @@ span {
     }
 }
 
+.dialog {
+    box-shadow: 0 8px 6px -6px #707070;
+    border: 3px solid #707070;
+    margin: 0px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+}
+
 #FrontsIntro {
     display: flex;
     margin-bottom: 8%;
@@ -136,6 +146,14 @@ span {
                     margin-bottom: 3%;
                     height: 300px;
                 }
+
+                .popup-image {
+                    padding: 1%;
+                    margin: 1px;
+                    width: 100%;
+                    height: 100%;
+                }
+
                 p {
                     font-size: 80%;
                 }
