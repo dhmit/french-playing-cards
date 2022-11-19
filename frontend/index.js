@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import "./scss/index.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "./components/global/Base";
@@ -16,7 +16,6 @@ import Iconography from "./components/pages/Iconography";
 import Search from "./components/pages/DatabaseSearch";
 import Games from "./components/pages/Games";
 import Bibliography from "./components/pages/Bibliography";
-import CardSearch from "./components/CardSearch";
 
 ReactDOM.render(
     <div>

@@ -1,6 +1,11 @@
 import React from "react";
 
 const Material = () => {
+
+    React.useEffect(() => {
+        document.title = 'Material Aspects | French Playing Cards';        
+    }, []);
+
     return (
     <>
         <h2 className="page-header"> Material Aspects </h2>

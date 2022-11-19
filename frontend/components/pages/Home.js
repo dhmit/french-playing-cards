@@ -1,6 +1,11 @@
 import React from "react";
 
 const Home = () => {
+
+    React.useEffect(() => {
+        document.title = 'Home | French Playing Cards';        
+    }, []);
+
     return (
     <>
         <h2 className="page-header"> An Overview of French Playing Cards, 1650-1850 </h2>

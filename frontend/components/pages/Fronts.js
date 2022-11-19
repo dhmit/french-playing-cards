@@ -1,6 +1,11 @@
 import React from "react";
 
 const Fronts = () => {
+
+    React.useEffect(() => {
+        document.title = 'Fronts | French Playing Cards';        
+    }, []);
+
     return (
     <>
         <h2 className="page-header"> Fronts: The Queen of Hearts </h2>
