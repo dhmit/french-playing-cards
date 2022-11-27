@@ -21,6 +21,17 @@
     border-width: 1px 1px 0 1px;
 }
 
+.SearchBarPair {
+    display: flex;
+    column-gap: 5%;
+    justify-content: center;
+
+    .SearchBar {
+        display: block;
+        width: 45%;
+    }
+}
+
 button {
     border-width: medium;
     width: 8%;
