@@ -21,6 +21,17 @@
     border-width: 1px 1px 0 1px;
 }
 
+#SearchPage {
+    h3 {
+        text-align: center;
+        margin-top: 3%;
+        margin-right: 3%;
+        font-size: 150%;
+        font-weight: 300;
+        color: #707070;
+    }
+}
+
 .SearchBarPair {
     display: flex;
     column-gap: 5%;
@@ -32,35 +43,33 @@
     }
 }
 
-button {
-    border-width: medium;
-    width: 8%;
+#SearchButton {
+    text-align: center;
+    margin-top: 3%;
 }
 
-button:hover {
-    background-color: #787878;
-    color: white;
-}
+#CardResults {
 
-.CardImage {
-    width: 50%;
-}
-
-ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-li {
-    display: inline-block;
-    flex: 0 0 30%; /* flex-grow, flex-shrink, flex-basis */
-    padding: 2%;
-}
-
-#CardOutline {
-    padding: 5%;
+    .CardImage {
+        width: 50%;
+    }
+    
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    li {
+        display: inline-block;
+        flex: 0 0 30%; /* flex-grow, flex-shrink, flex-basis */
+        padding: 2%;
+    }
+    
+    #CardOutline {
+        padding: 5%;
+    }
 }
 
 span {
