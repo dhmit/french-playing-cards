@@ -30,6 +30,46 @@ span {
     line-height: 150%;
 }
 
+#manufacture-header {
+    margin-top: 3%;
+    color: #707070;
+    text-decoration: underline;
+}
+
+.manufacture-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .manufacture-images {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin-top: 3%;
+
+        img {
+            height: 500px;
+            padding: 10px;
+        }
+    }
+    
+    .manufacture-caption {
+        width: 60%;
+        padding-top: 1.5%;
+        font-size: 90%;
+        text-align: center;
+    }
+
+    p {
+        margin-right: 3%;
+        margin-left: 3%;
+        padding-top: 8px;
+        font-size: 125%;
+        font-weight: 300;
+        text-align: left;
+    }
+}
+
 #MaterialImgContainer {
     position: relative;
     text-align: center;
