@@ -19,12 +19,11 @@ const Home = () => {
             overthrew a centuries-old monarchy.  They also played card games.  This site explores 
             the history of French playing cards in this period as an unusual and insightful source 
             for the history of the Old Regime, the French Revolution, and early Nineteenth-Century 
-            France.  It is intended to complement the research agenda of MIT History Professor 
-            Jeffrey Ravel.  You will find details about manufacturing procedures, state taxation 
-            policies, the material aspects of the playing cards, and the changing iconography of 
-            French face cards.  A bibliography provides suggestions for further reading.  And for 
-            those of you interested in gaming, we offer the opportunity to play a few of the most 
-            popular card games of the period, using the historical deck of cards of your choice!
+            France. You will find details about manufacturing procedures, the material aspects of 
+            the playing cards, and the changing iconography of French face cards. A bibliography 
+            provides suggestions for further reading. And for those of you interested in gaming, 
+            we offer the opportunity to play a few of the most popular card games of the period, 
+            using the historical deck of cards of your choice!
         </p>
     </>
     );
