@@ -313,6 +313,35 @@ span {
     }
 }
 
+#bibliography-mascot{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+.bibliography-content{
+    h3 {
+        margin-top: 5%;
+        margin-bottom: 1.5%;
+        color: #707070;
+        text-decoration: underline;
+    }
+
+    p {
+        text-align: left;
+        margin-left: 3%;
+        padding-top: 10px;
+        font-size: 100%;
+        font-weight: 200;
+    }
+
+    a {
+        color: #707070;
+        text-decoration: underline;
+    }
+}
+
 h2 {
     text-align: center;
     color: #707070;
