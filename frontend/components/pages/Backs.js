@@ -1,5 +1,5 @@
 import React from "react";
-import ImagePopup from "../ImagePopup";
+import ImageHover from "../ImageHover";
 
 const Backs = () => {
 
@@ -33,7 +33,7 @@ const Backs = () => {
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
-                        <img src="/static/img/materials/backs/library-card-catalogue/Loudun.JPEG"/>
+                        <ImageHover src1="/static/img/materials/backs/library-card-catalogue/Loudun.JPEG" src2="/static/img/materials/backs/library-card-catalogue/Loudon-front.JPEG"/>
                     </div>
                 </div>
                 <p className="back-caption">
@@ -54,7 +54,7 @@ const Backs = () => {
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
-                        <img src="/static/img/materials/backs/legal-case/legal-case.jpg" style={{height: "300px"}}/>
+                        <ImageHover src1="/static/img/materials/backs/legal-case/legal-case.jpg" src2="/static/img/materials/backs/legal-case/Legal case front.JPEG" />
                     </div>
                 </div>
                 <p className="back-caption">
@@ -75,7 +75,7 @@ const Backs = () => {
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
-                        <img src="/static/img/materials/backs/money/money.JPEG" style={{height: "300px"}}/>
+                        <ImageHover src1="/static/img/materials/backs/money/money.JPEG" src2="/static/img/materials/backs/money/Money front.JPEG" />
                     </div>
                 </div>
                 <p className="back-caption">
@@ -95,7 +95,7 @@ const Backs = () => {
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
-                        <img src="/static/img/materials/backs/meat-ration/ration.JPEG" style={{height: "300px"}}/>
+                        <ImageHover src1="/static/img/materials/backs/meat-ration/ration.JPEG" src2="/static/img/materials/backs/meat-ration/ration-front.JPEG" />
                     </div>
                 </div>
                 <p className="back-caption">
@@ -114,7 +114,7 @@ const Backs = () => {
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
-                        <img src="/static/img/materials/backs/business-cards/Business.JPEG" style={{height: "300px"}}/>
+                        <ImageHover src1="/static/img/materials/backs/business-cards/Business.JPEG" src2="/static/img/materials/backs/business-cards/business front.JPEG"/>
                     </div>
                 </div>
                 <p className="back-caption">
@@ -134,7 +134,7 @@ const Backs = () => {
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
-                        <img src="/static/img/materials/backs/flash-cards/flash card.jpg" style={{height: "300px"}}/>
+                        <ImageHover src1="/static/img/materials/backs/flash-cards/flash card.jpg" src2="/static/img/materials/backs/flash-cards/flash card front.JPEG" />
                     </div>
                 </div>
                 <p className="back-caption">
@@ -153,7 +153,7 @@ const Backs = () => {
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
-                        <img src="/static/img/materials/backs/call-and-response/89-99 Bezu.JPEG" style={{height: "300px"}}/>
+                        <ImageHover src1="/static/img/materials/backs/call-and-response/89-99 Bezu.JPEG" src2="/static/img/materials/backs/call-and-response/Bezu front.JPEG" />
                     </div>
                 </div>
                 <p className="back-caption">
@@ -172,7 +172,7 @@ const Backs = () => {
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
-                        <img src="/static/img/materials/backs/pastoral-drawing/Pastoral Drawing.jpg" style={{height: "300px"}}/>
+                        <ImageHover src1="/static/img/materials/backs/pastoral-drawing/Pastoral Drawing.jpg" src2="/static/img/materials/backs/pastoral-drawing/Pastoral front.jpg" />
                     </div>
                 </div>
                 <p className="back-caption">
