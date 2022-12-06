@@ -25,8 +25,8 @@ const Fronts = () => {
                 An analysis of the variations in face card design from the Old Regime through the 
                 Revolution of 1848 reveals substantial variation across time that can be explained by 
                 changing political, economic, and cultural factors. Here we focus on the Queen of Hearts, 
-                but those interested in exploring changes in the iconography of other French face cards 
-                in this period should explore our face card iconography search tool.
+                but those interested in exploring changes in the <a href='../iconography'>iconography</a> of other French face cards 
+                in this period should explore our <a href='../iconography/search'>face card iconography search tool</a>.
             </p>
         </div>
 

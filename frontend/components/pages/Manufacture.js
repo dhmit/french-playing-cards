@@ -13,8 +13,8 @@ const Manufacture = () => {
         <h3 id="manufacture-header"> Manufacturing Playing Cards in France Before 1800 </h3>
 
         <div className="manufacture-content">
-            <div className="manufacture-images">
-                <img src="/static/img/manufacture/Image 1.jpg" />
+            <div className="manufacture-image-1-9-container">
+                <img className="manufacture-image-1-9" src="/static/img/manufacture/Image 1.jpg" />
             </div>
             <p className="manufacture-caption">
                 Image 1. <i>The Workshop of a Parisian Playing Card Maker</i>, gouache, early 1690s, <i>Musée Carnavalet</i>. 
@@ -107,8 +107,8 @@ const Manufacture = () => {
                  punches that served to illuminate the point cards.
             </p>
 
-            <div className="manufacture-images">
-                <img src="/static/img/manufacture/Image 9.jpg" />
+            <div className="manufacture-image-1-9-container">
+                <img className="manufacture-image-1-9" src="/static/img/manufacture/Image 9.jpg" />
             </div>
             <p className="manufacture-caption">
                 Image 9. Denis Diderot and Jean le Rond d’Alembert, <i>L’Encyclopédie, ou dictionnaire raisonnée des arts, 

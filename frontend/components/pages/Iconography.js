@@ -17,7 +17,7 @@ const Iconography = () => {
         <div id='IconographyIntro'>
             <img src={'/static/img/misc/iconography-image.jpeg'}/>
             <p>
-                Our page on the changing “fronts” of playing cards offers variations on the Queen of Hearts 
+                Our page on the changing “<a href="../material-aspects/fronts">fronts</a>” of playing cards offers variations on the Queen of Hearts 
                 manufactured in France from the Old Regime to the middle of the nineteenth century. In 
                 addition, we have a compiled a database of face card images for kings, queens, jacks, and 
                 some aces in all four suits during this time period, along with the accompanying metadata 

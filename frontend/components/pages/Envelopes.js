@@ -146,7 +146,7 @@ const Envelopes = () => {
                     have imitated the sign that hung outside his shop.  On the right is a playing card wrapper manufactured 
                     by Chassonnier in the early years of the Revolution.  Here the three figures are similar enough to the 
                     prerevolutionary bookplate that the card-makers’ Parisian customers would have recognized the manufacturer.  
-                    But the kings have been stripped of their gifts, and their crowns have been replaced by turbans.  
+                    But the gifts the kings bear are de-emphasized, and their crowns have been replaced by turbans.  
                     The flap at the top of the envelope labels them as “moors,” not kings.  And the text at the bottom informs 
                     consumers that the cards in the wrapper were manufactured by “Citizen” Chassonnier.
                 </p>
@@ -229,7 +229,7 @@ const Envelopes = () => {
                     These two examples, from the first decade of the nineteenth century, display designs that eschew both 
                     Old Regime royal patronage and Revolutionary ideological concerns.  The envelope on the left, designed 
                     to package a deck of Gatteaux cards around 1810-1815, features two winged, classicizing angels sounding 
-                    their horns.  (On the Gatteaux deck, see the card “fronts” page on this site.)  Between them they support 
+                    their horns.  (On the Gatteaux deck, see the card “<a href="../material-aspects/fronts">fronts</a>” page on this site.)  Between them they support 
                     a small cartouche that contains the symbols of the four card suits.  On the right, the envelope printed by 
                     the Widon Delatre, a Parisian card-maker, also has a relatively simple cartouche evoking the biblical King 
                     Solomon. To his left and right, cornucopias overflow with playing cards, while the flap below records the 
