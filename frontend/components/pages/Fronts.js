@@ -43,19 +43,19 @@ const Fronts = () => {
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
-                    <ImagePopup src='/static/img/materials/fronts/old-regime/paris.jpeg'/>
+                    <ImagePopup src={'/static/img/materials/fronts/old-regime/paris.JPEG'}/>
                     <p>
                         Paris. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (7)
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
-                    <ImagePopup src={'/static/img/materials/fronts/old-regime/guyenne.jpeg'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/old-regime/guyenne.JPEG'}/>
                     <p>
                     Guyenne.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (3, 82)                    
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
-                    <ImagePopup src={'/static/img/materials/fronts/old-regime/dauphine.jpeg'}/>
+                    <ImagePopup src={'/static/img/materials/fronts/old-regime/dauphine.JPEG'}/>
                     <p>
                     Dauphiné.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (2, 40)    
                     </p> 
