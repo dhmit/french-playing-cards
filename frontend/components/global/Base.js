@@ -11,10 +11,10 @@ const Base = ({children}) => {
             </div>
             <span id={'Logos'}>
                 <a id={'BnF_container'}
-                   href={'https://www.bnf.fr/en/bibliotheque-nationale-de-france-catalogue-general'}>
+                   href={'https://www.bnf.fr/fr'}>
                     <img id={'BnF_logo'} src={'/static/img/footer/bnf_logo.jpg'}/>
                 </a>
-                <a id={'MIT_container'} href={'https://www.mit.edu/'}>
+                <a id={'MIT_container'} href={'https://web.mit.edu/'}>
                     <img id={'MIT_logo'} src={'/static/img/footer/MIT-modern-logo.jpg'}/>
                 </a>
                 <a id={'DH_container'} href={'https://digitalhumanities.mit.edu/'}>

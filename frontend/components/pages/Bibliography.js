@@ -38,7 +38,7 @@ const Bibliography = () => {
                 of over 1000 whole or partial decks of cards and many other playing card-related items.  For a 
                 description of the collection, and a link to searchable database, go to <a href="https://beinecke.library.yale.edu/collections/highlights/cary-playing-card-database">
                 https://beinecke.library.yale.edu/collections/highlights/cary-playing-card-database</a>. There is 
-                a useful essay describing the collection <a href="https://carycards.beinecke.library.yale.edu/CaryEssaysWeb.htm">
+                a useful essay describing the collection <a href="http://carycards.beinecke.library.yale.edu/CaryEssaysWeb.htm">
                 here</a>.
             </p>
         </div>

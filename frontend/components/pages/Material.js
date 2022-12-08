@@ -12,7 +12,7 @@ const Material = () => {
 
         <div className="material-subpage-intro">
             <img src={'/static/img/misc/mascot.jpg'}/>
-            <p className="material-subpage-blurb">
+            <p>
                 For gaming and gambling purposes, playing cards were assigned abstract values 
                 that allowed players to compete against each other, or against the betting 
                 establishment where the games were played.  But playing cards were also material objects

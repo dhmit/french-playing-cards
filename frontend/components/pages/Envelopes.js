@@ -24,7 +24,7 @@ const Envelopes = () => {
                 period may have toned down the ideological references of the 1790s.
                 <br/>
                 <br/>
-                The card images below and the associated metadata are courtesy of the Gallica site of the Bibilothèque 
+                The card images below and the associated metadata are courtesy of the <a href="https://gallica.bnf.fr/">Gallica</a> site of the Bibilothèque 
                 nationale de France.
             </p>
         </div>
