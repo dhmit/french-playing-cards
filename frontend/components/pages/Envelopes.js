@@ -139,7 +139,7 @@ const Envelopes = () => {
                 <p>
                     Card-makers had to adapt their wrappers to revolutionary ideals, just as they had to modify the 
                     iconography of the face cards they manufactured.  Sometimes the changes were subtle. On the left is a 
-                    prervolutionary bookplate produced by the Parisian card-maker and stationer Hugues Chassonnier that 
+                    prerevolutionary bookplate produced by the Parisian card-maker and stationer Hugues Chassonnier that 
                     features the three biblical kings from the East who bore gifts for the Christ child.  The monarch on 
                     the left points to the star in the sky that prompted their journey to Bethlehem.  This nameplate, 
                     produced in the last two decades of the Old Regime, served as the Chassonnier shop’s trademark; it may 
