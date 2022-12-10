@@ -13,7 +13,7 @@ const Backs = () => {
 
         <div className="material-subpage-intro">
             <img src={'/static/img/misc/mascot.jpg'}/>
-            <p className="material-subpage-blurb">
+            <p id="back-text" className="material-subpage-blurb">
                 The backs of playing cards in France were left blank until the 1820s. Because paper was valuable, 
                 card players would not throw out their cards when they were too worn to be useful for gaming. Instead, 
                 people would use the backs of the cards for various purposes, some practical and some more fanciful. 
