@@ -49,12 +49,21 @@ const Bibliography = () => {
                 Allemagne, Henri-René d’. <i>Les Cartes à jouer du XIVe au XXe siècle</i>, 2 vols., Paris, 1906.
             </p>
             <p> 
+                Anonyme, "<a href='https://histoire-de-la-douane.org/de-la-fiscalite-des-jeux-de-cartes-a-travers-lhistoire/'>De la fiscalité des jeux de cartes à travers l'histoire</a>," web site of the <i>Association pour l'Histoire de l'Administration des Douanes</i>. Posted on 22 March 2018.
+            </p>
+            <p> 
                 Belmas, Elisabeth.  <i>Jouer autrefois. Essai sur le jeu dans la France moderne, XVIe-XVIIIe siècle</i> 
                 Seyssel: Champ Vallon, 2006.
             </p>
             <p> 
                 Bert, Jean-François. <i>Comment pense un savant? Un physicien des Lumières et ses cartes à jouer</i>, 
                 Paris: Anamosa, 2018.
+            </p>
+            <p> 
+                Burke, Kristen. "Print and the Early Modern Playing Card," <i>Oxford Art Journal</i> 44-2 (2021), 185-205.
+            </p>
+            <p> 
+                Bustarret, Claire, "<a href='https://journals.openedition.org/socio-anthropologie/2255'>La Carte à jouer, support d'écriture au XVIIIe siècle. Détournement, retourenment, revolution</a>," <i>Socio-anthropologie</i> (2014), 83-98.
             </p>
             <p> 
                 Depaulis, Thierry. <i>Les Cartes de la Révolution: Cartes à jouer et propogande.</i> Issy-les-Moulineaux: 
@@ -85,7 +94,10 @@ const Bibliography = () => {
                 New Haven: The Library, 1981.
             </p>
             <p>
-                Netchine, Ève, ed., <i>Jeux de princes, jeux de vilains</i>, Paris: Bibliothèque nationale de France / Seuil, 2009.
+                Malone, Edward A. "The Use of Playing cards to Communicate Technical and Scientific Information," <i>Technical Communication</i> 55-1 (February 2008), 49-60.
+            </p>
+            <p>
+                Netchine, Ève, ed., <i>Jeux de princes, jeux de vilains</i>, Paris: Bibliothèque nationale de France / Seuil, 2009. <a href='http://expositions.bnf.fr/jeux/index.htm'>See also the online exhibition web site</a>.
             </p>
             <p>
                 Ravel, Jeffrey. “On the Playing Cards of the Dulac Brothers in the Year II,” <i>Studies in Eighteenth-Century 
