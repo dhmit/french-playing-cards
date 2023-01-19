@@ -4,7 +4,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import "./scss/index.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "./components/global/Base";
-import Nav from "./components/global/Nav";
+import NavBar from "./components/global/Nav";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Manufacture from "./components/pages/Manufacture";
@@ -21,7 +21,7 @@ ReactDOM.render(
     <div>
         <Base>
             <BrowserRouter>
-                <Nav />
+                <NavBar />
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="/about" element={<About />} />

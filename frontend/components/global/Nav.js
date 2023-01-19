@@ -1,30 +1,41 @@
 import React from "react";
-import {BrowserRouter, NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { Nav, Navbar } from "react-bootstrap";
 
-const Nav = () => {
-
+const NavBar = () => {
     let activeStyle = {
         color: "black",
     };
 
+    const close = () => {
+        expanded = false;
+    };
+
     return (
-        <ul className="nav">
-            <li><NavLink to="/" style={({ isActive }) => isActive ? activeStyle : undefined}>Home</NavLink></li>
-            <li><NavLink to="/about" style={({ isActive }) => isActive ? activeStyle : undefined}>About</NavLink></li>
-            <li><NavLink to="/manufacture" style={({ isActive }) => isActive ? activeStyle : undefined}>Manufacture</NavLink></li>
-            <div className="dropdown">
-                <li className="dropdown"><NavLink to="/material-aspects" style={({ isActive }) => isActive ? activeStyle : undefined}>Material Aspects</NavLink></li>
-                <div className="dropdown-content">
-                    <li><NavLink to="/material-aspects/fronts" style={({ isActive }) => isActive ? activeStyle : undefined}>Fronts</NavLink></li>
-                    <li><NavLink to="/material-aspects/backs" style={({ isActive }) => isActive ? activeStyle : undefined}>Backs</NavLink></li>
-                    <li><NavLink to="/material-aspects/envelopes" style={({ isActive }) => isActive ? activeStyle : undefined}>Envelopes</NavLink></li>
-                </div>
-            </div>
-            <li><NavLink to="/iconography" style={({ isActive }) => isActive ? activeStyle : undefined}>Face Card Iconography</NavLink></li>
-            <li><NavLink to="/games" style={({ isActive }) => isActive ? activeStyle : undefined}>Play Games!</NavLink></li>
-            <li><NavLink to="/bibliography" style={({ isActive }) => isActive ? activeStyle : undefined}>Bibliography</NavLink></li>
-        </ul>
+        <Navbar collapseOnSelect expand="xl" variant="light" id="nav-bar">
+            <Navbar.Toggle />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="nav">
+                    <NavLink onClick={() => close()} to="/" style={({ isActive }) => isActive ? activeStyle : undefined}>Home</NavLink>
+                    <NavLink onClick={() => close()} to="/about" style={({ isActive }) => isActive ? activeStyle : undefined}>About</NavLink>
+                    <NavLink onClick={() => close()} to="/manufacture" style={({ isActive }) => isActive ? activeStyle : undefined}>Manufacture</NavLink>
+                    
+                    <div className="dropdown">
+                        <NavLink className="dropdown-title" onClick={() => close()} to="/material-aspects" style={({ isActive }) => isActive ? activeStyle : undefined}>Material Aspects</NavLink>
+                        <div className="dropdown-content">
+                            <NavLink onClick={() => close()} to="/material-aspects/fronts" style={({ isActive }) => isActive ? activeStyle : undefined}>Fronts</NavLink>
+                            <NavLink onClick={() => close()} to="/material-aspects/backs" style={({ isActive }) => isActive ? activeStyle : undefined}>Backs</NavLink>
+                            <NavLink onClick={() => close()} to="/material-aspects/envelopes" style={({ isActive }) => isActive ? activeStyle : undefined}>Envelopes</NavLink>
+                        </div>
+                    </div>
+
+                    <NavLink onClick={() => close()} to="/iconography" style={({ isActive }) => isActive ? activeStyle : undefined}>Face Card Iconography</NavLink>
+                    <NavLink onClick={() => close()} to="/games" style={({ isActive }) => isActive ? activeStyle : undefined}>Play Games!</NavLink>
+                    <NavLink onClick={() => close()} to="/bibliography" style={({ isActive }) => isActive ? activeStyle : undefined}>Bibliography</NavLink>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     );
 };
 
-export default Nav;
+export default NavBar;
