@@ -1,3 +1,117 @@
 #main-container {
   padding: 1em 2em;
 }
+
+#nav-bar {
+  margin-top: 1%;
+  padding: 0px;
+  background-color: white;
+  
+}
+
+.nav {
+  margin: auto;
+  width: 100%;
+  border: 1px solid #707070;
+}
+
+.nav a {
+  color: #707070;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  margin: auto;
+}
+
+.dropdown {
+  margin: auto
+}
+
+.nav a:hover {
+  color: #353535;
+  text-decoration: none;
+}
+
+.dropdown-title {
+  width: 100%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #707070;
+  z-index: 1;
+
+  a {
+    width: 100%;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#Logos {
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    margin-top: 10%;
+    margin-bottom: 1%;
+    background-color: #e6e6e6;
+}
+
+#BnF_container {
+    display: inline-block;
+    max_width: 25%;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+#BnF_logo {
+    max-width: 200%;
+    height: auto;
+}
+
+#MIT_container {
+    display: inline-block;
+    max_width: 25%;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#MIT_logo {
+    max-width: 150%;
+    height: auto;
+}
+
+#DH_container {
+    display: inline-block;
+    max_width: 25%;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: -15%;
+}
+
+#DH_logo {
+    max-width: 50%;
+    height: auto;
+}
+
+#Performant_container {
+    display: inline-block;
+    max_width: 25%;
+    height: 100%;
+    margin-top: -1%;
+    margin-right: 25%;
+}
+
+#Performant_logo {
+    max-width: 650%;
+    height: auto;
+    margin: auto;
+}

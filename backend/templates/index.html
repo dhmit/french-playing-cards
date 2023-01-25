@@ -1,3 +1,5 @@
+
+
 {% load render_bundle from webpack_loader %}
 
 <!DOCTYPE html>
@@ -18,11 +20,9 @@
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="app_root">
-            <p>Hello world!</p>
+            <p>Loading...</p>
         </div>
 
-        {{component_props|json_script:"component_props"}}
-        {{component_name|json_script:"component_name"}}
         {% render_bundle 'index' 'js' %}
 
     </body>
