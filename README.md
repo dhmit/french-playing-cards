@@ -1,8 +1,8 @@
 # PLAYING CARDS
 
-Fall 2022 updates to playing card website.
+Fall 2022/IAP 2023 updates to playing card website.
 
-Access the original website at https://frenchplayingcards.mit.edu/.
+Access the website at https://frenchplayingcards.mit.edu/.
 
 
 ## Developer Instructions
