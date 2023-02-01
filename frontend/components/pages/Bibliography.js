@@ -48,6 +48,9 @@ const Bibliography = () => {
             <p> 
                 Allemagne, Henri-René d’. <i>Les Cartes à jouer du XIVe au XXe siècle</i>, 2 vols., Paris, 1906.
             </p>
+            <p>
+                D’Ambly, P. Boiteau. <i>Les cartes à jouer et la cartomancie</i>. Paris: Hachette, 1854.
+            </p>
             <p> 
                 Anonyme, "<a href='https://histoire-de-la-douane.org/de-la-fiscalite-des-jeux-de-cartes-a-travers-lhistoire/'>De la fiscalité des jeux de cartes à travers l'histoire</a>," web site of the <i>Association pour l'Histoire de l'Administration des Douanes</i>. Posted on 22 March 2018.
             </p>
@@ -67,9 +70,6 @@ const Bibliography = () => {
             </p>
             <p>
                 Court de Gébelin, Antoine. <i>Le Tarot</i>. Ed. Jean-Marie Lhote. Paris: Berg, 1983.
-            </p>
-            <p>
-                D’Ambly, P. Boiteau. <i>Les cartes à jouer et la cartomancie</i>. Paris: Hachette, 1854.
             </p>
             <p>
                 Decker, Ronald and Michael Dummett. <i>A History of the Occult Tarot</i>.  London: Duckworth, 2013.
