@@ -65,6 +65,19 @@ const Bibliography = () => {
             <p> 
                 Bustarret, Claire, "<a href='https://journals.openedition.org/socio-anthropologie/2255'>La Carte à jouer, support d'écriture au XVIIIe siècle. Détournement, retourenment, revolution</a>," <i>Socio-anthropologie</i> (2014), 83-98.
             </p>
+            <p>
+                Court de Gébelin, Antoine. <i>Le Tarot</i>. Ed. Jean-Marie Lhote. Paris: Berg, 1983.
+            </p>
+            <p>
+                D’Ambly, P. Boiteau. <i>Les cartes à jouer et la cartomancie</i>. Paris: Hachette, 1854.
+            </p>
+            <p>
+                Decker, Ronald and Michael Dummett. <i>A History of the Occult Tarot</i>.  London: Duckworth, 2013.
+            </p>
+            <p>
+                Decker, Ronald, Thierry Depaulis and Michael Dummett. <i>A Wicked Pack of Cards: The Origins of the Occult Tarot</i>. 
+                London: Duckworth, 1996.
+            </p>
             <p> 
                 Depaulis, Thierry. <i>Les Cartes de la Révolution: Cartes à jouer et propogande.</i> Issy-les-Moulineaux: 
                 Musée français de la Carte à jouer, 1989.
@@ -74,9 +87,19 @@ const Bibliography = () => {
                 Papier</i>, fasc. 412 (April 2014), pp. 256-64; fasc. 413 (July 2014), pp. 289-98; fasc. 414 (October 2014), 
                 pp. 342-53; and fasc. 415 (January 2015), pp. 409-21.
             </p>
+            <p>
+                Depaulis, Thierry.  “The Tarot de Marseille:  Facts and Fallacies.” <i>The Playing-Card</i> 42 (2013-2014): 
+                21-41, 101-120.
+            </p>
+            <p>
+                Depaulis, Thierry. <i>Tarot, jeu et magie</i>. Paris: Bibliothèque Nationale, 1984.
+            </p>
             <p> 
                 Desbarats, Catherine.  “On Being Surprised: by New France’s Card Money, for Example,” <i>Canadian Historical 
                 Review 102-1</i> (March 2021), 125-51.
+            </p>
+            <p>
+                Dummett, Thomas. <i>The Game of Tarot:  From Ferrera to Salt Lake City</i>. London: Duckworth, 1980.
             </p>
             <p> 
                 Dunkley, John. <i>Gambling: A Social and Moral Problem in France</i>, 1685-1792, Oxford: The Voltaire Foundation, 
@@ -84,6 +107,15 @@ const Bibliography = () => {
             </p>
             <p>
                 Freundlich, Francis. <i>Le Monde du jeu à Paris</i>, 1715-1800, Paris : Albin Michel, 1995.
+            </p>
+            <p>
+                Halbronn, Jacques. <i>Recherches sur l’histoire de l’astrologie et du Tarot</i>. Paris:  Grand conjonction, 1993.
+            </p>
+            <p>
+                Hargrave, Catherine Perry. <i>A History of Playing Cards and a Bibliography of Cards and Gaming</i>.  New York: Dover, 1966.
+            </p>
+            <p>
+                Kavanagh, Thomas. <i>Dice, Cards, Wheels: A Different History of French Culture</i>. Philadelphia: University of Pennsylvania Press, 2005.
             </p>
             <p>
                 Kavanaugh, <i>Thomas M. Enlightenment and the Shadows of Chance: The Novel and the Culture of Gambling in 
@@ -94,10 +126,21 @@ const Bibliography = () => {
                 New Haven: The Library, 1981.
             </p>
             <p>
+                Lynn, Michael R. “Jean Baptiste Alliette and the <i>Ecole de Magie</i> in late-eighteenth century Paris.”  In 
+                Michael R. Lynn, ed. <i>Magic, Witchcraft, and Ghosts in the Enlightenment</i>. Routledge: Abingdon, Oxon, 
+                2022: 100-122.
+            </p>
+            <p>
                 Malone, Edward A. "The Use of Playing cards to Communicate Technical and Scientific Information," <i>Technical Communication</i> 55-1 (February 2008), 49-60.
             </p>
             <p>
+                Merlin, Romain. <i>Origine des cartes à jouer</i>.  Paris: Chez l’auteur, 1869.
+            </p>
+            <p>
                 Netchine, Ève, ed., <i>Jeux de princes, jeux de vilains</i>, Paris: Bibliothèque nationale de France / Seuil, 2009. <a href='http://expositions.bnf.fr/jeux/index.htm'>See also the online exhibition web site</a>.
+            </p>
+            <p>
+                Piegeler, Hildegard. <i>Tarot:  Bilderwelten der Esoterik</i>. Munich: Wilhelm Fink, 2010.
             </p>
             <p>
                 Ravel, Jeffrey. “On the Playing Cards of the Dulac Brothers in the Year II,” <i>Studies in Eighteenth-Century 
