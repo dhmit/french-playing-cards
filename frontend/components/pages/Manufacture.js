@@ -71,7 +71,7 @@ const Manufacture = () => {
                 sheets to the card decorators.
             </p>
 
-            <div className="manufacture-images">
+            <div className="manufacture-images-double">
                 <img src="/static/img/manufacture/Image 5.jpg" />
                 <img src="/static/img/manufacture/Image 6.jpg" />
             </div>
@@ -90,7 +90,7 @@ const Manufacture = () => {
                 of the next color.
             </p>
 
-            <div className="manufacture-images">
+            <div className="manufacture-images-double">
                 <img src="/static/img/manufacture/Image 7.jpg" />
                 <img src="/static/img/manufacture/Image 8.jpg" />
             </div>

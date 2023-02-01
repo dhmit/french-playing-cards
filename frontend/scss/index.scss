@@ -55,6 +55,14 @@ span {
         color: #707070;
         text-decoration: underline;
     }
+
+    @media screen and (max-width: 500px) {
+        img {
+            margin: auto;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+    }
 }
 
 #AboutPageContents {
@@ -96,12 +104,28 @@ span {
     .manufacture-images {
         display: flex;
         justify-content: center;
-        width: 80%;
         margin-top: 3%;
+        width: 95%;
 
         img {
-            height: 500px;
+            max-width: 100%;
+            max-height: 500px;
             padding: 10px;
+            text-align: center;
+        }
+    }
+
+    .manufacture-images-double {
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+        width: 95%;
+
+        img {
+            max-width: 50%;
+            max-height: 500px;
+            padding: 10px;
+            text-align: center;
         }
     }
 
@@ -139,6 +163,7 @@ span {
 
 .MaterialsMenuItem {
     text-align: center;
+    margin-bottom: 10px;
 
     a {
         p {
@@ -154,8 +179,15 @@ span {
     }
 }
 
+@media screen and (max-width: 500px) {
+    #MaterialsMenu {
+        display: block;
+    }
+}
+
 #BackMenuImage {
     margin-top: -12%;
+    margin-bottom: -12%;
     transform: rotate(270deg);
 }
 
@@ -187,6 +219,7 @@ span {
     #back-intro {
         float: right;
         margin-right: 1.5%;
+        width: 22%;
     }
 
     p {
@@ -206,10 +239,22 @@ span {
         color: #707070;
         text-decoration: underline;
     }
-}
 
-#back-intro {
-    width: 22%;
+    @media screen and (max-width: 500px) {
+        img {
+            margin: auto;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        #back-text {
+            width: 100%;
+        }
+
+        #back-intro {
+            display: none;
+        }
+    }
 }
 
 .material-subpage-item {
@@ -266,6 +311,16 @@ span {
             }
         }
 
+        @media screen and (max-width: 750px) {
+            .material-subpage-item-images {
+                width: 95%;
+
+                .material-subpage-item-image-caption {
+                    width: 100%;
+                }
+            }
+        }
+
         .back-caption {
             font-size: 90%;
         }
@@ -306,6 +361,14 @@ span {
     a {
         color: #707070;
         text-decoration: underline;
+    }
+
+    @media screen and (max-width: 500px) {
+        img {
+            margin: auto;
+            width: 100%;
+            padding-bottom: 20px;
+        }
     }
 }
 
