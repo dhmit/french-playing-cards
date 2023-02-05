@@ -199,7 +199,8 @@ span {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 90%;
+    height: 80%;
+    width: auto;
 }
 
 .material-subpage-intro {
@@ -311,12 +312,17 @@ span {
             }
         }
 
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 1300px) {
             .material-subpage-item-images {
+                display: block;
                 width: 95%;
 
                 .material-subpage-item-image-caption {
                     width: 100%;
+
+                    img {
+                        max-width: 100%;
+                    }
                 }
             }
         }
@@ -454,6 +460,8 @@ span {
 
 #SearchButton {
     text-align: center;
+    width: fit-content;
+    margin: auto;
     margin-top: 3%;
 }
 
