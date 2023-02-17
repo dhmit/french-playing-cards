@@ -48,7 +48,7 @@ export default class CardSearch extends React.Component {
             makers: []
         },
         searchResults: []
-    }
+    };
 
     handleSearch = () => {
         console.log("clicked search!");
@@ -125,7 +125,7 @@ export default class CardSearch extends React.Component {
                 );
                 this.setState({searchResults: cardItems});
             });
-    }
+    };
 
     handleChange = (selectedItems, context) => {
         // deep copy the state object to be able to modify it
@@ -133,7 +133,7 @@ export default class CardSearch extends React.Component {
         // overwrite only the choice that was just updated
         stateToModify[context["name"]] = selectedItems;
         this.setState({selected: stateToModify});
-    }
+    };
 
     render() {
         return <>

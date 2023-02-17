@@ -11,7 +11,7 @@ export default class Tabs extends React.Component {
     onClick = () => {
         const {label, onClick} = this.props;
         onClick(label);
-    }
+    };
 
     render() {
         const {
