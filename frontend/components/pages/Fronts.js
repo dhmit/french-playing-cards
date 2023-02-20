@@ -118,8 +118,7 @@ const Fronts = () => {
                 <br/>
                 </div>
                 <br/>
-            <p id='SourceFooter'> Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 14) </p>
-
+                
             <br/>
             <h4>B.  SVB, ESC, and Bézu Decks</h4>
                 <p>
