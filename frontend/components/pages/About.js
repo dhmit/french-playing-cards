@@ -1,10 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
 
     React.useEffect(() => {
         document.title = 'About | French Playing Cards';        
     }, []);
+    const { t } = useTranslation();
 
     return (
         <>
@@ -12,22 +14,8 @@ const About = () => {
         
         <div id={"AboutIntro"}>
             <img src={'/static/img/misc/mascot.jpg'}/>
+            <p> { t('about_initial_blurb_1') } </p>
             <p className="About-initial-blurb">
-                The iconography, taxation, manufacture and uses of playing cards in France 
-                underwent substantial changes from 1650 to 1850. By the 1780s, an “Old 
-                Regime” deck of cards had emerged, characterized by the standardization of 
-                face cards, the state's increasing efforts to extract tax revenue from their 
-                producers, their manufacture via the guild system, and the gaming and non-gaming uses 
-                the kings subjects made of new and used decks of cards. The Revolution of 1789, 
-                however, temporarily eliminated the card-makers guild and the excise tax levied on 
-                cards, and mandated the suppression of kings, queens, and jacks on face cards. By 
-                the time of the Directory in the late 1790s, and even more so during the First Empire, 
-                Old Regime practices crept back into the design, taxation, and uses of playing cards. 
-                At the same time, the technologies of production evolved and the industry consolidated 
-                from dozens of manufacturers around the kingdom to a half dozen or so firms. The 
-                history of playing cards over these two centuries offers insight into questions of 
-                rupture and continuity in French politics, culture, and economics across the 
-                revolutionary divide. 
                 <br/>
                 <br/>
                 This web site is one outcome of a larger project by <a href="https://history.mit.edu/people/jeffrey-s-ravel/">Jeffrey Ravel</a>, Professor of History at MIT, to write this history.  At a later date, we hope to add a feature that will allow users to play popular Old Regime and Revolutionary card games online, selecting the historical deck with which they will play.
