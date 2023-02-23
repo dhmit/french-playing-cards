@@ -6,6 +6,7 @@ const About = () => {
     React.useEffect(() => {
         document.title = 'About | French Playing Cards';        
     }, []);
+
     const { t } = useTranslation();
 
     return (
@@ -14,7 +15,7 @@ const About = () => {
         
         <div id={"AboutIntro"}>
             <img src={'/static/img/misc/mascot.jpg'}/>
-            <p> { t('about_initial_blurb_1') } </p>
+            <p> { t("about_initial_blurb_1") } </p>
             <p className="About-initial-blurb">
                 <br/>
                 <br/>
