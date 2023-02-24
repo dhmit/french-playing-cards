@@ -91,7 +91,7 @@ const TarotHistory = () => {
                 </p>
                 <div className='tarot-subpage-item-images'>
                 <div id='tarot-revolutionary-card-reading'>
-                    <ImagePopup src={'/static/img/tarot/history/revolutionary-card-reading.jpg'}/>
+                    <img src={'/static/img/tarot/history/revolutionary-card-reading.jpg'}/>
                     <p>
                     <i>Nouvelle manière de tirer les cartes inventé en 1792</i>.  (Paris, Mondhare et Jean, 1792).  Bibliothèque nationale de France, Cabinet des estampes, RESERVE FOL-QB-201 (129). 
                     </p>
