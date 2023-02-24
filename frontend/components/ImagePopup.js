@@ -1,5 +1,5 @@
 import React from "react";
-import { PropTypes } from "prop-types";
+import {PropTypes} from "prop-types";
 
 const ImagePopup = ({src, alt}) => {
     const [open, setOpen] = React.useState(false);
@@ -12,10 +12,10 @@ const ImagePopup = ({src, alt}) => {
             }
         };
 
-        document.addEventListener('click', handleClickOutside, true);
+        document.addEventListener("click", handleClickOutside, true);
 
         return () => {
-          document.removeEventListener('click', handleClickOutside, true);
+            document.removeEventListener("click", handleClickOutside, true);
         };
 
     }, [open]);
@@ -25,11 +25,12 @@ const ImagePopup = ({src, alt}) => {
             <img src={src} onClick={() => setOpen(true)} alt={alt} />
             
             {open && (
-                <dialog className="dialog" ref={ref} style={{ position: "fixed" }} open>
+                <dialog className="dialog" ref={ref} style={{position: "fixed"}} open>
+                    <p onClick={() => setOpen(false)}>Close</p>
                     <img className="popup-image" src={src} alt={alt} />
                 </dialog>
             )}
-      </div>
+        </div>
 
     );
 };
