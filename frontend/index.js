@@ -25,7 +25,7 @@ ReactDOM.render(
                 <BrowserRouter>
                     <NavBar />
                     <button type="button" onClick={() => changeLanguage('fr')}>fr</button>
-                    <button type="button" onClick={() => changeLanguage('en')}>en</button>
+                    <button type="button" onClick={() => changeLanguage('en-US')}>en</button>
                     <Routes>
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="/about" element={<About />} />
