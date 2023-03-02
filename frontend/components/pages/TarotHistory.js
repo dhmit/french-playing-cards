@@ -17,7 +17,7 @@ const TarotHistory = () => {
                 Hints abound regarding the use of playing cards for divinatory purposes, but 
                 such uses were informal enough that a word for it was not coined until the end of 
                 the eighteenth century when <a href='https://en.wikipedia.org/wiki/Etteilla'>Jean-Baptiste Alliette</a> (1738-1791) started discussing 
-                “cartonomancy” which he later shortened to “cartomancy.”  One early hint comes from 
+                “cartonomancy” which he later shortened to “cartomancy.”  One early hint came from 
                 the famous roué Giovanni Casanova who writes in his memoir about chastising a young, 
                 Russian peasant girl named Zaïre who practiced divination with a regular deck of 
                 cards and apparently used them to predict his infidelities (a feat which probably 
@@ -25,7 +25,7 @@ const TarotHistory = () => {
                 <br/>
                 <br/>
                 While historians have identified some similar references in the eighteenth century, 
-                the use of Tarot cards for divinatory purposes really takes off only after <a href='https://en.wikipedia.org/wiki/Antoine_Court_de_G%C3%A9belin'>Antoine 
+                the use of Tarot cards for divinatory purposes really took off only after <a href='https://en.wikipedia.org/wiki/Antoine_Court_de_G%C3%A9belin'>Antoine 
                 Court de Gébelin</a> (1725-1784) makes a claim for the Egyptian origins of Tarot and 
                 their uses in divination in his multi-volume <u>Le monde primatif</u>.  In the eighth 
                 volume of this work, appearing in 1781, Court de Gébelin claimed the seventy-eight 
@@ -169,7 +169,9 @@ const TarotHistory = () => {
                 </div>
         </div>
         </div>
-
+        
+        <p id='TarotHistoryNote'>For more on Tarot cards and Cartomancy, please the relevant citations on our <a href="../bibliography">Bibliography</a> page.</p>
+               
     </>
     );
 };

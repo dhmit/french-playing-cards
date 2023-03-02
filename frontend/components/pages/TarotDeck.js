@@ -52,7 +52,7 @@ const TarotDeck = () => {
                     such as the Tarot de Marseille included fifty-six regular playing cards 
                     (ace through ten and four face cards including King, Queen, Knight, and Jack) 
                     using the suits of cups, coins, swords, and batons.  When the regular deck was 
-                    combined with the twenty-two Tarot cards it resulted in a standard Tarot deck 
+                    combined with the twenty-two Tarot cards it resulted in a deck 
                     of seventy-eight cards.  Over time, manufacturers regularized the subjects of 
                     the Tarot cards and their order.  Traditionally, these cards are numbered from 
                     one to twenty-one with the Fool card remaining unnumbered. 
@@ -93,7 +93,7 @@ const TarotDeck = () => {
                 <p>
                     Although largely understood today as tools for divination and fortune-telling, 
                     Tarot cards originally served as trumps in a set of card games.  Just as in 
-                    modern Bridge, where one of the suits is designated the trump suit through a 
+                    modern bridge, where one of the suits is designated the trump suit through a 
                     bidding process, Tarot games utilized the twenty-two Tarot cards as trumps.  
                     The standard images of the twenty-two cards include the Fool, the Juggler, the 
                     Popess, the Empress, the Emperor, the Pope, the Lovers, The Chariot, Justice, 

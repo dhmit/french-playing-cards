@@ -144,7 +144,7 @@ const Bibliography = () => {
             </p>
             <p>
                 Ravel, Jeffrey. “On the Playing Cards of the Dulac Brothers in the Year II,” <i>Studies in Eighteenth-Century 
-                Culture</i>, Vol 52, forthcoming March 2023.
+                Culture</i>, Vol. 52 (2023), pp. 325-367.
             </p>
             <p>
                 Ravel, Jeffrey.  “Accommodation: The Policing of Used Playing Cards in Paris in the 1780s,” Pascal Bastien, 

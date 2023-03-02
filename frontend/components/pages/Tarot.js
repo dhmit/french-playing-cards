@@ -8,13 +8,13 @@ const Tarot = () => {
 
     return (
     <>
-        <h2 className="page-header"> TAROT LANDING PAGE </h2>
+        <h2 className="page-header"> Tarot Cards </h2>
 
         <div className="material-subpage-intro">
             <img id="tarot-mascot" src={'/static/img/tarot/tarotMascot.jpeg'}/>
             <p>
                 Tarot cards appeared in Europe in the fourteenth century, and soon made their way 
-                to France. The Tarot deck consisted of 78 cards: four suits consisting of four face 
+                to France. The standard Tarot deck consisted of 78 cards: four suits consisting of four face 
                 cards (King, Queen,Knight, Jack) and the Ace through ten cards, as well as 22 trump 
                 cards. These decks were used to play a game similar to the modern game of bridge. 
                 In the last third of the eighteenth century a new use for these decks appeared, 
