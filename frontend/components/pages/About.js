@@ -15,19 +15,17 @@ const About = () => {
         
         <div id={"AboutIntro"}>
             <img src={'/static/img/misc/mascot.jpg'}/>
-            <p> { t("about_initial_blurb_1") } </p>
+            <p> { t("about.about_initial_blurb_1") } </p>
             <p className="About-initial-blurb">
                 <br/>
                 <br/>
-                This web site is one outcome of a larger project by <a href="https://history.mit.edu/people/jeffrey-s-ravel/">Jeffrey Ravel</a>, Professor of History at MIT, to write this history.  At a later date, we hope to add a feature that will allow users to play popular Old Regime and Revolutionary card games online, selecting the historical deck with which they will play.
+                { t("about.about_initial_blurb_2") } <a href="https://history.mit.edu/people/jeffrey-s-ravel/">Jeffrey Ravel</a> { t("about.about_initial_blurb_3") }
                 <br/>
                 <br/>
-                Professor Ravel and his team wish to thank the <a href="https://www.bnf.fr/en/bibliotheque-nationale-de-france-catalogue-general">Bibliothèque nationale de France</a> (BnF), 
-                which has provided the digital versions of playing cards and the metadata we make available on our site. Users are 
-                invited to explore the extensive digital reproductions of playing cards in the collections of the BnF, which the 
-                Library makes available on its <a href="https://gallica.bnf.fr/accueil/en/content/accueil-en?mode=desktop">Gallica web site</a>. We are also grateful to 
-                the <a href="https://digitalhumanities.mit.edu/">MIT Programs in the Digital Humanities</a> and <a href="https://www.performantsoftware.com">Performant Software</a> for technical support.
-            </p>
+                { t("about.about_initial_blurb_4") } <a href="https://www.bnf.fr/en/bibliotheque-nationale-de-france-catalogue-general">Bibliothèque nationale de France</a>
+                { t("about.about_initial_blurb_5") } <a href="https://gallica.bnf.fr/accueil/en/content/accueil-en?mode=desktop">Gallica web site</a>.{ t("about.about_initial_blurb_6") }
+                <a href="https://digitalhumanities.mit.edu/">MIT Programs in the Digital Humanities</a> { t("about.about_initial_blurb_7") }<a href="https://www.performantsoftware.com">Performant Software</a> { t("about.about_initial_blurb_8") }
+                </p>
         </div>
 
         <div id={'AboutProfiles'}>

@@ -1,6 +1,70 @@
 {
-    "about_initial_blurb_1": "The iconography, taxation, manufacture and uses of playing cards in France  underwent substantial changes from 1650 to 1850. By the 1780s, an “Old  Regime” deck of cards had emerged, characterized by the standardization of  face cards, the state's increasing efforts to extract tax revenue from their  producers, their manufacture via the guild system, and the gaming and non-gaming uses  the kings subjects made of new and used decks of cards. The Revolution of 1789, however, temporarily eliminated the card-makers guild and the excise tax levied on cards, and mandated the suppression of kings, queens, and jacks on face cards. By the time of the Directory in the late 1790s, and even more so during the First Empire, Old Regime practices crept back into the design, taxation, and uses of playing cards. At the same time, the technologies of production evolved and the industry consolidated from dozens of manufacturers around the kingdom to a half dozen or so firms. The history of playing cards over these two centuries offers insight into questions of rupture and continuity in French politics, culture, and economics across the revolutionary divide.",
-    "about_initial_blurb_2": "This web site is one outcome of a larger project by Jeffrey Ravel, Professor of History at MIT, to write this history.  At a later date, we hope to add a feature that will allow users to play popular Old Regime and Revolutionary card games online, selecting the historical deck with which they will play.",
-    "about_intial_blurb_3": "Professor Ravel and his team wish to thank the Bibliothèque nationale de France(BnF), which has provided the digital versions of playing cards and the metadata we make available on our site. Users are invited to explore the extensive digital reproductions of playing cards in the collections of the BnF, which the Library makes available on its Gallica web site. We are also grateful to the MIT Programs in the Digital Humanities and Performant Software for technical support."
-
+    "about":{
+        "about_initial_blurb_1": "The iconography, taxation, manufacture and uses of playing cards in France  underwent substantial changes from 1650 to 1850. By the 1780s, an “Old  Regime” deck of cards had emerged, characterized by the standardization of  face cards, the state's increasing efforts to extract tax revenue from their  producers, their manufacture via the guild system, and the gaming and non-gaming uses  the kings subjects made of new and used decks of cards. The Revolution of 1789, however, temporarily eliminated the card-makers guild and the excise tax levied on cards, and mandated the suppression of kings, queens, and jacks on face cards. By the time of the Directory in the late 1790s, and even more so during the First Empire, Old Regime practices crept back into the design, taxation, and uses of playing cards. At the same time, the technologies of production evolved and the industry consolidated from dozens of manufacturers around the kingdom to a half dozen or so firms. The history of playing cards over these two centuries offers insight into questions of rupture and continuity in French politics, culture, and economics across the revolutionary divide.",
+        "about_initial_blurb_2": "This web site is one outcome of a larger project by ",
+        "about_initial_blurb_3": ", Professor of History at MIT, to write this history.  At a later date, we hope to add a feature that will allow users to play popular Old Regime and Revolutionary card games online, selecting the historical deck with which they will play.",
+        "about_initial_blurb_4": "Professor Ravel and his team wish to thank the ", 
+        "about_initial_blurb_5": " (BnF), which has provided the digital versions of playing cards and the metadata we make available on our site. Users are invited to explore the extensive digital reproductions of playing cards in the collections of the BnF, which the Library makes available on its ",
+        "about_initial_blurb_6":  " We are also grateful to the ",
+        "about_initial_blurb_7":" and ",
+        "about_initial_blurb_8":" for technical support."
+    },
+    "manufacture":{
+        "manufacture_1": "The image above, painted to decorate a hand fan, depicts a lively, chaotic scene in a card-maker’s shop on the Ile de la Cité in Paris overlooking the Pont Neuf and the Seine River at the end of the seventeenth century. Some workers create the paper stock on which the cards are printed, while others paint the cards and then cut and sort them into decks. Shopkeepers sell finished decks to well-appointed customers, while cats and dogs cavort in the foreground among the discards from the manufacturing process. Although the shop looks disorderly, the steps involved in making commercial playing cards were well thought-out and efficient. Thanks to two later, detailed discussions of the process, we have a good idea of how most playing cards in France were made before the French Revolution.",
+        "img_1":{
+            "1": "Image 1.",
+            "2": "The Workshop of a Parisian Playing Card Maker,",
+            "3": "gouache, early 1690s,",
+            "4": "Musée Carnavalet."
+        },
+        "manufacture_2": "The first step in the process was to create the card stock. Guildsmen combined three different types of paper into a composite that absorbed the paint used to decorate the cards, but also created enough flexibility that users could shuffle the cards without bending them. In the figure above, we see two workers on the left using a furnace to fabricate the glue that will bind the three different paper stocks together, while the figure on the right stirs the heated glue in preparation for joining the three layers of paper together.",
+        "img_2": {
+            "1": "Image 2. Detail from Plate 1 of Duhamel du Monceau,", 
+            "2": "Art du cartier",
+            "3": "(Paris: Saillant & Nyon and Desaint, 1761)."
+        },
+        "manufacture_3": "Once the glue had been fabricated, it was used to glue the three different types of paper together. The resulting composite card stock was then placed in a press, similar to that in the image above on the left, to facilitate adhesion and flatten the card stock.",
+        "img_3": {
+            "1":"Image 3. Denis Diderot and Jean le Rond d’Alembert, ",
+            "2": "L’Encyclopédie, ou dictionnaire raisonnée des arts, des sciences, et des métiers",
+            "3": "(Paris, 1763), vol. 19, 1763, article ",
+            "4": "cartier",
+            "5": ", Plate 4."
+    },
+        "manufacture_4": "The paper stock, once removed from the press, was further prepared by workers who trimmed away excess glue from the sides and used tools to scrape off imperfections on the top and bottom layers of the cards. The sheets were then hung from the rafters, as we see in the image above, in order to dry fully before having the card designs applied to them. The worker labeled as Fig. 6 above prepares to take a pile of completed sheets to the card decorators.",
+        "img_4": {
+            "1" :   "Image 4. Detail from Plate 1 of Duhamel du Monceau,",
+            "2":    "Art du cartier",
+            "3":    "(Paris: Saillant & Nyon and Desaint, 1761)."
+        },
+        "manufacture_5": "Face cards (kings, queens, and jacks) and point cards (ace through ten) were painted onto the card stock using stencils. Image 5 shows a carved woodblock from the eighteenth century with the face card designs used to create playing cards in the city of Lyon. Card decorators painted five different colors on the face cards: red, yellow, blue, gray, and black. Image 6 shows an outline printed from a wood block in the upper left, then the five different stencils used to illuminate the cards. Each color requires a different stencil; the colors would be applied one at a time, each color being allowed to dry before the application of the next color.",
+        "img_5":{
+            "1": "Image 5. Woodblock for printing outlines of face cards. Eighteenth Century, Musée Gadagne, Lyon."
+        },
+        "img_6": {
+            "1": "Image 6. Plate 3, Duhamel du Monceau, ",
+            "2":"Art du cartier",
+            "3": "(Paris: Saillant & Nyon and Desaint, 1761)."
+        }, 
+        "manufacture_6": "The illumination of point cards was simpler, because each card required only one color, either black or red. Image 7 shows the metal punches that card-makers used to prepare stencils to print one of the four suits (hearts, diamonds, clubs, and spades). Image 8 shows the resulting stencils created by using these metal punches that served to illuminate the point cards.",
+        "img_7": {
+            "1": "Image 7. Detail from Plate 6 of Denis Diderot and Jean le Rond d’Alembert, ",
+            "2": "L’Encyclopédie, ou dictionnaire raisonnée des arts, des sciences, et des métiers",
+            "3": "(Paris, 1763), vol. 19, 1763, article ",
+            "4":" cartier."
+    },
+        "img_8": {
+            "1": "Image 8. Plate 5, Duhamel du Monceau, ",
+            "2": "Art du cartier",
+            "3": " (Paris: Saillant & Nyon and Desaint, 1761)."
+        },
+        "manufacture_7": "Image 9 shows a single room in which the cards are being painted, given a sheen, cut, and sorted into decks. The individuals labeled as Figures 1 and 2 on the left are applying paint using the stenciling technique described above. Figure 3 is the lisseur, who is applying a sheen to the cards that makes them easier to handle and more pleasing to the touch. Figure 4 uses the large pair of scissors attached to the table to cut the dried, illuminated sheets supplied by Figure 5 into individual cards. Finally on the far right Figure 6 sorts the cut cards into individual decks. Figure 7 in the background is working the press used to create the paper stock that serves as the foundation for the cards being created in the front room of the shop.",
+        "img_9": {
+            "1":"Image 9. Denis Diderot and Jean le Rond d’Alembert, ",
+            "2": "L’Encyclopédie, ou dictionnaire raisonnée des arts, des sciences, et des métiers (Paris, 1763)",
+            "3": ", vol. 19, 1763, article ",
+            "4": "cartier",
+            "5": ", Plate 1."
+    }
+    }
 }
