@@ -1,35 +1,31 @@
 import React from "react";
 import ImageHover from "../ImageHover";
+import { useTranslation } from "react-i18next";
 
 const Backs = () => {
 
     React.useEffect(() => {
         document.title = 'Backs | French Playing Cards';        
     }, []);
+    const { t } = useTranslation();
 
     return (
     <>
-        <h2 className="page-header"> Backs </h2>
+        <h2 className="page-header"> {t("material.backs.full_title")} </h2>
 
         <div className="material-subpage-intro">
             <img src={'/static/img/misc/mascot.jpg'}/>
             <p id="back-text" className="material-subpage-blurb">
-                The backs of playing cards in France were left blank until the 1820s. Because paper was valuable, 
-                card players would not throw out their cards when they were too worn to be useful for gaming. Instead, 
-                people would use the backs of the cards for various purposes, some practical and some more fanciful. 
-                The examples below, drawn from the collections of the <i>Bibliothèque nationale de France</i>, capture some 
-                of these uses. To see the front of the card in question, please pass your cursor over it.
+            {t("material.backs.introa")} <i> {t("material.backs.introb")} </i>{t("material.backs.introc")} 
             </p>
             <img id="back-intro" src={'/static/img/materials/materialsBacks.jpeg'}/>
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Library Card Catalogue</h3>
+        <h3>{t("material.backs.catalogue.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    In the decades before the French Revolution, bibliophiles realized that they could utilize used playing 
-                    cards to catalogue their book collections.  Surviving playing cards from the period suggest that this had 
-                    become the most frequent use for discarded playing cards by the end of the eighteenth century.
+                {t("material.backs.catalogue.1")} 
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
@@ -37,20 +33,18 @@ const Backs = () => {
                     </div>
                 </div>
                 <p className="back-caption">
-                    Transcription: “Chap. 2892. Cruels effets de la vengeance du Cardinal de Richelieu ou Histoire des diables 
-                    de Loudun er d’Urbain Grandier. Amsterdam, Roger, 1716. In-12–veau"
+                {t("material.backs.catalogue.2")} 
                     <br />
-                    Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (18)
+                    {t("material.backs.catalogue.3")} 
                 </p>
             </div>
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Legal Case Label</h3>
+        <h3>{t("material.backs.legal.title")} </h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                After card catalogues, the second most common usage for the backs of discarded playing cards was as filing 
-                labels for legal cases.
+                {t("material.backs.legal.1")}
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
@@ -58,20 +52,18 @@ const Backs = () => {
                     </div>
                 </div>
                 <p className="back-caption">
-                    Transcription: “Apointement en droit pour Claude des Chavanes, Sieur de Beauregard, contre Sieur Claude 
-                    Pesant Bourgeois de Villefranche. Mr. Jacques Bord. Dubost. Vermorel.”
+                    {t("material.backs.legal.2")}
                     <br />
-                    Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 14)
+                    {t("material.backs.legal.3")}
                 </p>
             </div>
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Money</h3>
+        <h3>{t("material.backs.money.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    During the French Revolution, the government printed <i>billets de confiance</i>, or small denomination bills, 
-                    on the backs of used playing cards to supplement the printed bills known <i>assignats</i>.
+                {t("material.backs.money.1a")} <i>{t("material.backs.money.1b")}</i>{t("material.backs.money.1c")} <i>{t("material.backs.money.1d")}</i>
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
@@ -79,19 +71,18 @@ const Backs = () => {
                     </div>
                 </div>
                 <p className="back-caption">
-                    Transcription: “Société patriotique, Ville de S. Maixent, Bon pour quinze sols. Billets de confiance 
-                    remboursables en assignats de deux cent livres et au sessous. No. 2895, 1791.”
+                {t("material.backs.money.2")}
                     <br />
-                    Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 145-147)
+                    {t("material.backs.money.3")}
                 </p>
             </div>
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Meat Ration</h3>
+        <h3>{t("material.backs.meat.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    The military printed meat ration cards on the backs of used playing cards.
+                {t("material.backs.meat.1")}
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
@@ -99,18 +90,18 @@ const Backs = () => {
                     </div>
                 </div>
                 <p className="back-caption">
-                    Transcription: “Infanterie, Viande. Trois Rations. Controllé.”
+                    {t("material.backs.meat.2")}
                     <br />
-                    Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (3, 105)
+                    {t("material.backs.meat.3")}
                 </p>
             </div>
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Business Cards</h3>
+        <h3>{t("material.backs.business_cards.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    Merchants in Paris and other cities would print their business cards on the back of used playing cards.
+                {t("material.backs.business_cards.1")}
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
@@ -118,19 +109,18 @@ const Backs = () => {
                     </div>
                 </div>
                 <p className="back-caption">
-                    Transcription: “Bienvenu Samson, Négociant au Bourget, près Paris, ci-devant à St.-Denis. Tient magasin 
-                    de Vons, Eaux-de-vie, Epicerie.”
+                {t("material.backs.business_cards.2")}
                     <br />
-                    Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (7, 210).
+                    {t("material.backs.business_cards.3")}
                 </p>
             </div>
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Flash Cards</h3>
+        <h3>{t("material.backs.flash_cards.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    The backs of cards were used to teach spelling and grammar
+                {t("material.backs.flash_cards.1")}
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
@@ -138,18 +128,18 @@ const Backs = () => {
                     </div>
                 </div>
                 <p className="back-caption">
-                    Transcription:  “avoir infinitive – present”
+                    {t("material.backs.flash_cards.2")}
                     <br />
-                    Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 16).
+                    {t("material.backs.flash_cards.3")}
                 </p>
             </div>
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Call and Response</h3>
+        <h3>{t("material.backs.call_response.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    The backs of used playing cards might be repurposed for provocative parlor games.
+                {t("material.backs.call_response.1")}
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
@@ -157,18 +147,18 @@ const Backs = () => {
                     </div>
                 </div>
                 <p className="back-caption">
-                    Transcription: “Etes-vous séduisant?”
+                {t("material.backs.call_response.2")}
                     <br />
-                    Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 153)
+                    {t("material.backs.call_response.3")}
                 </p>
             </div>
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Pastoral Drawing</h3>
+        <h3>{t("material.backs.pastoral_drawing.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    An unknown artist used the back of this Jack of Clubs to sketch a pastoral scene.
+                {t("material.backs.pastoral_drawing.1")}
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>
@@ -176,7 +166,7 @@ const Backs = () => {
                     </div>
                 </div>
                 <p className="back-caption">
-                    Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (18)
+                {t("material.backs.pastoral_drawing.2")}
                 </p>
             </div>
         </div>

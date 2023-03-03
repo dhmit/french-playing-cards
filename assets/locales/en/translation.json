@@ -65,6 +65,123 @@
             "3": ", vol. 19, 1763, article ",
             "4": "cartier",
             "5": ", Plate 1."
-    }
+        }
+    },
+    "material": {
+        "material_1": "For gaming and gambling purposes, playing cards were assigned abstract values that allowed players to compete against each other, or against the betting establishment where the games were played.  But playing cards were also material objects that were manufactured and sold to consumers. To understand fully the materiality of French playing cards from 1650 to 1850, we have created pages to examine the fronts of the cards, their backs, and the envelopes in which they were wrapped by their manufacturers.",
+        "fronts":{
+            "title": "fronts",
+            "full_title": "Fronts: The Queen of Hearts",
+            "intro" :{
+            "1": "Most French playing cards before the nineteenth century were manufactured using stencils. The stencil process for point cards (ace through ten) was simple, involving only one color and a design that was standardized across the kingdom. Designs for face cards, however (the king, queen, and jack), varied widely, and utilized four or five different colors. Furthermore, for purposes of control and taxation, the state before 1789 and after 1797 demanded that manufacturers adhere to a single authorized design.",
+            "2": "An analysis of the variations in face card design from the Old Regime through the Revolution of 1848 reveals substantial variation across time that can be explained by changing political, economic, and cultural factors. Here we focus on the Queen of Hearts, but those interested in exploring changes in the ",
+            "3": "iconography",
+            "4": "of other French face cards in this period should explore our ",
+            "5": "face card iconography search tool"
+            },
+            "old_regime":{
+                "title": "The Old Regime (to 1789)",
+                "1": "By 1750, the crown had divided the kingdom into nine regions for purposes of collecting excise taxes on the manufacture of playing cards. Each district had a unique face card iconography which the tax bureau used to ensure compliance with taxation procedures. Face cards that deviated from these designs were alleged to be “fraudulent,” i.e., their manufacturers had not paid the excise tax. Below you see official examples of the Queen of Hearts from the Paris, Guyenne, and Dauphiné regions.",
+                "2": "Paris. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (7)",
+                "3": "Guyenne.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (3, 82)  ",
+                "4": "Dauphiné.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (2, 40) "
+
+            },
+            "french_revolution": {
+                "title": "The French Revolution (1789-1799)",
+                "1": "In the early years of the Revolution, the legislative assemblies abolished the guilds that had controlled the card-making industry and abolished the excise tax levied on playing cards.  The result was that anyone with sufficient capital could open a card-making shop, without being constrained by the official regional playing card designs that characterized the Old Regime.  In addition, rising anti-monarchical sentiment encouraged revolutionary card-makers to find alternatives to the traditional face card trio of kings, queens, and jacks.",
+                "2": "Card-makers experimented with many iconographies in the 1790s.  We provide a sampling of those designs below.",
+                "3": "A. Genuises, Liberties, Equalities",
+                "4": "In Spring 1793, Urbain Jaume and Jean-Démosthène Dugourc took out a patent on a new face card design that converted Kings to “Genuises,” Queens to “Liberties,” and Jacks to “Equalities.”  Their labels, and in some instances their designs, were emulated by other card-makers throughout the kingdom.  In some cases only modest design changes were made to the Old Regime designs.  The right-hand example below, although stylistically similar to prerevolutionary versions of the Queen of Hearts, removes the queen's crown and puts a pike with a phrygian bonnet, a symbol of Republican Rome from antiquity, in her left hand.",
+                "5": "Jaume and Dugourc original design.  “Freedom of Religion.” Source: Bibliothèque nationale de France, RESERVE BOITE ECU-KH-204 (6).",
+                "6": "Jaume and Dugourc variant.  “Freedom of the Press.” Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 154).",
+                "7": "Old Regime “Liberty” modification. Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (4, 102). ",
+                "8": "Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 14)",
+                "9": "B.  SVB, ESC, and Bézu Decks",
+                "10": "Three other notable revolutionary designs were the Sages, Vertus, Braves deck (wise ones, virtuous ones, brave ones), now labeled SVB; the Eléments, Saisons, Cultivateurs deck (Platonic elements, seasons of the year, farmers) deck, now labeled ESC; and a secular, rationalized deck designed by a card-maker in the Champagne region named Bézu.  The queen of Hearts in the deck the left is the “virtue” of justice, and in the middle and on the right are variations on the season of summer.",
+                "11": "SVB.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-204",
+                "12": "ESC.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5BIS, 164).",
+                "13": "Bézu. Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-204-BOITE FOL.  "
+            },
+            "napoleon": {
+                "title": "Napoleon (1799-1815)",
+                "1": "By the time Napoleon came to power, the French state had resumed the excise tax on the manufacture of playing cards. In addition, Napoleon's officials decided to create one uniform face card design for the entire nation. In 1810 they asked the great revolutionary and imperial artist Jacques-Louis David to design a new deck of cards.  David returned to the iconography of the Old Regime, but endowed each king, queen, and jack with historically appropriate costumes. When his design did not prove popular, the regime turned to a designer named Nicolas-Marie Gatteaux, who created designs in 1813 that were more faithful to the appearance of the Old Regime cards, and therefore more popular.  In 1815, a designer named Gustave-Armand Houbigant patented a new iconography with a more romantic, medieval look.",
+                "2":  "David.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, PET FOL-KH-34 (C, 28).",
+                "3": "Gatteaux.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (7BIS, 326).",
+                "4":"Houbigant.  Source:  British Library, 1896,0501.1292.1-12. "
+            },
+            "nineteenth_century": {
+                "title": "Revolution and the Occult in the Nineteenth Century (1815-1848)",
+                "1": "After the fall of Napoleon in 1815, French politics veered between monarchy and republicanism.  Decks of cards designed in the revolutionary years of 1830 and 1848 expressed the hope for change, while other decks of cards tapped into occult tendencies in the early nineteenth century.",
+                "2": "The Revolution of 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (10, 399-400).",
+                "3": "The Revolution of 1848.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (A, 7)-BOITE ECU. ",
+                "4": "Cartomancy, between 1814 and 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (3, 29)-BOITE ECU."
+            }
+        },
+        "backs":{
+            "title": "backs",
+            "full_title": "Backs",
+            "introa": "The backs of playing cards in France were left blank until the 1820s. Because paper was valuable, card players would not throw out their cards when they were too worn to be useful for gaming. Instead, people would use the backs of the cards for various purposes, some practical and some more fanciful. The examples below, drawn from the collections of the ",
+            "introb": "Bibliothèque nationale de France",
+            "introc": ", capture some of these uses. To see the front of the card in question, please pass your cursor over it.",
+            "catalogue": {
+                "title": "Library Card Catalogue",
+                "1": "In the decades before the French Revolution, bibliophiles realized that they could utilize used playing cards to catalogue their book collections.  Surviving playing cards from the period suggest that this had become the most frequent use for discarded playing cards by the end of the eighteenth century.",
+                "2": "Transcription: “Chap. 2892. Cruels effets de la vengeance du Cardinal de Richelieu ou Histoire des diables de Loudun er d’Urbain Grandier. Amsterdam, Roger, 1716. In-12–veau",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (18)"
+            },
+            "legal": {
+                "title": "Legal Case Label",
+                "1": "After card catalogues, the second most common usage for the backs of discarded playing cards was as filing labels for legal cases.",
+                "2": "Transcription: “Apointement en droit pour Claude des Chavanes, Sieur de Beauregard, contre Sieur Claude Pesant Bourgeois de Villefranche. Mr. Jacques Bord. Dubost. Vermorel.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 14)"
+            },
+            "money": {
+                "title": "Money",
+                "1a": "During the French Revolution, the government printed ",
+                "1b": "billets de confiance",
+                "1c": ", or small denomination bills, on the backs of used playing cards to supplement the printed bills known ",
+                "1d" : "assignats.",
+                "2": "Transcription: “Société patriotique, Ville de S. Maixent, Bon pour quinze sols. Billets de confiance remboursables en assignats de deux cent livres et au sessous. No. 2895, 1791.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 145-147)"
+            },
+            "meat": {
+                "title": "Meat Ration",
+                "1": "The military printed meat ration cards on the backs of used playing cards.",
+                "2": "Transcription: “Infanterie, Viande. Trois Rations. Controllé.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (3, 105)"
+            },
+            "business_cards": {
+                "title": "Business Cards",
+                "1": "Merchants in Paris and other cities would print their business cards on the back of used playing cards.",
+                "2": "Transcription: “Bienvenu Samson, Négociant au Bourget, près Paris, ci-devant à St.-Denis. Tient magasin de Vons, Eaux-de-vie, Epicerie.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (7, 210)."
+
+            },
+            "flash_cards": {
+                "title": "Flash Cards",
+                "1": "The backs of cards were used to teach spelling and grammar",
+                "2": "Transcription:  “avoir infinitive – present”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 16)."
+
+            },
+            "call_response":{
+                "title": "Call and Response",
+                "1": "The backs of used playing cards might be repurposed for provocative parlor games.",
+                "2": "Transcription: “Etes-vous séduisant?”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 153)"
+
+            },
+            "pastoral_drawing":{
+                "title": "Pastoral Drawing",
+                "1": "An unknown artist used the back of this Jack of Clubs to sketch a pastoral scene.",
+                "2": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (18)"
+
+            }
+        },
+        "envelopes":{
+            "title": "envelopes"
+
+        }
     }
 }

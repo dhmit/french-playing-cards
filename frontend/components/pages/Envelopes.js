@@ -1,11 +1,13 @@
 import React from "react";
 import ImagePopup from "../ImagePopup";
+import { useTranslation } from "react-i18next";
 
 const Envelopes = () => {
 
     React.useEffect(() => {
         document.title = 'Envelopes | French Playing Cards';        
     }, []);
+    const { t } = useTranslation();
 
     return (
     <>
