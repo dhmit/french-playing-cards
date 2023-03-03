@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import { Nav, Navbar } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const NavBar = () => {
     let activeStyle = {
@@ -15,8 +16,9 @@ const NavBar = () => {
     const { t } = useTranslation();
 
     return (
+        <>
         <Navbar collapseOnSelect expand="xl" variant="light" id="nav-bar">
-            <Navbar.Toggle />
+            <Navbar.Toggle id="nav-toggle" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="nav">
                     <NavLink onClick={() => close()} to="/" style={({ isActive }) => isActive ? activeStyle : undefined}>{t("navigation.home")}</NavLink>
@@ -37,7 +39,9 @@ const NavBar = () => {
                     <NavLink onClick={() => close()} to="/bibliography" style={({ isActive }) => isActive ? activeStyle : undefined}>{t("navigation.bibliography")}</NavLink>
                 </Nav>
             </Navbar.Collapse>
+        <p className="lang-button"><a id={i18next.language === "en" ? "active" : ""} onClick={() => i18next.changeLanguage('en')}>en</a> / <a id={i18next.language === "fr" ? "active" : ""} onClick={() => i18next.changeLanguage('fr')}>fr</a></p>
         </Navbar>
+        </>
     );
 };
 
