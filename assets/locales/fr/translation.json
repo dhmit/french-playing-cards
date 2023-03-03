@@ -1,4 +1,103 @@
 {
+    "navigation" : {
+        "home": "Bienvenu",
+        "about": "À propos",
+        "manufacture": "Fabrication",
+        "material": "Aspects matériels",
+        "fronts": "De face",
+        "backs": "De dos",
+        "envelopes": "Enveloppes",
+        "iconography": "Iconographie",
+        "games": "Jouez !",
+        "bibliography": "Bibliographie"
+    },
+    "home": {
+        "header": "Cartes à jouer françaises, 1650-1850",
+        "blurb": "De 1650 à 1850, les Français ont propagé les Lumières. Ils ont gagné et perdu un empire, puis en ont commencé un autre, et ont renversé une monarchie vieille de plusieurs siècles. Ils ont également joué aux cartes. Ce site explore l'histoire des cartes à jouer françaises de cette période comme une source inhabituelle et éclairante pour l'histoire de l'Ancien Régime, de la Révolution française et du début du XIXe siècle en France. Vous y trouverez des détails sur <1>les procédures de fabrication</1>, <1>les aspects matériels</1> des cartes à jouer et l'évolution de leur <1>iconographie</1>. <1>Une bibliographie</1> fournit des suggestions de lectures complémentaires. Et pour ceux d'entre vous qui souhaitent faire une partie, nous vous proposerons de vous essayer à certains <1>des jeux</1> les plus populaires de l'époque, en utilisant le paquet de cartes historique de votre choix !" 
+    },
+    "manufacture": {
+        "header": "Fabrication",
+        "intro": "Fabrication de cartes à jouer en France avant 1800",
+        "1": {
+            "caption": "Image 1. L'atelier d'un fabricant de cartes à jouer parisien, gouache, début des années 1690, musée Carnavalet.",
+            "text": "L'image ci-dessus, peinte pour décorer un éventail, représente une scène animée et chaotique dans la boutique d'un fabricant de cartes sur l'île de la Cité à Paris, avec vue sur le Pont Neuf et la Seine, à la fin du XVIIe siècle. Certains ouvriers préparent le papier sur lequel les cartes sont imprimées, tandis que d'autres peignent les cartes, puis les découpent et les distribuent en paquets. Des commerçants vendent des jeux à des clients bien mis, tandis que des chats et des chiens gambadent au premier plan parmi les chutes de fabrication. Bien que l'atelier semble désordonné, les étapes de la fabricationdes cartes à jouer commerciales étaient bien pensées et efficaces. Grâce à deux discussions ultérieures détaillées du processus, nous avons une bonne idée de la façon dont la plupart des cartes à jouer étaient fabriquées en France avant la Révolution française."
+        },
+        "2": {
+            "caption": "Image 2. Détail de la planche 1 de Duhamel du Monceau, Art du cartier (Paris : Saillant & Nyon et Desaint, 1761).",
+            "text": "La première étape du processus consistait à confectionner le papier cartonné. Les membres des corporations combinaient trois types de papier différents en un composite qui absorbait la peinture utilisée pour décorer les cartes, mais qui était également suffisamment souple pour que les joueurs puissent mélanger les cartes sans les plier. Sur la figure ci-dessus, nous voyons deux ouvriers, à gauche, qui utilisent un four pour fabriquer la colle qui reliera les trois types de papier, tandis que l'ouvrier de droite remue la colle chauffée pour préparer l'assemblage des trois couches de papier."
+        },
+        "3": {
+            "caption": "Image 3. Denis Diderot et Jean le Rond d'Alembert, L'Encyclopédie, ou dictionnaire raisonné des arts, des sciences, et des métiers (Paris, 1763), vol. 19, 1763, article cartier, planche 4.",
+            "text": "Une fois la colle fabriquée, elle était utilisée pour coller les trois différents types de papier ensemble. Le papier cartonné composite ainsi obtenu était ensuite placé dans une presse, semblable à celle de l'image ci-dessus à gauche, pour faciliter l'adhésion et aplatir le papier cartonné."
+        },
+        "4": {
+            "caption": "Image 4. Détail de la planche 1 de Duhamel du Monceau, Art du cartier (Paris : Saillant & Nyon et Desaint, 1761).",
+            "text": "Le papier, une fois retiré de la presse, était préparé par des ouvriers qui coupaient l'excès de colle sur les côtés et utilisaient des outils pour gratter les imperfections sur les couches supérieures et inférieures des cartes. Les feuilles étaient ensuite suspendues aux chevrons comme nous le voyons sur l'image ci-dessus, afin de sécher complètement avant que les motifs des cartes ne leur soient appliqués. L'ouvrier identifié comme la figure 6 ci-dessus se prépare à apporter une pile de feuilles aux décorateurs de cartes."
+        },
+        "5-6": {
+            "caption": "Image 5. Gravure sur bois pour l'impression des contours des cartes à faces. XVIIIe siècle, Musée Gadagne, Lyon. <br /> Image 6. Planche 3, Duhamel du Monceau, Art du cartier (Paris : Saillant & Nyon et Desaint, 1761).",
+            "text": "Les cartes à figures (rois, dames et valets) et les cartes à points (de l'as au dix) étaient peintes sur le papier cartonné à l'aide de pochoirs. L'image 5 montre un bloc de bois sculpté du XVIIIe siècle avec les motifs de figure utilisés pour créer des cartes à jouer dans la ville de Lyon. Les décorateurs de cartes peignaient cinq couleurs différentes sur leurs faces : rouge, jaune, bleu, gris et noir. L'image 6 montre un contour imprimé à partir d'un bloc de bois en haut à gauche, puis les cinq pochoirs différents utilisés pour enluminer les cartes. L’élaboration de chaque couleur nécessite un pochoir différent ; ainsi, les couleurs étaient appliquées une par une, chaque couleur devant sécher avant l'application de la couleur suivante."
+        },
+        "7-8": {
+            "caption": "Image 7. Détail de la planche 6 de Denis Diderot et Jean le Rond d'Alembert, L'Encyclopédie, ou dictionnaire raisonné des arts, des sciences, et des métiers (Paris, 1763), vol. 19, 1763, article cartier. <br /> Image 8. Planche 5, Duhamel du Monceau, Art du cartier (Paris : Saillant & Nyon et Desaint, 1761).",
+            "text": "L'enluminure des cartes à points était plus simple, car chaque carte ne prenait qu'une seule couleur, soit le noir ou le rouge. L'image 7 montre les poinçons métalliques que les cartonniers utilisaient pour préparer les pochoirs destinés à imprimer l'une des quatre l’une des marques des quatre séries de cartes (cœur, carreau, trèfle et pique). L'image 8 montre les pochoirs créés à l'aide de ces poinçons métalliques, qui servaient à éclairer les cartes à points."
+        },
+        "9": {
+            "caption": "Image 9. Denis Diderot et Jean le Rond d'Alembert, L'Encyclopédie, ou dictionnaire raisonné des arts, des sciences, et des métiers (Paris, 1763), vol. 19, 1763, article cartier, planche 1.",
+            "text": "L'image 9 montre une pièce unique dans laquelle les cartes sont peintes, lustrées, coupées et réparties en différents jeux. Les personnages désignés par les figures 1 et 2 sur la gauche appliquent la peinture en utilisant la technique du pochoir décrite ci-dessus. La figure 3 est le <1>lisseur</1>, qui applique un lustre aux cartes afin de les rendre plus faciles à manipuler et plus agréables au toucher. La figure 4 utilise la grande paire de ciseaux fixée à la table pour découper en cartes individuelles les feuilles séchées et enluminées fournies par la figure 5. Enfin, à l'extrême droite, la figure 6 trie les cartes découpées en jeux individuels. La figure 7, à l'arrière-plan, travaille sur la presse utilisée pour confectionner le papier qui servira de support aux cartes créées dans la pièce avant de l'atelier."
+        }
+    },
+    "material": {
+        "header": "Aspects matériels",
+        "intro": "À des fins de jeu et de pari, les cartes à jouer se voyaient attribuer des valeurs abstraites qui permettaient aux joueurs de se mesurer les uns aux autres, ou à l'établissement de pari où se déroulaient les parties. Mais les cartes à jouer étaient aussi des objets matériels, fabriqués et vendus aux consommateurs. Pour apprécier pleinement la matérialité des cartes à jouer françaises de 1650 à 1850, nous avons créé des pages pour examiner le recto des cartes, leur verso et les enveloppes dans lesquelles elles étaient emballées par leurs fabricants.",
+        "fronts": "De face",
+        "backs": "De dos",
+        "envelopes": "Enveloppes"
+    },
+    "iconography": {
+        "header": "Iconographie des rois, des dames, et des valets",
+        "linkUpper": "Cliquez <1>ICI</1> pour effectuer une recherche dans notre base de données de cartes « figures » ",
+        "introduction": {
+            "header": "Introduction à la base de données",
+            "blurb": "Notre page sur l'évolution des <1>« figures »</1> des cartes à jouer propose des variantes de la dame de cœur, fabriquées en France de l'Ancien Régime au milieu du XIXe siècle. En outre, nous avons compilé une base de données de figures de cartes pour les rois, les reines, les valets et certains as dans les quatre couleurs pendant cette période, ainsi que les métadonnées correspondantes provenant du site Web de la Bibliothèque nationale de France. Notre base de données contient les images et les données de 24 jeux de cartes créés au cours de cette période. L'outil de recherche qui l'accompagne permet aux utilisateurs de rechercher ces images en filtrant par période, carte de face, couleur, ville, fabricant, ainsi que par le recto et le verso des cartes. Les utilisateurs peuvent ainsi personnaliser les comparaisons de l'iconographie du carton facial français entre 1644 et 1848."
+        },
+        "linkLower": "Cliquez <1>ici</1> pour effectuer une recherche dans notre base de données de cartes de visite.",
+        "contents": {
+            "header": "Contenu de la base de données",
+            "blurb": "Nous reproduisons ci-dessous le valet de trèfle de chaque jeu de notre base de données pour vous donner une idée de la variété de conception des figures :"
+        },
+        "decks": {
+            "geography": "Géographie du monde",
+            "heraldry": "Héraldique",
+            "provence": "Portraits de Provence, Ancien Régime",
+            "guyenne": "Portraits de Guyenne, Ancien Régime",
+            "elements": "Éléments, saisons, cultivateurs",
+            "bezu": "Cartes révolutionnaires de Bézu",
+            "david": "Création de Jacques-Louis David",
+            "fantasy": "Jeu de cartes de fantaisie",
+            "queens": "Reines, anciennes et modernes",
+            "auvergne": "Portraits de l’Auvergne, Ancien Régime",
+            "dauphine": "Portraits du Dauphiné, Ancien Régime",
+            "lyon": "Portraits de Lyon, Ancien Régime",
+            "counter-rev": "Cartes contre-révolutionnaires",
+            "philosophes": "<1>Philosophes</1> de l'an II",
+            "gatteaux": "Création de Nicolas-Edme Gatteaux",
+            "heros": "Jeu de cartes « héros »",
+            "war-games": "Jeux de guerre",
+            "languedoc": "Portraits du Languedoc, Ancien Régime",
+            "paris": "Portraits de Paris, Ancien Régime",
+            "modified": "Portraits de Paris, version révolutionnaire modifiée",
+            "genius": "Figures du génie, de la liberté, de l’égalité",
+            "wise-virtuous": "Figures des sages, des vertueuses, des courageux",
+            "barricades": "Jeu de cartes « barricades »",
+            "liberators": "Jeu de cartes « libérateurs »"
+        }
+    },
+    "games": {
+        "header": "Jouez !",
+        "play": "En cours de réalisation"
+    },
+
     "about_initial_blurb_1": "The iconography, taxation, manufacture and uses of playing cards in France  underwent substantial changes from 1650 to 1850. By the 1780s, an “Old  Regime” deck of cards had emerged, characterized by the standardization of  face cards, the state's increasing efforts to extract tax revenue from their  producers, their manufacture via the guild system, and the gaming and non-gaming uses  the kings subjects made of new and used decks of cards. The Revolution of 1789, however, temporarily eliminated the card-makers guild and the excise tax levied on cards, and mandated the suppression of kings, queens, and jacks on face cards. By the time of the Directory in the late 1790s, and even more so during the First Empire, Old Regime practices crept back into the design, taxation, and uses of playing cards. At the same time, the technologies of production evolved and the industry consolidated from dozens of manufacturers around the kingdom to a half dozen or so firms. The history of playing cards over these two centuries offers insight into questions of rupture and continuity in French politics, culture, and economics across the revolutionary divide.",
     "about_initial_blurb_2": "This web site is one outcome of a larger project by Jeffrey Ravel, Professor of History at MIT, to write this history.  At a later date, we hope to add a feature that will allow users to play popular Old Regime and Revolutionary card games online, selecting the historical deck with which they will play.",
     "about_intial_blurb_3": "Professor Ravel and his team wish to thank the Bibliothèque nationale de France(BnF), which has provided the digital versions of playing cards and the metadata we make available on our site. Users are invited to explore the extensive digital reproductions of playing cards in the collections of the BnF, which the Library makes available on its Gallica web site. We are also grateful to the MIT Programs in the Digital Humanities and Performant Software for technical support."
