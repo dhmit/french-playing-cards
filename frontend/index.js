@@ -17,6 +17,7 @@ import Iconography from "./components/pages/Iconography";
 import Search from "./components/pages/DatabaseSearch";
 import Games from "./components/pages/Games";
 import Bibliography from "./components/pages/Bibliography";
+import i18next from "i18next";
 
 ReactDOM.render(
     <div>
@@ -24,8 +25,8 @@ ReactDOM.render(
             <Base>
                 <BrowserRouter>
                     <NavBar />
-                    <button type="button" onClick={() => changeLanguage('fr')}>fr</button>
-                    <button type="button" onClick={() => changeLanguage('en-US')}>en</button>
+                    <button type="button" onClick={() => i18next.changeLanguage('fr')}>fr</button>
+                    <button type="button" onClick={() => i18next.changeLanguage('en')}>en</button>
                     <Routes>
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="/about" element={<About />} />
