@@ -10,6 +10,8 @@
         "about_initial_blurb_8":" for technical support."
     },
     "manufacture":{
+        "header":"Manufacture",
+        "intro": "Introduction",
         "manufacture_1": "The image above, painted to decorate a hand fan, depicts a lively, chaotic scene in a card-maker’s shop on the Ile de la Cité in Paris overlooking the Pont Neuf and the Seine River at the end of the seventeenth century. Some workers create the paper stock on which the cards are printed, while others paint the cards and then cut and sort them into decks. Shopkeepers sell finished decks to well-appointed customers, while cats and dogs cavort in the foreground among the discards from the manufacturing process. Although the shop looks disorderly, the steps involved in making commercial playing cards were well thought-out and efficient. Thanks to two later, detailed discussions of the process, we have a good idea of how most playing cards in France were made before the French Revolution.",
         "img_1":{
             "1": "Image 1.",
