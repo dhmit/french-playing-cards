@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Games = () => {
 
@@ -6,15 +7,17 @@ const Games = () => {
         document.title = 'Play Games! | French Playing Cards';        
     }, []);
 
+    const { t } = useTranslation();
+
     return (
         <>
 
-        <h2 className="page-header"> Play Games! </h2>
+        <h2 className="page-header">{t("games.header")}</h2>
 
         <div className="material-subpage-intro">
             <img src={'/static/img/misc/mascot.jpg'}/>
             <p className="material-subpage-blurb">
-                In progress...
+                {t("games.play")}
             </p>
         </div>
 

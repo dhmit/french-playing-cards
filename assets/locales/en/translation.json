@@ -183,5 +183,68 @@
             "title": "envelopes"
 
         }
-    }
+    },
+    "navigation" : {
+        "home": "Home",
+        "about": "About",
+        "manufacture": "Manufacture",
+        "material": "Material Aspects",
+        "fronts": "Fronts",
+        "backs": "Backs",
+        "envelopes": "Envelopes",
+        "iconography": "Face Card Iconography",
+        "games": "Play Games!",
+        "bibliography": "Bibliography"
+    },
+    "home" : {
+        "header": "French Playing Cards, 1650-1850",
+        "blurb": "From 1650 to 1850, the French spread enlightenment, gained and lost one empire and began another, and overthrew a centuries-old monarchy.  They also played card games.  This site explores the history of French playing cards in this period as an unusual and insightful source for the history of the Old Regime, the French Revolution, and early Nineteenth-Century France.  You will find details about <1>manufacturing procedures</1>, the <1>material aspects</1> of the playing cards, and the changing <1>iconography</1> of French face cards.  A <1>bibliography</1> provides suggestions for further reading.  And for those of you interested in gaming, we will offer the opportunity to play a few of the most popular <1>card games</1> of the period, using the historical deck of cards of your choice!"
+    },
+
+    "iconography": {
+        "header": "Face Card Iconography",
+        "linkUpper": "Click <1>HERE</1> to search our face card database",
+        "introduction": {
+            "header": "Introduction to the database",
+            "blurb": "Our page on the changing “<1>fronts</1>” of playing cards offers variations on the Queen of Hearts manufactured in France from the Old Regime to the middle of the nineteenth century. In addition, we have a compiled a database of face card images for kings, queens, jacks, and some aces in all four suits during this time period, along with the accompanying metadata from the web site of the Bibliothèque nationale de France. Our database contains images and data from 24 decks of cards created during this period. The accompanying search tool allows users to search these images by filtering for time period, face card, suit, town, maker, and the fronts and backs of the cards. Users can thus customize comparisons of French face card iconography during the 1644-1848 time period."
+        },
+        "linkLower": "Click <1>here</1> to search our face card database",
+        "contents": {
+            "header": "Contents of the database",
+            "blurb": "Below we reproduce the Jack of Clubs from each deck in our database to give you a sense of the variety of face card design:"
+        },
+        "decks": {
+            "geography": "World Geography",
+            "heraldry": "Heraldry",
+            "provence": "Provence Old Regime face cards",
+            "guyenne": "Guyenne Old Regime face cards",
+            "elements": "Elements, seasons, farmers face cards",
+            "bezu": "Bézu revolutionary cards",
+            "david": "Jacques-Louis David design",
+            "fantasy": "Fantasy deck",
+            "queens": "Queens, ancient and modern",
+            "auvergne": "Auvergne Old Regime face cards",
+            "dauphine": "Dauphiné Old Regime face cards",
+            "lyon": "Lyon Old Regime face cards",
+            "counter-rev": "Counter-revolutionary cards",
+            "philosophes": "Year II <1>philosophes<1>",
+            "gatteaux": "Nicolas-Edme Gatteaux design",
+            "heros": "Heros deck",
+            "war-games": "War Games",
+            "languedoc": "Languedoc Old Regime face cards",
+            "paris": "Paris Old Regime face cards",
+            "modified": "Modified Old Regime Paris face cards",
+            "genius": "Genius, liberty, equality face cards",
+            "wise-virtuous": "Wise men, virtuous women, brave men face cards",
+            "barricades": "Barricades deck",
+            "liberators": "Liberators deck"
+        }
+    },
+    "games" : {
+        "header": "Play Games!",
+        "play": "In progress..."
+    },
+    "about_initial_blurb_1": "The iconography, taxation, manufacture and uses of playing cards in France  underwent substantial changes from 1650 to 1850. By the 1780s, an “Old  Regime” deck of cards had emerged, characterized by the standardization of  face cards, the state's increasing efforts to extract tax revenue from their  producers, their manufacture via the guild system, and the gaming and non-gaming uses  the kings subjects made of new and used decks of cards. The Revolution of 1789, however, temporarily eliminated the card-makers guild and the excise tax levied on cards, and mandated the suppression of kings, queens, and jacks on face cards. By the time of the Directory in the late 1790s, and even more so during the First Empire, Old Regime practices crept back into the design, taxation, and uses of playing cards. At the same time, the technologies of production evolved and the industry consolidated from dozens of manufacturers around the kingdom to a half dozen or so firms. The history of playing cards over these two centuries offers insight into questions of rupture and continuity in French politics, culture, and economics across the revolutionary divide.",
+    "about_initial_blurb_2": "This web site is one outcome of a larger project by Jeffrey Ravel, Professor of History at MIT, to write this history.  At a later date, we hope to add a feature that will allow users to play popular Old Regime and Revolutionary card games online, selecting the historical deck with which they will play.",
+    "about_intial_blurb_3": "Professor Ravel and his team wish to thank the Bibliothèque nationale de France(BnF), which has provided the digital versions of playing cards and the metadata we make available on our site. Users are invited to explore the extensive digital reproductions of playing cards in the collections of the BnF, which the Library makes available on its Gallica web site. We are also grateful to the MIT Programs in the Digital Humanities and Performant Software for technical support."
 }

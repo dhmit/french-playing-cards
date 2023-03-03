@@ -1,6 +1,6 @@
-import React, { Suspense } from "react";
+import React, {Suspense} from "react";
 import ReactDOM from "react-dom";
-import './i18n';
+import "./i18n";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import "./scss/index.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,8 +24,6 @@ ReactDOM.render(
             <Base>
                 <BrowserRouter>
                     <NavBar />
-                    <button type="button" onClick={() => changeLanguage('fr')}>fr</button>
-                    <button type="button" onClick={() => changeLanguage('en-US')}>en</button>
                     <Routes>
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="/about" element={<About />} />
