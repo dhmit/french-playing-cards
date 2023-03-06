@@ -1,6 +1,6 @@
 import React from "react";
 import ImageHover from "../ImageHover";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 const Backs = () => {
 
@@ -63,7 +63,9 @@ const Backs = () => {
         <h3>{t("material.backs.money.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                {t("material.backs.money.1a")} <i>{t("material.backs.money.1b")}</i>{t("material.backs.money.1c")} <i>{t("material.backs.money.1d")}</i>
+                <Trans i18nKey="material.backs.money.text">
+                    During the French Revolution, the government printed <i>billets de confiance</i>, or small denomination bills, on the backs of used playing cards to supplement the printed bills known as <i>assignats</i>
+                </Trans>
                 </p>
                 <div className='material-subpage-item-images'>
                     <div className='material-subpage-item-image-caption'>

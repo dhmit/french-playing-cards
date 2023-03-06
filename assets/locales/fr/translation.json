@@ -15,6 +15,15 @@
         "header": "Cartes à jouer françaises, 1650-1850",
         "blurb": "De 1650 à 1850, les Français ont propagé les Lumières. Ils ont gagné et perdu un empire, puis en ont commencé un autre, et ont renversé une monarchie vieille de plusieurs siècles. Ils ont également joué aux cartes. Ce site explore l'histoire des cartes à jouer françaises de cette période comme une source inhabituelle et éclairante pour l'histoire de l'Ancien Régime, de la Révolution française et du début du XIXe siècle en France. Vous y trouverez des détails sur <1>les procédures de fabrication</1>, <1>les aspects matériels</1> des cartes à jouer et l'évolution de leur <1>iconographie</1>. <1>Une bibliographie</1> fournit des suggestions de lectures complémentaires. Et pour ceux d'entre vous qui souhaitent faire une partie, nous vous proposerons de vous essayer à certains <1>des jeux</1> les plus populaires de l'époque, en utilisant le paquet de cartes historique de votre choix !" 
     },
+    "about": {
+        "header": "À propos de ce site web",
+        "intro": {
+            "1": "L'iconographie, la taxation, la fabrication et les usages des cartes à jouer en France ont connu d’importants changements entre 1650 et 1850. Jusque dans les années 1780, on assiste à l’émergence d’un jeu dit « d'Ancien Régime », caractérisé par la standardisation des « figures » des cartes, leur production par le système des corporations, les efforts accrus de l'État pour collecter des recettes fiscales auprès de leurs fabricants et les usages, ludiques ou non, qui ont fait des sujets du roi des paquets neufs et usités. La Révolution de 1789, toutefois, a éliminé temporairement la corporation  des des cartiers et l'impôt sur les cartes, et a imposé la suppression des rois, reines et valets sur les figures. À l'époque du Directoire, à la fin des années 1790, et plus encore sous le Premier Empire, les pratiques de l'Ancien Régime se sont ensuite rétablies dans la conception, la fiscalité et les usages des cartes à jouer. Dans le même temps, les technologies de production évoluent et l'industrie se consolide, passant de dizaines de fabricants à travers le royaume à une demi-douzaine d'entreprises. L'histoire des cartes à jouer au cours de ces deux siècles offre un aperçu des questions de rupture et de continuité dans la politique, la culture et l'économie françaises par-delà la fracture révolutionnaire.",
+            "2": "Ce site web s’inscrit dans un projet plus vaste mené par <1>Jeffrey Ravel</1>, professeur d'histoire au MIT, pour écrire cette histoire. Nous espérons ajouter ultérieurement une fonction qui permettra aux utilisateurs de jouer en ligne à des jeux populaires de l'Ancien Régime et de la Révolution, en sélectionnant le paquet de cartes historique de leur choix.",
+            "3": "Le professeur Ravel et son équipe tiennent à remercier la <1>Bibliothèque nationale de France</1> (BnF), qui a fourni les versions numériques des cartes à jouer et les métadonnées que nous mettons à disposition sur notre site. Les utilisateurs sont invités à explorer les nombreuses reproductions numériques de cartes à jouer dans les collections de la BnF, que la Bibliothèque met à disposition sur son <1>site Gallica</1>. Nous sommes également reconnaissants aux <1>programmes du MIT pour les humanités numériques</1> et à <1>Performant Software</1> pour leur soutien technique."
+        },
+        "team": "Membres de l'équipe de développement du site Web des cartes à jouer"
+    },
     "manufacture": {
         "header": "Fabrication",
         "intro": "Fabrication de cartes à jouer en France avant 1800",
@@ -49,10 +58,137 @@
     },
     "material": {
         "header": "Aspects matériels",
-        "intro": "À des fins de jeu et de pari, les cartes à jouer se voyaient attribuer des valeurs abstraites qui permettaient aux joueurs de se mesurer les uns aux autres, ou à l'établissement de pari où se déroulaient les parties. Mais les cartes à jouer étaient aussi des objets matériels, fabriqués et vendus aux consommateurs. Pour apprécier pleinement la matérialité des cartes à jouer françaises de 1650 à 1850, nous avons créé des pages pour examiner le recto des cartes, leur verso et les enveloppes dans lesquelles elles étaient emballées par leurs fabricants.",
-        "fronts": "De face",
-        "backs": "De dos",
-        "envelopes": "Enveloppes"
+        "material_1": "À des fins de jeu et de pari, les cartes à jouer se voyaient attribuer des valeurs abstraites qui permettaient aux joueurs de se mesurer les uns aux autres, ou à l'établissement de pari où se déroulaient les parties. Mais les cartes à jouer étaient aussi des objets matériels, fabriqués et vendus aux consommateurs. Pour apprécier pleinement la matérialité des cartes à jouer françaises de 1650 à 1850, nous avons créé des pages pour examiner le recto des cartes, leur verso et les enveloppes dans lesquelles elles étaient emballées par leurs fabricants.",
+        "fronts": {
+            "title": "De face",
+            "full_title": "De face : La dame de cœur",
+            "intro" :{
+            "1": "La plupart des cartes à jouer françaises avant le XIXe siècle étaient fabriquées au pochoir. Le procédé du pochoir pour les cartes à points (de l'as au dix) était simple, n'impliquant qu'une seule couleur et un dessin qui était standardisé dans tout le royaume. En revanche, les dessins des cartes à face (le roi, la dame et le valet) variaient considérablement et utilisaient quatre ou cinq couleurs différentes. En outre, à des fins de contrôle et de taxation, l'État, avant 1789 et après 1797, exigeait des fabricants qu'ils adhèrent à un seul et même modèle autorisé.",
+            "2": "Une analyse des variations dans la conception des cartes de face, de l'Ancien Régime à la Révolution de 1848, révèle des variations substantielles dans le temps qui peuvent être expliquées par l'évolution des facteurs politiques, économiques et culturels. Nous nous concentrons ici sur la dame de cœur, mais nous invitons les lecteurs intéressées par l'évolution de ",
+            "3": "l'iconographie",
+            "4": "od'autres figures françaises au cours de cette période à explorer notre ",
+            "5": "outil de recherche sur l'iconographie des figures"
+            },
+            "old_regime": {
+                "title": "L'ancien régime (jusqu'en 1789)",
+                "1": "Avant 1750, la Couronne avait divisé le royaume en neuf régions afin de percevoir les droits d'accise (un impôt indirect perçu) sur la fabrication des cartes à jouer. Chaque district disposait d'une iconographie de figure unique que le bureau des impôts utilisait pour s'assurer du respect des procédures fiscales. Les cartes à jouer qui s'écartaient de ces modèles étaient considérées comme « frauduleuses », c'est-à-dire que leurs fabricants n'avaient pas payé la taxe d'accise. Vous trouverez ci-dessous des exemples officiels de la reine de cœur provenant des régions de Paris, de Guyenne et du Dauphiné.",
+                "2": "Paris. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (7)",
+                "3": "Guyenne.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (3, 82)  ",
+                "4": "Dauphiné.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (2, 40) "
+            },
+            "french_revolution": {
+                "title": "La Révolution française (1789-1799)",
+                "1": "Dans les premières années de la Révolution, les assemblées législatives abolissent les corporations qui contrôlaient l'industrie de la cartonnerie et suppriment également l'impôt sur les cartes à jouer. Par conséquent, toute personne disposant d'un capital suffisant pouvait désormais ouvrir un atelier de fabrication de cartes, sans être limitée par les modèles de cartes à jouer régionaux officiels qui caractérisaient l'Ancien Régime. En outre, la montée du sentiment antimonarchique a encouragé les fabricants de cartes révolutionnaires à trouver des alternatives au trio traditionnel de cartes faciales (rois, dames et valets).",
+                "2": "Les fabricants de cartes ont ainsi fait des expériences avec de nombreuses iconographies dans les années 1790. Nous présentons ci-dessous un échantillon de ces créations.",
+                "3": "A. Génies, libertés, égalités",
+                "4": "Au printemps 1793, Urbain Jaume et Jean-Démosthène Dugourc déposent un brevet pour un nouveau modèle de carte qui convertit les rois en « Génies», les reines en « Libertés » et les valets en « Egalités ». Leurs étiquettes et dans certains cas leurs dessins, ont été imités par d'autres fabricants de cartes dans tout le royaume. Dans certains cas, seules des modifications modestes ont été apportées aux dessins de l'Ancien Régime. L'exemple de droite ci-dessous, bien que stylistiquement similaire aux versions prérévolutionnaires de la reine de cœur, retire la couronne de la reine et place dans sa main gauche une pique avec un bonnet phrygien, symbole de la Rome républicaine depuis l’Antiquité.",
+                "5": "Jaume and Dugourc original design.  “Freedom of Religion.” Source: Bibliothèque nationale de France, RESERVE BOITE ECU-KH-204 (6).",
+                "6": "Jaume and Dugourc variant.  “Freedom of the Press.” Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 154).",
+                "7": "Old Regime “Liberty” modification. Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (4, 102). ",
+                "8": "Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 14)",
+                "9": "B. Les jeux SVB, ESC et Bézu",
+                "10": "Trois autres conceptions révolutionnaires notables furent le jeu de cartes Sages, Vertus, Braves (les sages, les vertueuses, les courageux), maintenant appelé SVB ; le jeu de cartes Eléments, Saisons, Cultivateurs (éléments platoniciens, saisons de l'année, agriculteurs), maintenant appelé ESC ; et un jeu de cartes séculaire et rationalisé conçu par un fabricant de cartes de la région de Champagne nommé Bézu. La dame de cœur dans le jeu de gauche représente la « vertu » de la justice, et au milieu et à droite, des variations sur la saison de l'été.",
+                "11": "SVB.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-204",
+                "12": "ESC.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5BIS, 164).",
+                "13": "Bézu. Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-204-BOITE FOL.  "
+            },
+            "napoleon": {
+                "title": "Napoléon (1799-1815)",
+                "1": "Au moment de l'arrivée au pouvoir de Napoléon, l'État français avait repris la taxe d'accise sur la fabrication des cartes à jouer. Les fonctionnaires de Napoléon décident de surcroît de créer un modèle de carte à jouer uniforme pour toute la nation. En 1810, ils demandent au grand artiste révolutionnaire et impérial Jacques-Louis David de concevoir un nouveau jeu de cartes. David revient à l'iconographie de l'Ancien Régime, mais dote chaque roi, dame et valet de costumes historiquement appropriés. Ses motifs ne rencontrant pas le succès escompté, le régime se tournera vers un autre dessinateur nommé Nicolas-Marie Gatteaux, qui créera en 1813 des dessins plus fidèles à l'apparence des cartes de l'Ancien Régime, et donc plus populaires. Enfin, en 1815, un dessinateur nommé Gustave-Armand Houbigant fera breveter une nouvelle iconographie à l'aspect plus romantique et médiéval.",
+                "2":  "David.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, PET FOL-KH-34 (C, 28).",
+                "3": "Gatteaux.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (7BIS, 326).",
+                "4":"Houbigant.  Source:  British Library, 1896,0501.1292.1-12. "
+            },
+            "nineteenth_century": {
+                "title": "La révolution et l'occultisme au XIXe siècle (1815-1848)",
+                "1": "Après la chute de Napoléon en 1815, la politique française oscille entre monarchie et républicanisme. Les jeux de cartes conçus pendant les années révolutionnaires de 1830 et 1848 expriment l'espoir d'un changement, tandis que d'autres jeux de cartes exploitent les tendances occultes du début du XIXe siècle.",
+                "2": "The Revolution of 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (10, 399-400).",
+                "3": "The Revolution of 1848.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (A, 7)-BOITE ECU. ",
+                "4": "Cartomancy, between 1814 and 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (3, 29)-BOITE ECU."
+            }
+        },
+        "backs":{
+            "title": "De Dos",
+            "full_title": "De Dos",
+            "introa": "En France, le dos des cartes à jouer est resté vierge jusque dans les années 1820. Le papier étant précieux, les joueurs de cartes ne jetaient pas leurs cartes lorsqu'elles étaient trop usées pour être utiles au jeu. Au lieu de cela, les gens utilisaient le dos des cartes à diverses fins, certaines pratiques et d'autres plus fantaisistes. Les exemples ci-dessous, tirés des collections de la ",
+            "introb": "Bibliothèque nationale de France",
+            "introc": ", illustrent certaines de ces utilisations. Pour voir le recto de la carte en question, vous pouvez passer votre curseur sur chacune d’elles.",
+            "catalogue": {
+                "title": "Catalogue des fichiers bibliothécaires",
+                "1": "Dans les décennies précédant la Révolution française, les bibliophiles ont réalisé qu'ils pouvaient utiliser des cartes à jouer usagées pour cataloguer leurs collections de livres. Les cartes à jouer qui ont survécu à cette période suggèrent que cette utilisation était devenue la plus fréquente pour les cartes à jouer jetées à la fin du XVIIIe siècle.",
+                "2": "Transcription: “Chap. 2892. Cruels effets de la vengeance du Cardinal de Richelieu ou Histoire des diables de Loudun er d’Urbain Grandier. Amsterdam, Roger, 1716. In-12–veau",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (18)"
+            },
+            "legal": {
+                "title": "Étiquette d'étui juridique",
+                "1": "Après les catalogues de cartes, la deuxième utilisation la plus courante du dos des cartes à jouer mises au rebut était celle d'étiquettes de classement pour les affaires juridiques.",
+                "2": "Transcription: “Apointement en droit pour Claude des Chavanes, Sieur de Beauregard, contre Sieur Claude Pesant Bourgeois de Villefranche. Mr. Jacques Bord. Dubost. Vermorel.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 14)"
+            },
+            "money": {
+                "title": "Monnaie",
+                "text": "Pendant la Révolution française, le gouvernement a imprimé des billets de confiance, ou petites coupures, au dos des cartes à jouer usagées pour compléter les billets imprimés appelés assignats.",
+                "2": "Transcription: “Société patriotique, Ville de S. Maixent, Bon pour quinze sols. Billets de confiance remboursables en assignats de deux cent livres et au sessous. No. 2895, 1791.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 145-147)"
+            },
+            "meat": {
+                "title": "Ration de viande",
+                "1": "Les militaires imprimaient des cartes de rationnement de viande au dos de cartes à jouer usagées.",
+                "2": "Transcription: “Infanterie, Viande. Trois Rations. Controllé.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (3, 105)"
+            },
+            "business_cards": {
+                "title": "Cartes de visite",
+                "1": "Les commerçants de Paris et d'autres villes imprimaient leurs cartes de visite au dos de cartes à jouer usagées.",
+                "2": "Transcription: “Bienvenu Samson, Négociant au Bourget, près Paris, ci-devant à St.-Denis. Tient magasin de Vons, Eaux-de-vie, Epicerie.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (7, 210)."
+            },
+            "flash_cards": {
+                "title": "Cartes flash",
+                "1": "Le dos des cartes était utilisé pour enseigner l'orthographe et la grammaire.",
+                "2": "Transcription:  “avoir infinitive – present”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 16)."
+            },
+            "call_response":{
+                "title": "Appel et réponse",
+                "1": "Le dos des cartes à jouer usagées pouvait être réutilisé pour des jeux de société provocants.",
+                "2": "Transcription: “Etes-vous séduisant?”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 153)"
+            },
+            "pastoral_drawing":{
+                "title": "Dessin pastoral",
+                "1": "Un artiste inconnu a utilisé le dos de ce valet de trèfle pour dessiner une scène pastorale.",
+                "2": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (18)"
+            }
+        },
+        "envelopes":{
+            "title": "Enveloppes",
+            "intro": "Les fabricants français de cartes à jouer de ces siècles emballent leurs cartes dans des enveloppes en papier pour les vendre au public. L'aspect de ces enveloppes n'étant pas contrôlé par les agents fiscaux royaux, les fabricants de cartes étaient libres de créer leurs propres motifs d'enveloppes, dans le respect de limites idéologiques implicitement comprises. Avant la Révolution, les fabricants utilisaient ainsi les enveloppes pour faire connaître leurs produits, les noms de leurs marques et les emplacements urbains de leurs magasins à leur clientèle. Les images imprimées sur les emballages pouvaient faire référence à la monarchie française ou à d'autres rois. Comme pour l'iconographie des cartes de figures, une fois que la Révolution a éclaté en 1789, les enveloppes ont commencé à incorporer des images et des devises révolutionnaires. Certains éléments suggèrent que la conception des enveloppes de la période napoléonienne a peut-être atténué les références idéologiques des années 1790.",
+            "epinal": {
+                "title": "Enveloppes de cartes à jouer d'Épinal, première moitié du XVIIe siècle",
+                "text": "Dans la première moitié du XVIIe siècle, les fabricants de cartes de la ville d'Épinal, en Lorraine, mettent en valeur l'héraldique, l'architecture et la couronne sur leurs emballages de cartes."
+            },
+            "rouen": {
+                "title": "Enveloppes de cartes à jouer de Rouen, seconde moitié du XVIIe siècle",
+                "text": "Ces deux exemples d'enveloppes, datant de la seconde moitié du XVIIe siècle à Rouen, sont reliés par un panneau central où deux figures allégoriques, intitulées « JEUNESSE » et « RICHESSE », soutiennent un cartouche central. Dans un cas, le cartouche fait un jeu de mots sur le nom du fabricant de cartes (Lepinne, ou pin), tandis que dans l'autre, il contient une représentation du roi biblique David, qui était fréquemment représenté sur le roi de pique avant 1789."
+            },
+            "eighteenth": {
+                "title": "Exemples d'enveloppes de cartes du XVIIIe siècle",
+                "text": "Ces deux exemples du XVIIIe siècle sont tous deux focalisés sur la monarchie. Celui de gauche montre un roi français à cheval dans un cartouche soutenu par des courtisans. La légende qui entoure le cartouche affirme que le roi est « le héros de tous les rois ». Le panneau central de l'emballage de droite représente l'épouse de l'héritier du trône de France (la « Dauphine ») dans une pose de peintre. Le fabricant parisien affirme être son cartonnier autorisé."
+            },
+            "revolutionary": {
+                "title": "Une modification révolutionnaire de l'emballage d'une carte",
+                "text": "Les fabricants de cartes ont dû adapter leurs emballages aux idéaux révolutionnaires, tout comme ils ont dû modifier l'iconographie des cartes qu'ils fabriquaient. Parfois, les changements étaient subtils. À gauche, un ex-libris prérévolutionnaire produit par le cartier et papetier parisien Hugues Chassonnier représente les trois rois bibliques d'Orient qui portaient des cadeaux pour l'enfant Jésus. Le monarque de gauche montre l'étoile dans le ciel qui les a poussés à se rendre à Bethléem. Cette plaque, produite dans les deux dernières décennies de l'Ancien Régime, a servi de marque de fabrique à la boutique de Chassonnier ; elle a peut-être imité l'enseigne qui pendait à l'extérieur de sa boutique. A droite, un emballage de carte à jouer fabriqué par Chassonnier dans les premières années de la Révolution. Ici, les trois personnages sont suffisamment proches de l'ex-libris prérévolutionnaire pour que les clients parisiens du fabricant de cartes aient pu reconnaître le fabricant. Mais les cadeaux que portent les rois sont atténués, et leurs couronnes ont été remplacées par des turbans. Le rabat en haut de l'enveloppe les qualifie de « maures » et non de rois. Et le texte en bas informe les acheteurs que les cartes contenues dans l'enveloppe ont été fabriquées par le « citoyen » Chassonnier."
+            },
+            "shine": {
+                "title": "« Je luit pour tous »",
+                "text": "D'autres fabricants de cartes ont gravé des images et des slogans plus ouvertement révolutionnaires sur leurs emballages de cartes. À gauche, un emballage imprimé par le cartonnier lyonnais Manus présente également un corps céleste dans le coin supérieur droit du panneau principal, en l'occurrence le soleil, avec la légende égalitaire « Je luit pour tous. » (Je brille pour tous.). Une allégorie féminine assise, bien en vue, contemple un navire à l'horizon et lève le bras en signe de salut à l'idée d'espoir (« A LESPERANCE »). L'enveloppe de droite, créée par les cartiers grenoblois Cheminade et Repellin, reprend la devise « le soleil luit pour tous » figurant sur les rabats latéraux de l'enveloppe. Dans le panneau central, un cartouche représentant une fasce romaine antique et un bonnet phrygien est entouré des mots « REPUBLIQUE FRANCAISE ». Les mentions « LIBERTE » et « EGALITE » sont imprimées au-dessus. Les acheteurs auraient ainsi facilement reconnu les sympathies républicaines des deux fabricants de cartes."
+            },
+            "napoleonic": {
+                "title": "Enveloppes de cartes napoléoniennes",
+                "text": "Ces deux exemples, datant de la première décennie du XIXe siècle, présentent des modèles qui évitent à la fois le patronage royal de l'Ancien Régime et les préoccupations idéologiques de la Révolution. L'enveloppe de gauche, conçue pour emballer un jeu de cartes Gatteaux vers 1810-1815, présente deux anges ailés, de style classique, sonnant de la corne. (Sur le jeu du graveur Gatteaux, voir la page « DE FACE » des cartes sur ce site). Entre eux, ils soutiennent un petit cartouche contenant les symboles des quatre couleurs des cartes. À droite, l'enveloppe imprimée par la Veuve Delatre, une cartonnière parisien, comporte également un cartouche relativement simple évoquant le roi Salomon de la Bible. À sa gauche et à sa droite, des cornes d'abondance débordent de cartes à jouer, tandis que le rabat situé en dessous indique le magasin du fabricant dans une police de caractères simple. Si l'iconographie des deux emballages fait référence à l'imagerie classique et biblique, elle reproduit également des images de cartes et des jeux de cartes qui auraient été familières aux joueurs de l’époque."
+            }
+        }
     },
     "iconography": {
         "header": "Iconographie des rois, des dames, et des valets",
@@ -97,8 +233,15 @@
         "header": "Jouez !",
         "play": "En cours de réalisation"
     },
-
-    "about_initial_blurb_1": "The iconography, taxation, manufacture and uses of playing cards in France  underwent substantial changes from 1650 to 1850. By the 1780s, an “Old  Regime” deck of cards had emerged, characterized by the standardization of  face cards, the state's increasing efforts to extract tax revenue from their  producers, their manufacture via the guild system, and the gaming and non-gaming uses  the kings subjects made of new and used decks of cards. The Revolution of 1789, however, temporarily eliminated the card-makers guild and the excise tax levied on cards, and mandated the suppression of kings, queens, and jacks on face cards. By the time of the Directory in the late 1790s, and even more so during the First Empire, Old Regime practices crept back into the design, taxation, and uses of playing cards. At the same time, the technologies of production evolved and the industry consolidated from dozens of manufacturers around the kingdom to a half dozen or so firms. The history of playing cards over these two centuries offers insight into questions of rupture and continuity in French politics, culture, and economics across the revolutionary divide.",
-    "about_initial_blurb_2": "This web site is one outcome of a larger project by Jeffrey Ravel, Professor of History at MIT, to write this history.  At a later date, we hope to add a feature that will allow users to play popular Old Regime and Revolutionary card games online, selecting the historical deck with which they will play.",
-    "about_intial_blurb_3": "Professor Ravel and his team wish to thank the Bibliothèque nationale de France(BnF), which has provided the digital versions of playing cards and the metadata we make available on our site. Users are invited to explore the extensive digital reproductions of playing cards in the collections of the BnF, which the Library makes available on its Gallica web site. We are also grateful to the MIT Programs in the Digital Humanities and Performant Software for technical support."
+    "bibliography": {
+        "header": "Bibliographie",
+        "collections": {
+            "title": "I. Collections de cartes à jouer historiques avec un important fonds français",
+            "bnf": "<i>Bibliothèque nationale de France</i>. La BnF a numérisé plus de 1800 pièces de ses collections de cartes à jouer du Cabinet des estampes. Pour parcourir ces fonds, rendez-vous sur <2>https://gallica.bnf.fr</2>. Sélectionnez « images » dans le menu déroulant intitulé « Tout Gallica », puis saisissez « JeuCart » dans la barre de recherche. Les utilisateurs peuvent filtrer les résultats par auteur, siècle et langue.",
+            "musee": "<i>Musée français de la carte à jouer</i>. Ce musée, situé dans la banlieue parisienne d'Issy-les-Moulineaux, contient des expositions sur l'histoire des cartes à jouer françaises ainsi que des collections de cartes et une bibliothèque consacrée à leur histoire. Le site web du musée est disponible <2>ici</2>.",
+            "columbia": "<i>Université de Columbia, Columbia University, Rare Book and Manuscript Library</i>. L’université de Columbia conserve la collection Albert Field de cartes à jouer, avec plus de 6300 paquets  individuels. Une description et l'accès à une base de données sont disponibles à l'adresse <2>https://dlc.library.columbia.edu/field_playing_cards.</2>",
+            "yale": "<i>Université de Yale, Beinecke Library</i>. La Beinecke Library possède la Cary Card Collection, qui comprend plus de 1000 jeux de cartes entiers ou partiels et de nombreux autres articles liés aux cartes à jouer. Pour obtenir une description de la collection et un lien vers une base de données consultable, rendez-vous sur <2>https://beinecke.library.yale.edu/collections/highlights/cary-playing-card-database</2>. Un essai utile décrivant la collection est disponible <2>ici</2>."
+        },
+        "scholarship": "II. Selected Scholarship on the History of French Playing Cards and Gaming"
+    }
 }

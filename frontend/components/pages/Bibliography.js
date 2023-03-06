@@ -1,4 +1,5 @@
 import React from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 const Bibliography = () => {
     
@@ -6,45 +7,55 @@ const Bibliography = () => {
         document.title = 'Bibliography | French Playing Cards';        
     }, []);
 
+    const {t} = useTranslation();
+
     return (
         <>
-        <h2 className="page-header"> Bibliography </h2>
+        <h2 className="page-header">{t("bibliography.header")}</h2>
 
         <img id="bibliography-mascot" src="/static/img/misc/bibliography-image.jpeg"/>
 
         <div className="bibliography-content">
-            <h3> I. Collections of Historical Playing Cards with Substantial French Holdings </h3>
+            <h3>{t("bibliography.collections.title")}</h3>
             <p>
+            <Trans i18nKey="bibliography.collections.bnf">
                 <i>Bibliothèque nationale de France</i>.  The BnF has digitized more than 1800 items 
                 in its playing card collections in the Cabinet des estampes.  To browse these holdings, 
                 go to <a href="https://gallica.bnf.fr">https://gallica.bnf.fr</a>.  Select “images” in 
                 the dropdown menu labeled “Tout Gallica,” then enter “JeuCart” in the search bar.  Users 
                 can filter the results by author, century, and language.
+            </Trans>
             </p>
             <p>
+            <Trans i18nKey="bibliography.collections.musee">
                 <i>Musée français de la carte à jouer</i>.  This museum, located in the Parisian suburb of 
                 Issy-les-Moulineaux, contains exhibits about the history of French playing cards as well as 
                 collections of cards and a library devoted to their history.  The Museum’s web site is 
                 available <a href="https://www.museecarteajouer.com/">here</a>.
+            </Trans>
             </p>
             <p>
+            <Trans i18nKey="bibliography.collections.columbia">
                 <i>Columbia University, Rare Book and Manuscript Library</i>.  Columbia conserves the Albert 
                 Field Collection of Playing Cards, with more than 6300 individual decks.  A description and 
                 access to a database can be found at <a href="https://dlc.library.columbia.edu/field_playing_cards">
                 https://dlc.library.columbia.edu/field_playing_cards</a>.
+            </Trans>
             </p>
             <p>
+            <Trans i18nKey="bibliography.collections.yale">
                 <i>Yale University, Beinecke Library.</i> The Beinecke holds the Cary Card Collection, consisting 
                 of over 1000 whole or partial decks of cards and many other playing card-related items.  For a 
                 description of the collection, and a link to searchable database, go to <a href="https://beinecke.library.yale.edu/collections/highlights/cary-playing-card-database">
                 https://beinecke.library.yale.edu/collections/highlights/cary-playing-card-database</a>. There is 
                 a useful essay describing the collection <a href="http://carycards.beinecke.library.yale.edu/CaryEssaysWeb.htm">
                 here</a>.
+            </Trans>
             </p>
         </div>
 
         <div className="bibliography-content">
-            <h3>II. Selected Scholarship on the History of French Playing Cards and Gaming</h3>
+            <h3>{t("bibliography.scholarship")}</h3>
             <p> 
                 Allemagne, Henri-René d’. <i>Les Cartes à jouer du XIVe au XXe siècle</i>, 2 vols., Paris, 1906.
             </p>

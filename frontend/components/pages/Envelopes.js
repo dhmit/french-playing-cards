@@ -1,42 +1,37 @@
 import React from "react";
 import ImagePopup from "../ImagePopup";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 const Envelopes = () => {
 
     React.useEffect(() => {
         document.title = 'Envelopes | French Playing Cards';        
     }, []);
+
     const { t } = useTranslation();
 
     return (
     <>
-        <h2 className="page-header"> Envelopes </h2>
+        <h2 className="page-header">{t("material.envelopes.title")}</h2>
 
         <div className="material-subpage-intro">
             <img src={'/static/img/misc/mascot.jpg'}/>
             <p className="material-subpage-blurb">
-                French playing card manufacturers in these centuries packaged their cards in paper wrappers for sale to the 
-                public.  The look of these wrappers was not controlled by the royal taxing agents, so card-makers were free 
-                to create their own wrapper designs, within implicitly understood ideological limits.  Before the Revolution, 
-                manufacturers utilized the wrappers to communicate patronage of their product, brand names, and the urban 
-                locations of their shops.  The images imprinted on the wrappers might reference the French monarchy, or other 
-                kings.  As with face card iconography, once the Revolution broke out in 1789 the wrappers began to incorporate 
-                revolutionary images and mottos.  There is some evidence to suggest that envelope design in the Napoleonic 
-                period may have toned down the ideological references of the 1790s.
+            {t("material.envelopes.intro")}
                 <br/>
                 <br/>
+            <Trans i18nKey="material.envelopes.images">
                 The card images below and the associated metadata are courtesy of the <a href="https://gallica.bnf.fr/">Gallica</a> site of the Bibilothèque 
                 nationale de France.
+            </Trans>
             </p>
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Epinal Playing Card Wrappers, First Half of the Seventeenth Century</h3>
+        <h3>{t("material.envelopes.epinal.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                In the first half of the seventeenth century, card-makers in the town of Épinal, in Lorraine, emphasized 
-                heraldry, architecture, and the crown on their card wrappers.
+                {t("material.envelopes.epinal.text")}
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
@@ -63,14 +58,10 @@ const Envelopes = () => {
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Rouen Playing Card Wrappers, Second Half of the Seventeenth Century</h3>
+        <h3>{t("material.envelopes.rouen.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    These two envelope examples, from the second half of the seventeenth century in Rouen, are linked by a 
-                    central panel in which two allegorical figures, labeled “JEUNESSE” (youth) and “RICHESSE,” (wealth) 
-                    support a central cartouche.  In one case the cartouche puns on the name of the card manufacturer
-                    (Lepinne, or pine tree), while in the other it contains a representation of the biblical King David, 
-                    who was frequently depicted on the King of Spades before 1789.
+                {t("material.envelopes.rouen.text")}
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
@@ -98,14 +89,10 @@ const Envelopes = () => {
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Eighteenth-Century Examples of Card Wrappers</h3>
+        <h3>{t("material.envelopes.eighteenth.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    These two examples from the eighteenth century both have a focus on monarchy.  The one on the left 
-                    displays a French king on horseback in a cartouche held up by courtiers.  The legend encircling the 
-                    cartouche claims that the king is “the hero of all kings.”  The central panel of the wrapper on the 
-                    right represents the wife of the heir to the French throne (the “Dauphine”) in a painterly pose.  
-                    The Parisian manufacturer claims to be her authorized card-maker.
+                {t("material.envelopes.eighteenth.text")}
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
@@ -136,21 +123,10 @@ const Envelopes = () => {
         </div>
 
         <div className='material-subpage-item'>
-        <h3>A Revolutionary Modification to a Card Wrapper</h3>
+        <h3>{t("material.envelopes.revolutionary.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    Card-makers had to adapt their wrappers to revolutionary ideals, just as they had to modify the 
-                    iconography of the face cards they manufactured.  Sometimes the changes were subtle. On the left is a 
-                    prerevolutionary bookplate produced by the Parisian card-maker and stationer Hugues Chassonnier that 
-                    features the three biblical kings from the East who bore gifts for the Christ child.  The monarch on 
-                    the left points to the star in the sky that prompted their journey to Bethlehem.  This nameplate, 
-                    produced in the last two decades of the Old Regime, served as the Chassonnier shop’s trademark; it may 
-                    have imitated the sign that hung outside his shop.  On the right is a playing card wrapper manufactured 
-                    by Chassonnier in the early years of the Revolution.  Here the three figures are similar enough to the 
-                    prerevolutionary bookplate that the card-makers’ Parisian customers would have recognized the manufacturer.  
-                    But the gifts the kings bear are de-emphasized, and their crowns have been replaced by turbans.  
-                    The flap at the top of the envelope labels them as “moors,” not kings.  And the text at the bottom informs 
-                    consumers that the cards in the wrapper were manufactured by “Citizen” Chassonnier.
+                {t("material.envelopes.revolutionary.text")}
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
@@ -185,18 +161,10 @@ const Envelopes = () => {
         </div>
 
         <div className='material-subpage-item'>
-        <h3>“I Shine for All”</h3>
+        <h3>{t("material.envelopes.shine.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    Other card-makers engraved more overtly revolutionary images and slogans on their card wrappers.  
-                    On the left, a wrapper printed by the Lyonnais card-maker Manus also features a celestial body in the 
-                    upper-right hand corner of the main panel, in this case the sun, with the egalitarian legend “Je luit pour tous.”  
-                    (I shine for all.). A seated female allegory, prominently featured, gazes at a ship on the horizon, raising her 
-                    arm in a salute to the idea of hope (“A LESPERANCE”).  The wrapper on the right, created by the Grenoblois 
-                    card-makers Cheminade and Repellin, repeats the “sun shines for all” motto on the side flaps of the envelope.  
-                    In the center panel a cartouche featuring an ancient Roman fasces and a phrygian bonnet is encircled by the 
-                    words “REPUBLIQUE FRANCAISE.”  The labels “LIBERTE” and “EGALITE” are printed above.  Consumers would have 
-                    readily recognized the republican sympathies of both card-makers.
+                {t("material.envelopes.shine.text")}
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
@@ -225,9 +193,10 @@ const Envelopes = () => {
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Napoleonic Card Wrappers</h3>
+        <h3>{t("material.envelopes.napoleonic.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
+                <Trans i18nKey="material.envelopes.napoleonic.text">
                     These two examples, from the first decade of the nineteenth century, display designs that eschew both 
                     Old Regime royal patronage and Revolutionary ideological concerns.  The envelope on the left, designed 
                     to package a deck of Gatteaux cards around 1810-1815, features two winged, classicizing angels sounding 
@@ -238,6 +207,7 @@ const Envelopes = () => {
                     manufacturer’s shop in a plain typeface.  While the iconography of both wrappers references classical and 
                     biblical imagery, it also reproduces images of card suits and card decks that would have been familiar to 
                     gamblers in the period.
+                </Trans>
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
