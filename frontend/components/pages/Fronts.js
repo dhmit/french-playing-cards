@@ -1,63 +1,52 @@
 import React from "react";
 import ImagePopup from "../ImagePopup";
+import { useTranslation } from "react-i18next";
 
 const Fronts = () => {
 
     React.useEffect(() => {
         document.title = 'Fronts | French Playing Cards';        
     }, []);
+    const { t } = useTranslation();
 
     return (
     <>
-        <h2 className="page-header"> Fronts: The Queen of Hearts </h2>
+        <h2 className="page-header"> {t("material.fronts.full_title")} </h2>
 
         <div className="material-subpage-intro">
             <img src={'/static/img/misc/mascot.jpg'}/>
             <p className="material-subpage-blurb">
-                Most French playing cards before the nineteenth century were manufactured using stencils. 
-                The stencil process for point cards (ace through ten) was simple, involving only one 
-                color and a design that was standardized across the kingdom. Designs for face cards, 
-                however (the king, queen, and jack), varied widely, and utilized four or five different 
-                colors. Furthermore, for purposes of control and taxation, the state before 1789 and 
-                after 1797 demanded that manufacturers adhere to a single authorized design. 
+                {t("material.fronts.intro.1")}
                 <br/>
                 <br/>
-                An analysis of the variations in face card design from the Old Regime through the 
-                Revolution of 1848 reveals substantial variation across time that can be explained by 
-                changing political, economic, and cultural factors. Here we focus on the Queen of Hearts, 
-                but those interested in exploring changes in the <a href='../iconography'>iconography</a> of other French face cards 
-                in this period should explore our <a href='../iconography/search'>face card iconography search tool</a>.
+                {t("material.fronts.intro.2")} <a href='../iconography'>{t("material.fronts.intro.3")} </a>
+                {t("material.fronts.intro.4")}  <a href='../iconography/search'>{t("material.fronts.intro.5")} </a>.
             </p>
         </div>
 
         <div className='material-subpage-item'>
-        <h3>The Old Regime (to 1789)</h3>
+        <h3>{t("material.fronts.old_regime.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                By 1750, the crown had divided the kingdom into nine regions for purposes of collecting excise 
-                taxes on the manufacture of playing cards. Each district had a unique face card iconography
-                which the tax bureau used to ensure compliance with taxation procedures. Face cards that
-                deviated from these designs were alleged to be “fraudulent,” i.e., their manufacturers had 
-                not paid the excise tax. Below you see official examples of the Queen of Hearts from the Paris, 
-                Guyenne, and Dauphiné regions.
+                {t("material.fronts.old_regime.1")}
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/old-regime/paris.JPEG'}/>
                     <p>
-                        Paris. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (7)
+                    {t("material.fronts.old_regime.2")}
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/old-regime/guyenne.JPEG'}/>
                     <p>
-                    Guyenne.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (3, 82)                    
+                    {t("material.fronts.old_regime.3")}                   
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/old-regime/dauphine.JPEG'}/>
                     <p>
-                    Dauphiné.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (2, 40)    
+                    {t("material.fronts.old_regime.4")}  
                     </p> 
                     {/* TODO: make the images all the same height!! */}
                 </div>
@@ -66,86 +55,68 @@ const Fronts = () => {
         </div>
 
         <div className='material-subpage-item'>
-        <h3>The French Revolution (1789-1799)</h3>
+        <h3>{t("material.fronts.french_revolution.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                    In the early years of the Revolution, the legislative assemblies abolished the 
-                    guilds that had controlled the card-making industry and abolished the excise tax 
-                    levied on playing cards.  The result was that anyone with sufficient capital could 
-                    open a card-making shop, without being constrained by the official regional playing 
-                    card designs that characterized the Old Regime.  In addition, rising anti-monarchical 
-                    sentiment encouraged revolutionary card-makers to find alternatives to the traditional 
-                    face card trio of kings, queens, and jacks.
+                {t("material.fronts.french_revolution.1")}
                     <br/>
                     <br/>
-                    Card-makers experimented with many iconographies in the 1790s.  We provide a sampling 
-                    of those designs below.
+                    {t("material.fronts.french_revolution.2")}
                 </p>
                 <br/>
-                <h4>A. Genuises, Liberties, Equalities</h4>
+                <h4>{t("material.fronts.french_revolution.3")}</h4>
                 <p>
-                    In Spring 1793, Urbain Jaume and Jean-Démosthène Dugourc took out a patent on 
-                    a new face card design that converted Kings to “Genuises,” Queens to “Liberties,” 
-                    and Jacks to “Equalities.”  Their labels, and in some instances their designs, were 
-                    emulated by other card-makers throughout the kingdom.  In some cases only modest design 
-                    changes were made to the Old Regime designs.  The right-hand example below, although 
-                    stylistically similar to prerevolutionary versions of the Queen of Hearts, removes the 
-                    queen's crown and puts a pike with a phrygian bonnet, a symbol of Republican Rome from 
-                    antiquity, in her left hand. 
+                {t("material.fronts.french_revolution.4")}
                 </p>
 
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/revolution/Jaume.Rev.1.JPEG'}/>
                     <p>
-                    Jaume and Dugourc original design.  “Freedom of Religion.” Source: Bibliothèque nationale de France, RESERVE BOITE ECU-KH-204 (6).
+                    {t("material.fronts.french_revolution.5")}
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/revolution/Sigogne.Rev.JPEG'}/>
 
                     <p>
-                    Jaume and Dugourc variant.  “Freedom of the Press.” Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 154).                    
+                    {t("material.fronts.french_revolution.6")}                   
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/revolution/Jaume.Rustic.JPEG'}/>
                     <p>
-                    Old Regime “Liberty” modification. Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (4, 102).    
+                    {t("material.fronts.french_revolution.7")}    
                     </p> 
                     {/* TODO: make the images all the same height!! */}
                 </div>
                 <br/>
                 </div>
                 <br/>
-                
+            <p id='SourceFooter'> {t("material.fronts.french_revolution.8")} </p>
             <br/>
-            <h4>B.  SVB, ESC, and Bézu Decks</h4>
+            <h4>{t("material.fronts.french_revolution.9")}</h4>
                 <p>
-                    Three other notable revolutionary designs were the Sages, Vertus, Braves deck (wise ones, virtuous ones, 
-                    brave ones), now labeled SVB; the Eléments, Saisons, Cultivateurs deck (Platonic elements, seasons of the year, 
-                    farmers) deck, now labeled ESC; and a secular, rationalized deck designed by a card-maker in the Champagne region 
-                    named Bézu.  The queen of Hearts in the deck the left is the “virtue” of justice, and in the middle and on the 
-                    right are variations on the season of summer. 
+                {t("material.fronts.french_revolution.10")}
                 </p>
 
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/svb-esc-bezu/SVB.1.JPEG'}/>
                     <p>
-                    SVB.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-204 (1).
+                    {t("material.fronts.french_revolution.11")}
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/svb-esc-bezu/ESC.1.JPEG'}/>
                     <p>
-                    ESC.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5BIS, 164).                    
+                    {t("material.fronts.french_revolution.12")}                   
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/svb-esc-bezu/Bezu.1.jpg'}/>
                     <p>
-                    Bézu. Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-204-BOITE FOL.    
+                    {t("material.fronts.french_revolution.13")}   
                     </p> 
                 </div>
                 <br/>
@@ -154,35 +125,28 @@ const Fronts = () => {
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Napoleon (1799-1815)</h3>
+        <h3>{t("material.fronts.napoleon.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                By the time Napoleon came to power, the French state had resumed the excise tax on the manufacture of playing cards.  
-                In addition, Napoleon's officials decided to create one uniform face card design for the entire nation.  
-                In 1810 they asked the great revolutionary and imperial artist Jacques-Louis David to design a new deck of cards.  
-                David returned to the iconography of the Old Regime, but endowed each king, queen, and jack with historically 
-                appropriate costumes. When his design did not prove popular, the regime turned to a designer named Nicolas-Marie 
-                Gatteaux, who created designs in 1813 that were more faithful to the appearance of the Old Regime cards, and 
-                therefore more popular.  In 1815, a designer named Gustave-Armand Houbigant patented a new iconography with a more 
-                romantic, medieval look.
+                {t("material.fronts.napoleon.1")}
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/napoleon/David.JPEG'}/>
                     <p>
-                        David.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, PET FOL-KH-34 (C, 28).
+                    {t("material.fronts.napoleon.2")}
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/napoleon/Gatteaux.JPEG'}/>
                     <p>
-                        Gatteaux.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (7BIS, 326).                    
+                    {t("material.fronts.napoleon.3")}                    
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/napoleon/Houbigant.jpg'}/>
                     <p>
-                    Houbigant.  Source:  British Library, 1896,0501.1292.1-12.    
+                    {t("material.fronts.napoleon.4")}   
                     </p> 
                     {/* TODO: make the images all the same height!! */}
                 </div>
@@ -191,30 +155,28 @@ const Fronts = () => {
         </div>
 
         <div className='material-subpage-item'>
-        <h3>Revolution and the Occult in the Nineteenth Century (1815-1848)</h3>
+        <h3>{t("material.fronts.nineteenth_century.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                After the fall of Napoleon in 1815, French politics veered between monarchy and republicanism.  
-                Decks of cards designed in the revolutionary years of 1830 and 1848 expressed the hope for change, 
-                while other decks of cards tapped into occult tendencies in the early nineteenth century.
+                {t("material.fronts.nineteenth_century.1")}
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/1815-1848/1830.Barricades.JPEG'}/>
                     <p>
-                        The Revolution of 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (10, 399-400).
+                    {t("material.fronts.nineteenth_century.2")}
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/1815-1848/1848.JPEG'}/>
                     <p>
-                        The Revolution of 1848.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (A, 7)-BOITE ECU.                    
+                    {t("material.fronts.nineteenth_century.3")}                    
                     </p>
                 </div>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src={'/static/img/materials/fronts/1815-1848/Cartomancy.JPEG'}/>
                     <p>
-                    Cartomancy, between 1814 and 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (3, 29)-BOITE ECU.    
+                    {t("material.fronts.nineteenth_century.4")}   
                     </p> 
                     {/* TODO: make the images all the same height!! */}
                 </div>

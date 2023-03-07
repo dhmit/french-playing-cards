@@ -1,0 +1,248 @@
+{
+    "navigation" : {
+        "home": "Home",
+        "about": "About",
+        "manufacture": "Manufacture",
+        "material": "Material Aspects",
+        "fronts": "Fronts",
+        "backs": "Backs",
+        "envelopes": "Envelopes",
+        "iconography": "Face Card Iconography",
+        "games": "Play Games!",
+        "bibliography": "Bibliography"
+    },
+    "home" : {
+        "header": "French Playing Cards, 1650-1850",
+        "blurb": "From 1650 to 1850, the French spread enlightenment, gained and lost one empire and began another, and overthrew a centuries-old monarchy.  They also played card games.  This site explores the history of French playing cards in this period as an unusual and insightful source for the history of the Old Regime, the French Revolution, and early Nineteenth-Century France.  You will find details about <1>manufacturing procedures</1>, the <1>material aspects</1> of the playing cards, and the changing <1>iconography</1> of French face cards.  A <1>bibliography</1> provides suggestions for further reading.  And for those of you interested in gaming, we will offer the opportunity to play a few of the most popular <1>card games</1> of the period, using the historical deck of cards of your choice!"
+    },
+    "about": {
+        "header": "About This Web Site",
+        "intro": {
+            "1": "The iconography, taxation, manufacture and uses of playing cards in France underwent substantial changes from 1650 to 1850. By the 1780s, an “Old  Regime” deck of cards had emerged, characterized by the standardization of  face cards, the state's increasing efforts to extract tax revenue from their  producers, their manufacture via the guild system, and the gaming and non-gaming uses  the kings subjects made of new and used decks of cards. The Revolution of 1789, however, temporarily eliminated the card-makers guild and the excise tax levied on cards, and mandated the suppression of kings, queens, and jacks on face cards. By the time of the Directory in the late 1790s, and even more so during the First Empire, Old Regime practices crept back into the design, taxation, and uses of playing cards. At the same time, the technologies of production evolved and the industry consolidated from dozens of manufacturers around the kingdom to a half dozen or so firms. The history of playing cards over these two centuries offers insight into questions of rupture and continuity in French politics, culture, and economics across the revolutionary divide.",
+            "2": "This web site is one outcome of a larger project by <1>Jeffrey Ravel</1>, Professor of History at MIT, to write this history.  At a later date, we hope to add a feature that will allow users to play popular Old Regime and Revolutionary card games online, selecting the historical deck with which they will play.",
+            "3": "Professor Ravel and his team wish to thank the <1>Bibliothèque nationale de France</1> (BnF), which has provided the digital versions of playing cards and the metadata we make available on our site. Users are invited to explore the extensive digital reproductions of playing cards in the collections of the BnF, which the Library makes available on its <1>Gallica web site</1>. We are also grateful to the <1>MIT Programs in the Digital Humanities</1> and <1>Performant Software</1> for technical support."
+        },
+        "team": "Playing Card Web Site Development Team Members"
+    },
+    "manufacture": {
+        "header": "Manufacture",
+        "intro": "Manufacturing Playing Cards in France Before 1800",
+        "1": {
+            "caption": "Image 1. <i>The Workshop of a Parisian Playing Card Maker</i>, gouache, early 1690s, <i>Musée Carnavalet</i>.",
+            "text": "The image above, painted to decorate a hand fan, depicts a lively, chaotic scene in a card-maker’s shop on the Ile de la Cité in Paris overlooking the Pont Neuf and the Seine River at the end of the seventeenth century. Some workers create the paper stock on which the cards are printed, while others paint the cards and then cut and sort them into decks.  Shopkeepers sell finished decks to well-appointed customers, while cats and dogs cavort in the foreground among the discards from the manufacturing process.  Although the shop looks disorderly, the steps involved in making commercial playing cards were well thought-out and efficient.  Thanks to two later, detailed discussions of the process, we have a good idea of how most playing cards in France were made before the French Revolution."
+        },
+        "2": {
+            "caption": "Image 2. Detail from Plate 1 of Duhamel du Monceau, <i>Art du cartier</i> (Paris: Saillant & Nyon and Desaint, 1761).",
+            "text": "The first step in the process was to create the card stock.  Guildsmen combined three different types of paper into a composite that absorbed the paint used to decorate the cards, but also created enough flexibility that users could shuffle the cards without bending them. In the figure above, we see two workers on the left using a furnace to fabricate the glue that will bind the three different paper stocks together, while the figure on the right stirs the heated glue in preparation for joining the three layers of paper together."
+        },
+        "3": {
+            "caption": "Image 3. Denis Diderot and Jean le Rond d’Alembert, <i>L’Encyclopédie, ou dictionnaire raisonnée des arts, des sciences, et des métiers</i> (Paris, 1763), vol. 19, 1763, article <i>cartier</i>, Plate 4.",
+            "text": "Once the glue had been fabricated, it was used to glue the three different types of paper together. The resulting composite card stock was then placed in a press, similar to that in the image above on the left, to facilitate adhesion and flatten the card stock."
+        },
+        "4": {
+            "caption": "Image 4. Detail from Plate 1 of Duhamel du Monceau, <i>Art du cartier</i> (Paris: Saillant & Nyon and Desaint, 1761).",
+            "text": "The paper stock, once removed from the press, was further prepared by workers who trimmed away excess glue from the sides and used tools to scrape off imperfections on the top and bottom layers of the cards. The sheets were then hung from the rafters, as we see in the image above, in order to dry fully before having the card designs applied to them. The worker labeled as Fig. 6 above prepares to take a pile of completed sheets to the card decorators."
+        },
+        "5-6": {
+            "caption": "Image 5.  Woodblock for printing outlines of face cards. Eighteenth Century, Musée Gadagne, Lyon. <br /> Image 6.  Plate 3, Duhamel du Monceau, <i>Art du cartier</i> (Paris: Saillant & Nyon and Desaint, 1761).",
+            "text": "Face cards (kings, queens, and jacks) and point cards (ace through ten) were painted onto the card stock using stencils.  Image 5 shows a carved woodblock from the eighteenth century with the face card designs used to create playing cards in the city of Lyon. Card decorators painted five different colors on the face cards: red, yellow, blue, gray, and black. Image 6 shows an outline printed from a wood block in the upper left, then the five different stencils used to illuminate the cards. Each color requires a different stencil; the colors would be applied one at a time, each color being allowed to dry before the application of the next color."
+        },
+        "7-8": {
+            "caption": "Image 7. Detail from Plate 6 of Denis Diderot and Jean le Rond d’Alembert, <i>L’Encyclopédie, ou dictionnaire raisonnée des arts, des sciences, et des métiers</i> (Paris, 1763), vol. 19, 1763, article <i>cartier</i>. <br /> Image 8.  Plate 5, Duhamel du Monceau, <i>Art du cartier</i> (Paris: Saillant & Nyon and Desaint, 1761).",
+            "text": "The illumination of point cards was simpler, because each card required only one color, either black or red. Image 7 shows the metal punches that card-makers used to prepare stencils to print one of the four suits (hearts, diamonds, clubs, and spades).  Image 8 shows the resulting stencils created by using these metal punches that served to illuminate the point cards."
+        },
+        "9": {
+            "caption": "Image 9. Denis Diderot and Jean le Rond d’Alembert, <i>L’Encyclopédie, ou dictionnaire raisonnée des arts, des sciences, et des métiers</i> (Paris, 1763), vol. 19, 1763, article <i>cartier</i>, Plate 1.",
+            "text": "Image 9 shows a single room in which the cards are being painted, given a sheen, cut, and sorted into decks. The individuals labeled as Figures 1 and 2 on the left are applying paint using the stenciling technique described above. Figure 3 is the <i>lisseur</i>, who is applying a sheen to the cards that makes them easier to handle and more pleasing to the touch. Figure 4 uses the large pair of scissors attached to the table to cut the dried, illuminated sheets supplied by Figure 5 into individual cards. Finally on the far right Figure 6 sorts the cut cards into individual decks. Figure 7 in the background is working the press used to create the paper stock that serves as the foundation for the cards being created in the front room of the shop."
+        }
+    },
+    "material": {
+        "header": "Material Aspects",
+        "material_1": "For gaming and gambling purposes, playing cards were assigned abstract values that allowed players to compete against each other, or against the betting establishment where the games were played.  But playing cards were also material objects that were manufactured and sold to consumers. To understand fully the materiality of French playing cards from 1650 to 1850, we have created pages to examine the fronts of the cards, their backs, and the envelopes in which they were wrapped by their manufacturers.",
+        "fronts":{
+            "title": "Fronts",
+            "full_title": "Fronts: The Queen of Hearts",
+            "intro" :{
+            "1": "Most French playing cards before the nineteenth century were manufactured using stencils. The stencil process for point cards (ace through ten) was simple, involving only one color and a design that was standardized across the kingdom. Designs for face cards, however (the king, queen, and jack), varied widely, and utilized four or five different colors. Furthermore, for purposes of control and taxation, the state before 1789 and after 1797 demanded that manufacturers adhere to a single authorized design.",
+            "2": "An analysis of the variations in face card design from the Old Regime through the Revolution of 1848 reveals substantial variation across time that can be explained by changing political, economic, and cultural factors. Here we focus on the Queen of Hearts, but those interested in exploring changes in the ",
+            "3": "iconography",
+            "4": "of other French face cards in this period should explore our ",
+            "5": "face card iconography search tool"
+            },
+            "old_regime":{
+                "title": "The Old Regime (to 1789)",
+                "1": "By 1750, the crown had divided the kingdom into nine regions for purposes of collecting excise taxes on the manufacture of playing cards. Each district had a unique face card iconography which the tax bureau used to ensure compliance with taxation procedures. Face cards that deviated from these designs were alleged to be “fraudulent,” i.e., their manufacturers had not paid the excise tax. Below you see official examples of the Queen of Hearts from the Paris, Guyenne, and Dauphiné regions.",
+                "2": "Paris. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (7)",
+                "3": "Guyenne.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (3, 82)  ",
+                "4": "Dauphiné.  Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (2, 40) "
+            },
+            "french_revolution": {
+                "title": "The French Revolution (1789-1799)",
+                "1": "In the early years of the Revolution, the legislative assemblies abolished the guilds that had controlled the card-making industry and abolished the excise tax levied on playing cards.  The result was that anyone with sufficient capital could open a card-making shop, without being constrained by the official regional playing card designs that characterized the Old Regime.  In addition, rising anti-monarchical sentiment encouraged revolutionary card-makers to find alternatives to the traditional face card trio of kings, queens, and jacks.",
+                "2": "Card-makers experimented with many iconographies in the 1790s.  We provide a sampling of those designs below.",
+                "3": "A. Genuises, Liberties, Equalities",
+                "4": "In Spring 1793, Urbain Jaume and Jean-Démosthène Dugourc took out a patent on a new face card design that converted Kings to “Genuises,” Queens to “Liberties,” and Jacks to “Equalities.”  Their labels, and in some instances their designs, were emulated by other card-makers throughout the kingdom.  In some cases only modest design changes were made to the Old Regime designs.  The right-hand example below, although stylistically similar to prerevolutionary versions of the Queen of Hearts, removes the queen's crown and puts a pike with a phrygian bonnet, a symbol of Republican Rome from antiquity, in her left hand.",
+                "5": "Jaume and Dugourc original design.  “Freedom of Religion.” Source: Bibliothèque nationale de France, RESERVE BOITE ECU-KH-204 (6).",
+                "6": "Jaume and Dugourc variant.  “Freedom of the Press.” Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 154).",
+                "7": "Old Regime “Liberty” modification. Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (4, 102). ",
+                "8": "Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 14)",
+                "9": "B.  SVB, ESC, and Bézu Decks",
+                "10": "Three other notable revolutionary designs were the Sages, Vertus, Braves deck (wise ones, virtuous ones, brave ones), now labeled SVB; the Eléments, Saisons, Cultivateurs deck (Platonic elements, seasons of the year, farmers) deck, now labeled ESC; and a secular, rationalized deck designed by a card-maker in the Champagne region named Bézu.  The queen of Hearts in the deck the left is the “virtue” of justice, and in the middle and on the right are variations on the season of summer.",
+                "11": "SVB.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-204",
+                "12": "ESC.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5BIS, 164).",
+                "13": "Bézu. Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-204-BOITE FOL.  "
+            },
+            "napoleon": {
+                "title": "Napoleon (1799-1815)",
+                "1": "By the time Napoleon came to power, the French state had resumed the excise tax on the manufacture of playing cards. In addition, Napoleon's officials decided to create one uniform face card design for the entire nation. In 1810 they asked the great revolutionary and imperial artist Jacques-Louis David to design a new deck of cards.  David returned to the iconography of the Old Regime, but endowed each king, queen, and jack with historically appropriate costumes. When his design did not prove popular, the regime turned to a designer named Nicolas-Marie Gatteaux, who created designs in 1813 that were more faithful to the appearance of the Old Regime cards, and therefore more popular.  In 1815, a designer named Gustave-Armand Houbigant patented a new iconography with a more romantic, medieval look.",
+                "2":  "David.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, PET FOL-KH-34 (C, 28).",
+                "3": "Gatteaux.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (7BIS, 326).",
+                "4":"Houbigant.  Source:  British Library, 1896,0501.1292.1-12. "
+            },
+            "nineteenth_century": {
+                "title": "Revolution and the Occult in the Nineteenth Century (1815-1848)",
+                "1": "After the fall of Napoleon in 1815, French politics veered between monarchy and republicanism.  Decks of cards designed in the revolutionary years of 1830 and 1848 expressed the hope for change, while other decks of cards tapped into occult tendencies in the early nineteenth century.",
+                "2": "The Revolution of 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (10, 399-400).",
+                "3": "The Revolution of 1848.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (A, 7)-BOITE ECU. ",
+                "4": "Cartomancy, between 1814 and 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (3, 29)-BOITE ECU."
+            }
+        },
+        "backs":{
+            "title": "Backs",
+            "full_title": "Backs",
+            "introa": "The backs of playing cards in France were left blank until the 1820s. Because paper was valuable, card players would not throw out their cards when they were too worn to be useful for gaming. Instead, people would use the backs of the cards for various purposes, some practical and some more fanciful. The examples below, drawn from the collections of the ",
+            "introb": "Bibliothèque nationale de France",
+            "introc": ", capture some of these uses. To see the front of the card in question, please pass your cursor over it.",
+            "catalogue": {
+                "title": "Library Card Catalogue",
+                "1": "In the decades before the French Revolution, bibliophiles realized that they could utilize used playing cards to catalogue their book collections.  Surviving playing cards from the period suggest that this had become the most frequent use for discarded playing cards by the end of the eighteenth century.",
+                "2": "Transcription: “Chap. 2892. Cruels effets de la vengeance du Cardinal de Richelieu ou Histoire des diables de Loudun er d’Urbain Grandier. Amsterdam, Roger, 1716. In-12–veau",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (18)"
+            },
+            "legal": {
+                "title": "Legal Case Label",
+                "1": "After card catalogues, the second most common usage for the backs of discarded playing cards was as filing labels for legal cases.",
+                "2": "Transcription: “Apointement en droit pour Claude des Chavanes, Sieur de Beauregard, contre Sieur Claude Pesant Bourgeois de Villefranche. Mr. Jacques Bord. Dubost. Vermorel.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 14)"
+            },
+            "money": {
+                "title": "Money",
+                "text": "During the French Revolution, the government printed <1>billets de confiance</1>, or small denomination bills, on the backs of used playing cards to supplement the printed bills known as <1>assignats</1>",
+                "2": "Transcription: “Société patriotique, Ville de S. Maixent, Bon pour quinze sols. Billets de confiance remboursables en assignats de deux cent livres et au sessous. No. 2895, 1791.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 145-147)"
+            },
+            "meat": {
+                "title": "Meat Ration",
+                "1": "The military printed meat ration cards on the backs of used playing cards.",
+                "2": "Transcription: “Infanterie, Viande. Trois Rations. Controllé.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (3, 105)"
+            },
+            "business_cards": {
+                "title": "Business Cards",
+                "1": "Merchants in Paris and other cities would print their business cards on the back of used playing cards.",
+                "2": "Transcription: “Bienvenu Samson, Négociant au Bourget, près Paris, ci-devant à St.-Denis. Tient magasin de Vons, Eaux-de-vie, Epicerie.”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (7, 210)."
+            },
+            "flash_cards": {
+                "title": "Flash Cards",
+                "1": "The backs of cards were used to teach spelling and grammar",
+                "2": "Transcription:  “avoir infinitive – present”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 16)."
+            },
+            "call_response":{
+                "title": "Call and Response",
+                "1": "The backs of used playing cards might be repurposed for provocative parlor games.",
+                "2": "Transcription: “Etes-vous séduisant?”",
+                "3": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 153)"
+            },
+            "pastoral_drawing":{
+                "title": "Pastoral Drawing",
+                "1": "An unknown artist used the back of this Jack of Clubs to sketch a pastoral scene.",
+                "2": "Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-205 (18)"
+            }
+        },
+        "envelopes":{
+            "title": "Envelopes",
+            "intro": "French playing card manufacturers in these centuries packaged their cards in paper wrappers for sale to the public.  The look of these wrappers was not controlled by the royal taxing agents, so card-makers were free to create their own wrapper designs, within implicitly understood ideological limits.  Before the Revolution, manufacturers utilized the wrappers to communicate patronage of their product, brand names, and the urban locations of their shops.  The images imprinted on the wrappers might reference the French monarchy, or other kings.  As with face card iconography, once the Revolution broke out in 1789 the wrappers began to incorporate revolutionary images and mottos.  There is some evidence to suggest that envelope design in the Napoleonic period may have toned down the ideological references of the 1790s.",
+            "images": "The card images below and the associated metadata are courtesy of the <1>Gallica</1> site of the Bibilothèque nationale de France.",
+            "epinal": {
+                "title": "Epinal Playing Card Wrappers, First Half of the Seventeenth Century",
+                "text": "In the first half of the seventeenth century, card-makers in the town of Épinal, in Lorraine, emphasized heraldry, architecture, and the crown on their card wrappers."
+            },
+            "rouen": {
+                "title": "Rouen Playing Card Wrappers, Second Half of the Seventeenth Century",
+                "text": "These two envelope examples, from the second half of the seventeenth century in Rouen, are linked by a central panel in which two allegorical figures, labeled “JEUNESSE” (youth) and “RICHESSE,” (wealth) support a central cartouche.  In one case the cartouche puns on the name of the card manufacturer (Lepinne, or pine tree), while in the other it contains a representation of the biblical King David, who was frequently depicted on the King of Spades before 1789."
+            },
+            "eighteenth": {
+                "title": "Eighteenth-Century Examples of Card Wrappers",
+                "text": "These two examples from the eighteenth century both have a focus on monarchy.  The one on the left displays a French king on horseback in a cartouche held up by courtiers.  The legend encircling the cartouche claims that the king is “the hero of all kings.”  The central panel of the wrapper on the  right represents the wife of the heir to the French throne (the “Dauphine”) in a painterly pose. The Parisian manufacturer claims to be her authorized card-maker."
+            },
+            "revolutionary": {
+                "title": "A Revolutionary Modification to a Card Wrapper",
+                "text": "Card-makers had to adapt their wrappers to revolutionary ideals, just as they had to modify the iconography of the face cards they manufactured.  Sometimes the changes were subtle. On the left is a prerevolutionary bookplate produced by the Parisian card-maker and stationer Hugues Chassonnier that features the three biblical kings from the East who bore gifts for the Christ child.  The monarch on the left points to the star in the sky that prompted their journey to Bethlehem.  This nameplate, produced in the last two decades of the Old Regime, served as the Chassonnier shop’s trademark; it may have imitated the sign that hung outside his shop.  On the right is a playing card wrapper manufactured by Chassonnier in the early years of the Revolution.  Here the three figures are similar enough to the prerevolutionary bookplate that the card-makers’ Parisian customers would have recognized the manufacturer. But the gifts the kings bear are de-emphasized, and their crowns have been replaced by turbans.  The flap at the top of the envelope labels them as “moors,” not kings.  And the text at the bottom informs consumers that the cards in the wrapper were manufactured by “Citizen” Chassonnier."
+            },
+            "shine": {
+                "title": "“I Shine for All”",
+                "text": "Other card-makers engraved more overtly revolutionary images and slogans on their card wrappers. On the left, a wrapper printed by the Lyonnais card-maker Manus also features a celestial body in the upper-right hand corner of the main panel, in this case the sun, with the egalitarian legend “Je luit pour tous.”  (I shine for all.). A seated female allegory, prominently featured, gazes at a ship on the horizon, raising her arm in a salute to the idea of hope (“A LESPERANCE”).  The wrapper on the right, created by the Grenoblois card-makers Cheminade and Repellin, repeats the “sun shines for all” motto on the side flaps of the envelope. In the center panel a cartouche featuring an ancient Roman fasces and a phrygian bonnet is encircled by the words “REPUBLIQUE FRANCAISE.”  The labels “LIBERTE” and “EGALITE” are printed above.  Consumers would have readily recognized the republican sympathies of both card-makers."
+            },
+            "napoleonic": {
+                "title": "Napoleonic Card Wrappers",
+                "text": "These two examples, from the first decade of the nineteenth century, display designs that eschew both Old Regime royal patronage and Revolutionary ideological concerns.  The envelope on the left, designed to package a deck of Gatteaux cards around 1810-1815, features two winged, classicizing angels sounding their horns.  (On the Gatteaux deck, see the card “<1>fronts</1>” page on this site.)  Between them they support a small cartouche that contains the symbols of the four card suits.  On the right, the envelope printed by the Widon Delatre, a Parisian card-maker, also has a relatively simple cartouche evoking the biblical King Solomon. To his left and right, cornucopias overflow with playing cards, while the flap below records the manufacturer’s shop in a plain typeface.  While the iconography of both wrappers references classical and biblical imagery, it also reproduces images of card suits and card decks that would have been familiar to gamblers in the period."
+            }
+        }
+    },
+    "iconography": {
+        "header": "Face Card Iconography",
+        "linkUpper": "Click <1>HERE</1> to search our face card database",
+        "introduction": {
+            "header": "Introduction to the database",
+            "blurb": "Our page on the changing “<1>fronts</1>” of playing cards offers variations on the Queen of Hearts manufactured in France from the Old Regime to the middle of the nineteenth century. In addition, we have a compiled a database of face card images for kings, queens, jacks, and some aces in all four suits during this time period, along with the accompanying metadata from the web site of the Bibliothèque nationale de France. Our database contains images and data from 24 decks of cards created during this period. The accompanying search tool allows users to search these images by filtering for time period, face card, suit, town, maker, and the fronts and backs of the cards. Users can thus customize comparisons of French face card iconography during the 1644-1848 time period."
+        },
+        "linkLower": "Click <1>here</1> to search our face card database",
+        "contents": {
+            "header": "Contents of the database",
+            "blurb": "Below we reproduce the Jack of Clubs from each deck in our database to give you a sense of the variety of face card design:"
+        },
+        "decks": {
+            "geography": "World Geography",
+            "heraldry": "Heraldry",
+            "provence": "Provence Old Regime face cards",
+            "guyenne": "Guyenne Old Regime face cards",
+            "elements": "Elements, seasons, farmers face cards",
+            "bezu": "Bézu revolutionary cards",
+            "david": "Jacques-Louis David design",
+            "fantasy": "Fantasy deck",
+            "queens": "Queens, ancient and modern",
+            "auvergne": "Auvergne Old Regime face cards",
+            "dauphine": "Dauphiné Old Regime face cards",
+            "lyon": "Lyon Old Regime face cards",
+            "counter-rev": "Counter-revolutionary cards",
+            "philosophes": "Year II <1>philosophes<1>",
+            "gatteaux": "Nicolas-Edme Gatteaux design",
+            "heros": "Heros deck",
+            "war-games": "War Games",
+            "languedoc": "Languedoc Old Regime face cards",
+            "paris": "Paris Old Regime face cards",
+            "modified": "Modified Old Regime Paris face cards",
+            "genius": "Genius, liberty, equality face cards",
+            "wise-virtuous": "Wise men, virtuous women, brave men face cards",
+            "barricades": "Barricades deck",
+            "liberators": "Liberators deck"
+        }
+    },
+    "games" : {
+        "header": "Play Games!",
+        "play": "In progress..."
+    },
+    "bibliography": {
+        "header": "Bibliography",
+        "collections": {
+            "title": "I. Collections of Historical Playing Cards with Substantial French Holdings",
+            "bnf": "<i>Bibliothèque nationale de France</i>.  The BnF has digitized more than 1800 items in its playing card collections in the Cabinet des estampes.  To browse these holdings, go to <2>https://gallica.bnf.fr</2>.  Select “images” in the dropdown menu labeled “Tout Gallica,” then enter “JeuCart” in the search bar.  Users can filter the results by author, century, and language.",
+            "musee": "<i>Musée français de la carte à jouer</i>.  This museum, located in the Parisian suburb of Issy-les-Moulineaux, contains exhibits about the history of French playing cards as well as collections of cards and a library devoted to their history.  The Museum’s web site is available <2>here</2>.",
+            "columbia": "<i>Columbia University, Rare Book and Manuscript Library</i>.  Columbia conserves the Albert Field Collection of Playing Cards, with more than 6300 individual decks.  A description and access to a database can be found at <2>https://dlc.library.columbia.edu/field_playing_cards</2>.",
+            "yale": "<i>Yale University, Beinecke Library.</i> The Beinecke holds the Cary Card Collection, consisting of over 1000 whole or partial decks of cards and many other playing card-related items.  For a description of the collection, and a link to searchable database, go to <2>https://beinecke.library.yale.edu/collections/highlights/cary-playing-card-database</2>. There is a useful essay describing the collection <2>here</2>."
+        },
+        "scholarship": "II. Selected Scholarship on the History of French Playing Cards and Gaming"
+    }
+}
