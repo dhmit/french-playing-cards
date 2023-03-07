@@ -33,8 +33,17 @@ const NavBar = () => {
                             <NavLink onClick={() => close()} to="/material-aspects/envelopes" style={({ isActive }) => isActive ? activeStyle : undefined}>{t("navigation.envelopes")}</NavLink>
                         </div>
                     </div>
-
+                    
                     <NavLink onClick={() => close()} to="/iconography" style={({ isActive }) => isActive ? activeStyle : undefined}>{t("navigation.iconography")}</NavLink>
+                    
+                    <div className="dropdown">
+                        <NavLink className="dropdown-title" onClick={() => close()} to="/tarot" style={({ isActive }) => isActive ? activeStyle : undefined}>Tarot</NavLink>
+                        <div className="dropdown-content">
+                            <NavLink onClick={() => close()} to="/tarot/tarot-deck" style={({ isActive }) => isActive ? activeStyle : undefined}>The Tarot Deck</NavLink>
+                            <NavLink onClick={() => close()} to="/tarot/tarot-history" style={({ isActive }) => isActive ? activeStyle : undefined}>A Brief History of Cartomancy</NavLink>
+                        </div>
+                    </div>
+                    
                     <NavLink onClick={() => close()} to="/games" style={({ isActive }) => isActive ? activeStyle : undefined}>{t("navigation.games")}</NavLink>
                     <NavLink onClick={() => close()} to="/bibliography" style={({ isActive }) => isActive ? activeStyle : undefined}>{t("navigation.bibliography")}</NavLink>
                 </Nav>

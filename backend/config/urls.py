@@ -41,6 +41,9 @@ urlpatterns = [
     path('material-aspects/envelopes', envelopes, name='envelopes'),
     path('iconography', iconography, name='iconography'),
     path('iconography/search', search, name='search'),
+    path('tarot', search, name='tarot'),
+    path('tarot/tarot-deck', search, name='TarotDeck'),
+    path('tarot/tarot-history', search, name='TarotHistory'),
     # path('iconography/search', showCardSearch),
     path('games', games, name='games'),
     path('bibliography', bibliography, name='bibliography')

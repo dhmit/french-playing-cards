@@ -94,7 +94,6 @@ const Fronts = () => {
                 </div>
                 <br/>
             <p id='SourceFooter'> {t("material.fronts.french_revolution.8")} </p>
-
             <br/>
             <h4>{t("material.fronts.french_revolution.9")}</h4>
                 <p>

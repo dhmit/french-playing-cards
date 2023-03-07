@@ -15,6 +15,9 @@ import Backs from "./components/pages/Backs";
 import Envelopes from "./components/pages/Envelopes";
 import Iconography from "./components/pages/Iconography";
 import Search from "./components/pages/DatabaseSearch";
+import Tarot from "./components/pages/Tarot";
+import TarotDeck from "./components/pages/TarotDeck";
+import TarotHistory from "./components/pages/TarotHistory";
 import Games from "./components/pages/Games";
 import Bibliography from "./components/pages/Bibliography";
 
@@ -34,12 +37,15 @@ ReactDOM.render(
                         <Route exact path="/material-aspects/envelopes" element={<Envelopes />} />
                         <Route exact path="/iconography" element={<Iconography />} />
                         <Route exact path="/iconography/search" element={<Search />} />
+                        <Route exact path="/tarot" element={<Tarot />} />
+                        <Route exact path="/tarot/tarot-deck" element={<TarotDeck />} />
+                        <Route exact path="/tarot/tarot-history" element={<TarotHistory />} />
                         <Route exact path="/games" element={<Games />} />
                         <Route exact path="/bibliography" element={<Bibliography />} />
                     </Routes>
                 </BrowserRouter>
             </Base>
-        </Suspense>
+        </Suspense
     </div>,
     document.getElementById("app_root")
 );

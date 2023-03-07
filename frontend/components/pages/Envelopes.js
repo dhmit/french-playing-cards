@@ -202,7 +202,7 @@ const Envelopes = () => {
                     to package a deck of Gatteaux cards around 1810-1815, features two winged, classicizing angels sounding 
                     their horns.  (On the Gatteaux deck, see the card “<a href="../material-aspects/fronts">fronts</a>” page on this site.)  Between them they support 
                     a small cartouche that contains the symbols of the four card suits.  On the right, the envelope printed by 
-                    the Widon Delatre, a Parisian card-maker, also has a relatively simple cartouche evoking the biblical King 
+                    the Widow Delatre, a Parisian card-maker, also has a relatively simple cartouche evoking the biblical King 
                     Solomon. To his left and right, cornucopias overflow with playing cards, while the flap below records the 
                     manufacturer’s shop in a plain typeface.  While the iconography of both wrappers references classical and 
                     biblical imagery, it also reproduces images of card suits and card decks that would have been familiar to 

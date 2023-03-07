@@ -204,8 +204,8 @@ span {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 80%;
-    width: auto;
+    height: 90%;
+    text-decoration: underline;
 }
 
 .material-subpage-intro {
@@ -307,8 +307,7 @@ span {
                 .popup-image {
                     padding: 1%;
                     margin: 1px;
-                    width: 100%;
-                    height: 100%;
+                    height: 90%;
                 }
 
                 p {
@@ -492,6 +491,128 @@ span {
     #CardOutline {
         padding: 5%;
     }
+}
+
+#tarot-mascot {
+    width: 20%;
+    height: 20%;
+    margin-left: 1.5%;
+    margin-right: 3%;
+    float: left;
+}
+
+#tarot-history-menu-img {
+    height: 72%;
+}
+
+.tarot-subpage-item {
+    margin-left: 3%;
+    margin-right: 3%;
+    color: #707070;
+
+    h3 {
+        text-decoration: underline;
+    }
+
+    h4 {
+        text-decoration: underline;
+    }
+
+    .tarot-subpage-item-contents {
+        padding-left: 3%;
+        padding-right: 3%;
+        margin-top: 0.5%;
+        margin-bottom: 9%;
+
+        p {
+            font-size: 125%;
+            font-weight: 300;
+            margin-bottom: 3%;
+            text-align: left;
+        }
+
+        .tarot-subpage-item-images {
+            display: flex;
+            justify-content: center;
+
+            .tarot-subpage-item-image-caption {
+                margin-left: 3%;
+                margin-right: 3%;
+                width: 30%;
+                text-align: center;
+                img {
+                    object-fit: scale-down;
+                    margin-bottom: 3%;
+                    height: 400px;
+                }
+
+                .popup-image {
+                    padding: 1%;
+                    margin: 1px;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                p {
+                    font-size: 80%;
+                }
+            }
+
+            #tarot-revolutionary-card-reading {
+                margin-left: 3%;
+                margin-right: 3%;
+                text-align: center;
+
+                img {
+                    margin-bottom: 3%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                }
+
+                .popup-image {
+                    padding: 1%;
+                    margin: 1px;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                p {
+                    font-size: 80%;
+                    text-align: center;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1300px) {
+            .tarot-subpage-item-images {
+                display: block;
+                width: 95%;
+
+                .tarot-subpage-item-image-caption {
+                    width: 100%;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#TarotDeckNote {
+    text-align: center;
+    font-weight: 300;
+    font-size: 125%;
+    color: #707070
+}
+
+#TarotHistoryNote {
+    text-align: center;
+    font-weight: 300;
+    font-size: 125%;
+    color: #707070
 }
 
 #bibliography-mascot{
