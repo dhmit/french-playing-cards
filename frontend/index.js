@@ -45,7 +45,7 @@ ReactDOM.render(
                     </Routes>
                 </BrowserRouter>
             </Base>
-        </Suspense
+        </Suspense>
     </div>,
     document.getElementById("app_root")
 );
