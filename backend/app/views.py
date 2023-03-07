@@ -206,12 +206,16 @@ def example(request, example_id=None):
 
 
 def results(request):
-    # de-stringify
-    dic = json.loads(request.GET.get('0'))  # res is a dictionary
+    print("reached views.results")
+    
+    # De-stringify    
+    dic = json.loads(request.GET.get('query'))
+
+    # Print statements for testing
     # print(type(dic))
+    # print(request.GET)
     # print(dic)
     # keys = request.GET.keys()  # keys, like 'periods' or 'cards'
-    #
     # print(request.GET)
     # print(keys)  # testing statement to see what keys look like
     # request.GET.get(key) is value of key
@@ -363,6 +367,10 @@ def results(request):
     for card in result:
         final_result.append([card.title, card.image, card.card, card.suit, card.start_date,
                              card.end_date, card.maker, card.town, card.back_notes])
+    
+    # print("Just got here!")
+    # print(final_result)
+    
     return JsonResponse({'cards': final_result})
 
     # result = result.values()

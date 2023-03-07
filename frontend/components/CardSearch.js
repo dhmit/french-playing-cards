@@ -68,7 +68,7 @@ export default class CardSearch extends React.Component {
 
         console.log("Selected: ", selected);
 
-        axios.get("/results", {params: JSON.stringify(selected)})
+        axios.get("/results/", {params: {query: JSON.stringify(selected)}})
             .then((results) => {
                 console.log("results from axios", results);
                 // Setting variables in advance
@@ -124,6 +124,10 @@ export default class CardSearch extends React.Component {
                     }
                 );
                 this.setState({searchResults: cardItems});
+            }
+            )
+            .catch(function (error) {
+                console.log(error);
             });
     };
 
