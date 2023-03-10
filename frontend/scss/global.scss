@@ -29,7 +29,9 @@
 }
 
 .dropdown {
-  margin: auto
+  margin: auto;
+  display: block;
+  width: 95%;
 }
 
 .nav a:hover {
@@ -43,7 +45,6 @@
 
 .dropdown-content {
   display: none;
-  position: absolute;
   text-align: center;
   background-color: white;
   border: 1px solid #707070;
@@ -51,6 +52,18 @@
 
   a {
     width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dropdown {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+  }
+  .dropdown-content {
+    position: absolute;
+    margin-top: 40px;
   }
 }
 
