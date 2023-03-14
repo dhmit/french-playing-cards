@@ -83,6 +83,9 @@ const Bibliography = () => {
                 Court de Gébelin, Antoine. <i>Le Tarot</i>. Ed. Jean-Marie Lhote. Paris: Berg, 1983.
             </p>
             <p>
+                Cronk, Nicholas.  "Voltaire et l’art du texto," <i>Littéraire: Pour Alain Viala</i>, ed. M. Roussillon, S. Guyot, D.Glynn and M.-M. Fragonard, 2 vols (Arras, Artois Presses Université, 2018), vol.2, p.243-59.
+            </p>
+            <p>
                 Decker, Ronald and Michael Dummett. <i>A History of the Occult Tarot</i>.  London: Duckworth, 2013.
             </p>
             <p>
