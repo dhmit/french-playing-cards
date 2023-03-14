@@ -29,7 +29,7 @@ const Home = () => {
             those of you interested in gaming, we will offer the opportunity to play a few of the most 
             popular <a href='games'>card games</a> of the period, using the historical deck of cards of your choice!
             <br /><br />
-            Pour accéder à la version française du site, cliquez sur “fr” en haut de la page à droit.
+            <b>Pour accéder à la version française du site, cliquez sur “fr” en haut de la page à droit.</b>
             </Trans>
         </p>
     </>
