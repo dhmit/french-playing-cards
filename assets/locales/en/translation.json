@@ -165,6 +165,17 @@
             "title": "Envelopes",
             "intro": "French playing card manufacturers in these centuries packaged their cards in paper wrappers for sale to the public.  The look of these wrappers was not controlled by the royal taxing agents, so card-makers were free to create their own wrapper designs, within implicitly understood ideological limits.  Before the Revolution, manufacturers utilized the wrappers to communicate patronage of their product, brand names, and the urban locations of their shops.  The images imprinted on the wrappers might reference the French monarchy, or other kings.  As with face card iconography, once the Revolution broke out in 1789 the wrappers began to incorporate revolutionary images and mottos.  There is some evidence to suggest that envelope design in the Napoleonic period may have toned down the ideological references of the 1790s.",
             "images": "The card images below and the associated metadata are courtesy of the <1>Gallica</1> site of the Bibilothèque nationale de France.",
+            "leftWrapper":"Left-hand wrapper",
+            "rightWrapper":"Right-hand wrapper",
+            "bottomLegend": "Bottom legend",
+            "topLegend": "Top legend",
+            "leftBookplate": "Left-hand bookplate, between 1766 and 1789. ",
+            "faictesEspinal": "Left-hand wrapper. “FAICTES A ESPINAL.  CARTES FINES FAITES PAR JEHAN HEMAU A ESPINAL”. (Between 1623 and 1630.)",
+            "bottomNote": "(The note at the bottom, “ENTIER,” indicates that the wrapper contained a full deck of 52 cards.)",
+            "rightWrapperCA": "Right-hand wrapper, ca. 1794? ",
+            "noTextWrapper": "Left-hand wrapper. No text.",
+            "piquet": "(Piquet was a popular card game requiring a 32-card deck.)",
+            "rightWrapperFlaps": "Right-hand wrapper. Side flaps: “LE SOLEIL LUIT POUR TOUT”. Center panel: “LIBERTE EGALITE REPUBLIQUE FRANCAISE CARTYES FINES”. Bottom panel: “FAITES PAR CHEMINADE ET REPELIN MDS CARTIERS RUE NEUVE VIS A VIS CTS JACOBINS A GRENOBLE”",
             "epinal": {
                 "title": "Epinal Playing Card Wrappers, First Half of the Seventeenth Century",
                 "text": "In the first half of the seventeenth century, card-makers in the town of Épinal, in Lorraine, emphasized heraldry, architecture, and the crown on their card wrappers."
@@ -187,7 +198,10 @@
             },
             "napoleonic": {
                 "title": "Napoleonic Card Wrappers",
-                "text": "These two examples, from the first decade of the nineteenth century, display designs that eschew both Old Regime royal patronage and Revolutionary ideological concerns.  The envelope on the left, designed to package a deck of Gatteaux cards around 1810-1815, features two winged, classicizing angels sounding their horns.  (On the Gatteaux deck, see the card “<1>fronts</1>” page on this site.)  Between them they support a small cartouche that contains the symbols of the four card suits.  On the right, the envelope printed by the Widon Delatre, a Parisian card-maker, also has a relatively simple cartouche evoking the biblical King Solomon. To his left and right, cornucopias overflow with playing cards, while the flap below records the manufacturer’s shop in a plain typeface.  While the iconography of both wrappers references classical and biblical imagery, it also reproduces images of card suits and card decks that would have been familiar to gamblers in the period."
+                "text": "These two examples, from the first decade of the nineteenth century, display designs that eschew both Old Regime royal patronage and Revolutionary ideological concerns.  The envelope on the left, designed to package a deck of Gatteaux cards around 1810-1815, features two winged, classicizing angels sounding their horns.  (On the Gatteaux deck, see the card ",
+                "text2": "fronts",
+                "text3": "page on this site.)  Between them they support a small cartouche that contains the symbols of the four card suits.  On the right, the envelope printed by the Widon Delatre, a Parisian card-maker, also has a relatively simple cartouche evoking the biblical King Solomon. To his left and right, cornucopias overflow with playing cards, while the flap below records the manufacturer’s shop in a plain typeface.  While the iconography of both wrappers references classical and biblical imagery, it also reproduces images of card suits and card decks that would have been familiar to gamblers in the period."
+
             }
         }
     },

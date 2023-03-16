@@ -37,8 +37,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/epinal/Epinal1.JPEG'/>
                     <p>
-                        Left-hand wrapper. “FAICTES A ESPINAL.  CARTES FINES FAITES PAR JEHAN HEMAU A ESPINAL”. (Between 1623 
-                        and 1630.)
+                    {t("material.envelopes.faictesEspinal")}
                         <br />
                         <br />
                         Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (B, 43)-BOITE ECU.
@@ -47,7 +46,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/epinal/Epinal2.JPEG'/>
                     <p>
-                        Right-hand wrapper.  “CLAUDE GERARD.  CARTES FINES FAITE PAR CLAUDE GERARD A ESPINA”. (1650)
+                        {t("material.envelopes.rightWrapper")}  “CLAUDE GERARD.  CARTES FINES FAITE PAR CLAUDE GERARD A ESPINA”. (1650)
                         <br />
                         <br />
                         Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (B, 45)-BOITE ECU.
@@ -67,7 +66,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/rouen/Rouen1.jpg'/>
                     <p>
-                        Left-hand wrapper. Cartouche: “L’EPINNE ESTANT EN FLEUR SENT UN TRES BON ODEUR.” Bottom legend: 
+                    {t("material.envelopes.leftWrapper")} Cartouche: “L’EPINNE ESTANT EN FLEUR SENT UN TRES BON ODEUR.” Bottom legend: 
                         “CARTES TRES FINNES DE EDME DE LEPINNE DEMT AU BAS DE LE RUE DES BELLES FEMMES A ROUEN.”
                         <br />
                         <br />
@@ -77,7 +76,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/rouen/Rouen2.jpg'/>
                     <p>
-                        Right-hand wrapper.  Cartouche: “DAVID DE SA HARPE LOUE DIEU DE TOUT SON COEUR.”  Bottom legend:  
+                    {t("material.envelopes.rightWrapper")}: Cartouche: “DAVID DE SA HARPE LOUE DIEU DE TOUT SON COEUR.”  {t("material.envelopes.bottomLegend")}:  
                         “CARTES TRES FINES FAITES PAR ANTO”
                         <br />
                         <br />
@@ -98,8 +97,8 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/eighteenth-century/EighteenthCentury1.JPEG'/>
                     <p>
-                        Left-hand wrapper.  Cartouche: “JE ME DIS LE HEROS DES ROYS ESTANT POURVEU DE CHARGES DES FRANCOIS”  
-                        Legend at bottom: “CARTES TRES FINES FAITES AU HEROS DES ROIS ET CE VEND TOUTES SORTES DE PAPIER FIN 
+                    {t("material.envelopes.leftWrapper")}: Cartouche: “JE ME DIS LE HEROS DES ROYS ESTANT POURVEU DE CHARGES DES FRANCOIS”  
+                        {t("material.envelopes.bottomLegend")}: “CARTES TRES FINES FAITES AU HEROS DES ROIS ET CE VEND TOUTES SORTES DE PAPIER FIN 
                         ANCRE DOUBLE”
                         <br />
                         <br />
@@ -109,10 +108,10 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/eighteenth-century/EighteenthCentury2.JPEG'/>
                     <p>
-                        Right-hand wrapper: Legend at bottom: “CARTES TRES FINES FAITES PAR FRANCOIS GUILLOT MRE CARTIER A 
+                    {t("material.envelopes.rightWrapper")}: {t("material.envelopes.bottomLegend")}: “CARTES TRES FINES FAITES PAR FRANCOIS GUILLOT MRE CARTIER A 
                         PARIS DEMEURANT RUE DE SEINE VIS A VIS LA RUE DU COLOMBIER PRES CEL. DE BUSY VAND TOUT CE QUI 
-                        CONCERNE LECRITURE A MADAMME LA DAUPHINE”  (The note at the bottom, “ENTIER,” indicates that the 
-                        wrapper contained a full deck of 52 cards.)
+                        CONCERNE LECRITURE A MADAMME LA DAUPHINE”  
+                        {t("material.envelopes.bottomNote")}
                         <br />
                         <br />
                         Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (1BIS, 54BIS).
@@ -132,7 +131,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/chassonneris/Chassonneris1.JPEG'/>
                     <p>
-                        Left-hand bookplate, between 1766 and 1789.  “Rue de la Verrerie au coin de la Rue Coquilles, 
+                    {t("material.envelopes.leftBookplate")} “Rue de la Verrerie au coin de la Rue Coquilles, 
                         en face de la Rue Bardubec A Paris.  Md. Fabricant de cartes à jouer, tient magasin de papier 
                         tant d’hollande, que de Francepour l’Ecriture, et le dessein, fait toutes sortes de registres, 
                         et Cartons de toutes especes, Vend des Porte-Feuilles en Maroquin, et autres, Cire a cacheter, 
@@ -147,8 +146,8 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/chassonneris/Chassonneris2.JPEG'/>
                     <p>
-                        Right-hand wrapper, ca. 1794? Legend at the top: “AT THE THREE MOORS JEU DE PIQUET”   
-                        (Piquet was a popular card game requiring a 32-card deck.). Legend at the bottom: “CARTES TRES FINES 
+                    {t("material.envelopes.rightWrapperCA")} {t("material.envelopes.topLegend")}: “AT THE THREE MOORS JEU DE PIQUET”   
+                    {t("material.envelopes.piquet")}. Legend at the bottom: “CARTES TRES FINES 
                         FAITES PAR LE CITOYEN CHASSONNERIS MD CARTIER PAPETIER, RUE DE LA VERRERIE VIS A VIS LA RUE COQUILLES 
                         VEND TOUT CE QUI CONCERNE L’ECRITURE ET FAIT”
                         <br />
@@ -170,7 +169,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/i-shine-for-all/Shine1.JPEG'/>
                     <p>
-                        Left-hand wrapper.  Legend at bottom: “CARTES FINES, Faites par ANT. MANUS, Marchand Cartier, 
+                    {t("material.envelopes.leftWrapper")}. {t("material.envelopes.bottomLegend")}: “CARTES FINES, Faites par ANT. MANUS, Marchand Cartier, 
                         demeurant Place du Plâtre, maison Tolozan, No 3, du côté de rue Longue, au troisieme, A LYON”
                         <br />
                         <br />
@@ -180,9 +179,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/i-shine-for-all/Shine2.JPEG'/>
                     <p>
-                        Right-hand wrapper. Side flaps: “LE SOLEIL LUIT POUR TOUT”. Center panel: “LIBERTE EGALITE REPUBLIQUE 
-                        FRANCAISE CARTYES FINES”. Bottom panel: “FAITES PAR CHEMINADE ET REPELIN MDS CARTIERS RUE NEUVE VIS A 
-                        VIS CTS JACOBINS A GRENOBLE”
+                    {t("material.envelopes.rightWrapperFlaps")}
                         <br />
                         <br />
                         Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (2, 33).
@@ -196,24 +193,16 @@ const Envelopes = () => {
         <h3>{t("material.envelopes.napoleonic.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                <Trans i18nKey="material.envelopes.napoleonic.text">
-                    These two examples, from the first decade of the nineteenth century, display designs that eschew both 
-                    Old Regime royal patronage and Revolutionary ideological concerns.  The envelope on the left, designed 
-                    to package a deck of Gatteaux cards around 1810-1815, features two winged, classicizing angels sounding 
-                    their horns.  (On the Gatteaux deck, see the card “<a href="../material-aspects/fronts">fronts</a>” page on this site.)  Between them they support 
-                    a small cartouche that contains the symbols of the four card suits.  On the right, the envelope printed by 
-                    the Widow Delatre, a Parisian card-maker, also has a relatively simple cartouche evoking the biblical King 
-                    Solomon. To his left and right, cornucopias overflow with playing cards, while the flap below records the 
-                    manufacturer’s shop in a plain typeface.  While the iconography of both wrappers references classical and 
-                    biblical imagery, it also reproduces images of card suits and card decks that would have been familiar to 
-                    gamblers in the period.
-                </Trans>
+                {t("material.envelopes.napoleonic.text")}
+                <a href="../material-aspects/fronts"> {t("material.envelopes.napoleonic.text2")} </a>
+                {t("material.envelopes.napoleonic.text3")}
+                {t("material.envelopes.noTextWrapper")}
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/napoleon/Napoleon1.JPEG'/>
                     <p>
-                        Left-hand wrapper. No text.
+                    {t("material.envelopes.noTextWrapper")}
                         <br />
                         <br />
                         Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (10, 416).
@@ -222,7 +211,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/napoleon/Napoleon2.JPEG'/>
                     <p>
-                        Right-hand wrapper. “CARTES. FABRIQUE DE CARTES DE LA VE DELATRE RUE HELVETIUS NO 37 A PARIS”
+                    {t("material.envelopes.rightWrapper")} “CARTES. FABRIQUE DE CARTES DE LA VE DELATRE RUE HELVETIUS NO 37 A PARIS”
                         <br />
                         <br />
                         Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5BIS, 159).

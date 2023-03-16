@@ -165,6 +165,17 @@
             "title": "Enveloppes",
             "intro": "Les fabricants français de cartes à jouer de ces siècles emballent leurs cartes dans des enveloppes en papier pour les vendre au public. L'aspect de ces enveloppes n'étant pas contrôlé par les agents fiscaux royaux, les fabricants de cartes étaient libres de créer leurs propres motifs d'enveloppes, dans le respect de limites idéologiques implicitement comprises. Avant la Révolution, les fabricants utilisaient ainsi les enveloppes pour faire connaître leurs produits, les noms de leurs marques et les emplacements urbains de leurs magasins à leur clientèle. Les images imprimées sur les emballages pouvaient faire référence à la monarchie française ou à d'autres rois. Comme pour l'iconographie des cartes de figures, une fois que la Révolution a éclaté en 1789, les enveloppes ont commencé à incorporer des images et des devises révolutionnaires. Certains éléments suggèrent que la conception des enveloppes de la période napoléonienne a peut-être atténué les références idéologiques des années 1790.",
             "images": "Les images de cartes ci-dessous et les métadonnées associées sont une courtoisie du site <1>Gallica</1> de la Bibliothèque nationale de France.",
+            "faictesEspinal": "Enveloppe à gauche. “FAICTES A ESPINAL.  CARTES FINES FAITES PAR JEHAN HEMAU A ESPINAL”. (Entre 1623 et 1630.)",
+            "leftWrapper":"Enveloppe à gauche",
+            "rightWrapper":"Enveloppe à droite",
+            "bottomLegend": "Légende en bas",
+            "topLegend": "Légende en haut",
+            "leftBookplate": "Ex-libris à gauche entre 1766 et 1789. ",
+            "piquet": "(Piquet était un jeu populaire qu’on jouait avec un jeu de 32 cartes.)",
+            "bottomNote": "(En bas, le mot ENTIER veut dire que cette enveloppe contenait 52 cartes.)",
+            "rightWrapperCA": "Enveloppe à droit, vers 1794? Légende en haut",
+            "noTextWrapper": "Enveloppe à gauche, sans texte.",
+            "rightWrapperFlaps": "Enveloppe à droit.  Rabats latéraux: “LE SOLEIL LUIT POUR TOUT”. Panneau central: “LIBERTE EGALITE REPUBLIQUE FRANCAISE CARTYES FINES”. Panneau du bas: “FAITES PAR CHEMINADE ET REPELIN MDS CARTIERS RUE NEUVE VIS A VIS CTS JACOBINS A GRENOBLE”",
             "epinal": {
                 "title": "Enveloppes de cartes à jouer d'Épinal, première moitié du XVIIe siècle",
                 "text": "Dans la première moitié du XVIIe siècle, les fabricants de cartes de la ville d'Épinal, en Lorraine, mettent en valeur l'héraldique, l'architecture et la couronne sur leurs emballages de cartes."
@@ -187,7 +198,9 @@
             },
             "napoleonic": {
                 "title": "Enveloppes de cartes napoléoniennes",
-                "text": "Ces deux exemples, datant de la première décennie du XIXe siècle, présentent des modèles qui évitent à la fois le patronage royal de l'Ancien Régime et les préoccupations idéologiques de la Révolution. L'enveloppe de gauche, conçue pour emballer un jeu de cartes Gatteaux vers 1810-1815, présente deux anges ailés, de style classique, sonnant de la corne. (Sur le jeu du graveur Gatteaux, voir la page « DE FACE » des cartes sur ce site). Entre eux, ils soutiennent un petit cartouche contenant les symboles des quatre couleurs des cartes. À droite, l'enveloppe imprimée par la Veuve Delatre, une cartonnière parisien, comporte également un cartouche relativement simple évoquant le roi Salomon de la Bible. À sa gauche et à sa droite, des cornes d'abondance débordent de cartes à jouer, tandis que le rabat situé en dessous indique le magasin du fabricant dans une police de caractères simple. Si l'iconographie des deux emballages fait référence à l'imagerie classique et biblique, elle reproduit également des images de cartes et des jeux de cartes qui auraient été familières aux joueurs de l’époque."
+                "text": "Ces deux exemples, datant de la première décennie du XIXe siècle, présentent des modèles qui évitent à la fois le patronage royal de l'Ancien Régime et les préoccupations idéologiques de la Révolution. L'enveloppe de gauche, conçue pour emballer un jeu de cartes Gatteaux vers 1810-1815, présente deux anges ailés, de style classique, sonnant de la corne. (Sur le jeu du graveur Gatteaux, voir la page ",
+                "text2": "DE FACE",
+                "text3": "des cartes sur ce site). Entre eux, ils soutiennent un petit cartouche contenant les symboles des quatre couleurs des cartes. À droite, l'enveloppe imprimée par la Veuve Delatre, une cartonnière parisien, comporte également un cartouche relativement simple évoquant le roi Salomon de la Bible. À sa gauche et à sa droite, des cornes d'abondance débordent de cartes à jouer, tandis que le rabat situé en dessous indique le magasin du fabricant dans une police de caractères simple. Si l'iconographie des deux emballages fait référence à l'imagerie classique et biblique, elle reproduit également des images de cartes et des jeux de cartes qui auraient été familières aux joueurs de l’époque."
             }
         }
     },
