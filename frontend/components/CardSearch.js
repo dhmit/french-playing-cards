@@ -2,6 +2,9 @@ import React from "react";
 import axios from "axios";
 import Select from "react-select";
 import Tabs from "./Tabs";
+import { withTranslation } from "react-i18next";
+import { PropTypes } from "prop-types";
+
 
 const options = {
     periods: [{label: "Pre-Revolutionary", value: "B"},
@@ -34,7 +37,7 @@ const options = {
         }]
 };
 
-export default class CardSearch extends React.Component {
+class CardSearch extends React.Component {
     state = {
         options: options,
         periods: [],
@@ -139,15 +142,17 @@ export default class CardSearch extends React.Component {
         this.setState({selected: stateToModify});
     };
 
+
     render() {
+        const { t } = this.props;
         return <>
         <div id='SearchPage' label="Search Page">
-                    <h3>Filter search by selecting the features of the cards you want to see:</h3>
+                    <h3>{t("iconography.search.header")}</h3>
                     <br/>
 
                     <div className='SearchBarPair'>
                     <div className='SearchBar'>
-                    <p>Time period</p>
+                    <p>{t("iconography.search.categories.period")}</p>
                     <Select
                         name={"periods"}
                         isMulti
@@ -158,7 +163,7 @@ export default class CardSearch extends React.Component {
                     </div>
 
                     <div className='SearchBar'>
-                    <p>Card</p>
+                    <p>{t("iconography.search.categories.card")}</p>
                     <Select
                         isMulti
                         name={"cards"}
@@ -171,7 +176,7 @@ export default class CardSearch extends React.Component {
                     
                     <div className='SearchBarPair'>
                     <div className='SearchBar'>
-                    <p>Suit</p>
+                    <p>{t("iconography.search.categories.suit")}</p>
                     <Select
                         isMulti
                         name={"suits"}
@@ -182,7 +187,7 @@ export default class CardSearch extends React.Component {
                     </div>
 
                     <div className='SearchBar'>
-                    <p>Front or back</p>
+                    <p>{t("iconography.search.categories.rectoVerso")}</p>
                     <Select
                         isMulti
                         name={"rectoVerso"}
@@ -195,7 +200,7 @@ export default class CardSearch extends React.Component {
 
                     <div className='SearchBarPair'>
                     <div className='SearchBar'>
-                    <p>Back Notes</p>
+                    <p>{t("iconography.search.categories.notes")}</p>
                     <Select
                         isMulti
                         name={"backNotes"}
@@ -206,7 +211,7 @@ export default class CardSearch extends React.Component {
                     </div>
 
                     <div className='SearchBar'>
-                    <p>Town</p>
+                    <p>{t("iconography.search.categories.town")}</p>
                     <Select
                         isMulti
                         name={"towns"}
@@ -219,7 +224,7 @@ export default class CardSearch extends React.Component {
 
                     <div className='SearchBarPair'>
                     <div className='SearchBar'>
-                    <p>Maker</p>
+                    <p>{t("iconography.search.categories.maker")}</p>
                     <Select
                         isMulti
                         name={"makers"}
@@ -231,15 +236,14 @@ export default class CardSearch extends React.Component {
                     </div>
 
                     <div id='SearchButton'>
-                        <button id='SearchButton' onClick={this.handleSearch}>Search</button>
+                        <button id='SearchButton' onClick={this.handleSearch}>{t("iconography.search.button")}</button>
                     </div>
 
                     <br/>
                     <br/>
                     <br/>
                     <div id={'CardResults'}>
-                        <p id={'Note'}>To view an card image in greater detail, right click on it
-                            and select 'Open Image in New Tab'</p>
+                        <p id={'Note'}>{t("iconography.search.note")}</p>
                         <ul>{this.state.searchResults}</ul>
                     </div>
                 </div>
@@ -247,3 +251,9 @@ export default class CardSearch extends React.Component {
             ;
     }
 }
+
+CardSearch.propTypes = {
+    t: PropTypes.any
+};
+
+export default withTranslation()(CardSearch);

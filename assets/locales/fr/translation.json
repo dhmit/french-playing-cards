@@ -8,6 +8,9 @@
         "backs": "De dos",
         "envelopes": "Enveloppes",
         "iconography": "Iconographie",
+        "tarot": "Tarot",
+        "deck": "Le jeu de tarot",
+        "history": "Une brève histoire de la cartomancie", 
         "games": "Jouez !",
         "bibliography": "Bibliographie"
     },
@@ -241,6 +244,68 @@
             "wise-virtuous": "Figures des sages, des vertueuses, des courageux",
             "barricades": "Jeu de cartes « barricades »",
             "liberators": "Jeu de cartes « libérateurs »"
+        },
+        "search": {
+            "header": "Filtrez la recherche en sélectionnant les caractéristiques des cartes que vous souhaitez voir :",
+            "categories": {
+                "period": "Période",
+                "card": "Carte",
+                "suit": "Couleur",
+                "rectoVerso": "Recto ou verso",
+                "notes": "Notes au dos",
+                "town": "Ville",
+                "maker": "Auteur"
+            },
+            "button": "Rechercher",
+            "note": "Pour visualiser une représentation de carte plus en détail, cliquez dessus avec le bouton droit de la souris et sélectionnez “Ouvrir l'image dans un nouvel onglet”"
+        }
+    },
+    "tarot": {
+        "header": "Cartes de tarot",
+        "blurb": "Les cartes de tarot sont apparues en Europe au XIVe siècle et ont rapidement gagné la France. Le jeu de tarot standard se composait de 78 cartes : quatre couleurs comprenant quatre figures (roi, reine, chevalier, valet) et les cartes de l'as au dix, ainsi que 22 cartes d'atout. Ces paquets de cartes étaient utilisés pour jouer à un jeu similaire au bridge moderne. Dans le dernier tiers du dix-huitième siècle, une nouvelle utilisation de ces jeux est apparue, celle de la \"cartomancie\", ou divination. Les liens ci-dessous vous mèneront à des pages qui fournissent des détails sur le jeu de cartes de Tarot standard, ainsi qu'une brève histoire de la cartomancie.",
+        "deck": {
+            "title": "Le jeu de tarot",
+            "intro": "Les cartes à jouer sont arrivées dans la péninsule italienne vers le XIVe siècle et les artistes ont créé les premières cartes de tarot peu de temps après. Ces premières cartes, peintes à la main, étaient destinées aux cours de la Renaissance dans des villes comme Milan, Florence et Ferrare. Avec les nobles comme clients, ces cartes démontraient leur habileté et utilisaient des matériaux de haute qualité, notamment de la peinture à l'or et à l'argent. Les cartes présentées ici, qui représentent l'Amour et le Monde, proviennent de l'atelier de Bonifacio Bembo au milieu du XVe siècle.",
+            "para1": "Bien que le nombre de cartes de tarot et leur imagerie aient varié au départ, elles se sont finalement arrangées en un jeu de vingt-deux cartes dont les thèmes ont perduré jusqu'à aujourd'hui. Ainsi, au début du XVIIIe siècle, un jeu de cartes tel que le Tarot de Marseille comprenait cinquante-six cartes à jouer ordinaires (de l'as au dix et quatre cartes de face dont le roi, la reine, le chevalier et le valet) utilisant les couleurs des coupes, des pièces de monnaie, des épées et des bâtons. Lorsque le jeu de cartes normal était combiné avec les vingt-deux cartes de tarot, on obtenait un jeu de soixante-dix-huit cartes. Au fil du temps, les fabricants ont régularisé les sujets des cartes de Tarot et leur ordre. Traditionnellement, ces cartes sont numérotées de un à vingt et un, la carte du Fou n'étant pas numérotée.",
+            "para2": "Si elles sont aujourd'hui considérées comme des outils de divination et de cartomancie, les cartes de Tarot servaient à l'origine d'atouts dans un ensemble de jeux de cartes. Tout comme dans le bridge moderne, où l'une des couleurs est désignée comme couleur d'atout par le biais d'un processus d'enchères, les jeux de Tarot utilisaient les vingt-deux cartes de Tarot comme atouts. Les images standard des vingt-deux cartes comprennent le Fou, le Jongleur, la Papesse, l'Impératrice, l'Empereur, le Pape, les Amoureux, le Chariot, la Justice, l'Ermite, la Roue de la Fortune, la Force, le Pendu, la Mort (sans titre), la Tempérance, le Diable, la Maison de Dieu, l'Étoile, la Lune, le Soleil, le Jugement et le Monde. Il existe des variantes. Dans certains jeux de tarot, la papesse devenait la grande prêtresse ou Junon, tandis que le pape devenait le grand prêtre ou Jupiter. Le Jongleur apparaissait parfois comme le Magicien. Pendant la Révolution française, alors que certaines personnes désapprouvaient les images de la religion et de la monarchie, l'impératrice et l'empereur sont devenus une grand-mère et un grand-père.",
+            "cards": {
+                "love": "Amour. Atelier de Bonifacio Bembo, 1445 ? Source : Collection Cary de cartes à jouer, cote ITA09. Bibliothèque des livres rares et manuscrits Beinecke, Université de Yale.",
+                "world": "Monde. Atelier de Bonifacio Bembo, 1445 ? Source : Collection Cary de cartes à jouer, cote ITA09. Bibliothèque des livres rares et manuscrits Beinecke, Université de Yale.",
+                "king": "Roi de monnaie. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "queen": "Dame d’épées. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "knight": "Chevalier de batons. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "jack": "Valet de coupes. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "fool": "Le Fou. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "juggler": "Le Jongleur. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "death": "La Mort. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "hangedman": "Le pendu. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "grandmother": "Le Grand-père. Italian Tarot Cards in the Revolutionary Style, Jean Isnard, 1794. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU.",
+                "grandfather": "La Grande-mère. Italian Tarot Cards in the Revolutionary Style, Jean Isnard, 1794. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU."
+            },
+            "note1": "Pour voir toutes les cartes du jeu de tarot de Marseille 1701-1715 de la Bibliothèque nationale de France, <1>cliquez ici</1>.",
+            "note2": "Pour voir toutes les cartes du jeu de tarot révolutionnaire de 1794 de la Bibliothèque nationale de France, <1>cliquez ici.</1>"
+        },
+        "cartomancy": {
+            "title": "Une brève histoire de la cartomancie",
+            "intro": "Malgré de fréquentes références à l'utilisation de cartes à jouer à des fins divinatoires, celles-ci étaient suffisamment informelles pour qu'un mot ne soit pas inventé avant la fin du 18e siècle, lorsque Jean-Baptiste Alliette (1738-1791) commença à parler de \"cartonomancie\", qu'il abrégea plus tard en \"cartomancie\". Une première allusion nous vient du célèbre roué Giovanni Casanova, qui raconte dans ses mémoires avoir réprimandé une jeune paysanne russe nommée Zaïre, qui pratiquait la divination avec un jeu de cartes ordinaire, et s'en serait servie pour prédire ses infidélités (un exploit qui ne nécessitait probablement aucune sorte d'aptitude magique). <br/><br/> Bien que les historiens aient identifié quelques références similaires au XVIIIe siècle, l'utilisation des cartes de Tarot à des fins divinatoires n'a réellement pris son essor qu'après qu'<6>Antoine Court de Gébelin</6> (1725-1784) ait revendiqué les origines égyptiennes du Tarot et son utilisation à des fins divinatoires dans son ouvrage en plusieurs volumes intitulé <8>Le monde primatif</8>. Dans le huitième volume de cet ouvrage, paru en 1781, Court de Gébelin affirme que les soixante-dix-huit \"pages\" du Tarot contiennent, sous forme allégorique, les connaissances trouvées dans la bibliothèque perdue d'Alexandrie. Il suffisait de disposer d'une clé appropriée pour déverrouiller ce savoir.",
+            "para1": "Une fois que Court de Gébelin eut attiré l'attention de tous sur cette possibilité, Alliette adopta complètement la pratique et essaya même d’en revendiquer la priorité. Alliette - professeur d'algèbre, vendeur d'estampes et pourvoyeur d'informations, de prédictions et d'objets magiques - créa son propre jeu de tarot, vendit des livres sur l'utilisation des cartes pour la divination (à la fois des jeux ordinaires et des jeux complets de tarot) et donna des conférences sur le sujet à son École de Magie. Plusieurs de ses livres contiennent des diagrammes détaillés et des instructions sur la lecture des cartes.",
+            "para2": "La cartomancie a continué à trouver des praticiens et des enthousiastes jusqu'à la période de la Révolution française, avec l'apparition de versions révolutionnaires des cartes de Tarot, certaines contenant des conseils pratiques pour le joueur, ajoutés comme une sorte d'antisèche.",
+            "para3": "La pratique continue d'inspirer l'innovation technique avec diverses méthodes de pose des cartes, dont certaines prétendent remonter jusqu'à l’Égypte antique, affirmation qui reçoit un écho favorable en cette période d'égyptomanie.",
+            "para4": "Il est certain que la cartomancie a fait l'objet d'une attention considérable à la fin du dix-huitième siècle et au début du dix-neuvième siècle. Certains jeux de tarot ont ainsi été adaptés pour servir de divertissement, comme le Jeu de cartomancie pour l'amusement des dames.",
+            "para5": "La mode de la cartomancie s'est poursuivie au XIXe siècle. Dans Le Nouveau Paris (1798), Louis-Sébastien Mercier, par exemple, décrit sa rencontre avec un cartomancien nommé Martin qui travaillait à Paris et dont la boutique attirait un flot constant de clients. Mlle Le Normand (1772-1843) jouissait également d'une grande renommée (ou peut-être d'une infamie) pour ses lectures de cartes pendant toute la période napoléonienne, dans la première partie du dix-neuvième siècle.",
+            "images": {
+                "gebelin": "Antoine Court de Gébelin, <i>Le Monde primitif analysé et comparé avec le monde moderne</i> (Paris, 1777-1781) Vol. 8, planche VIII. Les images représentent les tarots suivants, dans le sens des aiguilles d'une montre, en partant du coin supérieur gauche : Le Diable ; La Mort ; La Roue de Fortune ; La Maison de Dieu. Avec l'aimable autorisation de la Bibliothèque nationale de France.",
+                "alliette": "Alliette écrivant son livre sur les tarots (frontispiece). Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i> (Amsterdam, 1770). Bibliothèque de l'Arsenal, 8-S-14395.",
+                "fortune": "“Roue de la fortune” (after p. 64). Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i> (Amsterdam, 1770). Bibliothèque de l'Arsenal, 8-S-14395.",
+                "horoscope": "\"Horoscope” (after p. 72). Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i> (Amsterdam, 1770). Bibliothèque de l'Arsenal, 8-S-14395.",
+                "tirer": "Nouvelle manière de tirer les cartes inventée en 1792. (Paris, Mondhare et Jean, 1792). Bibliothèque nationale de France, Cabinet des estampes, RESERVE FOL-QB-201 (129).",
+                "toth": "\"Tableau des cartes du Livre de Toth placées dans le temple du feu à Memphis\", extrait du <i>Livre de Thot, ou Collection précieuse des tableaux de la doctrine de Mercure dans laquelle se trouve le chemin royal de la vie humaine</i> (Paris : Basan et Poignant, 1788). Bibliothèque nationale, Cabinet des estampes, BOITE FT 4-KH-34 (E).",
+                "prelate": "“Le prélat,” extrait du Jeu de cartomancie pour l'amusement des Dames (Paris, 1788). Bibliothèque nationale de France, Cabinet des estampes, RESERVE KH-34 (3, 25)-BOITE ECU.",
+                "temple": "“Temple de l'Amour,” extrait du Jeu de cartomancie pour l'amusement des Dames (Paris, 1788). Bibliothèque nationale de France, Cabinet des estampes, RESERVE KH-34 (3, 25)-BOITE ECU. ",
+                "liberty": "“Liberté” du Jeu de cartomancie pour l'amusement des Dames (Paris, 1788). Bibliothèque nationale de France, Cabinet des estampes, RESERVE KH-34 (3, 25)-BOITE ECU. ",
+                "normand": "Frontispice de Marie-Anne Adelaïde Le Normand, Les Souvenirs prophétiques d'une sibylle sur les causes sécrètes de son éarrestation, le 11 décembre 1811. (Paris, 1814). La légende sous la gravure se lit comme suit : \"Notre visite doit vous surprendre ?\" \"Pas du tout, mes cartes l'avaient prédit....\". Bibliothèque de l'Arsenal, 8-NF-8589."
+            },
+            "note": "Pour plus d'informations sur les cartes de tarot et la cartomancie, veuillez consulter les citations qui s’y réfèrent sur notre page <1>Bibliographie</1>."
         }
     },
     "games": {
