@@ -644,6 +644,42 @@ span {
     }
 }
 
+.games-header {
+    font-size: 150%;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 1.5%;
+    color:#707070;
+}
+
+#Games-Menu {
+    display: flex;
+}
+
+.Games-Menu-Item {
+    text-align: center;
+    margin-bottom: 10px;
+
+    a {
+        p {
+            font-size: 150%;
+            font-weight: 200;
+            color: #787878;
+            text-decoration: underline;
+        }
+
+        img {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #Games-Menu {
+        display: block;
+    }
+}
+
 // h2 {
 //     text-align: center;
 //     color: #707070;
