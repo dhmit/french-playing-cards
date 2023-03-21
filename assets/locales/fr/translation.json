@@ -16,7 +16,8 @@
     },
     "home": {
         "header": "Cartes à jouer françaises, 1650-1850",
-        "blurb": "De 1650 à 1850, les Français ont propagé les Lumières. Ils ont gagné et perdu un empire, puis en ont commencé un autre, et ont renversé une monarchie vieille de plusieurs siècles. Ils ont également joué aux cartes. Ce site explore l'histoire des cartes à jouer françaises de cette période comme une source inhabituelle et éclairante pour l'histoire de l'Ancien Régime, de la Révolution française et du début du XIXe siècle en France. Vous y trouverez des détails sur <1>les procédures de fabrication</1>, <3>les aspects matériels</3> des cartes à jouer, l'évolution de leur <5>iconographie</5> et des <7>tarots</7> et l’histoire de <9>cartomancie</9>. <11>Une bibliographie</11> fournit des suggestions de lectures complémentaires. Et pour ceux d'entre vous qui souhaitent faire une partie, nous vous proposerons de vous essayer à certains <13>des jeux</13> les plus populaires de l'époque, en utilisant le paquet de cartes historique de votre choix !<br /><br /><17>For the English language version of the site, please click on “en” at the top of the page on the right.</17>" 
+        "blurb": "De 1650 à 1850, les Français ont propagé les Lumières. Ils ont gagné et perdu un empire, puis en ont commencé un autre, et ont renversé une monarchie vieille de plusieurs siècles. Ils ont également joué aux cartes. Ce site explore l'histoire des cartes à jouer françaises de cette période comme une source inhabituelle et éclairante pour l'histoire de l'Ancien Régime, de la Révolution française et du début du XIXe siècle en France. Vous y trouverez des détails sur <1>les procédures de fabrication</1>, <3>les aspects matériels</3> des cartes à jouer, l'évolution de leur <5>iconographie</5> et un aperçu sur des <7>tarots</7> et l’histoire de <9>cartomancie</9>. <11>Une bibliographie</11> fournit des suggestions de lectures complémentaires. Et pour ceux d'entre vous qui souhaitent faire une partie, nous vous proposerons de vous essayer à certains <13>des jeux</13> les plus populaires de l'époque, en utilisant le paquet de cartes historique de votre choix !",
+        "trans": "For the English language version of the site, please click on “en” at the top of the page on the right." 
     },
     "about": {
         "header": "À propos de ce site web",
@@ -168,18 +169,14 @@
             "title": "Enveloppes",
             "intro": "Les fabricants français de cartes à jouer de ces siècles emballent leurs cartes dans des enveloppes en papier pour les vendre au public. L'aspect de ces enveloppes n'étant pas contrôlé par les agents fiscaux royaux, les fabricants de cartes étaient libres de créer leurs propres motifs d'enveloppes, dans le respect de limites idéologiques implicitement comprises. Avant la Révolution, les fabricants utilisaient ainsi les enveloppes pour faire connaître leurs produits, les noms de leurs marques et les emplacements urbains de leurs magasins à leur clientèle. Les images imprimées sur les emballages pouvaient faire référence à la monarchie française ou à d'autres rois. Comme pour l'iconographie des cartes de figures, une fois que la Révolution a éclaté en 1789, les enveloppes ont commencé à incorporer des images et des devises révolutionnaires. Certains éléments suggèrent que la conception des enveloppes de la période napoléonienne a peut-être atténué les références idéologiques des années 1790.",
             "images": "Les images de cartes ci-dessous et les métadonnées associées sont une courtoisie du site <1>Gallica</1> de la Bibliothèque nationale de France.",
-            "faictesEspinal": "Enveloppe à gauche : “FAICTES A ESPINAL.  CARTES FINES FAITES PAR JEHAN HEMAU A ESPINAL”. (Entre 1623 et 1630.)",
-            "leftWrapper":"Enveloppe à gauche :",
-            "rightWrapper":"Enveloppe à droite :",
+            "leftWrapper":"Enveloppe à gauche : ",
+            "rightWrapper":"Enveloppe à droite : ",
             "bottomLegend": "Légende en bas ",
-            "topLegend": "Légende en haut :",
-            "leftBookplate": "Ex-libris à gauche entre 1766 et 1789 :",
-            "piquet": "(Piquet était un jeu populaire qu’on jouait avec un jeu de 32 cartes.)",
-            "bottomNote": "(En bas, le mot ENTIER veut dire que cette enveloppe contenait 52 cartes.)",
-            "rightWrapperCA": "Enveloppe à droite : vers 1794? Légende en haut :",
+            "topLegend": "Légende en haut ",
             "epinal": {
                 "title": "Enveloppes de cartes à jouer d'Épinal, première moitié du XVIIe siècle",
-                "text": "Dans la première moitié du XVIIe siècle, les fabricants de cartes de la ville d'Épinal, en Lorraine, mettent en valeur l'héraldique, l'architecture et la couronne sur leurs emballages de cartes."
+                "text": "Dans la première moitié du XVIIe siècle, les fabricants de cartes de la ville d'Épinal, en Lorraine, mettent en valeur l'héraldique, l'architecture et la couronne sur leurs emballages de cartes.",
+                "left": "Enveloppe à gauche : “FAICTES A ESPINAL. sCARTES FINES FAITES PAR JEHAN HEMAU A ESPINAL”. (Entre 1623 et 1630.)"
             },
             "rouen": {
                 "title": "Enveloppes de cartes à jouer de Rouen, seconde moitié du XVIIe siècle",
@@ -187,11 +184,15 @@
             },
             "eighteenth": {
                 "title": "Exemples d'enveloppes de cartes du XVIIIe siècle",
-                "text": "Ces deux exemples du XVIIIe siècle sont tous deux focalisés sur la monarchie. Celui de gauche montre un roi français à cheval dans un cartouche soutenu par des courtisans. La légende qui entoure le cartouche affirme que le roi est « le héros de tous les rois ». Le panneau central de l'emballage de droite représente l'épouse de l'héritier du trône de France (la « Dauphine ») dans une pose de peintre. Le fabricant parisien affirme être son cartonnier autorisé."
+                "text": "Ces deux exemples du XVIIIe siècle sont tous deux focalisés sur la monarchie. Celui de gauche montre un roi français à cheval dans un cartouche soutenu par des courtisans. La légende qui entoure le cartouche affirme que le roi est « le héros de tous les rois ». Le panneau central de l'emballage de droite représente l'épouse de l'héritier du trône de France (la « Dauphine ») dans une pose de peintre. Le fabricant parisien affirme être son cartonnier autorisé.",
+                "right": "(En bas, le mot ENTIER veut dire que cette enveloppe contenait 52 cartes.)"
             },
             "revolutionary": {
                 "title": "Une modification révolutionnaire de l'emballage d'une carte",
-                "text": "Les fabricants de cartes ont dû adapter leurs emballages aux idéaux révolutionnaires, tout comme ils ont dû modifier l'iconographie des cartes qu'ils fabriquaient. Parfois, les changements étaient subtils. À gauche, un ex-libris prérévolutionnaire produit par le cartier et papetier parisien Hugues Chassonnier représente les trois rois bibliques d'Orient qui portaient des cadeaux pour l'enfant Jésus. Le monarque de gauche montre l'étoile dans le ciel qui les a poussés à se rendre à Bethléem. Cette plaque, produite dans les deux dernières décennies de l'Ancien Régime, a servi de marque de fabrique à la boutique de Chassonnier ; elle a peut-être imité l'enseigne qui pendait à l'extérieur de sa boutique. A droite, un emballage de carte à jouer fabriqué par Chassonnier dans les premières années de la Révolution. Ici, les trois personnages sont suffisamment proches de l'ex-libris prérévolutionnaire pour que les clients parisiens du fabricant de cartes aient pu reconnaître le fabricant. Mais les cadeaux que portent les rois sont atténués, et leurs couronnes ont été remplacées par des turbans. Le rabat en haut de l'enveloppe les qualifie de « maures » et non de rois. Et le texte en bas informe les acheteurs que les cartes contenues dans l'enveloppe ont été fabriquées par le « citoyen » Chassonnier."
+                "text": "Les fabricants de cartes ont dû adapter leurs emballages aux idéaux révolutionnaires, tout comme ils ont dû modifier l'iconographie des cartes qu'ils fabriquaient. Parfois, les changements étaient subtils. À gauche, un ex-libris prérévolutionnaire produit par le cartier et papetier parisien Hugues Chassonnier représente les trois rois bibliques d'Orient qui portaient des cadeaux pour l'enfant Jésus. Le monarque de gauche montre l'étoile dans le ciel qui les a poussés à se rendre à Bethléem. Cette plaque, produite dans les deux dernières décennies de l'Ancien Régime, a servi de marque de fabrique à la boutique de Chassonnier ; elle a peut-être imité l'enseigne qui pendait à l'extérieur de sa boutique. A droite, un emballage de carte à jouer fabriqué par Chassonnier dans les premières années de la Révolution. Ici, les trois personnages sont suffisamment proches de l'ex-libris prérévolutionnaire pour que les clients parisiens du fabricant de cartes aient pu reconnaître le fabricant. Mais les cadeaux que portent les rois sont atténués, et leurs couronnes ont été remplacées par des turbans. Le rabat en haut de l'enveloppe les qualifie de « maures » et non de rois. Et le texte en bas informe les acheteurs que les cartes contenues dans l'enveloppe ont été fabriquées par le « citoyen » Chassonnier.",
+                "left": "Ex-libris à gauche entre 1766 et 1789 :",
+                "right": "Enveloppe à droite : vers 1794? Légende en haut :",
+                "piquet": "(Piquet était un jeu populaire qu’on jouait avec un jeu de 32 cartes.)"
             },
             "shine": {
                 "title": "« Je luit pour tous »",
@@ -278,7 +279,7 @@
                 "fool": "Le Fou. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
                 "juggler": "Le Jongleur. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
                 "death": "La Mort. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
-                "hangedman": "Le pendu. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "hangedman": "Le Pendu. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
                 "grandmother": "Le Grand-père. Italian Tarot Cards in the Revolutionary Style, Jean Isnard, 1794. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU.",
                 "grandfather": "La Grande-mère. Italian Tarot Cards in the Revolutionary Style, Jean Isnard, 1794. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU."
             },
@@ -296,8 +297,8 @@
             "images": {
                 "gebelin": "Antoine Court de Gébelin, <i>Le Monde primitif analysé et comparé avec le monde moderne</i> (Paris, 1777-1781) Vol. 8, planche VIII. Les images représentent les tarots suivants, dans le sens des aiguilles d'une montre, en partant du coin supérieur gauche : Le Diable ; La Mort ; La Roue de Fortune ; La Maison de Dieu. Avec l'aimable autorisation de la Bibliothèque nationale de France.",
                 "alliette": "Alliette écrivant son livre sur les tarots (frontispiece). Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i> (Amsterdam, 1770). Bibliothèque de l'Arsenal, 8-S-14395.",
-                "fortune": "“Roue de la fortune” (after p. 64). Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i> (Amsterdam, 1770). Bibliothèque de l'Arsenal, 8-S-14395.",
-                "horoscope": "\"Horoscope” (after p. 72). Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i> (Amsterdam, 1770). Bibliothèque de l'Arsenal, 8-S-14395.",
+                "fortune": "“Roue de la fortune” (après p. 64). Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i> (Amsterdam, 1770). Bibliothèque de l'Arsenal, 8-S-14395.",
+                "horoscope": "\"Horoscope” (après p. 72). Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i> (Amsterdam, 1770). Bibliothèque de l'Arsenal, 8-S-14395.",
                 "tirer": "Nouvelle manière de tirer les cartes inventée en 1792. (Paris, Mondhare et Jean, 1792). Bibliothèque nationale de France, Cabinet des estampes, RESERVE FOL-QB-201 (129).",
                 "toth": "\"Tableau des cartes du Livre de Toth placées dans le temple du feu à Memphis\", extrait du <i>Livre de Thot, ou Collection précieuse des tableaux de la doctrine de Mercure dans laquelle se trouve le chemin royal de la vie humaine</i> (Paris : Basan et Poignant, 1788). Bibliothèque nationale, Cabinet des estampes, BOITE FT 4-KH-34 (E).",
                 "prelate": "“Le prélat,” extrait du Jeu de cartomancie pour l'amusement des Dames (Paris, 1788). Bibliothèque nationale de France, Cabinet des estampes, RESERVE KH-34 (3, 25)-BOITE ECU.",

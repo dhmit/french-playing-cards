@@ -28,9 +28,13 @@ const Home = () => {
             French face cards, and <a href='tarot'>tarot cards</a> and the history of <a href='tarot/tarot-history'>cartomancy</a>.  A <a href='bibliography'>bibliography</a> provides suggestions for further reading.  And for 
             those of you interested in gaming, we will offer the opportunity to play a few of the most 
             popular <a href='games'>card games</a> of the period, using the historical deck of cards of your choice!
-            <br /><br />
-            <b>Pour accéder à la version française du site, cliquez sur “fr” en haut de la page à droit.</b>
             </Trans>
+        </p>
+        <br />
+        <p id="home-divider">******************************************</p>
+        <br />
+        <p>
+            <b>{t("home.trans")}</b>
         </p>
     </>
     );

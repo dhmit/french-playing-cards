@@ -37,7 +37,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/epinal/Epinal1.JPEG'/>
                     <p>
-                    {t("material.envelopes.faictesEspinal")}
+                    {t("material.envelopes.epinal.left")}
                         <br />
                         <br />
                         Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (B, 43)-BOITE ECU.
@@ -46,7 +46,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/epinal/Epinal2.JPEG'/>
                     <p>
-                        {t("material.envelopes.rightWrapper")}  “CLAUDE GERARD.  CARTES FINES FAITE PAR CLAUDE GERARD A ESPINA”. (1650)
+                        {t("material.envelopes.rightWrapper")} “CLAUDE GERARD.  CARTES FINES FAITE PAR CLAUDE GERARD A ESPINA”. (1650)
                         <br />
                         <br />
                         Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (B, 45)-BOITE ECU.
@@ -95,7 +95,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/eighteenth-century/EighteenthCentury1.JPEG'/>
                     <p>
-                    {t("material.envelopes.leftWrapper")} “JE ME DIS LE HEROS DES ROYS ESTANT POURVEU DE CHARGES DES FRANCOIS”. {t("material.envelopes.bottomLegend")}: “CARTES TRES FINES FAITES AU HEROS DES ROIS ET CE VEND TOUTES SORTES DE PAPIER FIN ANCRE DOUBLE”
+                    {t("material.envelopes.leftWrapper")} “JE ME DIS LE HEROS DES ROYS ESTANT POURVEU DE CHARGES DES FRANCOIS”. {t("material.envelopes.bottomLegend")} “CARTES TRES FINES FAITES AU HEROS DES ROIS ET CE VEND TOUTES SORTES DE PAPIER FIN ANCRE DOUBLE”
                         <br />
                         <br />
                         Source:  Bibliothèque nationale de France, Cabinet des Estampes, PET FOL-KH-34 (A, 30).
@@ -106,7 +106,7 @@ const Envelopes = () => {
                     <p>
                     {t("material.envelopes.rightWrapper")} ({t("material.envelopes.bottomLegend")}) “CARTES TRES FINES FAITES PAR FRANCOIS GUILLOT MRE CARTIER A 
                         PARIS DEMEURANT RUE DE SEINE VIS A VIS LA RUE DU COLOMBIER PRES CEL. DE BUSY VAND TOUT CE QUI 
-                        CONCERNE LECRITURE A MADAMME LA DAUPHINE”. {t("material.envelopes.bottomNote")}
+                        CONCERNE LECRITURE A MADAMME LA DAUPHINE”. {t("material.envelopes.eighteenth.right")}
                         <br />
                         <br />
                         Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (1BIS, 54BIS).
@@ -126,7 +126,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/chassonneris/Chassonneris1.JPEG'/>
                     <p>
-                    {t("material.envelopes.leftBookplate")} “Rue de la Verrerie au coin de la Rue Coquilles, 
+                        {t("material.envelopes.revolutionary.left")} “Rue de la Verrerie au coin de la Rue Coquilles, 
                         en face de la Rue Bardubec A Paris.  Md. Fabricant de cartes à jouer, tient magasin de papier 
                         tant d’hollande, que de Francepour l’Ecriture, et le dessein, fait toutes sortes de registres, 
                         et Cartons de toutes especes, Vend des Porte-Feuilles en Maroquin, et autres, Cire a cacheter, 
@@ -141,7 +141,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/chassonneris/Chassonneris2.JPEG'/>
                     <p>
-                    {t("material.envelopes.rightWrapperCA")} “AT THE THREE MOORS JEU DE PIQUET” {t("material.envelopes.piquet")}. {t("material.envelopes.bottomLegend")}: “CARTES TRES FINES 
+                        {t("material.envelopes.revolutionary.right")} “AT THE THREE MOORS JEU DE PIQUET” {t("material.envelopes.revolutionary.piquet")}. {t("material.envelopes.bottomLegend")}: “CARTES TRES FINES 
                         FAITES PAR LE CITOYEN CHASSONNERIS MD CARTIER PAPETIER, RUE DE LA VERRERIE VIS A VIS LA RUE COQUILLES 
                         VEND TOUT CE QUI CONCERNE L’ECRITURE ET FAIT”
                         <br />
@@ -163,7 +163,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/i-shine-for-all/Shine1.JPEG'/>
                     <p>
-                    {t("material.envelopes.leftWrapper")} ({t("material.envelopes.bottomLegend")}) “CARTES FINES, Faites par ANT. MANUS, Marchand Cartier, 
+                        {t("material.envelopes.leftWrapper")} ({t("material.envelopes.bottomLegend")}) “CARTES FINES, Faites par ANT. MANUS, Marchand Cartier, 
                         demeurant Place du Plâtre, maison Tolozan, No 3, du côté de rue Longue, au troisieme, A LYON”
                         <br />
                         <br />
@@ -187,9 +187,7 @@ const Envelopes = () => {
         <h3>{t("material.envelopes.napoleonic.title")}</h3>
             <div className='material-subpage-item-contents'>
                 <p>
-                {t("material.envelopes.napoleonic.text")}
-                <a href="../material-aspects/fronts"> {t("material.envelopes.napoleonic.text2")} </a>
-                {t("material.envelopes.napoleonic.text3")}
+                {t("material.envelopes.napoleonic.text")} <a href="../material-aspects/fronts">{t("material.envelopes.napoleonic.text2")}</a> {t("material.envelopes.napoleonic.text3")}
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>

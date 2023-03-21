@@ -35,6 +35,13 @@ span {
     }
 }
 
+#home-divider {
+    text-align: center;
+    font-size: 150%;
+    font-weight: 200;
+    line-height: 150%;
+}
+
 #AboutIntro {
     margin-top: 3%;
     display: inline-block;
@@ -287,6 +294,11 @@ span {
             font-weight: 300;
             margin-bottom: 3%;
             text-align: left;
+        }
+
+        a {
+            color: #707070;
+            text-decoration: underline;
         }
 
         .material-subpage-item-images {
