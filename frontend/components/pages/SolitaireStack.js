@@ -1,4 +1,5 @@
 import React from "react";
+import SolitaireCard from 'SolitaireCard';
 
 class SolitaireStack extends React.Component {
     constructor(props) {
@@ -9,11 +10,6 @@ class SolitaireStack extends React.Component {
             cards: [], // the cards within the stack - highest index is card on top of stack
             top: null, // the card at the top of the stack
         };
-    };
-
-    // This event handler only gets called if we're clicking on the 'stock' stack
-    draw = () => {
-        // TODO
     };
 
     // When a card gets removed from a stack (e.g. drawing, moving a card from one stack to another)
@@ -32,10 +28,19 @@ class SolitaireStack extends React.Component {
     };
 
     render() {
-        return(
-            <h1>placeholder for now</h1>
+        const cards = this.state.cards.map((c, index) => 
+            <SolitaireCard 
+                card={c.card}
+                suit={c.suit}
+                deck={c.deck}
+                faceUp={c.faceUp}
+            />
         );
+
+        return (<>
+            {cards}
+        </>);
     };
 }
 
-// TODO: add "export default <ComponentName>" ?
+export default SolitaireStack;
