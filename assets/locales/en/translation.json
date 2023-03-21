@@ -176,9 +176,7 @@
             "faictesEspinal": "Left-hand wrapper. “FAICTES A ESPINAL.  CARTES FINES FAITES PAR JEHAN HEMAU A ESPINAL”. (Between 1623 and 1630.)",
             "bottomNote": "(The note at the bottom, “ENTIER,” indicates that the wrapper contained a full deck of 52 cards.)",
             "rightWrapperCA": "Right-hand wrapper, ca. 1794? ",
-            "noTextWrapper": "Left-hand wrapper. No text.",
             "piquet": "(Piquet was a popular card game requiring a 32-card deck.)",
-            "rightWrapperFlaps": "Right-hand wrapper. Side flaps: “LE SOLEIL LUIT POUR TOUT”. Center panel: “LIBERTE EGALITE REPUBLIQUE FRANCAISE CARTYES FINES”. Bottom panel: “FAITES PAR CHEMINADE ET REPELIN MDS CARTIERS RUE NEUVE VIS A VIS CTS JACOBINS A GRENOBLE”",
             "epinal": {
                 "title": "Epinal Playing Card Wrappers, First Half of the Seventeenth Century",
                 "text": "In the first half of the seventeenth century, card-makers in the town of Épinal, in Lorraine, emphasized heraldry, architecture, and the crown on their card wrappers."
@@ -197,14 +195,15 @@
             },
             "shine": {
                 "title": "“I Shine for All”",
-                "text": "Other card-makers engraved more overtly revolutionary images and slogans on their card wrappers. On the left, a wrapper printed by the Lyonnais card-maker Manus also features a celestial body in the upper-right hand corner of the main panel, in this case the sun, with the egalitarian legend “Je luit pour tous.”  (I shine for all.). A seated female allegory, prominently featured, gazes at a ship on the horizon, raising her arm in a salute to the idea of hope (“A LESPERANCE”).  The wrapper on the right, created by the Grenoblois card-makers Cheminade and Repellin, repeats the “sun shines for all” motto on the side flaps of the envelope. In the center panel a cartouche featuring an ancient Roman fasces and a phrygian bonnet is encircled by the words “REPUBLIQUE FRANCAISE.”  The labels “LIBERTE” and “EGALITE” are printed above.  Consumers would have readily recognized the republican sympathies of both card-makers."
+                "text": "Other card-makers engraved more overtly revolutionary images and slogans on their card wrappers. On the left, a wrapper printed by the Lyonnais card-maker Manus also features a celestial body in the upper-right hand corner of the main panel, in this case the sun, with the egalitarian legend “Je luit pour tous.”  (I shine for all.). A seated female allegory, prominently featured, gazes at a ship on the horizon, raising her arm in a salute to the idea of hope (“A LESPERANCE”).  The wrapper on the right, created by the Grenoblois card-makers Cheminade and Repellin, repeats the “sun shines for all” motto on the side flaps of the envelope. In the center panel a cartouche featuring an ancient Roman fasces and a phrygian bonnet is encircled by the words “REPUBLIQUE FRANCAISE.”  The labels “LIBERTE” and “EGALITE” are printed above.  Consumers would have readily recognized the republican sympathies of both card-makers.",
+                "right": "Right-hand wrapper. Side flaps: “LE SOLEIL LUIT POUR TOUT”. Center panel: “LIBERTE EGALITE REPUBLIQUE FRANCAISE CARTYES FINES”. Bottom panel: “FAITES PAR CHEMINADE ET REPELIN MDS CARTIERS RUE NEUVE VIS A VIS CTS JACOBINS A GRENOBLE”"
             },
             "napoleonic": {
                 "title": "Napoleonic Card Wrappers",
                 "text": "These two examples, from the first decade of the nineteenth century, display designs that eschew both Old Regime royal patronage and Revolutionary ideological concerns.  The envelope on the left, designed to package a deck of Gatteaux cards around 1810-1815, features two winged, classicizing angels sounding their horns.  (On the Gatteaux deck, see the card ",
                 "text2": "fronts",
-                "text3": "page on this site.)  Between them they support a small cartouche that contains the symbols of the four card suits.  On the right, the envelope printed by the Widon Delatre, a Parisian card-maker, also has a relatively simple cartouche evoking the biblical King Solomon. To his left and right, cornucopias overflow with playing cards, while the flap below records the manufacturer’s shop in a plain typeface.  While the iconography of both wrappers references classical and biblical imagery, it also reproduces images of card suits and card decks that would have been familiar to gamblers in the period."
-
+                "text3": "page on this site.)  Between them they support a small cartouche that contains the symbols of the four card suits.  On the right, the envelope printed by the Widon Delatre, a Parisian card-maker, also has a relatively simple cartouche evoking the biblical King Solomon. To his left and right, cornucopias overflow with playing cards, while the flap below records the manufacturer’s shop in a plain typeface.  While the iconography of both wrappers references classical and biblical imagery, it also reproduces images of card suits and card decks that would have been familiar to gamblers in the period.",
+                "left": "Left-hand wrapper. No text."
             }
         }
     },

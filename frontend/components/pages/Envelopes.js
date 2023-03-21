@@ -66,8 +66,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/rouen/Rouen1.jpg'/>
                     <p>
-                    {t("material.envelopes.leftWrapper")} Cartouche: “L’EPINNE ESTANT EN FLEUR SENT UN TRES BON ODEUR.” Bottom legend: 
-                        “CARTES TRES FINNES DE EDME DE LEPINNE DEMT AU BAS DE LE RUE DES BELLES FEMMES A ROUEN.”
+                    {t("material.envelopes.leftWrapper")} Cartouche: “L’EPINNE ESTANT EN FLEUR SENT UN TRES BON ODEUR.” {t("material.envelopes.bottomLegend")}: “CARTES TRES FINNES DE EDME DE LEPINNE DEMT AU BAS DE LE RUE DES BELLES FEMMES A ROUEN.”
                         <br />
                         <br />
                         Source: Bibliothèque nationale de France, Cabinet des Estampes, PET FOL-KH-34 (A, 32).
@@ -76,8 +75,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/rouen/Rouen2.jpg'/>
                     <p>
-                    {t("material.envelopes.rightWrapper")}: Cartouche: “DAVID DE SA HARPE LOUE DIEU DE TOUT SON COEUR.”  {t("material.envelopes.bottomLegend")}:  
-                        “CARTES TRES FINES FAITES PAR ANTO”
+                    {t("material.envelopes.rightWrapper")} Cartouche: “DAVID DE SA HARPE LOUE DIEU DE TOUT SON COEUR.”  {t("material.envelopes.bottomLegend")}: “CARTES TRES FINES FAITES PAR ANTO”
                         <br />
                         <br />
                         Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (1BIS, 54BIS).
@@ -97,9 +95,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/eighteenth-century/EighteenthCentury1.JPEG'/>
                     <p>
-                    {t("material.envelopes.leftWrapper")}: Cartouche: “JE ME DIS LE HEROS DES ROYS ESTANT POURVEU DE CHARGES DES FRANCOIS”  
-                        {t("material.envelopes.bottomLegend")}: “CARTES TRES FINES FAITES AU HEROS DES ROIS ET CE VEND TOUTES SORTES DE PAPIER FIN 
-                        ANCRE DOUBLE”
+                    {t("material.envelopes.leftWrapper")} “JE ME DIS LE HEROS DES ROYS ESTANT POURVEU DE CHARGES DES FRANCOIS”. {t("material.envelopes.bottomLegend")}: “CARTES TRES FINES FAITES AU HEROS DES ROIS ET CE VEND TOUTES SORTES DE PAPIER FIN ANCRE DOUBLE”
                         <br />
                         <br />
                         Source:  Bibliothèque nationale de France, Cabinet des Estampes, PET FOL-KH-34 (A, 30).
@@ -108,10 +104,9 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/eighteenth-century/EighteenthCentury2.JPEG'/>
                     <p>
-                    {t("material.envelopes.rightWrapper")}: {t("material.envelopes.bottomLegend")}: “CARTES TRES FINES FAITES PAR FRANCOIS GUILLOT MRE CARTIER A 
+                    {t("material.envelopes.rightWrapper")} ({t("material.envelopes.bottomLegend")}) “CARTES TRES FINES FAITES PAR FRANCOIS GUILLOT MRE CARTIER A 
                         PARIS DEMEURANT RUE DE SEINE VIS A VIS LA RUE DU COLOMBIER PRES CEL. DE BUSY VAND TOUT CE QUI 
-                        CONCERNE LECRITURE A MADAMME LA DAUPHINE”  
-                        {t("material.envelopes.bottomNote")}
+                        CONCERNE LECRITURE A MADAMME LA DAUPHINE”. {t("material.envelopes.bottomNote")}
                         <br />
                         <br />
                         Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (1BIS, 54BIS).
@@ -146,8 +141,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/chassonneris/Chassonneris2.JPEG'/>
                     <p>
-                    {t("material.envelopes.rightWrapperCA")} {t("material.envelopes.topLegend")}: “AT THE THREE MOORS JEU DE PIQUET”   
-                    {t("material.envelopes.piquet")}. Legend at the bottom: “CARTES TRES FINES 
+                    {t("material.envelopes.rightWrapperCA")} “AT THE THREE MOORS JEU DE PIQUET” {t("material.envelopes.piquet")}. {t("material.envelopes.bottomLegend")}: “CARTES TRES FINES 
                         FAITES PAR LE CITOYEN CHASSONNERIS MD CARTIER PAPETIER, RUE DE LA VERRERIE VIS A VIS LA RUE COQUILLES 
                         VEND TOUT CE QUI CONCERNE L’ECRITURE ET FAIT”
                         <br />
@@ -169,7 +163,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/i-shine-for-all/Shine1.JPEG'/>
                     <p>
-                    {t("material.envelopes.leftWrapper")}. {t("material.envelopes.bottomLegend")}: “CARTES FINES, Faites par ANT. MANUS, Marchand Cartier, 
+                    {t("material.envelopes.leftWrapper")} ({t("material.envelopes.bottomLegend")}) “CARTES FINES, Faites par ANT. MANUS, Marchand Cartier, 
                         demeurant Place du Plâtre, maison Tolozan, No 3, du côté de rue Longue, au troisieme, A LYON”
                         <br />
                         <br />
@@ -179,7 +173,7 @@ const Envelopes = () => {
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/i-shine-for-all/Shine2.JPEG'/>
                     <p>
-                    {t("material.envelopes.rightWrapperFlaps")}
+                    {t("material.envelopes.shine.right")}
                         <br />
                         <br />
                         Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (2, 33).
@@ -196,13 +190,12 @@ const Envelopes = () => {
                 {t("material.envelopes.napoleonic.text")}
                 <a href="../material-aspects/fronts"> {t("material.envelopes.napoleonic.text2")} </a>
                 {t("material.envelopes.napoleonic.text3")}
-                {t("material.envelopes.noTextWrapper")}
                 </p>
                 <div className='material-subpage-item-images'>
                 <div className='material-subpage-item-image-caption'>
                     <ImagePopup src='/static/img/materials/envelopes/napoleon/Napoleon1.JPEG'/>
                     <p>
-                    {t("material.envelopes.noTextWrapper")}
+                    {t("material.envelopes.napoleonic.left")}
                         <br />
                         <br />
                         Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (10, 416).
