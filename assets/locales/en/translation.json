@@ -26,7 +26,13 @@
             "2": "This web site is one outcome of a larger project by <1>Jeffrey Ravel</1>, Professor of History at MIT, to write this history.  At a later date, we hope to add a feature that will allow users to play popular Old Regime and Revolutionary card games online, selecting the historical deck with which they will play.",
             "3": "Professor Ravel and his team wish to thank the <1>Bibliothèque nationale de France</1> (BnF), which has provided the digital versions of playing cards and the metadata we make available on our site. Users are invited to explore the extensive digital reproductions of playing cards in the collections of the BnF, which the Library makes available on its <3>Gallica web site</3>. We are also grateful to the <5>MIT Programs in the Digital Humanities</5> and <7>Performant Software</7> for technical support."
         },
-        "team": "Playing Card Web Site Development Team Members"
+        "professor": "Professor",
+        "profiles": {
+            "editor": "Site Editor",
+            "tarot_consultant": "Consultant, Tarot Card Pages",
+            "team": "Web Development Team",
+            "translation": "Translation, French Site"
+        }
     },
     "manufacture": {
         "header": "Manufacture",

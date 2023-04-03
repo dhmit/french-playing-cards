@@ -26,7 +26,13 @@
             "2": "Ce site web s’inscrit dans un projet plus vaste mené par <1>Jeffrey Ravel</1>, professeur d'histoire au MIT, pour écrire cette histoire. Nous espérons ajouter ultérieurement une fonction qui permettra aux utilisateurs de jouer en ligne à des jeux populaires de l'Ancien Régime et de la Révolution, en sélectionnant le paquet de cartes historique de leur choix.",
             "3": "Le professeur Ravel et son équipe tiennent à remercier la <1>Bibliothèque nationale de France</1> (BnF), qui a fourni les versions numériques des cartes à jouer et les métadonnées que nous mettons à disposition sur notre site. Les utilisateurs sont invités à explorer les nombreuses reproductions numériques de cartes à jouer dans les collections de la BnF, que la Bibliothèque met à disposition sur son <3>site Gallica</3>. Nous sommes également reconnaissants aux <5>programmes du MIT pour les humanités numériques</5> et à <7>Performant Software</7> pour leur soutien technique."
         },
-        "team": "Membres de l'équipe de développement du site Web des cartes à jouer"
+        "professor": "Professeur",
+        "profiles": {
+            "editor": "Èditeur du site",
+            "tarot_consultant": "Consultant, pages Tarots",
+            "team": "Développement du site",
+            "translation": "Traductrice, version française du site"
+        }
     },
     "manufacture": {
         "header": "Fabrication",
