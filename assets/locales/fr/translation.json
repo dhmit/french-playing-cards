@@ -248,14 +248,42 @@
         },
         "search": {
             "header": "Filtrez la recherche en sélectionnant les caractéristiques des cartes que vous souhaitez voir :",
+            "placeholder": "Sélectionner...",
             "categories": {
-                "period": "Période",
-                "card": "Carte",
-                "suit": "Couleur",
-                "rectoVerso": "Recto ou verso",
-                "notes": "Notes au dos",
+                "period": {
+                    "title": "Période",
+                    "pre": "Pré-révolutionnaire",
+                    "revolutionary": "Révolutionnaire",
+                    "post": "Post-révolutionnaire"
+                },
+                "card": {
+                    "title": "Carte",
+                    "ace": "As",
+                    "king": "Roi",
+                    "queen": "Dame",
+                    "jack": "Valet"
+                },
+                "suit":{
+                    "title": "Couleur",
+                    "heart": "Coeurs",
+                    "club": "Trèfles",
+                    "diamond": "Carreaux",
+                    "spade": "Piques"
+                },
+                "rectoVerso": {
+                    "title": "Recto ou verso",
+                    "front": "Face",
+                    "back": "Dos"
+                },
+                "notes": {
+                    "title": "Notes au dos",
+                    "catalogue": "Catalogue bibliothèque",
+                    "call_response": "Demande et réponse",
+                    "typographical": "Lettres typographiques"
+                },
                 "town": "Ville",
-                "maker": "Auteur"
+                "maker": "Auteur",
+                "unknown": "Inconnu"
             },
             "button": "Rechercher",
             "note": "Pour visualiser une représentation de carte plus en détail, cliquez dessus avec le bouton droit de la souris et sélectionnez “Ouvrir l'image dans un nouvel onglet”"
