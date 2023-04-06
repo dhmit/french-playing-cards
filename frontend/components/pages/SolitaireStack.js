@@ -1,5 +1,5 @@
 import React from "react";
-import SolitaireCard from 'SolitaireCard';
+import SolitaireCard from "./SolitaireCard";
 
 class SolitaireStack extends React.Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class SolitaireStack extends React.Component {
         updatedCards = this.state.cards;
         updatedCards.pop();
         updatedTop = updatedCards.slice(-1);
-        this.setState({cards: updatedCards, top: updatedTop})
+        this.setState({cards: updatedCards, top: updatedTop});
     };
 
     // When a card gets added to a stack (e.g. moving a card from one stack to another)
@@ -28,17 +28,21 @@ class SolitaireStack extends React.Component {
     };
 
     render() {
-        const cards = this.state.cards.map((c, index) => 
+        // Stacks that are initially empty: foundations 1-4, waste 
+        if (!this.state.name.includes("foundation") && this.state.name !== "waste") {
+            const cards = this.state.cards.map((c, index) => 
             <SolitaireCard 
                 card={c.card}
                 suit={c.suit}
                 deck={c.deck}
                 faceUp={c.faceUp}
             />
-        );
+            );
+        }
+        
 
         return (<>
-            {cards}
+            {/* {cards} */}
         </>);
     };
 }

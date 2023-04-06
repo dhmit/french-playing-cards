@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import SolitaireGame from "./SolitaireGame";
 
 const Games = () => {
 
@@ -20,11 +21,13 @@ const Games = () => {
                 </p>
             </div>
 
-            <p className="games-header">Select a deck to play Solitaire with:</p>
+            <SolitaireGame/>
+            
+
+            {/* TODO: uncomment this once I figure out pop-up window, change the hyperlinks */}
+            {/* <p className="games-header">Select a deck to play Solitaire with:</p>
             <br/>
 
-            {/* TODO: change the hyperlinks */}
-    
             <div id='Games-Menu'>
                 <div className='Games-Menu-Item'>
                     <a href='material-aspects/fronts'> 
@@ -46,7 +49,7 @@ const Games = () => {
                         <img src={'/static/img/games/david-menu.PNG'}/>
                     </a> 
                 </div>
-            </div>
+            </div> */}
         </>
         );
 };

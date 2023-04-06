@@ -6,14 +6,21 @@ const SolitaireCard = ({card, suit, deck, faceUp}) => {
     
     // TODO: actually draw cards nicely
     if (faceUp) {
+        var imageName = '/static/img/B/Paris/' + {card} + {suit} + '.1.jpeg';
         return (
-            <div>{card} of {suit} of {deck}</div>
+            // <div>{card} of {suit} of {deck}</div>
+            <div className='faceupCard'>
+                <img src={'/static/img/B/Blason/JC.2.jpeg'}/>
+            </div>
         );
     } else {
         return (
-            <div>a facedown card</div>
+            <div className='facedownCard'>
+                {/* chose a neutral back of a card for now */}
+                <img src={'/static/img/B/Blason/JC.2.jpeg'}/>
+            </div>
         );
     }
-}
+};
 
 export default SolitaireCard;

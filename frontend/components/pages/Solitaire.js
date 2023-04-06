@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import SolitaireCard from './SolitaireCard';
 
 const Solitaire = () => {
 
@@ -11,21 +12,9 @@ const Solitaire = () => {
 
     return (
         <>
-            <h2 className="page-header">Solitaire</h2>
-    
-            <div className="material-subpage-intro">
-                <img src={'/static/img/misc/mascot.jpg'}/>
-                <p>
-                    [DESCRIPTION]
-                </p>
-            </div>
 
-            <p className="games-header">Solitaire:</p>
-            <br/>
-
-            {/* TODO: change the hyperlinks */}
-    
-            <div id='Games-Menu'>
+            {/* TODO: uncomment and change the hyperlinks */}
+            {/* <div id='Games-Menu'>
                 <div className='Games-Menu-Item'>
                     <a href='material-aspects/fronts'> 
                         <p>Portrait de Paris</p>
@@ -46,7 +35,7 @@ const Solitaire = () => {
                         <img src={'/static/img/games/david-menu.PNG'}/>
                     </a> 
                 </div>
-            </div>
+            </div> */}
         </>
         );
 };
