@@ -55,7 +55,7 @@ class SolitaireGame extends React.Component {
         var shuffledCards = shuffle(cardCombos);
 
         for (var i = 0; i < shuffledCards.length; i++) {
-            var faceupCards = [0, 1, 3, 6, 10, 15, 21];
+            var faceupCards = [0, 2, 5, 9, 14, 20, 27];
             var c = shuffledCards[i];
             // Assign cards that are faceup on each tableau
             if (faceupCards.includes(i)) {
@@ -63,34 +63,34 @@ class SolitaireGame extends React.Component {
                 var cardProps = {card: c[0], suit: c[1], deck: "paris", faceUp: 1}; // set deck as Paris for now, deal with the other decks later
                 if (i === 0) {
                     t1.push(cardProps);
-                } if (i === 1) {
+                } if (i === 2) {
                     t2.push(cardProps);
-                } if (i === 3) {
+                } if (i === 5) {
                     t3.push(cardProps);
-                } if (i === 6) {
+                } if (i === 9) {
                     t4.push(cardProps);
-                } if (i === 10) {
+                } if (i === 14) {
                     t5.push(cardProps);
-                } if (i === 15) {
+                } if (i === 20) {
                     t6.push(cardProps);
-                } if (i === 21) {
+                } if (i === 27) {
                     t7.push(cardProps);
                 }
             } 
             // Assign cards that are facedown
             else {
                 var cardProps = {card: c[0], suit: c[1], deck: "paris", faceUp: 0};
-                if (i === 2) {
+                if (i === 1) {
                     t2.push(cardProps);
-                } if (i > 3 && i < 6) {
+                } if (i > 2 && i < 5) {
                     t3.push(cardProps);
-                } if (i > 6 && i < 10) {
+                } if (i > 5 && i < 9) {
                     t4.push(cardProps);
-                } if (i > 10 && i < 15) {
+                } if (i > 9 && i < 14) {
                     t5.push(cardProps);
-                } if (i > 15 && i < 21) {
+                } if (i > 14 && i < 20) {
                     t6.push(cardProps);
-                } if (i > 21 && i < 28) {
+                } if (i > 20 && i < 27) {
                     t7.push(cardProps);
                 } else if (i >= 28) {
                     st.push(cardProps);
