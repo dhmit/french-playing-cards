@@ -680,17 +680,27 @@ span {
     }
 }
 
-.faceupCard {
+.solitaireBoard {
+    display: flex;
+    padding: 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableaus {
+    display: flex;
+}
+
+.solitaireStack {
+    display: block;
+}
+
+.solitaireCard {
     img {
-        width: 15%;
+        width: 30%;
     }
 }
 
-.facedownCard {
-    img {
-        height: 15%;
-    }
-}
 
 // h2 {
 //     text-align: center;

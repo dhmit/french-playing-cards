@@ -29,16 +29,16 @@ class SolitaireStack extends React.Component {
 
     render() {
         // Stacks that are initially empty: foundations 1-4, waste 
-        if (!this.state.name.includes("foundation") && this.state.name !== "waste") {
-            const cards = this.state.cards.map((c, index) => 
-            <SolitaireCard 
-                card={c.card}
-                suit={c.suit}
-                deck={c.deck}
-                faceUp={c.faceUp}
-            />
-            );
-        }
+        // if (!this.state.name.includes("foundation") && this.state.name !== "waste") {
+        //     const cards = this.state.cards.map((c, index) => 
+        //     <SolitaireCard 
+        //         card={c.card}
+        //         suit={c.suit}
+        //         deck={c.deck}
+        //         faceUp={c.faceUp}
+        //     />
+        //     );
+        // }
         
 
         return (<>
