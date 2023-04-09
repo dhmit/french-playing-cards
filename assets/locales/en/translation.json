@@ -358,6 +358,8 @@
             "columbia": "<i>Columbia University, Rare Book and Manuscript Library</i>.  Columbia conserves the Albert Field Collection of Playing Cards, with more than 6300 individual decks.  A description and access to a database can be found at <2>https://dlc.library.columbia.edu/field_playing_cards</2>.",
             "yale": "<i>Yale University, Beinecke Library.</i> The Beinecke holds the Cary Card Collection, consisting of over 1000 whole or partial decks of cards and many other playing card-related items.  For a description of the collection, and a link to searchable database, go to <2>https://beinecke.library.yale.edu/collections/highlights/cary-playing-card-database</2>. There is a useful essay describing the collection <4>here</4>."
         },
-        "scholarship": "II. Selected Scholarship on the History of French Playing Cards and Gaming"
+        "scholarship": {
+            "title": "II. Selected Scholarship on the History of French Playing Cards and Gaming"
+        }
     }
 }

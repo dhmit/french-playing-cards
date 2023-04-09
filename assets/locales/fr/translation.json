@@ -29,7 +29,7 @@
         },
         "professor": "Professeur",
         "profiles": {
-            "editor": "Èditeur du site",
+            "editor": "Éditeur du site",
             "tarot_consultant": "Consultant, pages Tarots",
             "team": "Développement du site",
             "translation": "Traductrice, version française du site"
@@ -183,7 +183,7 @@
             "epinal": {
                 "title": "Enveloppes de cartes à jouer d'Épinal, première moitié du XVIIe siècle",
                 "text": "Dans la première moitié du XVIIe siècle, les fabricants de cartes de la ville d'Épinal, en Lorraine, mettent en valeur l'héraldique, l'architecture et la couronne sur leurs emballages de cartes.",
-                "left": "Enveloppe à gauche : “FAICTES A ESPINAL. sCARTES FINES FAITES PAR JEHAN HEMAU A ESPINAL”. (Entre 1623 et 1630.)"
+                "left": "Enveloppe à gauche : “FAICTES A ESPINAL. CARTES FINES FAITES PAR JEHAN HEMAU A ESPINAL”. (Entre 1623 et 1630.)"
             },
             "rouen": {
                 "title": "Enveloppes de cartes à jouer de Rouen, seconde moitié du XVIIe siècle",
@@ -284,6 +284,7 @@
                 },
                 "notes": {
                     "title": "Notes au dos",
+                    "none": "Rien",
                     "catalogue": "Catalogue bibliothèque",
                     "call_response": "Demande et réponse",
                     "typographical": "Lettres typographiques"
@@ -307,16 +308,16 @@
             "cards": {
                 "love": "Amour. Atelier de Bonifacio Bembo, 1445 ? Source : Collection Cary de cartes à jouer, cote ITA09. Bibliothèque des livres rares et manuscrits Beinecke, Université de Yale.",
                 "world": "Monde. Atelier de Bonifacio Bembo, 1445 ? Source : Collection Cary de cartes à jouer, cote ITA09. Bibliothèque des livres rares et manuscrits Beinecke, Université de Yale.",
-                "king": "Roi de monnaie. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
-                "queen": "Dame d’épées. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
-                "knight": "Chevalier de batons. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
-                "jack": "Valet de coupes. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
-                "fool": "Le Fou. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
-                "juggler": "Le Jongleur. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
-                "death": "La Mort. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
-                "hangedman": "Le Pendu. Marseilles Tarot Deck, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
-                "grandmother": "Le Grand-père. Italian Tarot Cards in the Revolutionary Style, Jean Isnard, 1794. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU.",
-                "grandfather": "La Grande-mère. Italian Tarot Cards in the Revolutionary Style, Jean Isnard, 1794. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU."
+                "king": "Roi de monnaie. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "queen": "Dame d’épées. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "knight": "Chevalier de batons. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "jack": "Valet de coupes. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "fool": "Le Fou. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "juggler": "Le Jongleur. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "death": "La Mort. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "hangedman": "Le Pendu. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "grandmother": "Le Grand-père. Jeu de Tarot révolutionnaire, Jean Isnard, 1794. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU.",
+                "grandfather": "La Grande-mère. Jeu de Tarot révolutionnaire, Jean Isnard, 1794. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU."
             },
             "note1": "Pour voir toutes les cartes du jeu de tarot de Marseille 1701-1715 de la Bibliothèque nationale de France, <1>cliquez ici</1>.",
             "note2": "Pour voir toutes les cartes du jeu de tarot révolutionnaire de 1794 de la Bibliothèque nationale de France, <1>cliquez ici.</1>"
@@ -357,6 +358,10 @@
             "columbia": "<i>Université de Columbia, Columbia University, Rare Book and Manuscript Library</i>. L’université de Columbia conserve la collection Albert Field de cartes à jouer, avec plus de 6300 paquets  individuels. Une description et l'accès à une base de données sont disponibles à l'adresse <2>https://dlc.library.columbia.edu/field_playing_cards.</2>",
             "yale": "<i>Université de Yale, Beinecke Library</i>. La Beinecke Library possède la Cary Card Collection, qui comprend plus de 1000 jeux de cartes entiers ou partiels et de nombreux autres articles liés aux cartes à jouer. Pour obtenir une description de la collection et un lien vers une base de données consultable, rendez-vous sur <2>https://beinecke.library.yale.edu/collections/highlights/cary-playing-card-database</2>. Un essai utile décrivant la collection est disponible <4>ici</4>."
         },
-        "scholarship": "II. Une sélection de travaux de recherche sur l'histoire des cartes à jouer et des jeux de hasard en France"
+        "scholarship": {
+            "title": "II. Une sélection de travaux de recherche sur l'histoire des cartes à jouer et des jeux de hasard en France",
+            "anon": "site web d'<1>l’association pour l'Histoire de l'Administration des Douanes</1>. Affiché le 22 mars 2018.",
+            "netchine": "Voyez aussi le site web de l’exposition"
+        }
     }
 }
