@@ -14,7 +14,6 @@ var t5 = [];  // initial size 5
 var t6 = [];  // initial size 6
 var t7 = [];  // initial size 7
 var st = []; // initial size 24
-// TODO: maybe put this in a 2d array?
 
 // Helper function to shuffle an array
 function shuffle(array) {
@@ -100,7 +99,8 @@ class SolitaireGame extends React.Component {
         }
 
         this.state = {
-            // Foundations: faceup card is always the first element in the array
+            // Foundations: all cards 
+            // Tableaus: faceup card is always at the end of the array (pushed to array, popped from array)
             stacks: {
                 foundationH: [],
                 foundationD: [],
@@ -117,9 +117,9 @@ class SolitaireGame extends React.Component {
                 waste: [], // all cards will be face up, but only the most recently added card (at the end of the array) is accessible
             },
 
-            // use this to hold on to data for a card that's
-            // being actively dragged
-            activeCard: null,
+            // use this to hold on to data for a card that's being actively dragged
+            // activeStack is the (string) name of the stack with the active card
+            activeStack: 0,
         };
 
         console.log(this.state.stacks);
@@ -137,16 +137,61 @@ class SolitaireGame extends React.Component {
         w.push(drawnCard);
 
         this.setState({
-            stock: s,
-            waste: w,
+            stacks: {
+                stock: s,
+                waste: w,
+            }
         });
-        return drawnCard;
     };
 
-    handleStackClick = (stack) => { };
+    /*
+    Handle a stack being clicked: either the stack clicked contains a card that will be moved, or the stack clicked
+    will get a card moved to it.
+    stackName is a string
+    */
+   // TODO: right now the function assumes that the activeStack is not an empty array
+    handleStackClick = (stackName) => { 
+        // // If `this.state.activeStack` is null, make the given `stackName` the activeStack.
+        if (this.state.activeStack === 0) {
+            this.setState({
+                activeStack: stackName,
+            });
+        }
+        // If `this.state.activeStack` is not null, transfer the most most recently added card in activeStack to the given `stackName`
+        else {
+            // The stack getting a card removed is the stack with the name active stack
+            var activeStackName = String(this.state.activeStack);
+            var stack1 = this.state.stacks[activeStackName];
+            var transferCard = stack1.pop();
+            // The stack getting a card added is the stack with `stackName`
+            var stack2 = this.state.stacks[stackName];
+            stack2.push(transferCard);
+
+            // Create a copy of this.state.stacks and modify it
+            var stacks = this.state.stacks;
+            stacks[[activeStackName]] = stack1;
+            stacks[[stackName]] = stack2;
+
+            this.setState({
+                // Set activeStack as null for future callbacks
+                activeStack: 0,
+                // Set stacks as the new modified variable (see above)
+                stacks: stacks,
+            });
+            
+            // TODO: rendering correctly, but console.log statements say otherwise?
+            console.log(stackName + " gained a card");
+            console.log(stackName + ": " + this.state.stacks[stackName]);
+            console.log("activeStack set to 0");
+            console.log("activeStack: " + this.state.activeStack);
+            console.log(this.state);
+
+            // TODO: check if any of the stacks have no faceup cards, if so then make the last card in the array faceup
+        }
+    };
 
     render() {
-        var tableau1 = this.state.stacks.tableau1.map((c, index) => 
+        var tableau1 = this.state.stacks.tableau1?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -156,7 +201,7 @@ class SolitaireGame extends React.Component {
             />
         );
 
-        var tableau2 = this.state.stacks.tableau2.map((c, index) => 
+        var tableau2 = this.state.stacks.tableau2?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -166,7 +211,7 @@ class SolitaireGame extends React.Component {
             />
         );
 
-        var tableau3 = this.state.stacks.tableau3.map((c, index) => 
+        var tableau3 = this.state.stacks.tableau3?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -176,7 +221,7 @@ class SolitaireGame extends React.Component {
             />
         );
 
-        var tableau4 = this.state.stacks.tableau4.map((c, index) => 
+        var tableau4 = this.state.stacks.tableau4?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -186,7 +231,7 @@ class SolitaireGame extends React.Component {
             />
         );
 
-        var tableau5 = this.state.stacks.tableau5.map((c, index) => 
+        var tableau5 = this.state.stacks.tableau5?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -196,7 +241,7 @@ class SolitaireGame extends React.Component {
             />
         );
 
-        var tableau6 = this.state.stacks.tableau6.map((c, index) => 
+        var tableau6 = this.state.stacks.tableau6?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -206,7 +251,7 @@ class SolitaireGame extends React.Component {
             />
         );
 
-        var tableau7 = this.state.stacks.tableau7.map((c, index) => 
+        var tableau7 = this.state.stacks.tableau7?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -215,6 +260,21 @@ class SolitaireGame extends React.Component {
                 faceUp={c.faceUp}
             />
         );
+
+        // Check if foundations are empty
+        var foundationC;
+        var foundationD;
+        var foundationH;
+        var foundationS;
+        if (this.state.stacks.foundationC.length === 0) {
+            foundationC = '/static/img/games/solitaire/paris/foundationCblank.jpeg';
+        } if (this.state.stacks.foundationD.length === 0) {
+            foundationD = '/static/img/games/solitaire/paris/foundationDblank.jpeg';
+        } if (this.state.stacks.foundationH.length === 0) {
+            foundationH = '/static/img/games/solitaire/paris/foundationHblank.jpeg';
+        } if (this.state.stacks.foundationS.length === 0) {
+            foundationS = '/static/img/games/solitaire/paris/foundationSblank.jpeg';
+        }
         
 
         // TODO: render all of your stacks
@@ -232,32 +292,47 @@ class SolitaireGame extends React.Component {
                 Make cards within each stack in vertical block ordering */}
 
                 <div className='tableaus'>
-                    <div className='solitaireStack'>
+                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau1')}>
                         {tableau1}
                     </div>
 
-                    <div className='solitaireStack'>
+                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau2')}>
                         {tableau2}
                     </div>
 
-                    <div className='solitaireStack'>
+                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau3')}>
                         {tableau3}
                     </div>
 
-                    <div className='solitaireStack'>
+                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau4')}>
                         {tableau4}
                     </div>
 
-                    <div className='solitaireStack'>
+                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau5')}>
                         {tableau5}
                     </div>
 
-                    <div className='solitaireStack'>
+                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau6')}>
                         {tableau6}
                     </div>
 
-                    <div className='solitaireStack'>
+                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau7')}>
                         {tableau7}
+                    </div>
+                </div>
+
+                <div className='foundations'>
+                    <div className='solitaireFoundation'>
+                        <img src={foundationC}/>
+                    </div>
+                    <div className='solitaireFoundation'>
+                        <img src={foundationD}/>
+                    </div>
+                    <div className='solitaireFoundation'>
+                        <img src={foundationH}/>
+                    </div>
+                    <div className='solitaireFoundation'>
+                        <img src={foundationS}/>
                     </div>
                 </div>
 
