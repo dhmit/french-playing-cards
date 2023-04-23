@@ -204,6 +204,18 @@ def example(request, example_id=None):
     }
     return render(request, 'index.html', context)
 
+def divination_card_request(request):
+    num = int(request.GET.get('number'))
+    up = bool(request.GET.get('orientation'))
+
+    # TODO: retrieve card from database
+    card = {
+        "number": num,
+        "up": up
+    }
+
+    return JsonResponse({'card': card})
+
 
 def results(request):
     print("reached views.results")

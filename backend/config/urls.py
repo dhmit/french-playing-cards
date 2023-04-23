@@ -31,6 +31,7 @@ urlpatterns = [
     path('example/', views.example),
     path('example/<example_id>', views.example),
     path('results/', views.results),
+    path('divination-card/', views.divination_card_request),
 
     path('', index, name='home'),
     path('about', about, name='about'),

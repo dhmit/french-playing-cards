@@ -1,4 +1,5 @@
 import React from "react";
+import DivinationGame from "../DivinationGame";
 import { useTranslation } from "react-i18next";
 
 const Games = () => {
@@ -20,6 +21,8 @@ const Games = () => {
                 {t("games.play")}
             </p>
         </div>
+
+        <DivinationGame />
 
         </>
     );
