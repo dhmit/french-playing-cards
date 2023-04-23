@@ -208,7 +208,7 @@ def example(request, example_id=None):
 
 def divination_card_request(request):
     num = int(request.GET.get('number'))
-    up = bool(request.GET.get('orientation'))
+    up = bool(int(request.GET.get('orientation')))
     lang = request.GET.get('language')
 
     card = Tarot.objects.filter(number__exact=num).filter(lang__exact=lang).get(orientation=up)

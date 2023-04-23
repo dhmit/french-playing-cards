@@ -634,6 +634,18 @@ span {
     width: 25%;
 }
 
+#divination-cards{
+    display: flex;
+    width: 70%;
+    margin: auto;
+
+    img {
+        width: 20%;
+        flex: 33.3%;
+        padding: 5px;
+    }
+}
+
 .bibliography-content{
     h3 {
         margin-top: 5%;
