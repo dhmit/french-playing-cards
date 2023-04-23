@@ -55,7 +55,7 @@ from app.models import Tarot
 # 3. `import import_data`
 # 4. `import_data.populate_tarot("app/data/tarot/tarot_english.csv")` 
 
-def populate_tarot(filename):
+def populate_tarot(filename, lang):
     print("Reading csv...")
     tarot_cards = []
 
@@ -74,7 +74,7 @@ def populate_tarot(filename):
 
         print(card)
 
-        tarot_model = Tarot(lang="en", image=image_string, **card)
+        tarot_model = Tarot(lang=lang, image=image_string, **card)
         print(tarot_model.__dict__)
         tarot_model.save()
         print("Created " + tarot_model.lang + " card " + tarot_model.card)
