@@ -1,5 +1,6 @@
 number,orientation,card,title,subtitle,pair,etteilla,quad,triple,double
-1,,E,,,,,,,
+1,1,E,,,,,,,
+1,0,E,,,,,,,
 2,1,K,a man,loyalty,thief,gold on you,great honor,consultation,minor advice
 2,0,K,a man,father,thief,gold on you,haste,commerce,projects
 3,1,Q,a woman,air,extraordinary life,character,big talk,deception by a woman,female friend

@@ -47,7 +47,7 @@ class Deck(models.Model):
 class Tarot(models.Model):
     lang = models.CharField(max_length=2)
     number = models.IntegerField()
-    orientation = models.BooleanField(blank=True)
+    orientation = models.BooleanField(blank=True, null=True)
     card = models.CharField(max_length=1)
     title = models.CharField(max_length=30, blank=True)
     subtitle = models.CharField(max_length=30, blank=True)
