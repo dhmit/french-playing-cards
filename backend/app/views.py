@@ -28,9 +28,11 @@ import json
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.db.models import Q
+from django.forms.models import model_to_dict
 
 from .models import Card
 from .models import Deck
+from .models import Tarot
 
 
 def index(request):
@@ -207,14 +209,11 @@ def example(request, example_id=None):
 def divination_card_request(request):
     num = int(request.GET.get('number'))
     up = bool(request.GET.get('orientation'))
+    lang = request.GET.get('language')
 
-    # TODO: retrieve card from database
-    card = {
-        "number": num,
-        "up": up
-    }
+    card = Tarot.objects.filter(number__exact=num).filter(lang__exact=lang).get(orientation=up)
 
-    return JsonResponse({'card': card})
+    return JsonResponse({'card': model_to_dict(card)})
 
 
 def results(request):
