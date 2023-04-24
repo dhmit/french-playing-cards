@@ -32,6 +32,37 @@ function shuffle(array) {
     return array;
 }
 
+// Helper function to check if a card value is greater than the other
+// c1 and c2 are both strings, e.g. "1" "2" "K" "A"
+// Return true if c1 = (c2 + 1) and false otherwise 
+function compareCards(c1, c2) {
+    // if c1 and c2 are the same then return false
+    if (c1 === c2) {
+        return false;
+    }
+
+    c1 = cards.indexOf(c1);
+    c2 = cards.indexOf(c2);
+
+    if (c1 === (c2+1)) {
+        return true;
+    }
+    return false;
+}
+
+// Helper function to check if the two cards have opposite colors (based on suits)
+// c1 and c2 are both strings, e.g. "C" "D" "H" "S"
+// Return true they have opposite colors
+function compareSuits(c1, c2) {
+    if ((c1 === 'C' || c1 === 'S') && (c2 === 'D' || c2 === 'H')) {
+        return true;
+    }
+    else if ((c2 === 'C' || c2 === 'S') && (c1 === 'D' || c1 === 'H')) {
+        return true;
+    }
+    return false;
+}
+
 class SolitaireGame extends React.Component {
     // NOTE(Ryaan): This is the main controlling Component that
     // will handle the main logic, particularly moving cards from
@@ -148,60 +179,206 @@ class SolitaireGame extends React.Component {
     Handle a stack being clicked: either the stack clicked contains a card that will be moved, or the stack clicked
     will get a card moved to it.
     stackName is a string
-    */
-   // TODO: right now the function assumes that the activeStack is not an empty array
-    handleStackClick = (stackName) => { 
-        // // If `this.state.activeStack` is null, make the given `stackName` the activeStack.
+    TODO:
+    1. Need to handle case where the active stack (stack getting card removed) becomes empty - don't pop anything b/c
+    that will cause an index out of range error
+    2. How to move multiple cards (e.g. move a chunk of 6,5,4 to a stack that has a 7)
+   */
+    handleTableauClick = (stackName) => { 
+        // If `this.state.activeStack` is null, make the given `stackName` the activeStack.
         if (this.state.activeStack === 0) {
             this.setState({
                 activeStack: stackName,
             });
+            return;
         }
-        // If `this.state.activeStack` is not null, transfer the most most recently added card in activeStack to the given `stackName`
-        else {
-            // The stack getting a card removed is the stack with the name active stack
-            var activeStackName = String(this.state.activeStack);
-            var stack1 = this.state.stacks[activeStackName];
-            var transferCard = stack1.pop();
-            // The stack getting a card added is the stack with `stackName`
-            var stack2 = this.state.stacks[stackName];
-            stack2.push(transferCard);
 
-            // Create a copy of this.state.stacks and modify it
-            var stacks = this.state.stacks;
-            stacks[[activeStackName]] = stack1;
-            stacks[[stackName]] = stack2;
-
+        // Check that activeStack and stackName aren't the same (means that user double-clicked on same stack)
+        // Reset activeStack to 0 and exit function
+        if (this.state.activeStack === stackName) {
             this.setState({
-                // Set activeStack as null for future callbacks
                 activeStack: 0,
-                // Set stacks as the new modified variable (see above)
-                stacks: stacks,
             });
-            
-            // TODO: rendering correctly, but console.log statements say otherwise?
-            console.log(stackName + " gained a card");
-            console.log(stackName + ": " + this.state.stacks[stackName]);
-            console.log("activeStack set to 0");
-            console.log("activeStack: " + this.state.activeStack);
-            console.log(this.state);
-
-            // TODO: check if any of the stacks have no faceup cards, if so then make the last card in the array faceup
+            return;
         }
+
+        // Otherwise, `this.state.activeStack` is not null, so proceed
+        // The stack getting a card removed is the stack with the name active stack
+        var activeStackName = String(this.state.activeStack);
+        var stack1 = this.state.stacks[activeStackName];
+        var transferCard = stack1.pop();
+        // The stack getting a card added is the stack with `stackName`
+        var stack2 = this.state.stacks[stackName];
+
+        // If stack1 (activeStack) is a foundation and the card we're trying to remove from it is an Ace, don't allow it
+        // Reset activeStack to 0 and exit function
+        if (activeStackName.includes("foundation") && transferCard["card"] === "A") {
+            stack1.push(transferCard);
+            this.setState({
+                activeStack: 0,
+            });
+            return;
+        }
+
+        // Compare stack1's and stack2's cards: is this card transfer allowed?
+        // If not a valid move, then reset activeStack to 0 and exit function
+        var stack2Card = stack2.pop(); 
+        stack2.push(stack2Card);
+        // If the numbers aren't allowed for valid move, or the colors aren't opposite then reset activeSTack to 0 and exit function
+        if (!compareCards(stack2Card["card"], transferCard["card"]) || !compareSuits(stack2Card["suit"], transferCard["suit"])) {
+            stack1.push(transferCard);
+            this.setState({
+                activeStack: 0,
+            });
+            return;
+        }
+        
+        // Otherwise, it's a valid move and continue logic
+        stack2.push(transferCard);
+
+        // Check if the stack that a card got removed from (stack1) still has any faceup cards
+        var stack1Card = stack1.pop();
+        if (stack1Card["faceUp"] === 0) {
+            // Make the card face up and add it back to the stack
+            stack1Card["faceUp"] = 1;
+            stack1.push(stack1Card);
+        } else {
+            // Just add it back to the stack unchanged
+            stack1.push(stack1Card);
+        }
+
+        // Create a copy of this.state.stacks and modify it
+        var stacks = this.state.stacks;
+        stacks[[activeStackName]] = stack1;
+        stacks[[stackName]] = stack2;
+
+        this.setState({
+            // Set activeStack as null for future callbacks
+            activeStack: 0,
+            // Set stacks as the new modified variable (see above)
+            stacks: stacks,
+        });
+        
+        // TODO: rendering correctly, but console.log statements say otherwise?
+        console.log(stackName + " gained a card");
+        console.log(stackName + ": " + this.state.stacks[stackName]);
+        console.log("activeStack set to 0");
+        console.log("activeStack: " + this.state.activeStack);
+        console.log(this.state);
+
     };
 
+    /*
+    TODO: right now the function assumes that the stack getting a card removed is not empty after getting the card removed
+    √ Check that the transfer card's suit is the same as that of foundation stack.
+    √ If transfer card is Ace and the foundation stack is empty, it is a valid move.
+    3. If transfer card is not Ace and (foundation stack is not empty && top of foundation stack is one card above the transfer, it is a valid move.
+    4. If not a valid move, take action the same way as in `handleTableauClick`
+    5. If a valid move, take action the same way as in `handleTableauClick`
+    */
+   handleFoundationClick = (stackName) => {
+        // If `this.state.activeStack` is null, make the given `stackName` the activeStack.
+        if (this.state.activeStack === 0) {
+            this.setState({
+                activeStack: stackName,
+            });
+            return;
+        }
+
+        // Check that activeStack and stackName aren't the same (means that user double-clicked on same stack)
+        // Reset activeStack to 0 and exit function
+        if (this.state.activeStack === stackName) {
+            this.setState({
+                activeStack: 0,
+            });
+            return;
+        }
+
+        // Otherwise, `this.state.activeStack` is not null, so proceed
+        // The stack getting a card removed is `activeStack`
+        var activeStackName = String(this.state.activeStack);
+        var stack1 = this.state.stacks[activeStackName];
+        var transferCard = stack1.pop();
+        // The stack getting a card added is the stack with `stackName`
+        var stack2 = this.state.stacks[stackName];
+
+
+        // If transfer card's suit isn't the same as that of foundation stack, reset activeStack to 0 and exit function
+        if (transferCard["suit"] !== stackName[10]) {
+            stack1.push(transferCard);
+            this.setState({
+                activeStack: 0,
+            });
+            return;
+        }
+
+        // If transfer card is Ace and the foundation stack is not empty, OR transfer card isn't Ace and foundation stack is empty,
+        // reset activeStack to 0 and exit function
+        if ((transferCard["card"] === 'A' && stack2.length > 0) || (transferCard["card"] !== 'A' && stack2.length === 0)) {
+            stack1.push(transferCard);
+            this.setState({
+                activeStack: 0,
+            });
+            return;
+        }
+
+        // If transfer card is not Ace && foundation stack is not empty, need to compare the card values first
+        if (transferCard["card"] !== 'A' && stack2.length > 0) {
+            // Compare stack1's and stack2's cards: is this card transfer allowed?
+            // If not a valid move, then reset activeStack to 0 and exit function
+            var stack2Card = stack2.pop(); 
+            stack2.push(stack2Card);
+            // If the numbers aren't allowed for valid move, then reset activeStack to 0 and exit function
+            if (!compareCards(transferCard["card"], stack2Card["card"])) {
+                stack1.push(transferCard);
+                this.setState({
+                    activeStack: 0,
+                });
+                return;
+            }
+        }
+        // Otherwise transfer card is Ace && foundation stack is empty, so don't need to compare card values
+        
+        // Continue logic for valid move
+        stack2.push(transferCard);
+
+        // Check if the stack that a card got removed from (stack1) still has any faceup cards
+        var stack1Card = stack1.pop();
+        if (stack1Card["faceUp"] === 0) {
+            // Make the card face up and add it back to the stack
+            stack1Card["faceUp"] = 1;
+            stack1.push(stack1Card);
+        } else {
+            // Just add it back to the stack unchanged
+            stack1.push(stack1Card);
+        }
+
+        // Create a copy of this.state.stacks and modify it
+        var stacks = this.state.stacks;
+        stacks[[activeStackName]] = stack1;
+        stacks[[stackName]] = stack2;
+
+        this.setState({
+            // Set activeStack as null for future callbacks
+            activeStack: 0,
+            // Set stacks as the new modified variable (see above)
+            stacks: stacks,
+        });
+   };
+
     render() {
-        var tableau1 = this.state.stacks.tableau1?.map((c, index) => 
-            <SolitaireCard 
-                key={index}
-                card={c.card}
-                suit={c.suit}
-                deck={c.deck}
-                faceUp={c.faceUp}
-            />
-        );
+        var tableau1;
+        var tableau2;
+        var tableau3;
+        var tableau4;
+        var tableau5;
+        var tableau6;
+        var tableau7;
 
-        var tableau2 = this.state.stacks.tableau2?.map((c, index) => 
+        if (this.state.stacks.tableau1.length === 0) {
+            tableau1 = <img src='/static/img/games/solitaire/transparent.png'/>;
+        } else {
+            tableau1 = this.state.stacks.tableau1?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -209,9 +386,13 @@ class SolitaireGame extends React.Component {
                 deck={c.deck}
                 faceUp={c.faceUp}
             />
-        );
+            );
+        }
 
-        var tableau3 = this.state.stacks.tableau3?.map((c, index) => 
+        if (this.state.stacks.tableau2.length === 0) {
+            tableau2 = <img src='/static/img/games/solitaire/transparent.png'/>;
+        } else {
+            tableau2 = this.state.stacks.tableau2?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -219,9 +400,13 @@ class SolitaireGame extends React.Component {
                 deck={c.deck}
                 faceUp={c.faceUp}
             />
-        );
+            );
+        }
 
-        var tableau4 = this.state.stacks.tableau4?.map((c, index) => 
+        if (this.state.stacks.tableau3.length === 0) {
+            tableau3 = <img src='/static/img/games/solitaire/transparent.png'/>;
+        } else {
+            tableau3 = this.state.stacks.tableau3?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -229,9 +414,13 @@ class SolitaireGame extends React.Component {
                 deck={c.deck}
                 faceUp={c.faceUp}
             />
-        );
+            );
+        }
 
-        var tableau5 = this.state.stacks.tableau5?.map((c, index) => 
+        if (this.state.stacks.tableau4.length === 0) {
+            tableau4 = <img src='/static/img/games/solitaire/transparent.png'/>;
+        } else {
+            tableau4 = this.state.stacks.tableau4?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -239,9 +428,13 @@ class SolitaireGame extends React.Component {
                 deck={c.deck}
                 faceUp={c.faceUp}
             />
-        );
+            );
+        }
 
-        var tableau6 = this.state.stacks.tableau6?.map((c, index) => 
+        if (this.state.stacks.tableau5.length === 0) {
+            tableau5 = <img src='/static/img/games/solitaire/transparent.png'/>;
+        } else {
+            tableau5 = this.state.stacks.tableau5?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -249,9 +442,13 @@ class SolitaireGame extends React.Component {
                 deck={c.deck}
                 faceUp={c.faceUp}
             />
-        );
+            );
+        }
 
-        var tableau7 = this.state.stacks.tableau7?.map((c, index) => 
+        if (this.state.stacks.tableau7.length === 0) {
+            tableau7 = <img src='/static/img/games/solitaire/transparent.png'/>;
+        } else {
+            tableau7 = this.state.stacks.tableau7?.map((c, index) => 
             <SolitaireCard 
                 key={index}
                 card={c.card}
@@ -259,21 +456,44 @@ class SolitaireGame extends React.Component {
                 deck={c.deck}
                 faceUp={c.faceUp}
             />
-        );
+            );
+        }
 
         // Check if foundations are empty
         var foundationC;
         var foundationD;
         var foundationH;
         var foundationS;
-        if (this.state.stacks.foundationC.length === 0) {
-            foundationC = '/static/img/games/solitaire/paris/foundationCblank.jpeg';
-        } if (this.state.stacks.foundationD.length === 0) {
-            foundationD = '/static/img/games/solitaire/paris/foundationDblank.jpeg';
-        } if (this.state.stacks.foundationH.length === 0) {
-            foundationH = '/static/img/games/solitaire/paris/foundationHblank.jpeg';
-        } if (this.state.stacks.foundationS.length === 0) {
-            foundationS = '/static/img/games/solitaire/paris/foundationSblank.jpeg';
+        var Clength = this.state.stacks.foundationC.length;
+        var Dlength = this.state.stacks.foundationD.length;
+        var Hlength = this.state.stacks.foundationH.length;
+        var Slength = this.state.stacks.foundationS.length;
+        if (Clength === 0) {
+            foundationC = '/static/img/games/solitaire/paris/foundationC.png';
+        } else {
+            var top = this.state.stacks.foundationC[Clength-1];
+            foundationC = '/static/img/games/solitaire/paris/' + top['card'] + top['suit'] + '.1.jpeg';
+        }
+        if (Dlength === 0) {
+            foundationD = '/static/img/games/solitaire/paris/foundationD.png';
+        } else {
+            var top = this.state.stacks.foundationD[Dlength-1];
+            foundationD = '/static/img/games/solitaire/paris/' + top['card'] + top['suit'] + '.1.jpeg';
+            
+        }
+        if (Hlength === 0) {
+            foundationH = '/static/img/games/solitaire/paris/foundationH.png';
+        } else {
+            var top = this.state.stacks.foundationH[Hlength-1];
+            foundationH = '/static/img/games/solitaire/paris/' + top['card'] + top['suit'] + '.1.jpeg';
+            
+        }
+        if (Slength === 0) {
+            foundationS = '/static/img/games/solitaire/paris/foundationS.png';
+        } else {
+            var top = this.state.stacks.foundationS[Slength-1];
+            foundationS = '/static/img/games/solitaire/paris/' + top['card'] + top['suit'] + '.1.jpeg';
+            
         }
         
 
@@ -292,46 +512,46 @@ class SolitaireGame extends React.Component {
                 Make cards within each stack in vertical block ordering */}
 
                 <div className='tableaus'>
-                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau1')}>
+                    <div className='solitaireStack' onClick={() => this.handleTableauClick('tableau1')}>
                         {tableau1}
                     </div>
 
-                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau2')}>
+                    <div className='solitaireStack' onClick={() => this.handleTableauClick('tableau2')}>
                         {tableau2}
                     </div>
 
-                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau3')}>
+                    <div className='solitaireStack' onClick={() => this.handleTableauClick('tableau3')}>
                         {tableau3}
                     </div>
 
-                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau4')}>
+                    <div className='solitaireStack' onClick={() => this.handleTableauClick('tableau4')}>
                         {tableau4}
                     </div>
 
-                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau5')}>
+                    <div className='solitaireStack' onClick={() => this.handleTableauClick('tableau5')}>
                         {tableau5}
                     </div>
 
-                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau6')}>
+                    <div className='solitaireStack' onClick={() => this.handleTableauClick('tableau6')}>
                         {tableau6}
                     </div>
 
-                    <div className='solitaireStack' onClick={() => this.handleStackClick('tableau7')}>
+                    <div className='solitaireStack' onClick={() => this.handleTableauClick('tableau7')}>
                         {tableau7}
                     </div>
                 </div>
 
                 <div className='foundations'>
-                    <div className='solitaireFoundation'>
+                    <div className='solitaireFoundation' onClick={() => this.handleFoundationClick('foundationC')}>
                         <img src={foundationC}/>
                     </div>
-                    <div className='solitaireFoundation'>
+                    <div className='solitaireFoundation' onClick={() => this.handleFoundationClick('foundationD')}>
                         <img src={foundationD}/>
                     </div>
-                    <div className='solitaireFoundation'>
+                    <div className='solitaireFoundation' onClick={() => this.handleFoundationClick('foundationH')}>
                         <img src={foundationH}/>
                     </div>
-                    <div className='solitaireFoundation'>
+                    <div className='solitaireFoundation' onClick={() => this.handleFoundationClick('foundationS')}>
                         <img src={foundationS}/>
                     </div>
                 </div>
