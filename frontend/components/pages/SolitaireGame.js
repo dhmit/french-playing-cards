@@ -236,8 +236,9 @@ class SolitaireGame extends React.Component {
         // Otherwise, it's a valid move and continue logic
         stack2.push(transferCard);
 
-        // Check if the stack that a card got removed from (stack1) still has any faceup cards
-        var stack1Card = stack1.pop();
+        // Check if the stack that a card got removed from (stack1) is not empty && still has any faceup cards
+        if (stack1.length > 0) {
+            var stack1Card = stack1.pop();
         if (stack1Card["faceUp"] === 0) {
             // Make the card face up and add it back to the stack
             stack1Card["faceUp"] = 1;
@@ -245,6 +246,7 @@ class SolitaireGame extends React.Component {
         } else {
             // Just add it back to the stack unchanged
             stack1.push(stack1Card);
+        }
         }
 
         // Create a copy of this.state.stacks and modify it
@@ -343,14 +345,16 @@ class SolitaireGame extends React.Component {
         stack2.push(transferCard);
 
         // Check if the stack that a card got removed from (stack1) still has any faceup cards
-        var stack1Card = stack1.pop();
-        if (stack1Card["faceUp"] === 0) {
-            // Make the card face up and add it back to the stack
-            stack1Card["faceUp"] = 1;
-            stack1.push(stack1Card);
-        } else {
-            // Just add it back to the stack unchanged
-            stack1.push(stack1Card);
+        if (stack1.length > 0) {
+            var stack1Card = stack1.pop();
+            if (stack1Card["faceUp"] === 0) {
+                // Make the card face up and add it back to the stack
+                stack1Card["faceUp"] = 1;
+                stack1.push(stack1Card);
+            } else {
+                // Just add it back to the stack unchanged
+                stack1.push(stack1Card);
+            }
         }
 
         // Create a copy of this.state.stacks and modify it

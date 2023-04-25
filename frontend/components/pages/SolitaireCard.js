@@ -9,7 +9,6 @@ const SolitaireCard = ({card, suit, deck, faceUp}) => {
         var suitStr = String(suit);
         var imageName = '/static/img/games/solitaire/paris/' + cardStr + suitStr + '.1.jpeg';
         return (
-            // <div>{card} of {suit} of {deck}</div>
             <div className='solitaireCard'>
                 <img src={imageName}/>
             </div>
@@ -17,7 +16,6 @@ const SolitaireCard = ({card, suit, deck, faceUp}) => {
     } else {
         return (
             <div className='solitaireCard'>
-                {/* chose a neutral back of a card for now */}
                 <img src={'/static/img/games/solitaire/blue-back.jpeg'}/>
             </div>
         );
