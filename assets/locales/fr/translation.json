@@ -222,7 +222,7 @@
             "header": "Introduction à la base de données",
             "blurb": "Notre page sur l'évolution des <1>« figures »</1> des cartes à jouer propose des variantes de la dame de cœur, fabriquées en France de l'Ancien Régime au milieu du XIXe siècle. En outre, nous avons compilé une base de données de figures de cartes pour les rois, les reines, les valets et certains as dans les quatre couleurs pendant cette période, ainsi que les métadonnées correspondantes provenant du site Web de la Bibliothèque nationale de France. Notre base de données contient les images et les données de 24 jeux de cartes créés au cours de cette période. L'outil de recherche qui l'accompagne permet aux utilisateurs de rechercher ces images en filtrant par période, carte de face, couleur, ville, fabricant, ainsi que par le recto et le verso des cartes. Les utilisateurs peuvent ainsi personnaliser les comparaisons de l'iconographie du carton facial français entre 1644 et 1848."
         },
-        "linkLower": "Cliquez <1>ici</1> pour effectuer une recherche dans notre base de données de cartes de visite.",
+        "linkLower": "Cliquez <1>ici</1> pour effectuer une recherche dans notre base de données de cartes à jouer.",
         "contents": {
             "header": "Contenu de la base de données",
             "blurb": "Nous reproduisons ci-dessous le valet de trèfle de chaque jeu de notre base de données pour vous donner une idée de la variété de conception des figures :"
