@@ -220,33 +220,48 @@ class SolitaireGame extends React.Component {
             return;
         }
 
-        // Compare stack1's and stack2's cards: is this card transfer allowed?
-        // If not a valid move, then reset activeStack to 0 and exit function
-        var stack2Card = stack2.pop(); 
-        stack2.push(stack2Card);
-        // If the numbers aren't allowed for valid move, or the colors aren't opposite then reset activeSTack to 0 and exit function
-        if (!compareCards(stack2Card["card"], transferCard["card"]) || !compareSuits(stack2Card["suit"], transferCard["suit"])) {
-            stack1.push(transferCard);
-            this.setState({
-                activeStack: 0,
-            });
-            return;
+        // If stack2 is empty, make sure the transferCard is a King. Otherwise, not a valid move so 
+        // reset activeStack to 0 and exit function
+        if (stack2.length === 0) {
+            if (transferCard['card'] !== 'K') {
+                stack1.push(transferCard);
+                this.setState({
+                    activeStack: 0,
+                });
+                return;
+            }
+            stack2 = [transferCard];
+        } 
+
+        // If stack2 is not empty, need to compare both cards from both stacks to ensure it is a valid move
+        else {
+            // Compare stack1's and stack2's cards: is this card transfer allowed?
+            // If not a valid move, then reset activeStack to 0 and exit function
+            var stack2Card = stack2.pop(); 
+            stack2.push(stack2Card);
+            // If the numbers aren't allowed for valid move, or the colors aren't opposite then reset activeSTack to 0 and exit function
+            if (!compareCards(stack2Card["card"], transferCard["card"]) || !compareSuits(stack2Card["suit"], transferCard["suit"])) {
+                stack1.push(transferCard);
+                this.setState({
+                    activeStack: 0,
+                });
+                return;
+            }
+            // Otherwise, it's a valid move and continue logic
+            stack2.push(transferCard);
         }
-        
-        // Otherwise, it's a valid move and continue logic
-        stack2.push(transferCard);
 
         // Check if the stack that a card got removed from (stack1) is not empty && still has any faceup cards
         if (stack1.length > 0) {
             var stack1Card = stack1.pop();
-        if (stack1Card["faceUp"] === 0) {
-            // Make the card face up and add it back to the stack
-            stack1Card["faceUp"] = 1;
-            stack1.push(stack1Card);
-        } else {
-            // Just add it back to the stack unchanged
-            stack1.push(stack1Card);
-        }
+            if (stack1Card["faceUp"] === 0) {
+                // Make the card face up and add it back to the stack
+                stack1Card["faceUp"] = 1;
+                stack1.push(stack1Card);
+            } else {
+                // Just add it back to the stack unchanged
+                stack1.push(stack1Card);
+            }
         }
 
         // Create a copy of this.state.stacks and modify it
@@ -380,7 +395,7 @@ class SolitaireGame extends React.Component {
         var tableau7;
 
         if (this.state.stacks.tableau1.length === 0) {
-            tableau1 = <img src='/static/img/games/solitaire/transparent.png'/>;
+            tableau1 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
         } else {
             tableau1 = this.state.stacks.tableau1?.map((c, index) => 
             <SolitaireCard 
@@ -394,7 +409,7 @@ class SolitaireGame extends React.Component {
         }
 
         if (this.state.stacks.tableau2.length === 0) {
-            tableau2 = <img src='/static/img/games/solitaire/transparent.png'/>;
+            tableau2 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
         } else {
             tableau2 = this.state.stacks.tableau2?.map((c, index) => 
             <SolitaireCard 
@@ -408,7 +423,7 @@ class SolitaireGame extends React.Component {
         }
 
         if (this.state.stacks.tableau3.length === 0) {
-            tableau3 = <img src='/static/img/games/solitaire/transparent.png'/>;
+            tableau3 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
         } else {
             tableau3 = this.state.stacks.tableau3?.map((c, index) => 
             <SolitaireCard 
@@ -422,7 +437,7 @@ class SolitaireGame extends React.Component {
         }
 
         if (this.state.stacks.tableau4.length === 0) {
-            tableau4 = <img src='/static/img/games/solitaire/transparent.png'/>;
+            tableau4 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
         } else {
             tableau4 = this.state.stacks.tableau4?.map((c, index) => 
             <SolitaireCard 
@@ -436,7 +451,7 @@ class SolitaireGame extends React.Component {
         }
 
         if (this.state.stacks.tableau5.length === 0) {
-            tableau5 = <img src='/static/img/games/solitaire/transparent.png'/>;
+            tableau5 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
         } else {
             tableau5 = this.state.stacks.tableau5?.map((c, index) => 
             <SolitaireCard 
@@ -449,8 +464,22 @@ class SolitaireGame extends React.Component {
             );
         }
 
+        if (this.state.stacks.tableau6.length === 0) {
+            tableau6 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
+        } else {
+            tableau6 = this.state.stacks.tableau6?.map((c, index) => 
+            <SolitaireCard 
+                key={index}
+                card={c.card}
+                suit={c.suit}
+                deck={c.deck}
+                faceUp={c.faceUp}
+            />
+            );
+        }
+
         if (this.state.stacks.tableau7.length === 0) {
-            tableau7 = <img src='/static/img/games/solitaire/transparent.png'/>;
+            tableau7 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
         } else {
             tableau7 = this.state.stacks.tableau7?.map((c, index) => 
             <SolitaireCard 
@@ -499,6 +528,29 @@ class SolitaireGame extends React.Component {
             foundationS = '/static/img/games/solitaire/paris/' + top['card'] + top['suit'] + '.1.jpeg';
             
         }
+
+        // Stock and waste piles
+        var stock;
+        if (this.state.stacks.stock.length > 0) {
+            stock = '/static/img/games/solitaire/blue-back.jpeg';
+        } else {
+            stock = '/static/img/games/solitaire/stack-placeholder.png';
+        }
+
+        var waste;
+        if (this.state.stacks.waste.length === 1) {
+            waste = this.state.stacks.waste?.map((c, index) => 
+            <SolitaireCard 
+                key={index}
+                card={c.card}
+                suit={c.suit}
+                deck={c.deck}
+                faceUp={1}
+            />
+            );
+        } else {
+            waste = '/static/img/games/solitaire/stack-placeholder.png';
+        }
         
 
         // TODO: render all of your stacks
@@ -514,6 +566,17 @@ class SolitaireGame extends React.Component {
 
                 {/* Make all stacks side by side / inline
                 Make cards within each stack in vertical block ordering */}
+
+                {/* TODO: create the handleStockClick() and handleWasteClick() functions */}
+                {/* <div className='stockWaste'>
+                    <div className='solitaireStock' onClick={() => this.handleStockClick}>
+                        <img src={stock}/>
+                    </div>
+
+                    <div className='solitaireWaste' onClick={() => this.handleWasteClick}>
+                        <img src={waste}></img>
+                    </div>
+                </div> */}
 
                 <div className='tableaus'>
                     <div className='solitaireStack' onClick={() => this.handleTableauClick('tableau1')}>

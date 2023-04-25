@@ -687,13 +687,26 @@ span {
     align-items: center;
 }
 
-.tableaus {
-    display: flex;
-    background-color: transparent;
-}
-
 .solitaireStack {
     display: block;
+}
+
+.stockWaste {
+    display: block;
+    background-color: transparent;
+    img {
+        width: 37%;
+        margin-bottom: 20%;
+        margin-top: 0%;
+    }
+}
+
+.tableaus {
+    display: flex;
+    // background-color: transparent;
+    img {
+        width: 30%;
+    }
 }
 
 .foundations {
