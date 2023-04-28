@@ -180,9 +180,7 @@ class SolitaireGame extends React.Component {
     will get a card moved to it.
     stackName is a string
     TODO:
-    1. Need to handle case where the active stack (stack getting card removed) becomes empty - don't pop anything b/c
-    that will cause an index out of range error
-    2. How to move multiple cards (e.g. move a chunk of 6,5,4 to a stack that has a 7)
+    1. How to move multiple cards (e.g. move a chunk of 6,5,4 to a stack that has a 7)
    */
     handleTableauClick = (stackName) => { 
         // If `this.state.activeStack` is null, make the given `stackName` the activeStack.
@@ -285,14 +283,6 @@ class SolitaireGame extends React.Component {
 
     };
 
-    /*
-    TODO: right now the function assumes that the stack getting a card removed is not empty after getting the card removed
-    √ Check that the transfer card's suit is the same as that of foundation stack.
-    √ If transfer card is Ace and the foundation stack is empty, it is a valid move.
-    3. If transfer card is not Ace and (foundation stack is not empty && top of foundation stack is one card above the transfer, it is a valid move.
-    4. If not a valid move, take action the same way as in `handleTableauClick`
-    5. If a valid move, take action the same way as in `handleTableauClick`
-    */
    handleFoundationClick = (stackName) => {
         // If `this.state.activeStack` is null, make the given `stackName` the activeStack.
         if (this.state.activeStack === 0) {
@@ -380,6 +370,30 @@ class SolitaireGame extends React.Component {
         this.setState({
             // Set activeStack as null for future callbacks
             activeStack: 0,
+            // Set stacks as the new modified variable (see above)
+            stacks: stacks,
+        });
+   };
+
+   /*
+   Handle when user clicks on the stock to draw a card
+   1. Pop a card from the top of the stack
+   2. Transfer (push) the card to the top of the waste (logic similar to handleTableauClick)
+   3. For rendering: update the card to be faceUp=1
+   */
+   handleStockClick = () => {
+        var stock = this.state.stacks.stock;
+        var stockCard = stock.pop();
+        stockCard['faceUp'] = 1;
+        var waste = this.state.stacks.waste;
+        waste.push(stockCard);
+
+        // Create a copy of this.state.stacks and modify it
+        var stacks = this.state.stacks;
+        stacks["stock"] = stock;
+        stacks["waste"] = waste;
+        
+        this.setState({
             // Set stacks as the new modified variable (see above)
             stacks: stacks,
         });
@@ -568,7 +582,7 @@ class SolitaireGame extends React.Component {
                 Make cards within each stack in vertical block ordering */}
 
                 {/* TODO: create the handleStockClick() and handleWasteClick() functions */}
-                {/* <div className='stockWaste'>
+                <div className='stockWaste'>
                     <div className='solitaireStock' onClick={() => this.handleStockClick}>
                         <img src={stock}/>
                     </div>
@@ -576,7 +590,7 @@ class SolitaireGame extends React.Component {
                     <div className='solitaireWaste' onClick={() => this.handleWasteClick}>
                         <img src={waste}></img>
                     </div>
-                </div> */}
+                </div>
 
                 <div className='tableaus'>
                     <div className='solitaireStack' onClick={() => this.handleTableauClick('tableau1')}>
