@@ -703,16 +703,16 @@ span {
 
 .tableaus {
     display: flex;
+    // background-color: transparent;
     img {
+        // width: 30%;
         margin-top: -150px;
         max-width: 100%;
         position: relative;
     }
 }
 
-// formatting would go in solitareStack 
-.solitaireStack {
-    
+.foundations {
     display: block;
     background-color: transparent;
     img {
@@ -734,11 +734,9 @@ span {
 //     color: #707070;
 // }
 
-//create a top card class?
 // img {
-//     //margin-top: -150px;
+//     padding-top: 30px;
 //     max-width: 100%;
-//     position: relative;
 // }
 
 // p {
