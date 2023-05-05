@@ -25,6 +25,9 @@ context = {
 """
 import json
 
+import openai
+openai.api_key = ''
+
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.db.models import Q
@@ -215,6 +218,16 @@ def divination_card_request(request):
 
     return JsonResponse({'card': model_to_dict(card)})
 
+def generate_prediction(request):
+    question = request.POST.get('question')
+    completion = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        prompt=question,
+        temperature=0.6,
+        max_tokens=1000,
+    )
+
+    return JsonResponse({'response': completion.data.choices[0].text})
 
 def results(request):
     print("reached views.results")
