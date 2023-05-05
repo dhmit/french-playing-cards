@@ -10,6 +10,7 @@ const openai = new OpenAIApi(configuration);
 const NUM_CARDS = 33;
 
 const DivinationGame = () => {
+    const [question, setQuestion] = React.useState("");
     const [cards, setCards] = React.useState([]);
     const [reading, setReading] = React.useState("");
 
@@ -101,9 +102,11 @@ const DivinationGame = () => {
     async function divinate(num) {
         const chosen = await getCards(num);
         const keywords = getKeywords(chosen);
-        const divination_string = [...keywords].join(', ');
+        const divination_string = "Your keywords are: " + [...keywords].join(', ');
+        const input_string = "Write a prediction in response to the question \"" + question + "\" using the following words: " + [...keywords].join(', ');
 
         // get reading from keywords
+        //let reading = await()
 
         setReading(divination_string);
 
@@ -203,8 +206,9 @@ const DivinationGame = () => {
 
     return (
         <>
-            <button onClick={() => divinate(3)}>Get 3 cards</button>
-            <button onClick={() => divinate(5)}>Get 5 cards</button>
+            <input type="text" placeholder="Ask a question..." onChange={(e) => setQuestion(e.target.value)}/>
+            <button type="submit" onClick={() => divinate(3)}>Get 3 cards</button>
+            <button type="submit" onClick={() => divinate(5)}>Get 5 cards</button>
             <br />
             <div id="divination-cards">
                 {cards.map(card => (
