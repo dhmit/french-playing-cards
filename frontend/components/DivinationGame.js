@@ -113,7 +113,7 @@ const DivinationGame = () => {
             setReading(response.data.response);
         }).catch(function (error) {
             console.log(error);
-            setReading("Unable to get prediction.");
+            setReading("Unable to get prediction. Please make sure cookies are enabled.");
         });
     }
 
