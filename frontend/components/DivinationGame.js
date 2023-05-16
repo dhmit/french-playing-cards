@@ -98,6 +98,7 @@ const DivinationGame = () => {
         return keywords;
     }
 
+    // TODO: French translation! 
     async function getReading(keywords) {
         let input = question.trim();
         const input_string = "Write a prediction in response to the question \"" + input + "\" using the following themes: " + [...keywords].join(', ');

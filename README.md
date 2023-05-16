@@ -20,3 +20,10 @@ From 1650 to 1850, the French spread enlightenment, gained and lost one empire a
 4. To run from the command line:
     - For the backend, navigate to playing-cards/backend and run `python manage.py runserver`. 
     - For the frontend, run `npm start`. 
+
+## Before running this branch on the server for the first time:
+
+1. Run model/data migrations: `python manage.py migrate`
+2. `pip install openai` and `pip install dotenv`
+3. Generate OpenAI API key 
+4. Create .env file and add `OPENAI_API_KEY={API key}`
