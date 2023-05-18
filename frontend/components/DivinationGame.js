@@ -119,6 +119,7 @@ const DivinationGame = () => {
     }
 
     async function divinate(num) {
+        // check if a question has been asked
         if (question.trim() !== "") {
             // choose cards
             const chosen = await getCards(num);
