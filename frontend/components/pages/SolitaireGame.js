@@ -2,7 +2,7 @@ import React from "react";
 import SolitaireStack from "./SolitaireStack";
 import SolitaireCard from "./SolitaireCard";
 
-const cards = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+const cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 const suits = ["C", "D", "H", "S"];
 const decks = ["paris", "dugourc", "david"];
 const faceUp = [0, 1];
@@ -43,6 +43,8 @@ function compareCards(c1, c2) {
 
     c1 = cards.indexOf(c1);
     c2 = cards.indexOf(c2);
+    console.log("Index of c1: " + c1);
+    console.log("Index of c2: " + c2);
 
     if (c1 === (c2+1)) {
         return true;
@@ -331,12 +333,14 @@ class SolitaireGame extends React.Component {
 
         // If transfer card is not Ace && foundation stack is not empty, need to compare the card values first
         if (transferCard["card"] !== 'A' && stack2.length > 0) {
+            console.log("Transfer card is not Ace && foundation stack is not empty, so comparing card values first...");
             // Compare stack1's and stack2's cards: is this card transfer allowed?
             // If not a valid move, then reset activeStack to 0 and exit function
             var stack2Card = stack2.pop(); 
             stack2.push(stack2Card);
             // If the numbers aren't allowed for valid move, then reset activeStack to 0 and exit function
             if (!compareCards(transferCard["card"], stack2Card["card"])) {
+                console.log("...Not a valid move!");
                 stack1.push(transferCard);
                 this.setState({
                     activeStack: 0,
@@ -399,7 +403,55 @@ class SolitaireGame extends React.Component {
         });
    };
 
+   /*
+   Handle when user clicks on the waste to move 
+   Opposite of logic for handleFoundationClick (user can move a card from waste, but can't move a card TO waste)
+   */
+   handleWasteClick = () => {
+        // If `this.state.activeStack` is null, make the given `stackName` the activeStack.
+        if (this.state.activeStack === 0) {
+            this.setState({
+                activeStack: 'waste',
+            });
+            return;
+        }
+
+        // Otherwise, `this.state.activeStack` is not null, so do nothing
+   };
+
+   /*
+   Refresh the stock with cards from the waste (if there are cards in the waste)
+   */
+   refreshStock = () => {
+    // If the waste is empty, do nothing
+    if (this.state.stacks.waste.length === 0) {
+        return;
+    }
+
+    // Otherwise, refill with the stock with cards from the waste, in reverse order
+    var stock = this.state.stacks.waste;
+    var waste = this.state.stacks.stock;
+    while (waste.length > 0) {
+        var card = waste.pop();
+        stock.push(card);
+    }
+
+    // Create a copy of this.state.stacks and modify it
+    var stacks = this.state.stacks;
+    stacks["stock"] = stock;
+    stacks["waste"] = waste;
+    
+    this.setState({
+        // Set stacks as the new modified variable (see above)
+        stacks: stacks,
+    });
+    console.log("Length of this.state.stacks.waste after refill: " + this.state.stacks.waste.length);
+
+    // TODO: there's a weird bug where one of the cards gets moved out of stock to waste? So waste placeholder img never shows up
+};
+
     render() {
+        // TODO: create an 'undo' button
         var tableau1;
         var tableau2;
         var tableau3;
@@ -545,29 +597,23 @@ class SolitaireGame extends React.Component {
 
         // Stock and waste piles
         var stock;
+        console.log("this.state.stacks.stock.length: " + this.state.stacks.stock.length);
         if (this.state.stacks.stock.length > 0) {
-            stock = '/static/img/games/solitaire/blue-back.jpeg';
+            stock = <img src='/static/img/games/solitaire/blue-back.jpeg'/>;
         } else {
-            stock = '/static/img/games/solitaire/stack-placeholder.png';
+            stock = <button onClick={this.refreshStock}>Refresh Stock</button>;
         }
 
         var waste;
-        if (this.state.stacks.waste.length === 1) {
-            waste = this.state.stacks.waste?.map((c, index) => 
-            <SolitaireCard 
-                key={index}
-                card={c.card}
-                suit={c.suit}
-                deck={c.deck}
-                faceUp={1}
-            />
-            );
-        } else {
+        console.log("this.state.stacks.waste.length: " + this.state.stacks.waste.length);
+        if (this.state.stacks.waste.length > 0) {
+            var Wlength = this.state.stacks.waste.length;
+            var top = this.state.stacks.waste[Wlength-1];
+            waste = '/static/img/games/solitaire/paris/' + top['card'] + top['suit'] + '.1.jpeg';
+        } else if (this.state.stacks.waste.length === 0) {
             waste = '/static/img/games/solitaire/stack-placeholder.png';
         }
         
-
-        // TODO: render all of your stacks
         return (
             <div className='solitaireBoard'>
                 {/* <h3>Placeholder for now</h3>
@@ -581,13 +627,12 @@ class SolitaireGame extends React.Component {
                 {/* Make all stacks side by side / inline
                 Make cards within each stack in vertical block ordering */}
 
-                {/* TODO: create the handleStockClick() and handleWasteClick() functions */}
                 <div className='stockWaste'>
-                    <div className='solitaireStock' onClick={() => this.handleStockClick}>
-                        <img src={stock}/>
+                    <div className='solitaireStock' onClick={() => this.handleStockClick()}>
+                        {stock}
                     </div>
 
-                    <div className='solitaireWaste' onClick={() => this.handleWasteClick}>
+                    <div className='solitaireWaste' onClick={() => this.handleWasteClick()}>
                         <img src={waste}></img>
                     </div>
                 </div>
