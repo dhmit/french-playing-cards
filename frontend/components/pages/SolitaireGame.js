@@ -2,10 +2,18 @@ import React from "react";
 import SolitaireStack from "./SolitaireStack";
 import SolitaireCard from "./SolitaireCard";
 
+/* 
+The const arrays cards, suits, and decks are used during `shuffle` to randomize the cards
+assigned to each tableau stack
+
+The vars t1, t2, etc. are used to help manage SolitaireGame component's state: they are
+variables used to store the randomized card objects assigned to each tableau, and in the constructor each variable 
+gets assigned to its corresponding state variable (e.g. t1 gets assigned to the state variable that manages the first
+tableau stack)
+ */
 const cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 const suits = ["C", "D", "H", "S"];
 const decks = ["paris", "dugourc", "david"];
-const faceUp = [0, 1];
 var t1 = [];  // initial size 1
 var t2 = [];  // initial size 2
 var t3 = [];  // initial size 3
@@ -15,7 +23,7 @@ var t6 = [];  // initial size 6
 var t7 = [];  // initial size 7
 var st = []; // initial size 24
 
-// Helper function to shuffle an array
+/* Helper function to randomize the tableau stacks at the start of the game */
 function shuffle(array) {
     let currentIndex = array.length;
 
@@ -32,9 +40,11 @@ function shuffle(array) {
     return array;
 }
 
-// Helper function to check if a card value is greater than the other
-// c1 and c2 are both strings, e.g. "1" "2" "K" "A"
-// Return true if c1 = (c2 + 1) and false otherwise 
+/* 
+Helper function to check if a card value is greater than the other
+c1 and c2 are both strings, e.g. "1" "2" "K" "A"
+Returns true if c1 = (c2 + 1) and false otherwise 
+*/
 function compareCards(c1, c2) {
     // if c1 and c2 are the same then return false
     if (c1 === c2) {
@@ -52,9 +62,11 @@ function compareCards(c1, c2) {
     return false;
 }
 
-// Helper function to check if the two cards have opposite colors (based on suits)
-// c1 and c2 are both strings, e.g. "C" "D" "H" "S"
-// Return true they have opposite colors
+/* 
+Helper function to check if the two cards have opposite colors (colors are always based on suits)
+c1 and c2 are both strings, e.g. "C" "D" "H" "S"
+Returns true they have opposite colors
+*/
 function compareSuits(c1, c2) {
     if ((c1 === 'C' || c1 === 'S') && (c2 === 'D' || c2 === 'H')) {
         return true;
@@ -66,14 +78,15 @@ function compareSuits(c1, c2) {
 }
 
 class SolitaireGame extends React.Component {
-    // NOTE(Ryaan): This is the main controlling Component that
+    // NOTE (from Ryaan): This is the main controlling Component that
     // will handle the main logic, particularly moving cards from
     // stack to stack and initializing/managing the stacks.
 
     constructor(props) {
         super(props);
 
-        // Create all possible combinations of cards and suits
+        // Generate the entire deck of 52 cards by creating all possible combinations of cards and suits
+        // `cardCombos` contains the entire deck in the format [[<card>, <suit>], [<card>, <suit>], ...]
         var cardCombos = [];
         for (var i = 0; i < cards.length; i++) {
             for (var j = 0; j < suits.length; j++) {
@@ -83,16 +96,19 @@ class SolitaireGame extends React.Component {
             }
         }
 
-        // Assign card objects to the tableaus and the stock
+        // Shuffle the entire deck
         var shuffledCards = shuffle(cardCombos);
 
+        // Randomly assign each card to a tableau
         for (var i = 0; i < shuffledCards.length; i++) {
             var faceupCards = [0, 2, 5, 9, 14, 20, 27];
             var c = shuffledCards[i];
-            // Assign cards that are faceup on each tableau
+            // Assign exactly 1 faceup card to each tableau since that's how the game starts out
+            // When pushing each card to a tableu, format each card as an object so it's easy to pass 
+            // into SolitaireCard constructor when rendering later: {"card", "suit", "deck", faceUp=1 (face up) or 0 (face down)}
             if (faceupCards.includes(i)) {
-                // Format as object so it's easy to pass into SolitaireCard constructor: {"card", "suit", "deck", 0=facedown or 1=faceup}
-                var cardProps = {card: c[0], suit: c[1], deck: "paris", faceUp: 1}; // set deck as Paris for now, deal with the other decks later
+                // Note (from Alyssa): set deck as Paris for now, deal with the other decks later (this needs to be changed to be dynamic!)
+                var cardProps = {card: c[0], suit: c[1], deck: "paris", faceUp: 1}; 
                 if (i === 0) {
                     t1.push(cardProps);
                 } if (i === 2) {
@@ -131,9 +147,9 @@ class SolitaireGame extends React.Component {
             
         }
 
+        // STATE
         this.state = {
-            // Foundations: all cards 
-            // Tableaus: faceup card is always at the end of the array (pushed to array, popped from array)
+            // Tableaus: face up card(s) always at the end of the array
             stacks: {
                 foundationH: [],
                 foundationD: [],
@@ -146,21 +162,25 @@ class SolitaireGame extends React.Component {
                 tableau5: t5,  // initial size 5
                 tableau6: t6,  // initial size 6
                 tableau7: t7,  // initial size 7
-                stock: st,
-                waste: [], // all cards will be face up, but only the most recently added card (at the end of the array) is accessible
+                stock: st, // all cards in the stock will be face down
+                waste: [], // all cards in the waste will be face up, but remember only the most recently added card (at the end of the array) is accessible
             },
 
-            // use this to hold on to data for a card that's being actively dragged
-            // activeStack is the (string) name of the stack with the active card
+            // Note (from Alyssa): use `activeStack` to keep track of the card that's being actively transferred from one stack to another, 
+            // Right now we have a 2-click method where the user clicks on deck A (the `active stack`) and then clicks on deck B,
+            // and the card at the top of deck A gets moved to the top of deck B. This should later be omitted b/c the ultimate goal is for the user to be able to click and drag cards. 
+            // `activeStack` is the (string) name of the stack with the card that's being moved
             activeStack: 0,
         };
 
+        // For testing purposes
         console.log(this.state.stacks);
     };
 
     /* 
     Only call this when the stock stack is clicked 
-    Draws a card from the stock stack and puts it in the waste stack (up to the user whether or not to leave it in the waste)
+    Draws a card from the stock stack and puts it in the waste stack (up to the user whether or not to leave it in the waste
+    or move it to a tableau or foundation)
     Returns a card in the format {card: "card", suit: "suit", deck: "paris", faceUp: 0 or 1}}
     */
     drawCard = () => {
@@ -178,14 +198,14 @@ class SolitaireGame extends React.Component {
     };
 
     /*
-    Handle a stack being clicked: either the stack clicked contains a card that will be moved, or the stack clicked
-    will get a card moved to it.
-    stackName is a string
-    TODO:
-    1. How to move multiple cards (e.g. move a chunk of 6,5,4 to a stack that has a 7)
+    Handle a tableau stack being clicked: when a tableau gets clicked on, there are two possibilities:
+    (1) the stack clicked contains a card that will be moved, or (2) the stack clicked will get a card moved to it.
+    The argument `stackName` is a string
+    Note (from Alyssa): when the 2-click transfer method is changed to be a click-and-drag method, this function should allow
+    for multiple cards to be moved at once, e.g. moving a chunk of cards with values 6,5,4 from stack A to stack B that has a card with value 7 on top)
    */
     handleTableauClick = (stackName) => { 
-        // If `this.state.activeStack` is null, make the given `stackName` the activeStack.
+        // (1) If `this.state.activeStack` is 0, make the given `stackName` the activeStack.
         if (this.state.activeStack === 0) {
             this.setState({
                 activeStack: stackName,
@@ -193,8 +213,10 @@ class SolitaireGame extends React.Component {
             return;
         }
 
+        // (2) Otherwise, we already have an active stack, so that means the user wants to transfer a card to `stackName` 
+
         // Check that activeStack and stackName aren't the same (means that user double-clicked on same stack)
-        // Reset activeStack to 0 and exit function
+        // If so, reset activeStack to 0 and exit function
         if (this.state.activeStack === stackName) {
             this.setState({
                 activeStack: 0,
@@ -203,14 +225,16 @@ class SolitaireGame extends React.Component {
         }
 
         // Otherwise, `this.state.activeStack` is not null, so proceed
-        // The stack getting a card removed is the stack with the name active stack
+        // stack1: The stack getting a card removed is `activeStack`
         var activeStackName = String(this.state.activeStack);
         var stack1 = this.state.stacks[activeStackName];
+        // transferCard: the card we are trying to transfer from stack A to stack B
         var transferCard = stack1.pop();
-        // The stack getting a card added is the stack with `stackName`
+        // stack2: The stack we are trying to move a card to is `stackName`
         var stack2 = this.state.stacks[stackName];
 
         // If stack1 (activeStack) is a foundation and the card we're trying to remove from it is an Ace, don't allow it
+        // b/c it's an illegal move
         // Reset activeStack to 0 and exit function
         if (activeStackName.includes("foundation") && transferCard["card"] === "A") {
             stack1.push(transferCard);
@@ -220,8 +244,8 @@ class SolitaireGame extends React.Component {
             return;
         }
 
-        // If stack2 is empty, make sure the transferCard is a King. Otherwise, not a valid move so 
-        // reset activeStack to 0 and exit function
+        // If stack2 is empty, make sure the transferCard is a King. 
+        // Otherwise, not a legal move so reset activeStack to 0 and exit function
         if (stack2.length === 0) {
             if (transferCard['card'] !== 'K') {
                 stack1.push(transferCard);
@@ -233,13 +257,14 @@ class SolitaireGame extends React.Component {
             stack2 = [transferCard];
         } 
 
-        // If stack2 is not empty, need to compare both cards from both stacks to ensure it is a valid move
+        // If stack2 is not empty, we must compare make sure the user is trying to make a legal move by checking if
+        // 1. the top card of stack B is exactly 1 value above the transferCard's and that 
+        // 2. the color is the opposite of the transferCard's color
         else {
-            // Compare stack1's and stack2's cards: is this card transfer allowed?
-            // If not a valid move, then reset activeStack to 0 and exit function
+            // Compare stack1's and stack2's card values and colors
             var stack2Card = stack2.pop(); 
             stack2.push(stack2Card);
-            // If the numbers aren't allowed for valid move, or the colors aren't opposite then reset activeSTack to 0 and exit function
+            // Illegal move: if the numbers aren't allowed for valid move, or the colors aren't opposite then reset activeSTack to 0 and exit function
             if (!compareCards(stack2Card["card"], transferCard["card"]) || !compareSuits(stack2Card["suit"], transferCard["suit"])) {
                 stack1.push(transferCard);
                 this.setState({
@@ -247,11 +272,11 @@ class SolitaireGame extends React.Component {
                 });
                 return;
             }
-            // Otherwise, it's a valid move and continue logic
+            // Otherwise, it's a legal move so proceed
             stack2.push(transferCard);
         }
 
-        // Check if the stack that a card got removed from (stack1) is not empty && still has any faceup cards
+        // If stack1 is not empty && doesn't have any face up cards, make the card at the top of the stack face up
         if (stack1.length > 0) {
             var stack1Card = stack1.pop();
             if (stack1Card["faceUp"] === 0) {
@@ -264,7 +289,7 @@ class SolitaireGame extends React.Component {
             }
         }
 
-        // Create a copy of this.state.stacks and modify it
+        // Now copy any changes to the state variables so the stacks can be properly re-rendered
         var stacks = this.state.stacks;
         stacks[[activeStackName]] = stack1;
         stacks[[stackName]] = stack2;
@@ -272,11 +297,11 @@ class SolitaireGame extends React.Component {
         this.setState({
             // Set activeStack as null for future callbacks
             activeStack: 0,
-            // Set stacks as the new modified variable (see above)
+            // Reassign this.state.stacks to reflect the new changes
             stacks: stacks,
         });
         
-        // TODO: rendering correctly, but console.log statements say otherwise?
+        // For testing purposes
         console.log(stackName + " gained a card");
         console.log(stackName + ": " + this.state.stacks[stackName]);
         console.log("activeStack set to 0");
@@ -285,8 +310,13 @@ class SolitaireGame extends React.Component {
 
     };
 
+   /*
+    Handle a foundation stack being clicked: when a foundation gets clicked on, there are two possibilities:
+    (1) the stack clicked contains a card that will be moved, or (2) the stack clicked will get a card moved to it.
+    The argument `stackName` is a string
+   */
    handleFoundationClick = (stackName) => {
-        // If `this.state.activeStack` is null, make the given `stackName` the activeStack.
+        // (1) If `this.state.activeStack` is 0, make the given `stackName` the activeStack.
         if (this.state.activeStack === 0) {
             this.setState({
                 activeStack: stackName,
@@ -294,8 +324,10 @@ class SolitaireGame extends React.Component {
             return;
         }
 
+        // (2) Otherwise, we already have an active stack, so that means the user wants to transfer a card to `stackName` 
+
         // Check that activeStack and stackName aren't the same (means that user double-clicked on same stack)
-        // Reset activeStack to 0 and exit function
+        // If so, reset activeStack to 0 and exit function
         if (this.state.activeStack === stackName) {
             this.setState({
                 activeStack: 0,
@@ -304,15 +336,15 @@ class SolitaireGame extends React.Component {
         }
 
         // Otherwise, `this.state.activeStack` is not null, so proceed
-        // The stack getting a card removed is `activeStack`
+        // stack1: The stack getting a card removed is `activeStack`
         var activeStackName = String(this.state.activeStack);
         var stack1 = this.state.stacks[activeStackName];
+        // transferCard: the card we are trying to transfer from stack A to stack B
         var transferCard = stack1.pop();
-        // The stack getting a card added is the stack with `stackName`
+        // stack2: The stack we are trying to move a card to is `stackName`
         var stack2 = this.state.stacks[stackName];
 
-
-        // If transfer card's suit isn't the same as that of foundation stack, reset activeStack to 0 and exit function
+        // Illegal move checkpoint: if transfer card's suit isn't the same as that of foundation stack, reset activeStack to 0 and exit function
         if (transferCard["suit"] !== stackName[10]) {
             stack1.push(transferCard);
             this.setState({
@@ -321,7 +353,7 @@ class SolitaireGame extends React.Component {
             return;
         }
 
-        // If transfer card is Ace and the foundation stack is not empty, OR transfer card isn't Ace and foundation stack is empty,
+        // Illegal move checkpoint: if transfer card is Ace and the foundation stack is not empty, OR transfer card isn't Ace and foundation stack is empty,
         // reset activeStack to 0 and exit function
         if ((transferCard["card"] === 'A' && stack2.length > 0) || (transferCard["card"] !== 'A' && stack2.length === 0)) {
             stack1.push(transferCard);
@@ -331,16 +363,13 @@ class SolitaireGame extends React.Component {
             return;
         }
 
-        // If transfer card is not Ace && foundation stack is not empty, need to compare the card values first
+        // Illegal move checkpoint: if transfer card is not Ace && foundation stack is not empty, need to compare the card values first
+        // Make sure that the transferCard's value is exactly 1 above that of the top card in stack2
         if (transferCard["card"] !== 'A' && stack2.length > 0) {
-            console.log("Transfer card is not Ace && foundation stack is not empty, so comparing card values first...");
-            // Compare stack1's and stack2's cards: is this card transfer allowed?
-            // If not a valid move, then reset activeStack to 0 and exit function
             var stack2Card = stack2.pop(); 
             stack2.push(stack2Card);
-            // If the numbers aren't allowed for valid move, then reset activeStack to 0 and exit function
+            // If the numbers aren't allowed for valid move, this is an illegal move so reset activeStack to 0 and exit function
             if (!compareCards(transferCard["card"], stack2Card["card"])) {
-                console.log("...Not a valid move!");
                 stack1.push(transferCard);
                 this.setState({
                     activeStack: 0,
@@ -348,12 +377,12 @@ class SolitaireGame extends React.Component {
                 return;
             }
         }
-        // Otherwise transfer card is Ace && foundation stack is empty, so don't need to compare card values
+        // Otherwise, transfer card is Ace && foundation stack is empty, so don't need to compare card values
         
-        // Continue logic for valid move
+        // At this point, we know it's a legal move so we can transfer the card from stack1 to stack2
         stack2.push(transferCard);
 
-        // Check if the stack that a card got removed from (stack1) still has any faceup cards
+        // If stack1 is not empty && doesn't have any face up cards, make the card at the top of the stack face up
         if (stack1.length > 0) {
             var stack1Card = stack1.pop();
             if (stack1Card["faceUp"] === 0) {
@@ -366,7 +395,7 @@ class SolitaireGame extends React.Component {
             }
         }
 
-        // Create a copy of this.state.stacks and modify it
+        // Now copy any changes to the state variables so the stacks can be properly re-rendered
         var stacks = this.state.stacks;
         stacks[[activeStackName]] = stack1;
         stacks[[stackName]] = stack2;
@@ -374,16 +403,16 @@ class SolitaireGame extends React.Component {
         this.setState({
             // Set activeStack as null for future callbacks
             activeStack: 0,
-            // Set stacks as the new modified variable (see above)
+            // Reassign this.state.stacks to reflect the new changes
             stacks: stacks,
         });
    };
 
    /*
-   Handle when user clicks on the stock to draw a card
-   1. Pop a card from the top of the stack
-   2. Transfer (push) the card to the top of the waste (logic similar to handleTableauClick)
-   3. For rendering: update the card to be faceUp=1
+   Handle the stock pile being clicked (drawing a new card):
+   1. Pop a card from the top of the stack and re-render it to be face up
+   2. Transfer (push) the card to the top of the waste
+   User can only draw a card FROM the stock and should never be able to move a card TO the stock
    */
    handleStockClick = () => {
         var stock = this.state.stacks.stock;
@@ -398,14 +427,14 @@ class SolitaireGame extends React.Component {
         stacks["waste"] = waste;
         
         this.setState({
-            // Set stacks as the new modified variable (see above)
+            // Reassign this.state.stacks to reflect the new changes
             stacks: stacks,
         });
    };
 
    /*
-   Handle when user clicks on the waste to move 
-   Opposite of logic for handleFoundationClick (user can move a card from waste, but can't move a card TO waste)
+   Handle the waste pile being clicked
+   Opposite of logic for handleFoundationClick: user can move a card FROM waste, but can't move a card TO waste
    */
    handleWasteClick = () => {
         // If `this.state.activeStack` is null, make the given `stackName` the activeStack.
@@ -420,7 +449,8 @@ class SolitaireGame extends React.Component {
    };
 
    /*
-   Refresh the stock with cards from the waste (if there are cards in the waste)
+   If the stockpile becomes empty and the game isn't over, refresh the stock with cards from the waste.
+   This will get called when the user clicks on the 'refresh stock' button
    */
    refreshStock = () => {
     // If the waste is empty, do nothing
@@ -442,16 +472,18 @@ class SolitaireGame extends React.Component {
     stacks["waste"] = waste;
     
     this.setState({
-        // Set stacks as the new modified variable (see above)
+        // Reassign this.state.stacks to reflect the new changes
         stacks: stacks,
     });
     console.log("Length of this.state.stacks.waste after refill: " + this.state.stacks.waste.length);
 
-    // TODO: there's a weird bug where one of the cards gets moved out of stock to waste? So waste placeholder img never shows up
+    // Note (from Alyssa): there's a weird bug where the waste doesn't fully empty out and there's still
+    // one card left in the waste after refreshing the stock.
+    // I ran a bunch of print statements and it seems that the stack correctly fully empties out at the end of this function,
+    // but sometime during the rendering, one of the cards from the stock gets moved back to the waste
 };
 
     render() {
-        // TODO: create an 'undo' button
         var tableau1;
         var tableau2;
         var tableau3;
@@ -459,6 +491,8 @@ class SolitaireGame extends React.Component {
         var tableau5;
         var tableau6;
         var tableau7;
+
+        // For the tableau stacks, map each card object to a SolitaireCard component so it can be rendered
 
         if (this.state.stacks.tableau1.length === 0) {
             tableau1 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
@@ -558,7 +592,8 @@ class SolitaireGame extends React.Component {
             );
         }
 
-        // Check if foundations are empty
+        // Check if foundations are empty. If they are, render a slightly transparent image to indicate
+        // to the user that the foundations are empty. Otherwise, just render the top card (face up) in each foundation stack
         var foundationC;
         var foundationD;
         var foundationH;
@@ -595,7 +630,8 @@ class SolitaireGame extends React.Component {
             
         }
 
-        // Stock and waste piles
+        // Render stock and waste piles
+        // If stock is empty, display the 'refresh stock' button so the user can refill the stock
         var stock;
         console.log("this.state.stacks.stock.length: " + this.state.stacks.stock.length);
         if (this.state.stacks.stock.length > 0) {
@@ -604,6 +640,8 @@ class SolitaireGame extends React.Component {
             stock = <button onClick={this.refreshStock}>Refresh Stock</button>;
         }
 
+        // If the waste is empty, display a placeholder image to indicate it's empty
+        // Otherwise, just render the top card (card up)
         var waste;
         console.log("this.state.stacks.waste.length: " + this.state.stacks.waste.length);
         if (this.state.stacks.waste.length > 0) {
@@ -616,16 +654,6 @@ class SolitaireGame extends React.Component {
         
         return (
             <div className='solitaireBoard'>
-                {/* <h3>Placeholder for now</h3>
-                <SolitaireCard
-                    card={"J"}
-                    suit={"C"}
-                    deck={"paris"}
-                    faceUp={1}
-                /> */}
-
-                {/* Make all stacks side by side / inline
-                Make cards within each stack in vertical block ordering */}
 
                 <div className='stockWaste'>
                     <div className='solitaireStock' onClick={() => this.handleStockClick()}>

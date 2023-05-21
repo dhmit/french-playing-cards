@@ -1,8 +1,12 @@
 import React from "react";
 
+/*
+This functional component does not manage any state or data, it only renders the card image based
+on whether the card is face up or face down
+Fetches the correct card image from the Soliatire img directory `/static/img/games/solitaire/`
+*/
+
 const SolitaireCard = ({card, suit, deck, faceUp}) => {
-    // NOTE(Ryaan): This functional component _just_ draws a card, 
-    // and doesn't need to manage any data
     
     if (Boolean(faceUp)) {
         var cardStr = String(card);

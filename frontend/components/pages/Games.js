@@ -24,27 +24,30 @@ const Games = () => {
             <SolitaireGame/>
             
 
-            {/* TODO: uncomment this once I figure out pop-up window, change the hyperlinks */}
+            {/* Template for Solitaire menu: user should be able click on the deck they want  
+                to play with, and either a new tab or a pop-up window will open up with the 
+                Solitaire game
+            */}
             {/* <p className="games-header">Select a deck to play Solitaire with:</p>
             <br/>
 
             <div id='Games-Menu'>
                 <div className='Games-Menu-Item'>
-                    <a href='material-aspects/fronts'> 
+                    <a href='<insert link to Portrait de Paris version>'>
                         <p>Portrait de Paris</p>
                         <img src={'/static/img/games/paris-menu.PNG'}/>
                     </a>
                 </div>
     
                 <div className='Games-Menu-Item'>
-                    <a href='material-aspects/backs'>
+                    <a href='<insert link to Jaume et Dugourc version>'>
                         <p>Jaume et Dugourc</p>
                         <img src={'/static/img/games/dugourc-menu.PNG'}/>
                     </a> 
                 </div>
     
                 <div className='Games-Menu-Item'>
-                    <a href='material-aspects/envelopes'> 
+                    <a href='<insert link to J-L David version>'> 
                         <p>J-L David</p>
                         <img src={'/static/img/games/david-menu.PNG'}/>
                     </a> 
