@@ -8,12 +8,17 @@
         "backs": "Backs",
         "envelopes": "Envelopes",
         "iconography": "Face Card Iconography",
+        "search": "Search",
+        "tarot": "Tarot",
+        "deck": "The Tarot Deck",
+        "history": "A Brief History of Cartomancy",
         "games": "Play Games!",
         "bibliography": "Bibliography"
     },
     "home" : {
         "header": "French Playing Cards, 1650-1850",
-        "blurb": "From 1650 to 1850, the French spread enlightenment, gained and lost one empire and began another, and overthrew a centuries-old monarchy.  They also played card games.  This site explores the history of French playing cards in this period as an unusual and insightful source for the history of the Old Regime, the French Revolution, and early Nineteenth-Century France.  You will find details about <1>manufacturing procedures</1>, the <3>material aspects</3> of the playing cards, and the changing <5>iconography</5> of French face cards.  A <11>bibliography</11> provides suggestions for further reading.  And for those of you interested in gaming, we will offer the opportunity to play a few of the most popular <13>card games</13> of the period, using the historical deck of cards of your choice!<br /><br />Pour accéder à la version française du site, cliquez sur “fr” en haut de la page à droit."
+        "blurb": "From 1650 to 1850, the French spread enlightenment, gained and lost one empire and began another, and overthrew a centuries-old monarchy.  They also played card games.  This site explores the history of French playing cards in this period as an unusual and insightful source for the history of the Old Regime, the French Revolution, and early nineteenth-century France.  You will find details about <1>manufacturing procedures</1>, the <3>material aspects</3> of the playing cards, the changing <5>iconography</5> of French face cards, and <7>tarot cards</7> and the history of <9>cartomancy</9>.  A <11>bibliography</11> provides suggestions for further reading.  And for those of you interested in gaming, we will offer the opportunity to play a few of the most popular <13>card games</13> of the period, using the historical deck of cards of your choice!",
+        "trans": "Pour accéder à la version française du site, cliquez sur “fr” en haut de la page à droit."
     },
     "about": {
         "header": "About This Web Site",
@@ -22,7 +27,13 @@
             "2": "This web site is one outcome of a larger project by <1>Jeffrey Ravel</1>, Professor of History at MIT, to write this history.  At a later date, we hope to add a feature that will allow users to play popular Old Regime and Revolutionary card games online, selecting the historical deck with which they will play.",
             "3": "Professor Ravel and his team wish to thank the <1>Bibliothèque nationale de France</1> (BnF), which has provided the digital versions of playing cards and the metadata we make available on our site. Users are invited to explore the extensive digital reproductions of playing cards in the collections of the BnF, which the Library makes available on its <3>Gallica web site</3>. We are also grateful to the <5>MIT Programs in the Digital Humanities</5> and <7>Performant Software</7> for technical support."
         },
-        "team": "Playing Card Web Site Development Team Members"
+        "professor": "Professor",
+        "profiles": {
+            "editor": "Site Editor",
+            "tarot_consultant": "Consultant, Tarot Card Pages",
+            "team": "Web Development Team",
+            "translation": "Translation, French Site"
+        }
     },
     "manufacture": {
         "header": "Manufacture",
@@ -94,7 +105,7 @@
             },
             "napoleon": {
                 "title": "Napoleon (1799-1815)",
-                "1": "By the time Napoleon came to power, the French state had resumed the excise tax on the manufacture of playing cards. In addition, Napoleon's officials decided to create one uniform face card design for the entire nation. In 1810 they asked the great revolutionary and imperial artist Jacques-Louis David to design a new deck of cards.  David returned to the iconography of the Old Regime, but endowed each king, queen, and jack with historically appropriate costumes. When his design did not prove popular, the regime turned to a designer named Nicolas-Marie Gatteaux, who created designs in 1813 that were more faithful to the appearance of the Old Regime cards, and therefore more popular.  In 1815, a designer named Gustave-Armand Houbigant patented a new iconography with a more romantic, medieval look.",
+                "1": "By the time Napoleon came to power, the French state had resumed the excise tax on the manufacture of playing cards. In addition, Napoleon's officials decided to create one uniform face card design for the entire nation. In 1808 they asked the great revolutionary and imperial artist Jacques-Louis David to design a new deck of cards.  David returned to the iconography of the Old Regime, but endowed each king, queen, and jack with historically appropriate costumes. When his design did not prove popular, the regime turned to a designer named Nicolas-Marie Gatteaux, who created designs in 1811 that were more faithful to the appearance of the Old Regime cards, and therefore more popular.  In 1815, a designer named Gustave-Armand Houbigant patented a new iconography with a more romantic, medieval look.",
                 "2":  "David.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, PET FOL-KH-34 (C, 28).",
                 "3": "Gatteaux.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (7BIS, 326).",
                 "4":"Houbigant.  Source:  British Library, 1896,0501.1292.1-12. "
@@ -165,9 +176,14 @@
             "title": "Envelopes",
             "intro": "French playing card manufacturers in these centuries packaged their cards in paper wrappers for sale to the public.  The look of these wrappers was not controlled by the royal taxing agents, so card-makers were free to create their own wrapper designs, within implicitly understood ideological limits.  Before the Revolution, manufacturers utilized the wrappers to communicate patronage of their product, brand names, and the urban locations of their shops.  The images imprinted on the wrappers might reference the French monarchy, or other kings.  As with face card iconography, once the Revolution broke out in 1789 the wrappers began to incorporate revolutionary images and mottos.  There is some evidence to suggest that envelope design in the Napoleonic period may have toned down the ideological references of the 1790s.",
             "images": "The card images below and the associated metadata are courtesy of the <1>Gallica</1> site of the Bibilothèque nationale de France.",
+            "leftWrapper": "Left-hand wrapper: ",
+            "rightWrapper": "Right-hand wrapper: ",
+            "bottomLegend": "Bottom legend",
+            "topLegend": "Top legend",
             "epinal": {
                 "title": "Epinal Playing Card Wrappers, First Half of the Seventeenth Century",
-                "text": "In the first half of the seventeenth century, card-makers in the town of Épinal, in Lorraine, emphasized heraldry, architecture, and the crown on their card wrappers."
+                "text": "In the first half of the seventeenth century, card-makers in the town of Épinal, in Lorraine, emphasized heraldry, architecture, and the crown on their card wrappers.",
+                "left": "Left-hand wrapper. “FAICTES A ESPINAL.  CARTES FINES FAITES PAR JEHAN HEMAU A ESPINAL”. (Between 1623 and 1630.)"
             },
             "rouen": {
                 "title": "Rouen Playing Card Wrappers, Second Half of the Seventeenth Century",
@@ -175,19 +191,27 @@
             },
             "eighteenth": {
                 "title": "Eighteenth-Century Examples of Card Wrappers",
-                "text": "These two examples from the eighteenth century both have a focus on monarchy.  The one on the left displays a French king on horseback in a cartouche held up by courtiers.  The legend encircling the cartouche claims that the king is “the hero of all kings.”  The central panel of the wrapper on the  right represents the wife of the heir to the French throne (the “Dauphine”) in a painterly pose. The Parisian manufacturer claims to be her authorized card-maker."
+                "text": "These two examples from the eighteenth century both have a focus on monarchy.  The one on the left displays a French king on horseback in a cartouche held up by courtiers.  The legend encircling the cartouche claims that the king is “the hero of all kings.”  The central panel of the wrapper on the  right represents the wife of the heir to the French throne (the “Dauphine”) in a painterly pose. The Parisian manufacturer claims to be her authorized card-maker.",
+                "right": "(The note at the bottom, “ENTIER,” indicates that the wrapper contained a full deck of 52 cards.)"
             },
             "revolutionary": {
                 "title": "A Revolutionary Modification to a Card Wrapper",
-                "text": "Card-makers had to adapt their wrappers to revolutionary ideals, just as they had to modify the iconography of the face cards they manufactured.  Sometimes the changes were subtle. On the left is a prerevolutionary bookplate produced by the Parisian card-maker and stationer Hugues Chassonnier that features the three biblical kings from the East who bore gifts for the Christ child.  The monarch on the left points to the star in the sky that prompted their journey to Bethlehem.  This nameplate, produced in the last two decades of the Old Regime, served as the Chassonnier shop’s trademark; it may have imitated the sign that hung outside his shop.  On the right is a playing card wrapper manufactured by Chassonnier in the early years of the Revolution.  Here the three figures are similar enough to the prerevolutionary bookplate that the card-makers’ Parisian customers would have recognized the manufacturer. But the gifts the kings bear are de-emphasized, and their crowns have been replaced by turbans.  The flap at the top of the envelope labels them as “moors,” not kings.  And the text at the bottom informs consumers that the cards in the wrapper were manufactured by “Citizen” Chassonnier."
+                "text": "Card-makers had to adapt their wrappers to revolutionary ideals, just as they had to modify the iconography of the face cards they manufactured.  Sometimes the changes were subtle. On the left is a prerevolutionary bookplate produced by the Parisian card-maker and stationer Hugues Chassonnier that features the three biblical kings from the East who bore gifts for the Christ child.  The monarch on the left points to the star in the sky that prompted their journey to Bethlehem.  This nameplate, produced in the last two decades of the Old Regime, served as the Chassonnier shop’s trademark; it may have imitated the sign that hung outside his shop.  On the right is a playing card wrapper manufactured by Chassonnier in the early years of the Revolution.  Here the three figures are similar enough to the prerevolutionary bookplate that the card-makers’ Parisian customers would have recognized the manufacturer. But the gifts the kings bear are de-emphasized, and their crowns have been replaced by turbans.  The flap at the top of the envelope labels them as “moors,” not kings.  And the text at the bottom informs consumers that the cards in the wrapper were manufactured by “Citizen” Chassonnier.",
+                "left": "Left-hand bookplate between 1766 and 1789: ",
+                "right": "Right-hand wrapper: ca. 1794? Top legend: ",
+                "piquet": "(Piquet was a popular card game requiring a 32-card deck.)"
             },
             "shine": {
                 "title": "“I Shine for All”",
-                "text": "Other card-makers engraved more overtly revolutionary images and slogans on their card wrappers. On the left, a wrapper printed by the Lyonnais card-maker Manus also features a celestial body in the upper-right hand corner of the main panel, in this case the sun, with the egalitarian legend “Je luit pour tous.”  (I shine for all.). A seated female allegory, prominently featured, gazes at a ship on the horizon, raising her arm in a salute to the idea of hope (“A LESPERANCE”).  The wrapper on the right, created by the Grenoblois card-makers Cheminade and Repellin, repeats the “sun shines for all” motto on the side flaps of the envelope. In the center panel a cartouche featuring an ancient Roman fasces and a phrygian bonnet is encircled by the words “REPUBLIQUE FRANCAISE.”  The labels “LIBERTE” and “EGALITE” are printed above.  Consumers would have readily recognized the republican sympathies of both card-makers."
+                "text": "Other card-makers engraved more overtly revolutionary images and slogans on their card wrappers. On the left, a wrapper printed by the Lyonnais card-maker Manus also features a celestial body in the upper-right hand corner of the main panel, in this case the sun, with the egalitarian legend “Je luit pour tous.”  (I shine for all.). A seated female allegory, prominently featured, gazes at a ship on the horizon, raising her arm in a salute to the idea of hope (“A LESPERANCE”).  The wrapper on the right, created by the Grenoblois card-makers Cheminade and Repellin, repeats the “sun shines for all” motto on the side flaps of the envelope. In the center panel a cartouche featuring an ancient Roman fasces and a phrygian bonnet is encircled by the words “REPUBLIQUE FRANCAISE.”  The labels “LIBERTE” and “EGALITE” are printed above.  Consumers would have readily recognized the republican sympathies of both card-makers.",
+                "right": "Right-hand wrapper. (Side flaps) “LE SOLEIL LUIT POUR TOUT”. (Center panel) “LIBERTE EGALITE REPUBLIQUE FRANCAISE CARTYES FINES”. (Bottom panel) “FAITES PAR CHEMINADE ET REPELIN MDS CARTIERS RUE NEUVE VIS A VIS CTS JACOBINS A GRENOBLE”"
             },
             "napoleonic": {
                 "title": "Napoleonic Card Wrappers",
-                "text": "These two examples, from the first decade of the nineteenth century, display designs that eschew both Old Regime royal patronage and Revolutionary ideological concerns.  The envelope on the left, designed to package a deck of Gatteaux cards around 1810-1815, features two winged, classicizing angels sounding their horns.  (On the Gatteaux deck, see the card “<1>fronts</1>” page on this site.)  Between them they support a small cartouche that contains the symbols of the four card suits.  On the right, the envelope printed by the Widon Delatre, a Parisian card-maker, also has a relatively simple cartouche evoking the biblical King Solomon. To his left and right, cornucopias overflow with playing cards, while the flap below records the manufacturer’s shop in a plain typeface.  While the iconography of both wrappers references classical and biblical imagery, it also reproduces images of card suits and card decks that would have been familiar to gamblers in the period."
+                "text": "These two examples, from the first decade of the nineteenth century, display designs that eschew both Old Regime royal patronage and Revolutionary ideological concerns.  The envelope on the left, designed to package a deck of Gatteaux cards around 1810-1815, features two winged, classicizing angels sounding their horns.  (On the Gatteaux deck, see the card ",
+                "text2": "fronts",
+                "text3": "page on this site.)  Between them they support a small cartouche that contains the symbols of the four card suits.  On the right, the envelope printed by the Widon Delatre, a Parisian card-maker, also has a relatively simple cartouche evoking the biblical King Solomon. To his left and right, cornucopias overflow with playing cards, while the flap below records the manufacturer’s shop in a plain typeface.  While the iconography of both wrappers references classical and biblical imagery, it also reproduces images of card suits and card decks that would have been familiar to gamblers in the period.",
+                "left": "Left-hand wrapper: [No text]"
             }
         }
     },
@@ -228,6 +252,97 @@
             "wise-virtuous": "Wise men, virtuous women, brave men face cards",
             "barricades": "Barricades deck",
             "liberators": "Liberators deck"
+        },
+        "search": {
+            "header": "Filter search by selecting the features of the cards you want to see:",
+            "placeholder": "Select...",
+            "categories": {
+                "period": {
+                    "title": "Time period",
+                    "pre": "Pre-Revolutionary",
+                    "revolutionary": "Revolutionary",
+                    "post": "Post-Revolutionary"
+                },
+                "card": {
+                    "title": "Card",
+                    "ace": "Ace",
+                    "king": "King",
+                    "queen": "Queen",
+                    "jack": "Jack"
+                },
+                "suit":{
+                    "title": "Suit",
+                    "heart": "Hearts",
+                    "club": "Clubs",
+                    "diamond": "Diamonds",
+                    "spade": "Spades"
+                },
+                "rectoVerso": {
+                    "title": "Front or back",
+                    "front": "Front",
+                    "back": "Back"
+                },
+                "notes": {
+                    "title": "Back Notes",
+                    "none": "None",
+                    "catalogue": "Library card catalogue",
+                    "call_response": "Call and Response",
+                    "typographical": "Typographical letters"
+                },
+                "town": "Town",
+                "maker": "Maker",
+                "unknown": "Unknown"
+            },
+            "button": "Search",
+            "note": "To view an card image in greater detail, right click on it and select 'Open Image in New Tab'"
+        }
+    },
+    "tarot": {
+        "header": "Tarot Cards",
+        "blurb": "Tarot cards appeared in Europe in the fourteenth century, and soon made their way to France. The standard Tarot deck consisted of 78 cards: four suits consisting of four face cards (King, Queen,Knight, Jack) and the Ace through ten cards, as well as 22 trump cards. These decks were used to play a game similar to the modern game of bridge. In the last third of the eighteenth century a new use for these decks appeared, that of “cartomancy,” or divination. The links below will lead you to pages that provide details about the standard deck of Tarot cards, as well as a brief history of cartomancy.",
+        "deck": {
+            "title": "The Tarot Deck",
+            "intro": "Playing cards arrived in the Italian peninsula around the fourteenth century and artists created the first Tarot cards not long afterwards.  Artists crafted these early, hand-painted cards for use at Renaissance courts in such cities as Milan, Florence, and Ferrara.  With nobles as customers, these cards demonstrated skill and used high quality materials including gold and silver paint.  The cards here, representing Love and the World, are from the workshop of Bonifacio Bembo in the mid-15th century.",
+            "para1": "While the number of Tarot cards and their imagery varied initially, they ultimately settled into a set of twenty-two with themes that have lasted until the present.  Thus, by the early eighteenth century a pack of cards such as the Tarot de Marseille included fifty-six regular playing cards (ace through ten and four face cards including King, Queen, Knight, and Jack) using the suits of cups, coins, swords, and batons.  When the regular deck was combined with the twenty-two Tarot cards it resulted in a deck of seventy-eight cards.  Over time, manufacturers regularized the subjects of the Tarot cards and their order.  Traditionally, these cards are numbered from one to twenty-one with the Fool card remaining unnumbered. ",
+            "para2": "Although largely understood today as tools for divination and fortune-telling, Tarot cards originally served as trumps in a set of card games.  Just as in modern bridge, where one of the suits is designated the trump suit through a bidding process, Tarot games utilized the twenty-two Tarot cards as trumps. The standard images of the twenty-two cards include the Fool, the Juggler, the Popess, the Empress, the Emperor, the Pope, the Lovers, The Chariot, Justice, the Hermit, the Wheel of Fortune, Strength, the Hanged Man, Death (untitled), Temperance, the Devil, the House of God, the Star, the Moon, the Sun, Judgement, and the World.  Variations existed.  For some Tarot decks the Popess turned into the High Priestess or Juno while the Pope became the High Priest or Jupiter.  The Juggler sometimes appeared as the Magician. During the French Revolution when some people frowned on images of religion and monarchy, the Empress and Emperor became a Grandmother and Grandfather. ",
+            "cards": {
+                "love": "Love. Workshop of Bonifacio Bembo, 1445?  Source: Cary Collection of Playing Cards, Call # ITA09. Beinecke Rare Book and Manuscript Library, Yale University.",
+                "world": "World. Workshop of Bonifacio Bembo, 1445?  Source: Cary Collection of Playing Cards, Call # ITA09. Beinecke Rare Book and Manuscript Library, Yale University.",
+                "king": "King of Coins. Marseilles Tarot Deck, Jean Dodal, 1701-1715.  Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "queen": "Queen of Swords.  Marseilles Tarot Deck, Jean Dodal, 1701-1715.  Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "knight": "Knight of Batons.  Marseilles Tarot Deck, Jean Dodal, 1701-1715.  Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "jack": "Jack of Cups.  Marseilles Tarot Deck, Jean Dodal, 1701-1715.  Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "fool": "The Fool.  Marseilles Tarot Deck, Jean Dodal, 1701-1715.  Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "juggler": "The Juggler.  Marseilles Tarot Deck, Jean Dodal, 1701-1715.  Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "death": "Death.  Marseilles Tarot Deck, Jean Dodal, 1701-1715.  Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "hangedman": "Hanged Man.  Marseilles Tarot Deck, Jean Dodal, 1701-1715.  Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "grandmother": "Grandmother.  Italian Tarot Cards in the Revolutionary Style, Jean Isnard, 1794.  Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU.",
+                "grandfather": "Grandfather.  Italian Tarot Cards in the Revolutionary Style, Jean Isnard, 1794.  Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU."
+            },
+            "note1": "To see all the cards in the 1701-1715 Marseilles Tarot Deck from the Bibliothèque nationale de France, click <1>here</1>.",
+            "note2": "To see the all the cards in the 1794 Revolutionary Tarot deck from the Bibliothèque nationale de France, click <1>here</1>."
+        },
+        "cartomancy": {
+            "title": "A Brief History of Cartomancy",
+            "intro": "Hints abound regarding the use of playing cards for divinatory purposes, but such uses were informal enough that a word for it was not coined until the end of the eighteenth century when <1>Jean-Baptiste Alliette</1> (1738-1791) started discussing “cartonomancy” which he later shortened to “cartomancy.”  One early hint came from the famous roué Giovanni Casanova who writes in his memoir about chastising a young, Russian peasant girl named Zaïre who practiced divination with a regular deck of cards and apparently used them to predict his infidelities (a feat which probably did not require any sort of magical ability). <br/><br/> While historians have identified some similar references in the eighteenth century, the use of Tarot cards for divinatory purposes really took off only after <6>Antoine Court de Gébelin</6> (1725-1784) makes a claim for the Egyptian origins of Tarot and their uses in divination in his multi-volume <8>Le monde primatif</8>.  In the eighth volume of this work, appearing in 1781, Court de Gébelin claimed the seventy-eight “pages” of the Tarot held, in allegorical form, the knowledge once found in the lost library of Alexandria.  All people needed was an appropriate key to unlock this knowledge.",
+            "para1": "Once Court de Gébelin turned everyone's attention to this possibility, Alliette thoroughly adopted the practice and even tried to claim priority. Alliette – a teacher of algebra, print seller, and all-around purveyor of magical information, predictions, and objects – created his own Tarot deck, sold books on how to use cards for divination (both regular decks and full, Tarot decks), and gave lectures at his School of Magic on the topic.  Several of his books had detailed diagrams and instructions on card reading.",
+            "para2": "Cartomancy continued to find practitioners and enthusiasts into the period of the French Revolution with revolutionary versions of Tarot cards appearing, some conveniently containing hints for the user added as a sort of cheat-sheet.",
+            "para3": "The practice continued to inspire innovation with various methods for laying down the cards, some of which claimed to go back to Egypt, an assertion that received positive feedback in this time of Egyptomania. ",
+            "para4": "Certainly, cartomancy drew considerable attention at the end of the eighteenth century and into the nineteenth century.  Some Tarot games were adapted to serve as amusements such as the Cartomancy Game for the Amusement of Ladies.",
+            "para5": "The fashion for cartomancy continued into the nineteenth century.  In Le Nouveau Paris (1798) Louis-Sebastien Mercier, for example, describes his encounter with a cartomancer named Martin who worked in Paris and whose shop drew a constant stream of customers.  Mlle. Le Normand (1772-1843) received considerable fame (or perhaps infamy) for her card readings throughout the Napoleonic period in the first part of the nineteenth century.",
+            "images": {
+                "gebelin": "Antoine Court de Gébelin, <i>Le Monde primitif analysé et comparé avec le monde moderne</i> (Paris, 1777-1781) Vol. 8, plate VIII.  The images represent the following tarots, moving clockwise from the upper left: The Devil; Death; The Wheel of Fortune; The House of God.  Courtesy of the Bibliothèque nationale de France.",
+                "alliette": "Alliette writing his book on Tarot divination (frontispiece).  Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i>.  (Amsterdam, 1770). Bibliothèque de l’Arsenal, 8-S-14395.",
+                "fortune": "“Wheel of Fortune” card formation (after p. 64).  Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i>.  (Amsterdam, 1770).  Bibliothèque de l’Arsenal, 8-S-14395.",
+                "horoscope": "“Horoscope” card formation (after p. 72).  Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i>.  (Amsterdam, 1770).  Bibliothèque de l’Arsenal, 8-S-14395.",
+                "tirer": "<i>Nouvelle manière de tirer les cartes inventé en 1792</i>.  (Paris, Mondhare et Jean, 1792).  Bibliothèque nationale de France, Cabinet des estampes, RESERVE FOL-QB-201 (129).",
+                "toth": "“Table of cards from the Book of Toth that were placed in the Temple of Fire at Memphis,” from <i>Livre de Thot, ou Collection précieuse des tableaux de la doctrine de Mercure dans laquelle se trouve le chemin royal de la vie humaine</i> (Paris: Basan and Poignant, 1788).  Bibliothèque nationale, Cabinet des estampes, BOITE FT 4-KH-34 (E).",
+                "prelate": "“The Prelate,” from <i>Jeu de cartomancie pour l’amusement des Dames</i> (Paris, 1788).  Bibliothèque nationale de France, Cabinet des estampes, RESERVE KH-34 (3, 25)-BOITE ECU.",
+                "temple": "“Temple of Love,” from <i>Jeu de cartomancie pour l’amusement des Dames</i> (Paris, 1788).  Bibliothèque nationale de France, Cabinet des estampes, RESERVE KH-34 (3, 25)-BOITE ECU. ",
+                "liberty": "“Liberty” from <i>Jeu de cartomancie pour l’amusement des Dames</i> (Paris, 1788).  Bibliothèque nationale de France, Cabinet des estampes, RESERVE KH-34 (3, 25)-BOITE ECU. ",
+                "normand": "Frontispiece from Marie-Anne Adelaïde Le Normand, <i>Les Souvenirs prophétiques d’une sibylle sur les causes sécrètes de son éarrestation, le 11 décembre 1811</i>. (Paris, 1814).  The caption below the engraving reads: “’Our visit must surprise you?’  ‘Not at all, my cards had foretold it….’” Bibliothèque de l’Arsenal, 8-NF-8589."
+            },
+            "note": "For more on Tarot cards and Cartomancy, please the relevant citations on our <1>Bibliography</1> page."
         }
     },
     "games" : {
@@ -243,6 +358,8 @@
             "columbia": "<i>Columbia University, Rare Book and Manuscript Library</i>.  Columbia conserves the Albert Field Collection of Playing Cards, with more than 6300 individual decks.  A description and access to a database can be found at <2>https://dlc.library.columbia.edu/field_playing_cards</2>.",
             "yale": "<i>Yale University, Beinecke Library.</i> The Beinecke holds the Cary Card Collection, consisting of over 1000 whole or partial decks of cards and many other playing card-related items.  For a description of the collection, and a link to searchable database, go to <2>https://beinecke.library.yale.edu/collections/highlights/cary-playing-card-database</2>. There is a useful essay describing the collection <4>here</4>."
         },
-        "scholarship": "II. Selected Scholarship on the History of French Playing Cards and Gaming"
+        "scholarship": {
+            "title": "II. Selected Scholarship on the History of French Playing Cards and Gaming"
+        }
     }
 }

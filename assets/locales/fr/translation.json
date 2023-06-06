@@ -8,28 +8,39 @@
         "backs": "De dos",
         "envelopes": "Enveloppes",
         "iconography": "Iconographie",
+        "search": "Recherche",
+        "tarot": "Tarot",
+        "deck": "Le jeu de tarot",
+        "history": "Une brève histoire de la cartomancie", 
         "games": "Jouez !",
         "bibliography": "Bibliographie"
     },
     "home": {
         "header": "Cartes à jouer françaises, 1650-1850",
-        "blurb": "De 1650 à 1850, les Français ont propagé les Lumières. Ils ont gagné et perdu un empire, puis en ont commencé un autre, et ont renversé une monarchie vieille de plusieurs siècles. Ils ont également joué aux cartes. Ce site explore l'histoire des cartes à jouer françaises de cette période comme une source inhabituelle et éclairante pour l'histoire de l'Ancien Régime, de la Révolution française et du début du XIXe siècle en France. Vous y trouverez des détails sur <1>les procédures de fabrication</1>, <3>les aspects matériels</3> des cartes à jouer et l'évolution de leur <5>iconographie</5>. <11>Une bibliographie</11> fournit des suggestions de lectures complémentaires. Et pour ceux d'entre vous qui souhaitent faire une partie, nous vous proposerons de vous essayer à certains <13>des jeux</13> les plus populaires de l'époque, en utilisant le paquet de cartes historique de votre choix !<br /><br />For the English language version of the site, please click on “en” at the top of the page on the right." 
+        "blurb": "De 1650 à 1850, les Français ont propagé les Lumières. Ils ont gagné et perdu un empire, puis en ont commencé un autre, et ont renversé une monarchie vieille de plusieurs siècles. Ils ont également joué aux cartes. Ce site explore l'histoire des cartes à jouer françaises de cette période comme une source inhabituelle et éclairante pour l'histoire de l'Ancien Régime, de la Révolution française et du début du XIXe siècle en France. Vous y trouverez des détails sur <1>les procédures de fabrication</1>, <3>les aspects matériels</3> des cartes à jouer, l'évolution de leur <5>iconographie</5> et un aperçu sur des <7>tarots</7> et l’histoire de <9>cartomancie</9>. <11>Une bibliographie</11> fournit des suggestions de lectures complémentaires. Et pour ceux d'entre vous qui souhaitent faire une partie, nous vous proposerons de vous essayer à certains <13>des jeux</13> les plus populaires de l'époque, en utilisant le paquet de cartes historique de votre choix !",
+        "trans": "For the English language version of the site, please click on “en” at the top of the page on the right." 
     },
     "about": {
         "header": "À propos de ce site web",
         "intro": {
-            "1": "L'iconographie, la taxation, la fabrication et les usages des cartes à jouer en France ont connu d’importants changements entre 1650 et 1850. Jusque dans les années 1780, on assiste à l’émergence d’un jeu dit « d'Ancien Régime », caractérisé par la standardisation des « figures » des cartes, leur production par le système des corporations, les efforts accrus de l'État pour collecter des recettes fiscales auprès de leurs fabricants et les usages, ludiques ou non, qui ont fait des sujets du roi des paquets neufs et usités. La Révolution de 1789, toutefois, a éliminé temporairement la corporation  des des cartiers et l'impôt sur les cartes, et a imposé la suppression des rois, reines et valets sur les figures. À l'époque du Directoire, à la fin des années 1790, et plus encore sous le Premier Empire, les pratiques de l'Ancien Régime se sont ensuite rétablies dans la conception, la fiscalité et les usages des cartes à jouer. Dans le même temps, les technologies de production évoluent et l'industrie se consolide, passant de dizaines de fabricants à travers le royaume à une demi-douzaine d'entreprises. L'histoire des cartes à jouer au cours de ces deux siècles offre un aperçu des questions de rupture et de continuité dans la politique, la culture et l'économie françaises par-delà la fracture révolutionnaire.",
+            "1": "L'iconographie, la taxation, la fabrication et les usages des cartes à jouer en France ont connu d’importants changements entre 1650 et 1850. Jusque dans les années 1780, on assiste à l’émergence d’un jeu dit « d'Ancien Régime », caractérisé par la standardisation des « figures » des cartes, leur production par le système des corporations, les efforts accrus de l'État pour collecter des recettes fiscales auprès de leurs fabricants et les usages, ludiques ou non, qui ont fait des sujets du roi des paquets neufs et usités. La Révolution de 1789, toutefois, a éliminé temporairement la corporation des cartiers et l'impôt sur les cartes, et a imposé la suppression des rois, reines et valets sur les figures. À l'époque du Directoire, à la fin des années 1790, et plus encore sous le Premier Empire, les pratiques de l'Ancien Régime se sont ensuite rétablies dans la conception, la fiscalité et les usages des cartes à jouer. Dans le même temps, les technologies de production évoluent et l'industrie se consolide, passant de dizaines de fabricants à travers le royaume à une demi-douzaine d'entreprises. L'histoire des cartes à jouer au cours de ces deux siècles offre un aperçu des questions de rupture et de continuité dans la politique, la culture et l'économie françaises par-delà la fracture révolutionnaire.",
             "2": "Ce site web s’inscrit dans un projet plus vaste mené par <1>Jeffrey Ravel</1>, professeur d'histoire au MIT, pour écrire cette histoire. Nous espérons ajouter ultérieurement une fonction qui permettra aux utilisateurs de jouer en ligne à des jeux populaires de l'Ancien Régime et de la Révolution, en sélectionnant le paquet de cartes historique de leur choix.",
             "3": "Le professeur Ravel et son équipe tiennent à remercier la <1>Bibliothèque nationale de France</1> (BnF), qui a fourni les versions numériques des cartes à jouer et les métadonnées que nous mettons à disposition sur notre site. Les utilisateurs sont invités à explorer les nombreuses reproductions numériques de cartes à jouer dans les collections de la BnF, que la Bibliothèque met à disposition sur son <3>site Gallica</3>. Nous sommes également reconnaissants aux <5>programmes du MIT pour les humanités numériques</5> et à <7>Performant Software</7> pour leur soutien technique."
         },
-        "team": "Membres de l'équipe de développement du site Web des cartes à jouer"
+        "professor": "Professeur",
+        "profiles": {
+            "editor": "Éditeur du site",
+            "tarot_consultant": "Consultant, pages Tarots",
+            "team": "Développement du site",
+            "translation": "Traductrice, version française du site"
+        }
     },
     "manufacture": {
         "header": "Fabrication",
         "intro": "Fabrication de cartes à jouer en France avant 1800",
         "1": {
             "caption": "Image 1. L'atelier d'un fabricant de cartes à jouer parisien, gouache, début des années 1690, musée Carnavalet.",
-            "text": "L'image ci-dessus, peinte pour décorer un éventail, représente une scène animée et chaotique dans la boutique d'un fabricant de cartes sur l'île de la Cité à Paris, avec vue sur le Pont Neuf et la Seine, à la fin du XVIIe siècle. Certains ouvriers préparent le papier sur lequel les cartes sont imprimées, tandis que d'autres peignent les cartes, puis les découpent et les distribuent en paquets. Des commerçants vendent des jeux à des clients bien mis, tandis que des chats et des chiens gambadent au premier plan parmi les chutes de fabrication. Bien que l'atelier semble désordonné, les étapes de la fabricationdes cartes à jouer commerciales étaient bien pensées et efficaces. Grâce à deux discussions ultérieures détaillées du processus, nous avons une bonne idée de la façon dont la plupart des cartes à jouer étaient fabriquées en France avant la Révolution française."
+            "text": "L'image ci-dessus, peinte pour décorer un éventail, représente une scène animée et chaotique dans la boutique d'un fabricant de cartes sur l'île de la Cité à Paris, avec vue sur le Pont Neuf et la Seine, à la fin du XVIIe siècle. Certains ouvriers préparent le papier sur lequel les cartes sont imprimées, tandis que d'autres peignent les cartes, puis les découpent et les distribuent en paquets. Des commerçants vendent des jeux à des clients bien mis, tandis que des chats et des chiens gambadent au premier plan parmi les chutes de fabrication. Bien que l'atelier semble désordonné, les étapes de la fabrication des cartes à jouer commerciales étaient bien pensées et efficaces. Grâce à deux discussions ultérieures détaillées du processus, nous avons une bonne idée de la façon dont la plupart des cartes à jouer étaient fabriquées en France avant la Révolution française."
         },
         "2": {
             "caption": "Image 2. Détail de la planche 1 de Duhamel du Monceau, Art du cartier (Paris : Saillant & Nyon et Desaint, 1761).",
@@ -49,7 +60,7 @@
         },
         "7-8": {
             "caption": "Image 7. Détail de la planche 6 de Denis Diderot et Jean le Rond d'Alembert, L'Encyclopédie, ou dictionnaire raisonné des arts, des sciences, et des métiers (Paris, 1763), vol. 19, 1763, article cartier. <br /> Image 8. Planche 5, Duhamel du Monceau, Art du cartier (Paris : Saillant & Nyon et Desaint, 1761).",
-            "text": "L'enluminure des cartes à points était plus simple, car chaque carte ne prenait qu'une seule couleur, soit le noir ou le rouge. L'image 7 montre les poinçons métalliques que les cartonniers utilisaient pour préparer les pochoirs destinés à imprimer l'une des quatre l’une des marques des quatre séries de cartes (cœur, carreau, trèfle et pique). L'image 8 montre les pochoirs créés à l'aide de ces poinçons métalliques, qui servaient à éclairer les cartes à points."
+            "text": "L'enluminure des cartes à points était plus simple, car chaque carte ne prenait qu'une seule couleur, soit le noir ou le rouge. L'image 7 montre les poinçons métalliques que les cartonniers utilisaient pour préparer les pochoirs destinés à imprimer l'une des quatre séries de cartes (cœur, carreau, trèfle et pique). L'image 8 montre les pochoirs créés à l'aide de ces poinçons métalliques, qui servaient à éclairer les cartes à points."
         },
         "9": {
             "caption": "Image 9. Denis Diderot et Jean le Rond d'Alembert, L'Encyclopédie, ou dictionnaire raisonné des arts, des sciences, et des métiers (Paris, 1763), vol. 19, 1763, article cartier, planche 1.",
@@ -82,9 +93,9 @@
                 "2": "Les fabricants de cartes ont ainsi fait des expériences avec de nombreuses iconographies dans les années 1790. Nous présentons ci-dessous un échantillon de ces créations.",
                 "3": "A. Génies, libertés, égalités",
                 "4": "Au printemps 1793, Urbain Jaume et Jean-Démosthène Dugourc déposent un brevet pour un nouveau modèle de carte qui convertit les rois en « Génies», les reines en « Libertés » et les valets en « Egalités ». Leurs étiquettes et dans certains cas leurs dessins, ont été imités par d'autres fabricants de cartes dans tout le royaume. Dans certains cas, seules des modifications modestes ont été apportées aux dessins de l'Ancien Régime. L'exemple de droite ci-dessous, bien que stylistiquement similaire aux versions prérévolutionnaires de la reine de cœur, retire la couronne de la reine et place dans sa main gauche une pique avec un bonnet phrygien, symbole de la Rome républicaine depuis l’Antiquité.",
-                "5": "Jaume and Dugourc original design.  “Freedom of Religion.” Source: Bibliothèque nationale de France, RESERVE BOITE ECU-KH-204 (6).",
-                "6": "Jaume and Dugourc variant.  “Freedom of the Press.” Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 154).",
-                "7": "Old Regime “Liberty” modification. Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (4, 102). ",
+                "5": "Original: Jaume et Dugourc. Liberté des cultes. Source: Bibliothèque nationale de France, RESERVE BOITE ECU-KH-204 (6).",
+                "6": "Variation: Jaume et Dugourc. Liberté de la presse. Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (5, 154).",
+                "7": "Modification de la dame des coeurs. Liberté. Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (4, 102). ",
                 "8": "Source:  Bibliothèque nationale de France, Cabinet des Estampes, BOITE FOL-KH-383 (1, 14)",
                 "9": "B. Les jeux SVB, ESC et Bézu",
                 "10": "Trois autres conceptions révolutionnaires notables furent le jeu de cartes Sages, Vertus, Braves (les sages, les vertueuses, les courageux), maintenant appelé SVB ; le jeu de cartes Eléments, Saisons, Cultivateurs (éléments platoniciens, saisons de l'année, agriculteurs), maintenant appelé ESC ; et un jeu de cartes séculaire et rationalisé conçu par un fabricant de cartes de la région de Champagne nommé Bézu. La dame de cœur dans le jeu de gauche représente la « vertu » de la justice, et au milieu et à droite, des variations sur la saison de l'été.",
@@ -94,7 +105,7 @@
             },
             "napoleon": {
                 "title": "Napoléon (1799-1815)",
-                "1": "Au moment de l'arrivée au pouvoir de Napoléon, l'État français avait repris la taxe d'accise sur la fabrication des cartes à jouer. Les fonctionnaires de Napoléon décident de surcroît de créer un modèle de carte à jouer uniforme pour toute la nation. En 1810, ils demandent au grand artiste révolutionnaire et impérial Jacques-Louis David de concevoir un nouveau jeu de cartes. David revient à l'iconographie de l'Ancien Régime, mais dote chaque roi, dame et valet de costumes historiquement appropriés. Ses motifs ne rencontrant pas le succès escompté, le régime se tournera vers un autre dessinateur nommé Nicolas-Marie Gatteaux, qui créera en 1813 des dessins plus fidèles à l'apparence des cartes de l'Ancien Régime, et donc plus populaires. Enfin, en 1815, un dessinateur nommé Gustave-Armand Houbigant fera breveter une nouvelle iconographie à l'aspect plus romantique et médiéval.",
+                "1": "Au moment de l'arrivée au pouvoir de Napoléon, l'État français avait repris la taxe d'accise sur la fabrication des cartes à jouer. Les fonctionnaires de Napoléon décident de surcroît de créer un modèle de carte à jouer uniforme pour toute la nation. En 1808, ils demandent au grand artiste révolutionnaire et impérial Jacques-Louis David de concevoir un nouveau jeu de cartes. David revient à l'iconographie de l'Ancien Régime, mais dote chaque roi, dame et valet de costumes historiquement appropriés. Ses motifs ne rencontrant pas le succès escompté, le régime se tournera vers un autre dessinateur nommé Nicolas-Marie Gatteaux, qui créera en 1811 des dessins plus fidèles à l'apparence des cartes de l'Ancien Régime, et donc plus populaires. Enfin, en 1815, un dessinateur nommé Gustave-Armand Houbigant fera breveter une nouvelle iconographie à l'aspect plus romantique et médiéval.",
                 "2":  "David.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, PET FOL-KH-34 (C, 28).",
                 "3": "Gatteaux.  Source:  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (7BIS, 326).",
                 "4":"Houbigant.  Source:  British Library, 1896,0501.1292.1-12. "
@@ -102,9 +113,9 @@
             "nineteenth_century": {
                 "title": "La révolution et l'occultisme au XIXe siècle (1815-1848)",
                 "1": "Après la chute de Napoléon en 1815, la politique française oscille entre monarchie et républicanisme. Les jeux de cartes conçus pendant les années révolutionnaires de 1830 et 1848 expriment l'espoir d'un changement, tandis que d'autres jeux de cartes exploitent les tendances occultes du début du XIXe siècle.",
-                "2": "The Revolution of 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (10, 399-400).",
-                "3": "The Revolution of 1848.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (A, 7)-BOITE ECU. ",
-                "4": "Cartomancy, between 1814 and 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (3, 29)-BOITE ECU."
+                "2": "La Révolution de 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE ECU-KH-167 (10, 399-400).",
+                "3": "La Révolution de 1848.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (A, 7)-BOITE ECU. ",
+                "4": "Cartomancie, entre 1814 et 1830.  Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (3, 29)-BOITE ECU."
             }
         },
         "backs":{
@@ -165,9 +176,14 @@
             "title": "Enveloppes",
             "intro": "Les fabricants français de cartes à jouer de ces siècles emballent leurs cartes dans des enveloppes en papier pour les vendre au public. L'aspect de ces enveloppes n'étant pas contrôlé par les agents fiscaux royaux, les fabricants de cartes étaient libres de créer leurs propres motifs d'enveloppes, dans le respect de limites idéologiques implicitement comprises. Avant la Révolution, les fabricants utilisaient ainsi les enveloppes pour faire connaître leurs produits, les noms de leurs marques et les emplacements urbains de leurs magasins à leur clientèle. Les images imprimées sur les emballages pouvaient faire référence à la monarchie française ou à d'autres rois. Comme pour l'iconographie des cartes de figures, une fois que la Révolution a éclaté en 1789, les enveloppes ont commencé à incorporer des images et des devises révolutionnaires. Certains éléments suggèrent que la conception des enveloppes de la période napoléonienne a peut-être atténué les références idéologiques des années 1790.",
             "images": "Les images de cartes ci-dessous et les métadonnées associées sont une courtoisie du site <1>Gallica</1> de la Bibliothèque nationale de France.",
+            "leftWrapper":"Enveloppe à gauche : ",
+            "rightWrapper":"Enveloppe à droite : ",
+            "bottomLegend": "Légende en bas ",
+            "topLegend": "Légende en haut ",
             "epinal": {
                 "title": "Enveloppes de cartes à jouer d'Épinal, première moitié du XVIIe siècle",
-                "text": "Dans la première moitié du XVIIe siècle, les fabricants de cartes de la ville d'Épinal, en Lorraine, mettent en valeur l'héraldique, l'architecture et la couronne sur leurs emballages de cartes."
+                "text": "Dans la première moitié du XVIIe siècle, les fabricants de cartes de la ville d'Épinal, en Lorraine, mettent en valeur l'héraldique, l'architecture et la couronne sur leurs emballages de cartes.",
+                "left": "Enveloppe à gauche : “FAICTES A ESPINAL. CARTES FINES FAITES PAR JEHAN HEMAU A ESPINAL”. (Entre 1623 et 1630.)"
             },
             "rouen": {
                 "title": "Enveloppes de cartes à jouer de Rouen, seconde moitié du XVIIe siècle",
@@ -175,19 +191,27 @@
             },
             "eighteenth": {
                 "title": "Exemples d'enveloppes de cartes du XVIIIe siècle",
-                "text": "Ces deux exemples du XVIIIe siècle sont tous deux focalisés sur la monarchie. Celui de gauche montre un roi français à cheval dans un cartouche soutenu par des courtisans. La légende qui entoure le cartouche affirme que le roi est « le héros de tous les rois ». Le panneau central de l'emballage de droite représente l'épouse de l'héritier du trône de France (la « Dauphine ») dans une pose de peintre. Le fabricant parisien affirme être son cartonnier autorisé."
+                "text": "Ces deux exemples du XVIIIe siècle sont tous deux focalisés sur la monarchie. Celui de gauche montre un roi français à cheval dans un cartouche soutenu par des courtisans. La légende qui entoure le cartouche affirme que le roi est « le héros de tous les rois ». Le panneau central de l'emballage de droite représente l'épouse de l'héritier du trône de France (la « Dauphine ») dans une pose de peintre. Le fabricant parisien affirme être son cartonnier autorisé.",
+                "right": "(En bas, le mot ENTIER veut dire que cette enveloppe contenait 52 cartes.)"
             },
             "revolutionary": {
                 "title": "Une modification révolutionnaire de l'emballage d'une carte",
-                "text": "Les fabricants de cartes ont dû adapter leurs emballages aux idéaux révolutionnaires, tout comme ils ont dû modifier l'iconographie des cartes qu'ils fabriquaient. Parfois, les changements étaient subtils. À gauche, un ex-libris prérévolutionnaire produit par le cartier et papetier parisien Hugues Chassonnier représente les trois rois bibliques d'Orient qui portaient des cadeaux pour l'enfant Jésus. Le monarque de gauche montre l'étoile dans le ciel qui les a poussés à se rendre à Bethléem. Cette plaque, produite dans les deux dernières décennies de l'Ancien Régime, a servi de marque de fabrique à la boutique de Chassonnier ; elle a peut-être imité l'enseigne qui pendait à l'extérieur de sa boutique. A droite, un emballage de carte à jouer fabriqué par Chassonnier dans les premières années de la Révolution. Ici, les trois personnages sont suffisamment proches de l'ex-libris prérévolutionnaire pour que les clients parisiens du fabricant de cartes aient pu reconnaître le fabricant. Mais les cadeaux que portent les rois sont atténués, et leurs couronnes ont été remplacées par des turbans. Le rabat en haut de l'enveloppe les qualifie de « maures » et non de rois. Et le texte en bas informe les acheteurs que les cartes contenues dans l'enveloppe ont été fabriquées par le « citoyen » Chassonnier."
+                "text": "Les fabricants de cartes ont dû adapter leurs emballages aux idéaux révolutionnaires, tout comme ils ont dû modifier l'iconographie des cartes qu'ils fabriquaient. Parfois, les changements étaient subtils. À gauche, un ex-libris prérévolutionnaire produit par le cartier et papetier parisien Hugues Chassonnier représente les trois rois bibliques d'Orient qui portaient des cadeaux pour l'enfant Jésus. Le monarque de gauche montre l'étoile dans le ciel qui les a poussés à se rendre à Bethléem. Cette plaque, produite dans les deux dernières décennies de l'Ancien Régime, a servi de marque de fabrique à la boutique de Chassonnier ; elle a peut-être imité l'enseigne qui pendait à l'extérieur de sa boutique. A droite, un emballage de carte à jouer fabriqué par Chassonnier dans les premières années de la Révolution. Ici, les trois personnages sont suffisamment proches de l'ex-libris prérévolutionnaire pour que les clients parisiens du fabricant de cartes aient pu reconnaître le fabricant. Mais les cadeaux que portent les rois sont atténués, et leurs couronnes ont été remplacées par des turbans. Le rabat en haut de l'enveloppe les qualifie de « maures » et non de rois. Et le texte en bas informe les acheteurs que les cartes contenues dans l'enveloppe ont été fabriquées par le « citoyen » Chassonnier.",
+                "left": "Ex-libris à gauche entre 1766 et 1789 :",
+                "right": "Enveloppe à droite : vers 1794? Légende en haut :",
+                "piquet": "(Piquet était un jeu populaire qu’on jouait avec un jeu de 32 cartes.)"
             },
             "shine": {
                 "title": "« Je luit pour tous »",
-                "text": "D'autres fabricants de cartes ont gravé des images et des slogans plus ouvertement révolutionnaires sur leurs emballages de cartes. À gauche, un emballage imprimé par le cartonnier lyonnais Manus présente également un corps céleste dans le coin supérieur droit du panneau principal, en l'occurrence le soleil, avec la légende égalitaire « Je luit pour tous. » (Je brille pour tous.). Une allégorie féminine assise, bien en vue, contemple un navire à l'horizon et lève le bras en signe de salut à l'idée d'espoir (« A LESPERANCE »). L'enveloppe de droite, créée par les cartiers grenoblois Cheminade et Repellin, reprend la devise « le soleil luit pour tous » figurant sur les rabats latéraux de l'enveloppe. Dans le panneau central, un cartouche représentant une fasce romaine antique et un bonnet phrygien est entouré des mots « REPUBLIQUE FRANCAISE ». Les mentions « LIBERTE » et « EGALITE » sont imprimées au-dessus. Les acheteurs auraient ainsi facilement reconnu les sympathies républicaines des deux fabricants de cartes."
+                "text": "D'autres fabricants de cartes ont gravé des images et des slogans plus ouvertement révolutionnaires sur leurs emballages de cartes. À gauche, un emballage imprimé par le cartonnier lyonnais Manus présente également un corps céleste dans le coin supérieur droit du panneau principal, en l'occurrence le soleil, avec la légende égalitaire « Je luit pour tous. » (Je brille pour tous.). Une allégorie féminine assise, bien en vue, contemple un navire à l'horizon et lève le bras en signe de salut à l'idée d'espoir (« A LESPERANCE »). L'enveloppe de droite, créée par les cartiers grenoblois Cheminade et Repellin, reprend la devise « le soleil luit pour tous » figurant sur les rabats latéraux de l'enveloppe. Dans le panneau central, un cartouche représentant une fasce romaine antique et un bonnet phrygien est entouré des mots « REPUBLIQUE FRANCAISE ». Les mentions « LIBERTE » et « EGALITE » sont imprimées au-dessus. Les acheteurs auraient ainsi facilement reconnu les sympathies républicaines des deux fabricants de cartes.",
+                "right": "Enveloppe à droite : (Rabats latéraux) “LE SOLEIL LUIT POUR TOUT”. (Panneau central) “LIBERTE EGALITE REPUBLIQUE FRANCAISE CARTES FINES”. (Panneau du bas) “FAITES PAR CHEMINADE ET REPELIN MDS CARTIERS RUE NEUVE VIS A VIS CTS JACOBINS A GRENOBLE”"
             },
             "napoleonic": {
                 "title": "Enveloppes de cartes napoléoniennes",
-                "text": "Ces deux exemples, datant de la première décennie du XIXe siècle, présentent des modèles qui évitent à la fois le patronage royal de l'Ancien Régime et les préoccupations idéologiques de la Révolution. L'enveloppe de gauche, conçue pour emballer un jeu de cartes Gatteaux vers 1810-1815, présente deux anges ailés, de style classique, sonnant de la corne. (Sur le jeu du graveur Gatteaux, voir la page « DE FACE » des cartes sur ce site). Entre eux, ils soutiennent un petit cartouche contenant les symboles des quatre couleurs des cartes. À droite, l'enveloppe imprimée par la Veuve Delatre, une cartonnière parisien, comporte également un cartouche relativement simple évoquant le roi Salomon de la Bible. À sa gauche et à sa droite, des cornes d'abondance débordent de cartes à jouer, tandis que le rabat situé en dessous indique le magasin du fabricant dans une police de caractères simple. Si l'iconographie des deux emballages fait référence à l'imagerie classique et biblique, elle reproduit également des images de cartes et des jeux de cartes qui auraient été familières aux joueurs de l’époque."
+                "text": "Ces deux exemples, datant de la première décennie du XIXe siècle, présentent des modèles qui évitent à la fois le patronage royal de l'Ancien Régime et les préoccupations idéologiques de la Révolution. L'enveloppe de gauche, conçue pour emballer un jeu de cartes Gatteaux vers 1810-1815, présente deux anges ailés, de style classique, sonnant de la corne. (Sur le jeu du graveur Gatteaux, voir la page ",
+                "text2": "DE FACE",
+                "text3": "des cartes sur ce site). Entre eux, ils soutiennent un petit cartouche contenant les symboles des quatre couleurs des cartes. À droite, l'enveloppe imprimée par la Veuve Delatre, une cartonnière parisien, comporte également un cartouche relativement simple évoquant le roi Salomon de la Bible. À sa gauche et à sa droite, des cornes d'abondance débordent de cartes à jouer, tandis que le rabat situé en dessous indique le magasin du fabricant dans une police de caractères simple. Si l'iconographie des deux emballages fait référence à l'imagerie classique et biblique, elle reproduit également des images de cartes et des jeux de cartes qui auraient été familières aux joueurs de l’époque.",
+                "left": "Enveloppe à gauche : [sans texte]"
             }
         }
     },
@@ -198,7 +222,7 @@
             "header": "Introduction à la base de données",
             "blurb": "Notre page sur l'évolution des <1>« figures »</1> des cartes à jouer propose des variantes de la dame de cœur, fabriquées en France de l'Ancien Régime au milieu du XIXe siècle. En outre, nous avons compilé une base de données de figures de cartes pour les rois, les reines, les valets et certains as dans les quatre couleurs pendant cette période, ainsi que les métadonnées correspondantes provenant du site Web de la Bibliothèque nationale de France. Notre base de données contient les images et les données de 24 jeux de cartes créés au cours de cette période. L'outil de recherche qui l'accompagne permet aux utilisateurs de rechercher ces images en filtrant par période, carte de face, couleur, ville, fabricant, ainsi que par le recto et le verso des cartes. Les utilisateurs peuvent ainsi personnaliser les comparaisons de l'iconographie du carton facial français entre 1644 et 1848."
         },
-        "linkLower": "Cliquez <1>ici</1> pour effectuer une recherche dans notre base de données de cartes de visite.",
+        "linkLower": "Cliquez <1>ici</1> pour effectuer une recherche dans notre base de données de cartes à jouer.",
         "contents": {
             "header": "Contenu de la base de données",
             "blurb": "Nous reproduisons ci-dessous le valet de trèfle de chaque jeu de notre base de données pour vous donner une idée de la variété de conception des figures :"
@@ -228,6 +252,97 @@
             "wise-virtuous": "Figures des sages, des vertueuses, des courageux",
             "barricades": "Jeu de cartes « barricades »",
             "liberators": "Jeu de cartes « libérateurs »"
+        },
+        "search": {
+            "header": "Filtrez la recherche en sélectionnant les caractéristiques des cartes que vous souhaitez voir :",
+            "placeholder": "Sélectionner...",
+            "categories": {
+                "period": {
+                    "title": "Période",
+                    "pre": "Pré-révolutionnaire",
+                    "revolutionary": "Révolutionnaire",
+                    "post": "Post-révolutionnaire"
+                },
+                "card": {
+                    "title": "Carte",
+                    "ace": "As",
+                    "king": "Roi",
+                    "queen": "Dame",
+                    "jack": "Valet"
+                },
+                "suit":{
+                    "title": "Couleur",
+                    "heart": "Coeurs",
+                    "club": "Trèfles",
+                    "diamond": "Carreaux",
+                    "spade": "Piques"
+                },
+                "rectoVerso": {
+                    "title": "Recto ou verso",
+                    "front": "Face",
+                    "back": "Dos"
+                },
+                "notes": {
+                    "title": "Notes au dos",
+                    "none": "Rien",
+                    "catalogue": "Catalogue bibliothèque",
+                    "call_response": "Demande et réponse",
+                    "typographical": "Lettres typographiques"
+                },
+                "town": "Ville",
+                "maker": "Auteur",
+                "unknown": "Inconnu"
+            },
+            "button": "Rechercher",
+            "note": "Pour visualiser une représentation de carte plus en détail, cliquez dessus avec le bouton droit de la souris et sélectionnez “Ouvrir l'image dans un nouvel onglet”"
+        }
+    },
+    "tarot": {
+        "header": "Cartes de tarot",
+        "blurb": "Les cartes de tarot sont apparues en Europe au XIVe siècle et ont rapidement gagné la France. Le jeu de tarot standard se composait de 78 cartes : quatre couleurs comprenant quatre figures (roi, reine, chevalier, valet) et les cartes de l'as au dix, ainsi que 22 cartes d'atout. Ces paquets de cartes étaient utilisés pour jouer à un jeu similaire au bridge moderne. Dans le dernier tiers du dix-huitième siècle, une nouvelle utilisation de ces jeux est apparue, celle de la \"cartomancie\", ou divination. Les liens ci-dessous vous mèneront à des pages qui fournissent des détails sur le jeu de cartes de Tarot standard, ainsi qu'une brève histoire de la cartomancie.",
+        "deck": {
+            "title": "Le jeu de tarot",
+            "intro": "Les cartes à jouer sont arrivées dans la péninsule italienne vers le XIVe siècle et les artistes ont créé les premières cartes de tarot peu de temps après. Ces premières cartes, peintes à la main, étaient destinées aux cours de la Renaissance dans des villes comme Milan, Florence et Ferrare. Avec les nobles comme clients, ces cartes démontraient leur habileté et utilisaient des matériaux de haute qualité, notamment de la peinture à l'or et à l'argent. Les cartes présentées ici, qui représentent l'Amour et le Monde, proviennent de l'atelier de Bonifacio Bembo au milieu du XVe siècle.",
+            "para1": "Bien que le nombre de cartes de tarot et leur imagerie aient varié au départ, elles se sont finalement arrangées en un jeu de vingt-deux cartes dont les thèmes ont perduré jusqu'à aujourd'hui. Ainsi, au début du XVIIIe siècle, un jeu de cartes tel que le Tarot de Marseille comprenait cinquante-six cartes à jouer ordinaires (de l'as au dix et quatre cartes de face dont le roi, la reine, le chevalier et le valet) utilisant les couleurs des coupes, des pièces de monnaie, des épées et des bâtons. Lorsque le jeu de cartes normal était combiné avec les vingt-deux cartes de tarot, on obtenait un jeu de soixante-dix-huit cartes. Au fil du temps, les fabricants ont régularisé les sujets des cartes de Tarot et leur ordre. Traditionnellement, ces cartes sont numérotées de un à vingt et un, la carte du Fou n'étant pas numérotée.",
+            "para2": "Si elles sont aujourd'hui considérées comme des outils de divination et de cartomancie, les cartes de Tarot servaient à l'origine d'atouts dans un ensemble de jeux de cartes. Tout comme dans le bridge moderne, où l'une des couleurs est désignée comme couleur d'atout par le biais d'un processus d'enchères, les jeux de Tarot utilisaient les vingt-deux cartes de Tarot comme atouts. Les images standard des vingt-deux cartes comprennent le Fou, le Jongleur, la Papesse, l'Impératrice, l'Empereur, le Pape, les Amoureux, le Chariot, la Justice, l'Ermite, la Roue de la Fortune, la Force, le Pendu, la Mort (sans titre), la Tempérance, le Diable, la Maison de Dieu, l'Étoile, la Lune, le Soleil, le Jugement et le Monde. Il existe des variantes. Dans certains jeux de tarot, la papesse devenait la grande prêtresse ou Junon, tandis que le pape devenait le grand prêtre ou Jupiter. Le Jongleur apparaissait parfois comme le Magicien. Pendant la Révolution française, alors que certaines personnes désapprouvaient les images de la religion et de la monarchie, l'impératrice et l'empereur sont devenus une grand-mère et un grand-père.",
+            "cards": {
+                "love": "Amour. Atelier de Bonifacio Bembo, 1445 ? Source : Collection Cary de cartes à jouer, cote ITA09. Bibliothèque des livres rares et manuscrits Beinecke, Université de Yale.",
+                "world": "Monde. Atelier de Bonifacio Bembo, 1445 ? Source : Collection Cary de cartes à jouer, cote ITA09. Bibliothèque des livres rares et manuscrits Beinecke, Université de Yale.",
+                "king": "Roi de monnaie. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "queen": "Dame d’épées. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "knight": "Chevalier de batons. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "jack": "Valet de coupes. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "fool": "Le Fou. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "juggler": "Le Jongleur. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "death": "La Mort. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "hangedman": "Le Pendu. Tarot de Marseille, Jean Dodal, 1701-1715. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE BOITE FOL-KH-381 (5, 76).",
+                "grandmother": "Le Grand-père. Jeu de Tarot révolutionnaire, Jean Isnard, 1794. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU.",
+                "grandfather": "La Grande-mère. Jeu de Tarot révolutionnaire, Jean Isnard, 1794. Source: Bibliothèque nationale de France, Cabinet des Estampes, RESERVE KH-34 (2, 16)-BOITE ECU."
+            },
+            "note1": "Pour voir toutes les cartes du jeu de tarot de Marseille 1701-1715 de la Bibliothèque nationale de France, <1>cliquez ici</1>.",
+            "note2": "Pour voir toutes les cartes du jeu de tarot révolutionnaire de 1794 de la Bibliothèque nationale de France, <1>cliquez ici.</1>"
+        },
+        "cartomancy": {
+            "title": "Une brève histoire de la cartomancie",
+            "intro": "Malgré de fréquentes références à l'utilisation de cartes à jouer à des fins divinatoires, celles-ci étaient suffisamment informelles pour qu'un mot ne soit pas inventé avant la fin du 18e siècle, lorsque Jean-Baptiste Alliette (1738-1791) commença à parler de \"cartonomancie\", qu'il abrégea plus tard en \"cartomancie\". Une première allusion nous vient du célèbre roué Giovanni Casanova, qui raconte dans ses mémoires avoir réprimandé une jeune paysanne russe nommée Zaïre, qui pratiquait la divination avec un jeu de cartes ordinaire, et s'en serait servie pour prédire ses infidélités (un exploit qui ne nécessitait probablement aucune sorte d'aptitude magique). <br/><br/> Bien que les historiens aient identifié quelques références similaires au XVIIIe siècle, l'utilisation des cartes de Tarot à des fins divinatoires n'a réellement pris son essor qu'après qu'<6>Antoine Court de Gébelin</6> (1725-1784) ait revendiqué les origines égyptiennes du Tarot et son utilisation à des fins divinatoires dans son ouvrage en plusieurs volumes intitulé <8>Le monde primatif</8>. Dans le huitième volume de cet ouvrage, paru en 1781, Court de Gébelin affirme que les soixante-dix-huit \"pages\" du Tarot contiennent, sous forme allégorique, les connaissances trouvées dans la bibliothèque perdue d'Alexandrie. Il suffisait de disposer d'une clé appropriée pour déverrouiller ce savoir.",
+            "para1": "Une fois que Court de Gébelin eut attiré l'attention de tous sur cette possibilité, Alliette adopta complètement la pratique et essaya même d’en revendiquer la priorité. Alliette - professeur d'algèbre, vendeur d'estampes et pourvoyeur d'informations, de prédictions et d'objets magiques - créa son propre jeu de tarot, vendit des livres sur l'utilisation des cartes pour la divination (à la fois des jeux ordinaires et des jeux complets de tarot) et donna des conférences sur le sujet à son École de Magie. Plusieurs de ses livres contiennent des diagrammes détaillés et des instructions sur la lecture des cartes.",
+            "para2": "La cartomancie a continué à trouver des praticiens et des enthousiastes jusqu'à la période de la Révolution française, avec l'apparition de versions révolutionnaires des cartes de Tarot, certaines contenant des conseils pratiques pour le joueur, ajoutés comme une sorte d'antisèche.",
+            "para3": "La pratique continue d'inspirer l'innovation technique avec diverses méthodes de pose des cartes, dont certaines prétendent remonter jusqu'à l’Égypte antique, affirmation qui reçoit un écho favorable en cette période d'égyptomanie.",
+            "para4": "Il est certain que la cartomancie a fait l'objet d'une attention considérable à la fin du dix-huitième siècle et au début du dix-neuvième siècle. Certains jeux de tarot ont ainsi été adaptés pour servir de divertissement, comme le Jeu de cartomancie pour l'amusement des dames.",
+            "para5": "La mode de la cartomancie s'est poursuivie au XIXe siècle. Dans Le Nouveau Paris (1798), Louis-Sébastien Mercier, par exemple, décrit sa rencontre avec un cartomancien nommé Martin qui travaillait à Paris et dont la boutique attirait un flot constant de clients. Mlle Le Normand (1772-1843) jouissait également d'une grande renommée (ou peut-être d'une infamie) pour ses lectures de cartes pendant toute la période napoléonienne, dans la première partie du dix-neuvième siècle.",
+            "images": {
+                "gebelin": "Antoine Court de Gébelin, <i>Le Monde primitif analysé et comparé avec le monde moderne</i> (Paris, 1777-1781) Vol. 8, planche VIII. Les images représentent les tarots suivants, dans le sens des aiguilles d'une montre, en partant du coin supérieur gauche : Le Diable ; La Mort ; La Roue de Fortune ; La Maison de Dieu. Avec l'aimable autorisation de la Bibliothèque nationale de France.",
+                "alliette": "Alliette écrivant son livre sur les tarots (frontispiece). Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i> (Amsterdam, 1770). Bibliothèque de l'Arsenal, 8-S-14395.",
+                "fortune": "“Roue de la fortune” (après p. 64). Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i> (Amsterdam, 1770). Bibliothèque de l'Arsenal, 8-S-14395.",
+                "horoscope": "\"Horoscope” (après p. 72). Jean-Baptiste Alliette, <i>Etteilla, ou Manière de se recréer avec un jeu de cartes</i> (Amsterdam, 1770). Bibliothèque de l'Arsenal, 8-S-14395.",
+                "tirer": "Nouvelle manière de tirer les cartes inventée en 1792. (Paris, Mondhare et Jean, 1792). Bibliothèque nationale de France, Cabinet des estampes, RESERVE FOL-QB-201 (129).",
+                "toth": "\"Tableau des cartes du Livre de Toth placées dans le temple du feu à Memphis\", extrait du <i>Livre de Thot, ou Collection précieuse des tableaux de la doctrine de Mercure dans laquelle se trouve le chemin royal de la vie humaine</i> (Paris : Basan et Poignant, 1788). Bibliothèque nationale, Cabinet des estampes, BOITE FT 4-KH-34 (E).",
+                "prelate": "“Le prélat,” extrait du Jeu de cartomancie pour l'amusement des Dames (Paris, 1788). Bibliothèque nationale de France, Cabinet des estampes, RESERVE KH-34 (3, 25)-BOITE ECU.",
+                "temple": "“Temple de l'Amour,” extrait du Jeu de cartomancie pour l'amusement des Dames (Paris, 1788). Bibliothèque nationale de France, Cabinet des estampes, RESERVE KH-34 (3, 25)-BOITE ECU. ",
+                "liberty": "“Liberté” du Jeu de cartomancie pour l'amusement des Dames (Paris, 1788). Bibliothèque nationale de France, Cabinet des estampes, RESERVE KH-34 (3, 25)-BOITE ECU. ",
+                "normand": "Frontispice de Marie-Anne Adelaïde Le Normand, Les Souvenirs prophétiques d'une sibylle sur les causes sécrètes de son éarrestation, le 11 décembre 1811. (Paris, 1814). La légende sous la gravure se lit comme suit : \"Notre visite doit vous surprendre ?\" \"Pas du tout, mes cartes l'avaient prédit....\". Bibliothèque de l'Arsenal, 8-NF-8589."
+            },
+            "note": "Pour plus d'informations sur les cartes de tarot et la cartomancie, veuillez consulter les citations qui s’y réfèrent sur notre page <1>Bibliographie</1>."
         }
     },
     "games": {
@@ -243,6 +358,10 @@
             "columbia": "<i>Université de Columbia, Columbia University, Rare Book and Manuscript Library</i>. L’université de Columbia conserve la collection Albert Field de cartes à jouer, avec plus de 6300 paquets  individuels. Une description et l'accès à une base de données sont disponibles à l'adresse <2>https://dlc.library.columbia.edu/field_playing_cards.</2>",
             "yale": "<i>Université de Yale, Beinecke Library</i>. La Beinecke Library possède la Cary Card Collection, qui comprend plus de 1000 jeux de cartes entiers ou partiels et de nombreux autres articles liés aux cartes à jouer. Pour obtenir une description de la collection et un lien vers une base de données consultable, rendez-vous sur <2>https://beinecke.library.yale.edu/collections/highlights/cary-playing-card-database</2>. Un essai utile décrivant la collection est disponible <4>ici</4>."
         },
-        "scholarship": "II. Selected Scholarship on the History of French Playing Cards and Gaming"
+        "scholarship": {
+            "title": "II. Une sélection de travaux de recherche sur l'histoire des cartes à jouer et des jeux de hasard en France",
+            "anon": "site web d'<1>l’association pour l'Histoire de l'Administration des Douanes</1>. Affiché le 22 mars 2018.",
+            "netchine": "Voyez aussi le site web de l’exposition"
+        }
     }
 }

@@ -2,26 +2,28 @@ import React from "react";
 import axios from "axios";
 import Select from "react-select";
 import Tabs from "./Tabs";
+import { withTranslation } from "react-i18next";
+import { PropTypes } from "prop-types";
 
 const options = {
-    periods: [{label: "Pre-Revolutionary", value: "B"},
-        {label: "Revolutionary", value: "D"},
-        {label: "Post-Revolutionary", value: "A"}],
-    cards: [{label: "Ace", value: "A"}, {label: "King", value: "K"},
-        {label: "Queen", value: "Q"}, {label: "Jack", value: "J"}],
-    suits: [{label: "Hearts", value: "H"}, {label: "Clubs", value: "C"},
-        {label: "Diamonds", value: "D"}, {label: "Spades", value: "S"}],
-    rectoVerso: [{label: "Front", value: "R"}, {label: "Back", value: "V"}],
+    periods: [{label: "pre", value: "B"},
+        {label: "revolutionary", value: "D"},
+        {label: "post", value: "A"}],
+    cards: [{label: "ace", value: "A"}, {label: "king", value: "K"},
+        {label: "queen", value: "Q"}, {label: "jack", value: "J"}],
+    suits: [{label: "heart", value: "H"}, {label: "club", value: "C"},
+        {label: "diamond", value: "D"}, {label: "spade", value: "S"}],
+    rectoVerso: [{label: "front", value: "R"}, {label: "back", value: "V"}],
     backNotes: [{label: "None", value: "nan"},
-        {label: "Library Card Catalogue", value: "Library card catalogue"},
-        {label: "Call and Response", value: "Call and Response"},
-        {label: "Typographical Letters", value: "Typographical letters"}],
-    towns: [{label: "Unknown", value: "Unknown"}, {label: "Paris", value: "Paris"},
+        {label: "catalogue", value: "Library card catalogue"},
+        {label: "call_response", value: "Call and Response"},
+        {label: "typographical", value: "Typographical letters"}],
+    towns: [{label: "unknown", value: "Unknown"}, {label: "Paris", value: "Paris"},
         {label: "Auvergne", value: "Auvergne"}, {label: "Grenoble", value: "Grenoble"},
         {label: "Toulouse", value: "Toulouse"}, {label: "Montauban", value: "Montauban"},
         {label: "Lyon", value: "Lyon"}, {label: "Montpellier", value: "Montpellier"},
         {label: "Avignon", value: "Avignon"}],
-    makers: [{label: "Unknown", value: "Unknown"}, {label: "Cordier", value: "Cordier"},
+    makers: [{label: "unknown", value: "Unknown"}, {label: "Cordier", value: "Cordier"},
         {label: "Della Bella", value: "Della Bella"},
         {label: "Antoine Reynaud", value: "Antoine Reynaud"}, {label: "Vidal", value: "Vidal"},
         {label: "Ressy", value: "Ressy"}, {label: "J. Minot", value: "J. Minot"},
@@ -34,7 +36,7 @@ const options = {
         }]
 };
 
-export default class CardSearch extends React.Component {
+class CardSearch extends React.Component {
     state = {
         options: options,
         periods: [],
@@ -139,107 +141,125 @@ export default class CardSearch extends React.Component {
         this.setState({selected: stateToModify});
     };
 
+
     render() {
+        const { t } = this.props;
+
+
+
         return <>
         <div id='SearchPage' label="Search Page">
-                    <h3>Filter search by selecting the features of the cards you want to see:</h3>
+                    <h3>{t("iconography.search.header")}</h3>
                     <br/>
 
                     <div className='SearchBarPair'>
                     <div className='SearchBar'>
-                    <p>Time period</p>
+                    <p>{t("iconography.search.categories.period.title")}</p>
                     <Select
                         name={"periods"}
                         isMulti
                         value={this.state.selected.periods}
+                        getOptionLabel={option => t("iconography.search.categories.period." + option.label)}
                         options={options.periods}
                         onChange={this.handleChange}
+                        placeholder={t("iconography.search.placeholder")}
                     />
                     </div>
 
                     <div className='SearchBar'>
-                    <p>Card</p>
+                    <p>{t("iconography.search.categories.card.title")}</p>
                     <Select
                         isMulti
                         name={"cards"}
                         value={this.state.selected.cards}
+                        getOptionLabel={option => t("iconography.search.categories.card." + option.label)}
                         options={options.cards}
                         onChange={this.handleChange}
+                        placeholder={t("iconography.search.placeholder")}
                     />
                     </div>
                     </div>
                     
                     <div className='SearchBarPair'>
                     <div className='SearchBar'>
-                    <p>Suit</p>
+                    <p>{t("iconography.search.categories.suit.title")}</p>
                     <Select
                         isMulti
                         name={"suits"}
                         value={this.state.selected.suits}
+                        getOptionLabel={option => t("iconography.search.categories.suit." + option.label)}
                         options={options.suits}
                         onChange={this.handleChange}
+                        placeholder={t("iconography.search.placeholder")}
                     />
                     </div>
 
                     <div className='SearchBar'>
-                    <p>Front or back</p>
+                    <p>{t("iconography.search.categories.rectoVerso.title")}</p>
                     <Select
                         isMulti
                         name={"rectoVerso"}
                         value={this.state.selected.rectoVerso}
+                        getOptionLabel={option => t("iconography.search.categories.rectoVerso." + option.label)}
                         options={options.rectoVerso}
                         onChange={this.handleChange}
+                        placeholder={t("iconography.search.placeholder")}
                     />
                     </div>
                     </div>
 
                     <div className='SearchBarPair'>
                     <div className='SearchBar'>
-                    <p>Back Notes</p>
+                    <p>{t("iconography.search.categories.notes.title")}</p>
                     <Select
                         isMulti
                         name={"backNotes"}
                         value={this.state.selected.backNotes}
+                        getOptionLabel={option => t("iconography.search.categories.notes." + option.label, option.label)}
                         options={options.backNotes}
                         onChange={this.handleChange}
+                        placeholder={t("iconography.search.placeholder")}
                     />
                     </div>
 
                     <div className='SearchBar'>
-                    <p>Town</p>
+                    <p>{t("iconography.search.categories.town")}</p>
                     <Select
                         isMulti
                         name={"towns"}
                         value={this.state.selected.towns}
+                        getOptionLabel={option => t("iconography.search.categories." + option.label, option.label)}
                         options={options.towns}
                         onChange={this.handleChange}
+                        placeholder={t("iconography.search.placeholder")}
                     />
                     </div>
                     </div>
 
                     <div className='SearchBarPair'>
                     <div className='SearchBar'>
-                    <p>Maker</p>
+                    <p>{t("iconography.search.categories.maker")}</p>
                     <Select
                         isMulti
                         name={"makers"}
                         value={this.state.selected.makers}
+                        getOptionLabel={option => t("iconography.search.categories." + option.label, option.label)}
                         options={options.makers}
                         onChange={this.handleChange}
+                        placeholder={t("iconography.search.placeholder")}
                     />
                     </div>
                     </div>
 
                     <div id='SearchButton'>
-                        <button id='SearchButton' onClick={this.handleSearch}>Search</button>
+                        <button id='SearchButton' onClick={this.handleSearch}>{t("iconography.search.button")}</button>
                     </div>
 
                     <br/>
                     <br/>
                     <br/>
                     <div id={'CardResults'}>
-                        <p id={'Note'}>To view an card image in greater detail, right click on it
-                            and select 'Open Image in New Tab'</p>
+                        <p id={'Note'}>{t("iconography.search.note")}</p>
                         <ul>{this.state.searchResults}</ul>
                     </div>
                 </div>
@@ -247,3 +267,9 @@ export default class CardSearch extends React.Component {
             ;
     }
 }
+
+CardSearch.propTypes = {
+    t: PropTypes.any
+};
+
+export default withTranslation()(CardSearch);

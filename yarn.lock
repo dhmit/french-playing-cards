@@ -3415,6 +3415,7 @@ i18next-http-backend@^2.1.1:
   dependencies:
     cross-fetch "3.1.5"
 
+
 i18next@^22.4.11, "i18next@>= 19.0.0":
   version "22.4.11"
   resolved "https://registry.npmjs.org/i18next/-/i18next-22.4.11.tgz"

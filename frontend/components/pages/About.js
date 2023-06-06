@@ -35,10 +35,22 @@ const About = () => {
         </div>
 
         <div id={'AboutProfiles'}>
-            <h3>{t("about.team")}</h3>
-            <p>Rhea Bhattacharjee, MIT Class of 2025</p>
-            <p>Alyssa Choi, Wellesley College Class of 2024</p>
-            <p>Nyana Wright, Wellesley College Class of 2024</p>
+            <h3>{t("about.profiles.editor")}</h3>
+            <p>{t("about.professor")} Jeffrey Ravel</p>
+
+            <h3>{t("about.profiles.tarot_consultant")}</h3>
+            <p>{t("about.professor")} Michael Lynn</p>
+
+            <h3>{t("about.profiles.team")}</h3>
+            <p> Rhea Bhattacharjee<br />
+                David Chaudari<br />
+                Alyssa Choi<br />
+                Paula D. Contreras Nino<br />
+                Nyana Wright<br />
+                Xuefei Yu</p>
+
+            <h3>{t("about.profiles.translation")}</h3>
+            <p>Marie Prunières</p>
         </div>
         </>
     );

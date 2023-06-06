@@ -49,6 +49,7 @@
   background-color: white;
   border: 1px solid #707070;
   z-index: 1;
+  min-width: 100%;
 
   a {
     width: 100%;
@@ -92,7 +93,7 @@
     justify-content: center;
     padding-top: 3%;
     padding-bottom: 1%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 1%;
     background-color: #e6e6e6;
 }

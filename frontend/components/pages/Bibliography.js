@@ -55,23 +55,21 @@ const Bibliography = () => {
         </div>
 
         <div className="bibliography-content">
-            <h3>{t("bibliography.scholarship")}</h3>
+            <h3>{t("bibliography.scholarship.title")}</h3>
             <p> 
-                Allemagne, Henri-René d’. <i>Les Cartes à jouer du XIVe au XXe siècle</i>, 2 vols., Paris, 1906.
+                Allemagne, Henri-René d’. <i>Les Cartes à jouer du XIVe au XXe siècle</i>. 2 vols., Paris: Hachette, 1906.
             </p>
             <p>
-                D’Ambly, P. Boiteau. <i>Les cartes à jouer et la cartomancie</i>. Paris: Hachette, 1854.
+                Ambly, P. Boiteau d’. <i>Les cartes à jouer et la cartomancie</i>. Paris: Hachette, 1854.
             </p>
             <p> 
-                Anonyme, "<a href='https://histoire-de-la-douane.org/de-la-fiscalite-des-jeux-de-cartes-a-travers-lhistoire/'>De la fiscalité des jeux de cartes à travers l'histoire</a>," web site of the <i>Association pour l'Histoire de l'Administration des Douanes</i>. Posted on 22 March 2018.
+                Anonyme, "<a href='https://histoire-de-la-douane.org/de-la-fiscalite-des-jeux-de-cartes-a-travers-lhistoire/'>De la fiscalité des jeux de cartes à travers l'histoire</a>," <Trans i18nKey="bibliography.scholarship.anon"> web site of the <i>Association pour l'Histoire de l'Administration des Douanes</i>. Posted on 22 March 2018. </Trans>
             </p>
             <p> 
-                Belmas, Elisabeth.  <i>Jouer autrefois. Essai sur le jeu dans la France moderne, XVIe-XVIIIe siècle</i> 
-                Seyssel: Champ Vallon, 2006.
+                Belmas, Elisabeth.  <i>Jouer autrefois. Essai sur le jeu dans la France moderne, XVIe-XVIIIe siècle</i>. Seyssel: Champ Vallon, 2006.
             </p>
             <p> 
-                Bert, Jean-François. <i>Comment pense un savant? Un physicien des Lumières et ses cartes à jouer</i>, 
-                Paris: Anamosa, 2018.
+                Bert, Jean-François. <i>Comment pense un savant? Un physicien des Lumières et ses cartes à jouer</i>. Paris: Anamosa, 2018.
             </p>
             <p> 
                 Burke, Kristen. "Print and the Early Modern Playing Card," <i>Oxford Art Journal</i> 44-2 (2021), 185-205.
@@ -81,6 +79,9 @@ const Bibliography = () => {
             </p>
             <p>
                 Court de Gébelin, Antoine. <i>Le Tarot</i>. Ed. Jean-Marie Lhote. Paris: Berg, 1983.
+            </p>
+            <p>
+                Cronk, Nicholas.  "Voltaire et l’art du texto," <i>Littéraire: Pour Alain Viala</i>, ed. M. Roussillon, S. Guyot, D.Glynn and M.-M. Fragonard, 2 vols (Arras, Artois Presses Université, 2018), vol.2, p.243-59.
             </p>
             <p>
                 Decker, Ronald and Michael Dummett. <i>A History of the Occult Tarot</i>.  London: Duckworth, 2013.
@@ -99,7 +100,7 @@ const Bibliography = () => {
                 pp. 342-53; and fasc. 415 (January 2015), pp. 409-21.
             </p>
             <p>
-                Depaulis, Thierry.  “The Tarot de Marseille:  Facts and Fallacies.” <i>The Playing-Card</i> 42 (2013-2014): 
+                Depaulis, Thierry.  “The Tarot de Marseille:  Facts and Fallacies,” <i>The Playing-Card</i> 42 (2013-2014): 
                 21-41, 101-120.
             </p>
             <p>
@@ -113,11 +114,11 @@ const Bibliography = () => {
                 Dummett, Thomas. <i>The Game of Tarot:  From Ferrera to Salt Lake City</i>. London: Duckworth, 1980.
             </p>
             <p> 
-                Dunkley, John. <i>Gambling: A Social and Moral Problem in France</i>, 1685-1792, Oxford: The Voltaire Foundation, 
+                Dunkley, John. <i>Gambling: A Social and Moral Problem in France, 1685-1792</i>. Oxford: The Voltaire Foundation, 
                 1985. 
             </p>
             <p>
-                Freundlich, Francis. <i>Le Monde du jeu à Paris</i>, 1715-1800, Paris : Albin Michel, 1995.
+                Freundlich, Francis. <i>Le Monde du jeu à Paris, 1715-1800</i>. Paris : Albin Michel, 1995.
             </p>
             <p>
                 Halbronn, Jacques. <i>Recherches sur l’histoire de l’astrologie et du Tarot</i>. Paris:  Grand conjonction, 1993.
@@ -129,15 +130,14 @@ const Bibliography = () => {
                 Kavanagh, Thomas. <i>Dice, Cards, Wheels: A Different History of French Culture</i>. Philadelphia: University of Pennsylvania Press, 2005.
             </p>
             <p>
-                Kavanaugh, <i>Thomas M. Enlightenment and the Shadows of Chance: The Novel and the Culture of Gambling in 
-                Eighteenth-Century France</i>, Baltimore and London: The Johns Hopkins University Press, 1993.
+                Kavanaugh, Thomas M. <i>Enlightenment and the Shadows of Chance: The Novel and the Culture of Gambling in 
+                Eighteenth-Century France</i>. Baltimore and London: The Johns Hopkins University Press, 1993.
             </p>
             <p>
-                Keller, William B. <i>A Catalogue of the Cary Collection of Playing Cards in the Yale University Library.</i> 
-                New Haven: The Library, 1981.
+                Keller, William B. <i>A Catalogue of the Cary Collection of Playing Cards in the Yale University Library.</i> New Haven: The Library, 1981.
             </p>
             <p>
-                Lynn, Michael R. “Jean Baptiste Alliette and the <i>Ecole de Magie</i> in late-eighteenth century Paris.”  In 
+                Lynn, Michael R. “Jean Baptiste Alliette and the <i>Ecole de Magie</i> in late-eighteenth century Paris,”  in 
                 Michael R. Lynn, ed. <i>Magic, Witchcraft, and Ghosts in the Enlightenment</i>. Routledge: Abingdon, Oxon, 
                 2022: 100-122.
             </p>
@@ -148,7 +148,7 @@ const Bibliography = () => {
                 Merlin, Romain. <i>Origine des cartes à jouer</i>.  Paris: Chez l’auteur, 1869.
             </p>
             <p>
-                Netchine, Ève, ed., <i>Jeux de princes, jeux de vilains</i>, Paris: Bibliothèque nationale de France / Seuil, 2009. <a href='http://expositions.bnf.fr/jeux/index.htm'>See also the online exhibition web site</a>.
+                Netchine, Ève, ed., <i>Jeux de princes, jeux de vilains</i>, Paris: Bibliothèque nationale de France / Seuil, 2009. <a href='http://expositions.bnf.fr/jeux/index.htm'><Trans i18nKey="bibliography.scholarship.netchine"> See also the online exhibition web site</Trans></a>.
             </p>
             <p>
                 Piegeler, Hildegard. <i>Tarot:  Bilderwelten der Esoterik</i>. Munich: Wilhelm Fink, 2010.
@@ -168,7 +168,7 @@ const Bibliography = () => {
             </p>
             <p>
                 Spies-Gann, Paris Amanda.  “A Princely Education through Print: Stefano della Bella’s 1644 Jeux de Cartes Etched 
-                for Louis XIV” <i>Getty Research Journal</i> no. 9 (2017): pp. 1-22.
+                for Louis XIV,” <i>Getty Research Journal</i> no. 9 (2017): pp. 1-22.
             </p>
         </div>
 
