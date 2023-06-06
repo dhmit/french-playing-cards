@@ -656,6 +656,98 @@ span {
     }
 }
 
+.games-header {
+    font-size: 150%;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 1.5%;
+    color:#707070;
+}
+
+#Games-Menu {
+    display: flex;
+}
+
+.Games-Menu-Item {
+    text-align: center;
+    margin-bottom: 10px;
+
+    a {
+        p {
+            font-size: 150%;
+            font-weight: 200;
+            color: #787878;
+            text-decoration: underline;
+        }
+
+        img {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #Games-Menu {
+        display: block;
+    }
+}
+
+.solitaireBoard {
+    display: flex;
+    padding: 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+.solitaireStack {
+    display: block;
+}
+
+.stockWaste {
+    display: block;
+    background-color: transparent;
+    img {
+        width: 37%;
+        margin-bottom: 20%;
+        margin-top: 0%;
+    }
+    button {
+        width: 50%;
+        font-size: 14px;
+        padding-right: 20%;
+        margin-bottom: 20%;
+    }
+}
+
+.tableaus {
+    display: flex;
+    // background-color: transparent;
+    img {
+        // width: 30%;
+        margin-top: -150px;
+        max-width: 100%;
+        position: relative;
+    }
+}
+
+.foundations {
+    display: block;
+    background-color: transparent;
+    img {
+        width: 37%;
+        margin: 20%;
+        border: 2px solid #707070;
+    }
+}
+
+.solitaireCard {
+    img {
+        width: 30%;
+    }
+}
+
+
+
 // h2 {
 //     text-align: center;
 //     color: #707070;
