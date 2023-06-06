@@ -43,3 +43,17 @@ class Deck(models.Model):
         if self.name:
             return f"{self.id}: {self.name}"
         return f"{self.id}"
+
+class Tarot(models.Model):
+    lang = models.CharField(max_length=2)
+    number = models.IntegerField()
+    orientation = models.BooleanField(blank=True, null=True)
+    card = models.CharField(max_length=1)
+    title = models.CharField(max_length=30, blank=True)
+    subtitle = models.CharField(max_length=30, blank=True)
+    pair = models.CharField(max_length=20, blank=True)
+    etteilla = models.CharField(max_length=25, blank=True)
+    quad = models.CharField(max_length=20, blank=True)
+    triple = models.CharField(max_length=20, blank=True)
+    double = models.CharField(max_length=20, blank=True)
+    image = models.FilePathField(path="assets/img/divination/", null=True)

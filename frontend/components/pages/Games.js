@@ -1,4 +1,5 @@
 import React from "react";
+import DivinationGame from "../DivinationGame";
 import { useTranslation } from "react-i18next";
 import SolitaireGame from "./SolitaireGame";
 
@@ -12,6 +13,17 @@ const Games = () => {
 
     return (
         <>
+
+        <h2 className="page-header">{t("games.header")}</h2>
+
+        <div className="material-subpage-intro">
+            <img src={'/static/img/misc/mascot.jpg'}/>
+            <p className="material-subpage-blurb">
+                {t("games.play")}
+            </p>
+        </div>
+
+        <DivinationGame />
             <h2 className="page-header">Play Games!</h2>
     
             <div className="material-subpage-intro">

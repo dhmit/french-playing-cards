@@ -634,6 +634,50 @@ span {
     width: 25%;
 }
 
+#gamespace {
+    border: 1px solid #707070;
+    min-height: 500px;
+    text-align: center;
+
+    h3 {
+        margin: 20px auto;
+        color: #353535;
+    }
+
+    input {
+        padding: 2px;
+    }
+
+    button {
+        background-color: white;
+        color: black;
+        border: 2px solid #d3d3d3;
+        border-radius: 8px;
+        transition-duration: 0.2s;
+        margin: 20px;
+    }
+
+    button:hover {
+        background-color: #d3d3d3 ;
+    }
+
+    p {
+        margin: 20px;
+    }
+}
+
+#divination-cards{
+    display: flex;
+    width: 70%;
+    margin: auto;
+
+    img {
+        width: 20%;
+        flex: 33.3%;
+        padding: 5px;
+    }
+}
+
 .bibliography-content{
     h3 {
         margin-top: 5%;
