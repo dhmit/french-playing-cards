@@ -23,15 +23,22 @@ context = {
     'component_name': 'ExampleId'
 }
 """
+from dotenv import load_dotenv
+import os
+import openai
+load_dotenv()
+
 import json
 
 from django.shortcuts import render
 from django.http import JsonResponse
-from django.db.models import Q
+from django.forms.models import model_to_dict
 
 from .models import Card
 from .models import Deck
+from .models import Tarot
 
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def index(request):
     """
@@ -204,6 +211,32 @@ def example(request, example_id=None):
     }
     return render(request, 'index.html', context)
 
+def divination_card_request(request):
+    num = int(request.GET.get('number'))
+    up = bool(int(request.GET.get('orientation')))
+    lang = "fr" if "fr" in request.GET.get('language') else "en"
+
+    card = Tarot.objects.filter(number__exact=num).filter(lang__exact=lang).get(orientation=up)
+
+    return JsonResponse({'card': model_to_dict(card)})
+
+def generate_prediction(request):
+    question = json.loads(request.body.decode('utf-8')).get("question", None)
+
+    if question: 
+        completion = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "user", "content": question}
+            ],
+            temperature=0.6,
+            max_tokens=500
+        )
+        response = {'response': completion['choices'][0]['message']['content']}
+    else:
+        response = {'response': ""}
+
+    return JsonResponse(response)
 
 def results(request):
     print("reached views.results")
