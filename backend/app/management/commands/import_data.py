@@ -34,7 +34,14 @@ class Command(BaseCommand):
                 card_data = deck_data_frame.to_dict(orient="records")
 
                 # create and save the deck
-                deck_instance = Deck(name=deck_name, period=period)
+                deck_instance = Deck(name=deck_name, 
+                                     period=period,
+                                     start_date=card_data[0]["Start Date"],
+                                     end_date=card_data[0]["End Date"],
+                                     maker=card_data[0]["Maker"],
+                                     title=card_data[0]["Title"],
+                                     town=card_data[0]["Town"])
+
                 deck_instance.save()
                 self.stdout.write('Created deck named {} and id of {}...'.format(deck_name, deck_instance.id))
 
@@ -56,13 +63,8 @@ class Command(BaseCommand):
                     card = Card(
                         deck=deck_instance,
                         db_id=entry["DB ID"],
-                        card=card_name,
+                        rank=card_name,
                         suit=suit_name,
-                        title=entry["Title"],
-                        start_date=entry["Start Date"],
-                        end_date=entry["End Date"],
-                        maker=entry["Maker"],
-                        town=entry["Town"],
                         type=entry["Type"],
                         back_notes=entry["Back notes?"],
                         url=entry["BnF URL"],

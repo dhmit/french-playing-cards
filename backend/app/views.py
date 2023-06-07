@@ -240,91 +240,78 @@ def generate_prediction(request):
 def search_results(request):
     # De-stringify    
     query = json.loads(request.GET.get('query'))
+    mode = request.GET.get('mode')
 
-    # Print statements for testing
-    # print(type(query))
-    # print(request.GET)
-    # print(query)
-    # keys = request.GET.keys()  # keys, like 'periods' or 'cards'
-    # print(request.GET)
-    # print(keys)  # testing statement to see what keys look like
-    # request.GET.get(key) is value of key
+    periods = query.get('periods')
+    ranks = query.get('ranks')
+    towns = query.get('towns')
+    suits = query.get('suits')
 
-    result = Card.objects.none()
+    decks = Deck.objects.all()
 
-    if 'periods' in query:
-        decks = Deck.objects.none()
-        for period in query['periods']:
-            decks = decks | Deck.objects.filter(period=period)
+    if periods:
+        for period in periods:
+            decks = decks.filter(period=period)
+
+    if towns:
+        for town in towns:
+            decks = decks.filter(town=town)
+
+
+    if mode == 'card':
+        print('card mode!')
+        cards = Card.objects.filter(deck__in=decks)
+        cards = cards.order_by('deck__start_date', 'deck', 'suit')
+        if ranks:
+            for rank in ranks:
+                cards = cards.filter(rank=rank)
+
+        if suits:
+            for suit in suits:
+                cards = cards.filter(suit=suit)
+
+        result = []
+        for card in cards:
+            card_dict = {
+                'title': card.deck.title,
+                'image': card.recto_img,
+                'rank': card.rank,
+                'suit': card.suit,
+                'start_date': card.deck.start_date,
+                'end_date': card.deck.end_date,
+                'maker': card.deck.maker,
+                'town': card.deck.town,
+                'back_notes': card.back_notes
+            }
+            result.append(card_dict)
+
+        return JsonResponse(result, safe=False)
+    
+
+    if mode == 'deck':
+        print('deck mode!')
+        decks = decks.order_by('start_date', 'end_date')
+
+        result = []
         for deck in decks:
-            result = result | Card.objects.filter(deck=deck)
+            cards = []
+            for card in deck.card_set.all():
+                cards.append({
+                    'image': card.recto_img,
+                    'rank': card.rank,
+                    'suit': card.suit,
+                })
 
-    if 'cards' in query:
-        # for card in query['cards']:
-        #     result = result | Card.objects.filter(card=card)
-        if not result.exists():
-            for card in query['cards']:
-                result = result | Card.objects.filter(card=card)
-        else:
-            old_result = result
-            add_on = Card.objects.none()
-            for card in query['cards']:
-                add_on = add_on | Card.objects.filter(card=card)
-            result = old_result & add_on
+            result.append({
+                'title': deck.title,
+                'start_date': deck.start_date,
+                'end_date': deck.end_date,
+                'maker': deck.maker,
+                'town': deck.town,
+                'cards': cards,
+            })
+        print(result)
 
-    if 'suits' in query:
-        if not result.exists():
-            for suit in query['suits']:
-                result = result | Card.objects.filter(suit=suit)
-        else:
-            old_result = result
-            add_on = Card.objects.none()
-            for suit in query['suits']:
-                add_on = add_on | Card.objects.filter(suit=suit)
-            result = old_result & add_on
-
-    if 'towns' in query:
-        # for town in query['towns']:
-        #     result = result & Card.objects.filter(town=town)
-        if not result.exists():
-            for town in query['towns']:
-                if town == 'Unknown':
-                    result = result | Card.objects.filter(town='Unknown') | Card.objects.filter(
-                        town="nan")
-                else:
-                    result = result | Card.objects.filter(town=town)
-        else:
-            old_result = result
-            add_on = Card.objects.none()
-            for town in query['towns']:
-                if town == 'Unknown':
-                    add_on = add_on | Card.objects.filter(town='Unknown') | Card.objects.filter(
-                        town="nan")
-                else:
-                    add_on = add_on | Card.objects.filter(town=town)
-            result = old_result & add_on
+        return JsonResponse(result, safe=False)
 
 
-
-    # if the user didn't query for anything in particular:
-    if len(query) == 0:
-        result = Card.objects.all()
-
-    result = result.order_by('start_date', 'deck', 'suit')
-
-    final_result = []
-    for card in result:
-        card_dict = {
-            'title': card.title,
-            'image': card.recto_img,
-            'card': card.card,
-            'suit': card.suit,
-            'start_date': card.start_date,
-            'end_date': card.end_date,
-            'maker': card.maker,
-            'town': card.town,
-            'back_notes': card.back_notes
-        }
-        final_result.append(card_dict)
-
-    return JsonResponse({'cards': final_result})

@@ -18,7 +18,7 @@ const options = {
         {label: "revolutionary", value: "D"},
         {label: "post", value: "A"}
     ],
-    ranks: [
+    cards: [
         {label: "ace", value: "A"}, 
         {label: "king", value: "K"},
         {label: "queen", value: "Q"}, 
@@ -39,25 +39,18 @@ const options = {
     ],
 };
 
-
-const SearchMode = {
-  CARD: 0,
-  DECK: 1,
-};
-
-class CardSearch extends React.Component {
+class DeckSearch extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             selected: {
                 periods: [],
-                ranks: [],
+                cards: [],
                 suits: [],
                 towns: [],
             },
             results: [],
             searching: true,
-            mode: SearchMode.CARD,
         };
     }
 
@@ -66,6 +59,8 @@ class CardSearch extends React.Component {
     }
 
     handleSearch = () => {
+        console.log(JSON.stringify(this.state.selected));
+
         let selected = {};
         for (let item in this.state.selected) {
             if (this.state.selected[item].length) {
@@ -77,13 +72,9 @@ class CardSearch extends React.Component {
             }
         }
 
-        const params = {
-            query: JSON.stringify(selected),
-            mode: this.state.mode === SearchMode.CARD ? 'card' : 'deck',
-        };
-        axios.get("/search-results/", {params})
-             .then((results) => { this.setState({results: results.data, searching: false}); })
-             .catch(() => { console.log(error); });
+        axios.get("/search-results/", {params: {query: JSON.stringify(selected)}})
+            .then((results) => { this.setState({results: results.data, searching: false}); })
+            .catch(() => { console.log(error); });
     };
 
     handleChange = (selectedItems, context) => {
@@ -100,10 +91,6 @@ class CardSearch extends React.Component {
         );
     };
 
-    setMode = (mode) => {
-        this.setState({mode, searching: true}, this.handleSearch);
-    };
-    
 
     render() {
         const {t} = this.props;
@@ -111,8 +98,8 @@ class CardSearch extends React.Component {
         let results;
         if (this.state.searching) {
             results = <Loading />;
-        } else if (this.state.mode === SearchMode.CARD) {
-            const cards = this.state.results.map((card, idx) => {
+        } else {
+            const cards = this.state.results.cards.map((card, idx) => {
                 let dates = (card.start_date === card.end_date) ? card.start_date : card.start_date + " - " + card.end_date;
                 let maker = (card.maker === "nan" || card.maker === "Unknown") ? undefined : card.maker;
                 let town = (card.town === "nan" || card.town === "Unknown") ? undefined : card.town;
@@ -122,17 +109,17 @@ class CardSearch extends React.Component {
                     padding: "10%"
                 };
 
-                const cardName = card.rank + SUIT_SYMBOLS[card.suit];
+                const cardName = card.card + SUIT_SYMBOLS[card.suit];
 
                 return (
                     <li key={idx}>
-                        <div style={styles}>
+                        <div id={"CardOutline"} style={styles}>
                             <p style={{float: 'left'}}>
                                 {town && town + ', '}
                                 {dates}
                             </p>
                             <p style={{float: 'right'}}>{cardName}</p>
-                            <img className="card-image" src={"/static/img/" + card.image}/>
+                            <img className={"card-image"} src={"/static/img/" + card.image}/>
                             <p><em>{card.title}</em></p>
                             {maker && <p>{"Maker: " + maker}</p>}
                         </div>
@@ -140,53 +127,18 @@ class CardSearch extends React.Component {
                 );
             });
 
-            results = <ul id="search-results-cards">{cards}</ul>;
-        } else if (this.state.mode === SearchMode.DECK) {
-            const decks = this.state.results.map((deck, idx) => {
-                const cards = deck.cards.map((card, idx) => {
-                    const cardName = card.rank + SUIT_SYMBOLS[card.suit];
-                    return (
-                        <div className="deck-card" key={idx}>
-                            <p >{cardName}</p>
-                            <p>
-                            <img className="card-image" src={"/static/img/" + card.image}/>
-                            </p>
-                            <p><em>{card.title}</em></p>
-                        </div>
-                    );
-                });
-
-                return (
-                    <li key={idx} className="card mt-4">
-                        <div className="card-header">
-                            {deck.title} | {deck.start_date}-{deck.end_date} | {deck.maker} | {deck.town}
-                        </div>
-                        <div className="card-body">
-                            {cards}
-                        </div>
-
-                    </li>
-                );
-            });
-
-            results = <ul id="search-results-decks">{decks}</ul>;
+            results = <ul>{cards}</ul>;
         }
 
 
-        return (
+        return <>
             <div id='search-page'>
                 <div id="search-column">
-                    <div className="btn-group">
-                        <a onClick={() => this.setMode(SearchMode.CARD)}
-                           href="#" className={`btn btn-outline ${(this.state.mode === SearchMode.CARD) ? 'active' : ''}`}>
-                            Card Search
-                        </a>
-                        <a onClick={() => this.setMode(SearchMode.DECK)}
-                           href="#" className={`btn btn-outline ${(this.state.mode === SearchMode.DECK) ? 'active' : ''}`}>
-                            Deck Search
-                        </a>
-                    </div>
-
+                    <button
+                        onClick={() => this.props.setMode(SearchMode.CARD)}
+                    >
+                        Switch to CARD mode
+                    </button>
 
                     <div className='search-filter'>
                         {t("iconography.search.categories.period.title")}
@@ -202,35 +154,30 @@ class CardSearch extends React.Component {
                         />
                     </div>
 
-                    {this.state.mode === SearchMode.CARD && 
-                        <>
-                            <div className='search-filter'>
-                                {t("iconography.search.categories.card.title")}
-                                <Select
-                                    isMulti
-                                    name={"ranks"}
-                                    value={this.state.selected.ranks}
-                                    getOptionLabel={option => t("iconography.search.categories.card." + option.label)}
-                                    options={options.ranks}
-                                    onChange={this.handleChange}
-                                    placeholder={t("iconography.search.placeholder")}
-                                />
-                            </div>
-
-                            <div className='search-filter'>
-                                {t("iconography.search.categories.suit.title")}
-                                <Select
-                                    isMulti
-                                    name={"suits"}
-                                    value={this.state.selected.suits}
-                                    getOptionLabel={option => t("iconography.search.categories.suit." + option.label)}
-                                    options={options.suits}
-                                    onChange={this.handleChange}
-                                    placeholder={t("iconography.search.placeholder")}
-                                />
-                                    </div>
-                        </>
-                    }
+                    <div className='search-filter'>
+                        {t("iconography.search.categories.card.title")}
+                        <Select
+                            isMulti
+                            name={"cards"}
+                            value={this.state.selected.cards}
+                            getOptionLabel={option => t("iconography.search.categories.card." + option.label)}
+                            options={options.cards}
+                            onChange={this.handleChange}
+                            placeholder={t("iconography.search.placeholder")}
+                        />
+                    </div>
+                    <div className='search-filter'>
+                        {t("iconography.search.categories.suit.title")}
+                        <Select
+                            isMulti
+                            name={"suits"}
+                            value={this.state.selected.suits}
+                            getOptionLabel={option => t("iconography.search.categories.suit." + option.label)}
+                            options={options.suits}
+                            onChange={this.handleChange}
+                            placeholder={t("iconography.search.placeholder")}
+                        />
+                    </div>
 
                     <div className='search-filter'>
                         {t("iconography.search.categories.town")}
@@ -250,14 +197,15 @@ class CardSearch extends React.Component {
                 <div id="search-results-column">
                     {results}
                 </div>
-
             </div>
-        );
+        </>
+        ;
     }
 }
 
-CardSearch.propTypes = {
+DeckSearch.propTypes = {
     t: PropTypes.any,
+    setMode: PropTypes.function
 };
 
-export default withTranslation()(CardSearch);
+export default withTranslation()(DeckSearch);
