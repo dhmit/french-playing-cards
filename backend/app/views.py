@@ -31,10 +31,9 @@ import json
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.forms.models import model_to_dict
+from django.db.models import Q
 
-from .models import Card
-from .models import Deck
-from .models import Tarot
+from .models import Card, Deck, Tarot
 
 
 def index(request):
@@ -249,26 +248,35 @@ def search_results(request):
 
     decks = Deck.objects.all()
 
+    q_periods= Q()
     if periods:
         for period in periods:
-            decks = decks.filter(period=period)
+            q_periods |= Q(period=period)
 
+    q_towns = Q()
     if towns:
         for town in towns:
-            decks = decks.filter(town=town)
+            q_towns |= Q(town=town)
 
+    decks = decks.filter(q_periods & q_towns)
 
     if mode == 'card':
         print('card mode!')
         cards = Card.objects.filter(deck__in=decks)
         cards = cards.order_by('deck__start_date', 'deck', 'suit')
+
+        q_ranks = Q()
+        q_suits = Q()
+
         if ranks:
             for rank in ranks:
-                cards = cards.filter(rank=rank)
+                q_ranks |= Q(rank=rank)
 
         if suits:
             for suit in suits:
-                cards = cards.filter(suit=suit)
+                q_suits |= Q(suit=suit)
+
+        cards = cards.filter(q_ranks & q_suits)
 
         result = []
         for card in cards:
