@@ -5,24 +5,38 @@ import {withTranslation} from "react-i18next";
 import {PropTypes} from "prop-types";
 import {Loading} from  "./Loading";
 
-const CARDS_SUITS_ABBREVATIONS = {
-    "A": "Ace", "K": "King", "Q": "Queen", "J": "Jack", "H": "Hearts",
-    "C": "Clubs", "D": "Diamonds", "S": "Spades"
+const SUIT_SYMBOLS = {
+    H: "♥",
+    C: "♣",
+    D: "♦",
+    S: "♠",
 };
 
 const options = {
-    periods: [{label: "pre", value: "B"},
+    periods: [
+        {label: "pre", value: "B"},
         {label: "revolutionary", value: "D"},
-        {label: "post", value: "A"}],
-    cards: [{label: "ace", value: "A"}, {label: "king", value: "K"},
-        {label: "queen", value: "Q"}, {label: "jack", value: "J"}],
-    suits: [{label: "heart", value: "H"}, {label: "club", value: "C"},
-        {label: "diamond", value: "D"}, {label: "spade", value: "S"}],
-    towns: [{label: "unknown", value: "Unknown"}, {label: "Paris", value: "Paris"},
+        {label: "post", value: "A"}
+    ],
+    cards: [
+        {label: "ace", value: "A"}, 
+        {label: "king", value: "K"},
+        {label: "queen", value: "Q"}, 
+        {label: "jack", value: "J"}
+    ],
+    suits: [
+        {label: "heart", value: "H"},
+        {label: "club", value: "C"},
+        {label: "diamond", value: "D"},
+        {label: "spade", value: "S"}
+    ],
+    towns: [
+        {label: "unknown", value: "Unknown"}, {label: "Paris", value: "Paris"},
         {label: "Auvergne", value: "Auvergne"}, {label: "Grenoble", value: "Grenoble"},
         {label: "Toulouse", value: "Toulouse"}, {label: "Montauban", value: "Montauban"},
         {label: "Lyon", value: "Lyon"}, {label: "Montpellier", value: "Montpellier"},
-        {label: "Avignon", value: "Avignon"}],
+        {label: "Avignon", value: "Avignon"}
+    ],
 };
 
 class CardSearch extends React.Component {
@@ -86,23 +100,27 @@ class CardSearch extends React.Component {
         } else {
             const cards = this.state.results.cards.map((card, idx) => {
                 let dates = (card.start_date === card.end_date) ? card.start_date : card.start_date + " - " + card.end_date;
-                let maker = (card.maker === "nan" || card.maker === "Unknown") ? "Unknown" : card.maker;
-                let town = (card.town === "nan" || card.town === "Unknown") ? "Unknown" : card.town;
+                let maker = (card.maker === "nan" || card.maker === "Unknown") ? undefined : card.maker;
+                let town = (card.town === "nan" || card.town === "Unknown") ? undefined : card.town;
 
                 const styles = {
                     border: "2px solid rgba(0, 0, 0, 0.1)",
                     padding: "10%"
                 };
 
+                const cardName = card.card + SUIT_SYMBOLS[card.suit];
+
                 return (
                     <li key={idx}>
                         <div id={"CardOutline"} style={styles}>
+                            <p style={{float: 'left'}}>
+                                {town && town + ', '}
+                                {dates}
+                            </p>
+                            <p style={{float: 'right'}}>{cardName}</p>
                             <img className={"card-image"} src={"/static/img/" + card.image}/>
-                            <p> {CARDS_SUITS_ABBREVATIONS[card.card] + " of " + CARDS_SUITS_ABBREVATIONS[card.suit]}</p>
-                            <p>{"Deck: " + card.title}</p>
-                            <p>{"Maker: " + maker}</p>
-                            <p>{"Date: " + dates}</p>
-                            <p>{"Town: " + town}</p>
+                            <p><em>{card.title}</em></p>
+                            {maker && <p>{"Maker: " + maker}</p>}
                         </div>
                     </li>
                 );
