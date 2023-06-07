@@ -1,9 +1,8 @@
 import React from "react";
 import axios from "axios";
 import Select from "react-select";
-import Tabs from "./Tabs";
-import { withTranslation } from "react-i18next";
-import { PropTypes } from "prop-types";
+import {withTranslation} from "react-i18next";
+import {PropTypes} from "prop-types";
 
 const options = {
     periods: [{label: "pre", value: "B"},
@@ -79,51 +78,51 @@ class CardSearch extends React.Component {
                 let town;
                 let backNotes;
                 let cardsSuitsDic = {
-                    'A': 'Ace', 'K': 'King', 'Q': 'Queen', 'J': 'Jack', 'H': 'Hearts',
-                    'C': 'Clubs', 'D': 'Diamonds', 'S': 'Spades'
+                    "A": "Ace", "K": "King", "Q": "Queen", "J": "Jack", "H": "Hearts",
+                    "C": "Clubs", "D": "Diamonds", "S": "Spades"
                 };
                 /* 0: card.title, 1: card.image, 2: card.card, 3: card.suit, 4: card.start_date,
                 5: card.end_date, 6: card.maker, 7: card.town, 8: card.back_notes */
                 let cardItems = results.data.cards.map((card, idx) => {
-                        if (card[4] === card[5]) {
-                            dates = card[4];
-                        } else {
-                            dates = card[4] + ' - ' + card[5];
-                        }
-                        if (card[6] === 'nan' || 'Unknown') {
-                            maker = 'Unknown';
-                        } else {
-                            maker = card[6];
-                        }
-                        if (card[7] === 'nan' || 'Unknown') {
-                            town = 'Unknown';
-                        } else {
-                            town = card[7];
-                        }
-                        if (card[8] === 'nan') {
-                            backNotes = 'None';
-                        } else {
-                            backNotes = card[8];
-                        }
-
-                        const styles = {
-                            border: '2px solid rgba(0, 0, 0, 0.1)',
-                            // borderRadius: '10%',
-                            padding: '10%'
-                        };
-
-                        return <li key={idx}>
-                            <div id={"CardOutline"} style={styles}>
-                                <p> {'Card and Suit: ' + cardsSuitsDic[card[2]] + ' of ' + cardsSuitsDic[card[3]]}</p>
-                                <p>{'Name of Deck: '}<span>{card[0]}</span></p>
-                                <p>{'Maker: ' + maker + ', Date: ' + dates + ', Town: ' + town}</p>
-                                <p>{'Back notes: ' + backNotes}</p>
-                                <img className={'CardImage'} src={'/static/img/' + card[1]}/>
-                                <br/>
-                            </div>
-                        </li>
-                            ;
+                    if (card[4] === card[5]) {
+                        dates = card[4];
+                    } else {
+                        dates = card[4] + " - " + card[5];
                     }
+                    if (card[6] === "nan" || "Unknown") {
+                        maker = "Unknown";
+                    } else {
+                        maker = card[6];
+                    }
+                    if (card[7] === "nan" || "Unknown") {
+                        town = "Unknown";
+                    } else {
+                        town = card[7];
+                    }
+                    if (card[8] === "nan") {
+                        backNotes = "None";
+                    } else {
+                        backNotes = card[8];
+                    }
+
+                    const styles = {
+                        border: "2px solid rgba(0, 0, 0, 0.1)",
+                        // borderRadius: '10%',
+                        padding: "10%"
+                    };
+
+                    return <li key={idx}>
+                        <div id={"CardOutline"} style={styles}>
+                            <p> {"Card and Suit: " + cardsSuitsDic[card[2]] + " of " + cardsSuitsDic[card[3]]}</p>
+                            <p>{"Name of Deck: "}<span>{card[0]}</span></p>
+                            <p>{"Maker: " + maker + ", Date: " + dates + ", Town: " + town}</p>
+                            <p>{"Back notes: " + backNotes}</p>
+                            <img className={"CardImage"} src={"/static/img/" + card[1]}/>
+                            <br/>
+                        </div>
+                    </li>
+                    ;
+                }
                 );
                 this.setState({searchResults: cardItems});
             }
@@ -143,128 +142,128 @@ class CardSearch extends React.Component {
 
 
     render() {
-        const { t } = this.props;
+        const {t} = this.props;
 
 
 
         return <>
-        <div id='SearchPage' label="Search Page">
-                    <h3>{t("iconography.search.header")}</h3>
-                    <br/>
+            <div id='SearchPage' label="Search Page">
+                <h3>{t("iconography.search.header")}</h3>
+                <br/>
 
-                    <div className='SearchBarPair'>
+                <div className='SearchBarPair'>
                     <div className='SearchBar'>
-                    <p>{t("iconography.search.categories.period.title")}</p>
-                    <Select
-                        name={"periods"}
-                        isMulti
-                        value={this.state.selected.periods}
-                        getOptionLabel={option => t("iconography.search.categories.period." + option.label)}
-                        options={options.periods}
-                        onChange={this.handleChange}
-                        placeholder={t("iconography.search.placeholder")}
-                    />
-                    </div>
-
-                    <div className='SearchBar'>
-                    <p>{t("iconography.search.categories.card.title")}</p>
-                    <Select
-                        isMulti
-                        name={"cards"}
-                        value={this.state.selected.cards}
-                        getOptionLabel={option => t("iconography.search.categories.card." + option.label)}
-                        options={options.cards}
-                        onChange={this.handleChange}
-                        placeholder={t("iconography.search.placeholder")}
-                    />
-                    </div>
-                    </div>
-                    
-                    <div className='SearchBarPair'>
-                    <div className='SearchBar'>
-                    <p>{t("iconography.search.categories.suit.title")}</p>
-                    <Select
-                        isMulti
-                        name={"suits"}
-                        value={this.state.selected.suits}
-                        getOptionLabel={option => t("iconography.search.categories.suit." + option.label)}
-                        options={options.suits}
-                        onChange={this.handleChange}
-                        placeholder={t("iconography.search.placeholder")}
-                    />
+                        <p>{t("iconography.search.categories.period.title")}</p>
+                        <Select
+                            name={"periods"}
+                            isMulti
+                            value={this.state.selected.periods}
+                            getOptionLabel={option => t("iconography.search.categories.period." + option.label)}
+                            options={options.periods}
+                            onChange={this.handleChange}
+                            placeholder={t("iconography.search.placeholder")}
+                        />
                     </div>
 
                     <div className='SearchBar'>
-                    <p>{t("iconography.search.categories.rectoVerso.title")}</p>
-                    <Select
-                        isMulti
-                        name={"rectoVerso"}
-                        value={this.state.selected.rectoVerso}
-                        getOptionLabel={option => t("iconography.search.categories.rectoVerso." + option.label)}
-                        options={options.rectoVerso}
-                        onChange={this.handleChange}
-                        placeholder={t("iconography.search.placeholder")}
-                    />
-                    </div>
-                    </div>
-
-                    <div className='SearchBarPair'>
-                    <div className='SearchBar'>
-                    <p>{t("iconography.search.categories.notes.title")}</p>
-                    <Select
-                        isMulti
-                        name={"backNotes"}
-                        value={this.state.selected.backNotes}
-                        getOptionLabel={option => t("iconography.search.categories.notes." + option.label, option.label)}
-                        options={options.backNotes}
-                        onChange={this.handleChange}
-                        placeholder={t("iconography.search.placeholder")}
-                    />
-                    </div>
-
-                    <div className='SearchBar'>
-                    <p>{t("iconography.search.categories.town")}</p>
-                    <Select
-                        isMulti
-                        name={"towns"}
-                        value={this.state.selected.towns}
-                        getOptionLabel={option => t("iconography.search.categories." + option.label, option.label)}
-                        options={options.towns}
-                        onChange={this.handleChange}
-                        placeholder={t("iconography.search.placeholder")}
-                    />
-                    </div>
-                    </div>
-
-                    <div className='SearchBarPair'>
-                    <div className='SearchBar'>
-                    <p>{t("iconography.search.categories.maker")}</p>
-                    <Select
-                        isMulti
-                        name={"makers"}
-                        value={this.state.selected.makers}
-                        getOptionLabel={option => t("iconography.search.categories." + option.label, option.label)}
-                        options={options.makers}
-                        onChange={this.handleChange}
-                        placeholder={t("iconography.search.placeholder")}
-                    />
-                    </div>
-                    </div>
-
-                    <div id='SearchButton'>
-                        <button id='SearchButton' onClick={this.handleSearch}>{t("iconography.search.button")}</button>
-                    </div>
-
-                    <br/>
-                    <br/>
-                    <br/>
-                    <div id={'CardResults'}>
-                        <p id={'Note'}>{t("iconography.search.note")}</p>
-                        <ul>{this.state.searchResults}</ul>
+                        <p>{t("iconography.search.categories.card.title")}</p>
+                        <Select
+                            isMulti
+                            name={"cards"}
+                            value={this.state.selected.cards}
+                            getOptionLabel={option => t("iconography.search.categories.card." + option.label)}
+                            options={options.cards}
+                            onChange={this.handleChange}
+                            placeholder={t("iconography.search.placeholder")}
+                        />
                     </div>
                 </div>
+                    
+                <div className='SearchBarPair'>
+                    <div className='SearchBar'>
+                        <p>{t("iconography.search.categories.suit.title")}</p>
+                        <Select
+                            isMulti
+                            name={"suits"}
+                            value={this.state.selected.suits}
+                            getOptionLabel={option => t("iconography.search.categories.suit." + option.label)}
+                            options={options.suits}
+                            onChange={this.handleChange}
+                            placeholder={t("iconography.search.placeholder")}
+                        />
+                    </div>
+
+                    <div className='SearchBar'>
+                        <p>{t("iconography.search.categories.rectoVerso.title")}</p>
+                        <Select
+                            isMulti
+                            name={"rectoVerso"}
+                            value={this.state.selected.rectoVerso}
+                            getOptionLabel={option => t("iconography.search.categories.rectoVerso." + option.label)}
+                            options={options.rectoVerso}
+                            onChange={this.handleChange}
+                            placeholder={t("iconography.search.placeholder")}
+                        />
+                    </div>
+                </div>
+
+                <div className='SearchBarPair'>
+                    <div className='SearchBar'>
+                        <p>{t("iconography.search.categories.notes.title")}</p>
+                        <Select
+                            isMulti
+                            name={"backNotes"}
+                            value={this.state.selected.backNotes}
+                            getOptionLabel={option => t("iconography.search.categories.notes." + option.label, option.label)}
+                            options={options.backNotes}
+                            onChange={this.handleChange}
+                            placeholder={t("iconography.search.placeholder")}
+                        />
+                    </div>
+
+                    <div className='SearchBar'>
+                        <p>{t("iconography.search.categories.town")}</p>
+                        <Select
+                            isMulti
+                            name={"towns"}
+                            value={this.state.selected.towns}
+                            getOptionLabel={option => t("iconography.search.categories." + option.label, option.label)}
+                            options={options.towns}
+                            onChange={this.handleChange}
+                            placeholder={t("iconography.search.placeholder")}
+                        />
+                    </div>
+                </div>
+
+                <div className='SearchBarPair'>
+                    <div className='SearchBar'>
+                        <p>{t("iconography.search.categories.maker")}</p>
+                        <Select
+                            isMulti
+                            name={"makers"}
+                            value={this.state.selected.makers}
+                            getOptionLabel={option => t("iconography.search.categories." + option.label, option.label)}
+                            options={options.makers}
+                            onChange={this.handleChange}
+                            placeholder={t("iconography.search.placeholder")}
+                        />
+                    </div>
+                </div>
+
+                <div id='SearchButton'>
+                    <button id='SearchButton' onClick={this.handleSearch}>{t("iconography.search.button")}</button>
+                </div>
+
+                <br/>
+                <br/>
+                <br/>
+                <div id={"CardResults"}>
+                    <p id={"Note"}>{t("iconography.search.note")}</p>
+                    <ul>{this.state.searchResults}</ul>
+                </div>
+            </div>
         </>
-            ;
+        ;
     }
 }
 

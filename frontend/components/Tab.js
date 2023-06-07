@@ -1,11 +1,11 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export default class Tabs extends React.Component {
     static propTypes = {
         activeTab: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
-        onClick: PropTypes.func.isRequired,
+        onClick: PropTypes.func.isRequired
     };
 
     onClick = () => {
@@ -18,14 +18,14 @@ export default class Tabs extends React.Component {
             onClick,
             props: {
                 activeTab,
-                label,
-            },
+                label
+            }
         } = this;
 
-        let className = 'tab-list-item';
+        let className = "tab-list-item";
 
         if (activeTab === label) {
-            className += ' tab-list-active';
+            className += " tab-list-active";
         }
 
         return (

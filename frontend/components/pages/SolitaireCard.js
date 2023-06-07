@@ -9,10 +9,12 @@ Fetches the correct card image from the Soliatire img directory `/static/img/gam
 
 const SolitaireCard = ({card, suit, deck, faceUp}) => {
     
+    // TODO(ra): use deck to choose image image
+    //
     if (Boolean(faceUp)) {
         var cardStr = String(card);
         var suitStr = String(suit);
-        var imageName = '/static/img/games/solitaire/paris/' + cardStr + suitStr + '.1.jpeg';
+        var imageName = "/static/img/games/solitaire/paris/" + cardStr + suitStr + ".1.jpeg";
         return (
             <div className='solitaireCard'>
                 <img src={imageName}/>
@@ -21,7 +23,7 @@ const SolitaireCard = ({card, suit, deck, faceUp}) => {
     } else {
         return (
             <div className='solitaireCard'>
-                <img src={'/static/img/games/solitaire/blue-back.jpeg'}/>
+                <img src={"/static/img/games/solitaire/blue-back.jpeg"}/>
             </div>
         );
     }

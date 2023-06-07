@@ -8,7 +8,7 @@ class SolitaireStack extends React.Component {
             // OK to copy props.card, .suit, .deck to state b/c these fields will never change
             name: props.name, // the name of the stack (e.g. 'stock', 'foundation')
             cards: [], // the cards within the stack - highest index is card on top of stack
-            top: null, // the card at the top of the stack
+            top: null // the card at the top of the stack
         };
     };
 

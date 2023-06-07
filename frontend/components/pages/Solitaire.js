@@ -1,14 +1,10 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
-import SolitaireCard from './SolitaireCard';
 
 const Solitaire = () => {
 
     React.useEffect(() => {
-        document.title = 'Solitaire';        
+        document.title = "Solitaire";        
     }, []);
-
-    const { t } = useTranslation();
 
     return (
         <>
@@ -37,7 +33,7 @@ const Solitaire = () => {
                 </div>
             </div> */}
         </>
-        );
+    );
 };
 
 export default Solitaire;

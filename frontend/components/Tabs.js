@@ -1,17 +1,17 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import Tab from './Tab';
+import PropTypes from "prop-types";
+import Tab from "./Tab";
 
 export default class Tabs extends React.Component {
     static propTypes = {
-        children: PropTypes.instanceOf(Array).isRequired,
+        children: PropTypes.instanceOf(Array).isRequired
     };
 
     constructor(props) {
         super(props);
 
         this.state = {
-            activeTab: this.props.children[0].props.label,
+            activeTab: this.props.children[0].props.label
         };
     }
 
@@ -23,10 +23,10 @@ export default class Tabs extends React.Component {
         const {
             onClickTabItem,
             props: {
-                children,
+                children
             },
             state: {
-                activeTab,
+                activeTab
             }
         } = this;
 

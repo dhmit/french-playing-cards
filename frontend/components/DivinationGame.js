@@ -31,7 +31,7 @@ const DivinationGame = () => {
             cardNum = parseInt(cardNum);
             cardUp = parseInt(cardUp);
             
-            let response = await axios.get('/divination-card/', {
+            let response = await axios.get("/divination-card/", {
                 params: {
                     number: cardNum,
                     orientation: cardUp,
@@ -81,7 +81,7 @@ const DivinationGame = () => {
 
         // choose keyword: 1. check eteilla 2. choose title/subtitle
         for (let i = cards.length - 1; i >= 0; i--) {
-            if(i !== cards.length - 1 && cards[i+1].card === 'E') {
+            if(i !== cards.length - 1 && cards[i+1].card === "E") {
                 keywords.add(cards[i].etteilla);
             }
             else if (cards[i].number !== 1) {
@@ -101,12 +101,12 @@ const DivinationGame = () => {
     // TODO: French translation! 
     async function getReading(keywords) {
         let input = question.trim();
-        const input_string = "Write a prediction in response to the question \"" + input + "\" using the following themes: " + [...keywords].join(', ');
+        const input_string = "Write a prediction in response to the question \"" + input + "\" using the following themes: " + [...keywords].join(", ");
         setReading("Reading cards...");
 
         await axios({
-            method: 'post',
-            url: '/generate-prediction/', 
+            method: "post",
+            url: "/generate-prediction/", 
             data: {
                 question: input_string
             }
@@ -126,7 +126,7 @@ const DivinationGame = () => {
 
             // compute keywords
             const keywords = getKeywords(chosen);
-            const keyword_string = "Your keywords are: " + [...keywords].join(', ');
+            const keyword_string = "Your keywords are: " + [...keywords].join(", ");
             setKeywords(keyword_string);
 
             // get reading from keywords
