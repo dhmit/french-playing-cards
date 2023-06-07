@@ -254,7 +254,6 @@
             "liberators": "Jeu de cartes « libérateurs »"
         },
         "search": {
-            "header": "Filtrez la recherche en sélectionnant les caractéristiques des cartes que vous souhaitez voir :",
             "placeholder": "Sélectionner...",
             "categories": {
                 "period": {
@@ -293,8 +292,7 @@
                 "maker": "Auteur",
                 "unknown": "Inconnu"
             },
-            "button": "Rechercher",
-            "note": "Pour visualiser une représentation de carte plus en détail, cliquez dessus avec le bouton droit de la souris et sélectionnez “Ouvrir l'image dans un nouvel onglet”"
+            "button": "Rechercher"
         }
     },
     "tarot": {

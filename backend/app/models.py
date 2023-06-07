@@ -4,6 +4,7 @@ Django docs here: https://docs.djangoproject.com/en/3.2/topics/db/models/
 """
 
 from django.db import models
+from django.conf import settings
 
 
 class Card(models.Model):
@@ -13,7 +14,6 @@ class Card(models.Model):
     # auto id generated
     deck = models.ForeignKey('Deck', null=True, on_delete=models.DO_NOTHING)
     db_id = models.CharField(max_length=30, null=True)
-    recto_or_verso = models.CharField(max_length=1, null=True)
     card = models.CharField(max_length=1, null=True)
     suit = models.CharField(max_length=1, null=True)
     title = models.CharField(max_length=200, null=True)
@@ -24,8 +24,11 @@ class Card(models.Model):
     type = models.CharField(max_length=30, null=True)
     back_notes = models.CharField(max_length=30, null=True)
     url = models.URLField(max_length=200, null=True)
-    image = models.FilePathField(path="app/images/", null=True)
+    recto_img = models.FilePathField()
+    verso_img = models.FilePathField()
 
+    def __str__(self):
+        return f'{self.deck.name} - {self.card}{self.suit}'
 
 class Deck(models.Model):
     """

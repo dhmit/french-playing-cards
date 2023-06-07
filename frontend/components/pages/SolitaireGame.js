@@ -12,8 +12,8 @@ tableau stack)
  */
 const cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 const suits = ["C", "D", "H", "S"];
-const decks = ["paris", "dugourc", "david"];
-var t1 = [];  // initial size 1
+// const decks = ["paris", "dugourc", "david"];
+var t1 = [];  // initial size 0
 var t2 = [];  // initial size 2
 var t3 = [];  // initial size 3
 var t4 = [];  // initial size 4

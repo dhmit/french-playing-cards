@@ -7,7 +7,7 @@ on whether the card is face up or face down
 Fetches the correct card image from the Soliatire img directory `/static/img/games/solitaire/`
 */
 
-const SolitaireCard = ({card, suit, deck, faceUp}) => {
+const SolitaireCard = ({card, suit, _deck, faceUp}) => {
     
     // TODO(ra): use deck to choose image image
     //
@@ -31,7 +31,7 @@ const SolitaireCard = ({card, suit, deck, faceUp}) => {
 SolitaireCard.propTypes = {
     card: PropTypes.any, // TODO(ra): @NOCHECKIN fix this!
     suit: PropTypes.any, // TODO(ra): @NOCHECKIN fix this!
-    deck: PropTypes.any, // TODO(ra): @NOCHECKIN fix this!
+    _deck: PropTypes.any, // TODO(ra): @NOCHECKIN fix this!
     faceUp: PropTypes.boolean
 };
 

@@ -30,7 +30,7 @@ urlpatterns = [
     # API endpoints
     path('example/', views.example),
     path('example/<example_id>', views.example),
-    path('results/', views.results),
+    path('search-results/', views.search_results),
     path('divination-card/', views.divination_card_request),
     path('generate-prediction/', views.generate_prediction),
 

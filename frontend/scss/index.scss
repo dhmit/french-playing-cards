@@ -1,10 +1,6 @@
 @import '~normalize.css';
 @import './global.scss';
 
-span {
-    font-style: italic;
-}
-
 .page-header {
     text-align: center;
     margin-top: 1.5%;
@@ -451,40 +447,24 @@ span {
     }
 }
 
-#SearchPage {
-    h3 {
-        text-align: center;
-        margin-top: 3%;
-        margin-right: 3%;
-        font-size: 150%;
-        font-weight: 300;
-        color: #707070;
-    }
-}
-
-.SearchBarPair {
+#search-page {
     display: flex;
-    column-gap: 5%;
-    margin-top: 3%;
-    justify-content: center;
-
-    .SearchBar {
-        display: block;
-        width: 45%;
-    }
+    height: 100vh;
+    overflow: auto;
 }
 
-#SearchButton {
-    text-align: center;
-    width: fit-content;
-    margin: auto;
-    margin-top: 3%;
+#search-column {
+    flex: 1;
+    position: sticky;
+    top: 0;
+    padding-top: 1rem;
 }
 
-#CardResults {
+#search-results-column {
+    flex: 3;
 
-    .CardImage {
-        width: 50%;
+    .card-image {
+        width: 100%;
     }
     
     ul {
@@ -503,6 +483,15 @@ span {
     #CardOutline {
         padding: 5%;
     }
+}
+
+.search-filter {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#search-select {
+    margin-top: 0rem;
 }
 
 #tarot-mascot {

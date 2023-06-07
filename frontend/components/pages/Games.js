@@ -1,6 +1,6 @@
 import React from "react";
-import DivinationGame from "../DivinationGame";
 import {useTranslation} from "react-i18next";
+import DivinationGame from "../DivinationGame";
 import SolitaireGame from "./SolitaireGame";
 
 const Games = () => {
@@ -13,7 +13,6 @@ const Games = () => {
 
     return (
         <>
-
             <h2 className="page-header">{t("games.header")}</h2>
 
             <div className="material-subpage-intro">
@@ -23,24 +22,13 @@ const Games = () => {
                 </p>
             </div>
 
-            <DivinationGame />
-            <h2 className="page-header">Play Games!</h2>
-    
-            <div className="material-subpage-intro">
-                <img src={"/static/img/misc/mascot.jpg"}/>
-                <p>
-                    In progress... 
-                </p>
-            </div>
+            {/*
 
+            <DivinationGame />
             <SolitaireGame/>
             
 
-            {/* Template for Solitaire menu: user should be able click on the deck they want  
-                to play with, and either a new tab or a pop-up window will open up with the 
-                Solitaire game
-            */}
-            {/* <p className="games-header">Select a deck to play Solitaire with:</p>
+            <p className="games-header">Select a deck to play Solitaire with:</p>
             <br/>
 
             <div id='Games-Menu'>
