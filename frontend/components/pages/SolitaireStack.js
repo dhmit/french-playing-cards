@@ -1,5 +1,5 @@
 import React from "react";
-import SolitaireCard from "./SolitaireCard";
+import {PropTypes} from "prop-types";
 
 class SolitaireStack extends React.Component {
     constructor(props) {
@@ -46,5 +46,7 @@ class SolitaireStack extends React.Component {
         </>);
     };
 }
-
+SolitaireStack.propTypes = {
+    name: PropTypes.string
+};
 export default SolitaireStack;

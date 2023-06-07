@@ -1,4 +1,5 @@
 import React from "react";
+import {PropTypes} from "prop-types";
 
 /*
 This functional component does not manage any state or data, it only renders the card image based
@@ -24,6 +25,12 @@ const SolitaireCard = ({card, suit, deck, faceUp}) => {
             </div>
         );
     }
+};
+SolitaireCard.propTypes = {
+    card: PropTypes.any, // TODO(ra): @NOCHECKIN fix this!
+    suit: PropTypes.any, // TODO(ra): @NOCHECKIN fix this!
+    deck: PropTypes.any, // TODO(ra): @NOCHECKIN fix this!
+    faceUp: PropTypes.boolean
 };
 
 export default SolitaireCard;

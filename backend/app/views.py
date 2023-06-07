@@ -23,10 +23,8 @@ context = {
     'component_name': 'ExampleId'
 }
 """
-from dotenv import load_dotenv
 import os
 import openai
-load_dotenv()
 
 import json
 
@@ -38,7 +36,6 @@ from .models import Card
 from .models import Deck
 from .models import Tarot
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def index(request):
     """
@@ -222,6 +219,7 @@ def divination_card_request(request):
 
 def generate_prediction(request):
     question = json.loads(request.body.decode('utf-8')).get("question", None)
+    openai.api_key = os.getenv("OPENAI_API_KEY")
 
     if question: 
         completion = openai.ChatCompletion.create(
