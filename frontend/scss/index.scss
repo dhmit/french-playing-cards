@@ -463,6 +463,19 @@
 #search-results-column {
     flex: 3;
 
+
+    .card-image {
+        &.red {
+        }
+    }
+
+    .card-name {
+        font-weight: bold;
+        &.red {
+            color: red;
+        }
+    }
+
     #search-results-cards {
         // this is the ul
         list-style-type: none;
@@ -479,6 +492,11 @@
         .card-image {
             width: 100%;
         }
+
+        .card-name {
+            float: right;
+        }
+
     }
 
     #search-results-decks {

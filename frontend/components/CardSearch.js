@@ -108,6 +108,8 @@ class CardSearch extends React.Component {
     render() {
         const {t} = this.props;
 
+        // TODO(ra): This is a bit of a mess, so maybe factor these out into separate components later
+
         let results;
         if (this.state.searching) {
             results = <Loading />;
@@ -122,7 +124,10 @@ class CardSearch extends React.Component {
                     padding: "10%"
                 };
 
-                const cardName = card.rank + SUIT_SYMBOLS[card.suit];
+                let cardNameClass = "card-name";
+                if (['H', 'D'].includes(card.suit)) {
+                    cardNameClass += " red";
+                }
 
                 return (
                     <li key={idx}>
@@ -131,7 +136,10 @@ class CardSearch extends React.Component {
                                 {town && town + ', '}
                                 {dates}
                             </p>
-                            <p style={{float: 'right'}}>{cardName}</p>
+                            <p className={cardNameClass}>
+                                {card.rank}
+                                {SUIT_SYMBOLS[card.suit]}
+                            </p>
                             <img className="card-image" src={"/static/img/" + card.image}/>
                             <p><em>{card.title}</em></p>
                             {maker && <p>{"Maker: " + maker}</p>}
@@ -144,10 +152,16 @@ class CardSearch extends React.Component {
         } else if (this.state.mode === SearchMode.DECK) {
             const decks = this.state.results.map((deck, idx) => {
                 const cards = deck.cards.map((card, idx) => {
-                    const cardName = card.rank + SUIT_SYMBOLS[card.suit];
+                    let cardNameClass = "card-name";
+                    if (['H', 'D'].includes(card.suit)) {
+                        cardNameClass += " red";
+                    }
                     return (
                         <div className="deck-card" key={idx}>
-                            <p >{cardName}</p>
+                            <p className={cardNameClass}>
+                                {card.rank}
+                                {SUIT_SYMBOLS[card.suit]}
+                            </p>
                             <p>
                             <img className="card-image" src={"/static/img/" + card.image}/>
                             </p>
