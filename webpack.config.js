@@ -10,11 +10,11 @@ module.exports = {
     },
     output: {
         path: path.resolve("./assets/bundles/"),
-        filename: "[name].bundle.js"
+        filename: "[name].[contenthash].bundle.js"
     },
     plugins: [
         new BundleTracker({filename: "./webpack-stats.json"}),
-        new MiniCssExtractPlugin({ filename: "[name].bundle.css" }),
+        new MiniCssExtractPlugin({ filename: "[name].[contenthash].bundle.css" }),
         new ESLintPlugin(),
     ],
     module: {
