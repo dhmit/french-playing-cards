@@ -5,7 +5,21 @@ Django docs here: https://docs.djangoproject.com/en/3.2/topics/db/models/
 
 from django.db import models
 from django.conf import settings
+from enum import Enum
 
+ABBREVIATIONS_TO_CARD_SORT = {
+    # ranks
+    'K': 0,
+    'Q': 1,
+    'J': 2,
+    'A': 3,
+
+    # suits
+    'S': 0,
+    'H': 1,
+    'D': 2,
+    'C': 3,
+}
 
 class Card(models.Model):
     """
@@ -22,8 +36,21 @@ class Card(models.Model):
     recto_img = models.FilePathField()
     verso_img = models.FilePathField()
 
+    # So that we don't have to do any sorting in Python, we define a sort order
+    # for cards within a deck as follows:
+    #     Each suit occupies 4 slots (K, Q, J, A) -- kings high, so low in sort order
+    #     Suits follow traditional order: S, H, D, C -- spades high, so low in sort order
+    # So, e.g., king of spades is 0, ace of spades 3, king of hearts 4, etc.
+    # We bake in the sort order in our data importer so we never have to futz with it afterwards
+    sort_order = models.IntegerField()
+
+
     def __str__(self):
         return f'{self.deck.name} - {self.card}{self.suit}'
+
+    class Meta:
+        ordering = ['sort_order']
+
 
 class Deck(models.Model):
     """

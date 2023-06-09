@@ -171,11 +171,11 @@ class CardSearch extends React.Component {
                 });
 
                 return (
-                    <li key={idx} className="card mt-4">
+                    <li key={idx} className="deck-result card mt-4">
                         <div className="card-header">
                             {deck.title} | {deck.start_date}-{deck.end_date} | {deck.maker} | {deck.town}
                         </div>
-                        <div className="card-body">
+                        <div className="deck-cards card-body">
                             {cards}
                         </div>
 

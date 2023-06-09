@@ -500,13 +500,22 @@
     }
 
     #search-results-decks {
+
+        .deck-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 10px; 
+        }
+
         .deck-card {
             display: inline-block;
             margin: 1rem;
+            width: 100%;
         }
 
         .card-image {
-            width: 100px;
+            width: 100%;
         }
     }
     

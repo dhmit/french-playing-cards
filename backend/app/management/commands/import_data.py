@@ -4,7 +4,7 @@ import pandas as pd
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 
-from app.models import Card, Deck, Tarot
+from app.models import Card, Deck, Tarot, ABBREVIATIONS_TO_CARD_SORT
 
 class Command(BaseCommand):
     help = 'Populates the database from the app/data folder'
@@ -29,7 +29,6 @@ class Command(BaseCommand):
                     continue 
 
                 deck_name = os.path.splitext(file_name)[0]
-                self.stdout.write('Reading Excel CSV file...')
                 deck_data_frame = pd.read_excel(os.path.join(period_folder, file_name))
                 card_data = deck_data_frame.to_dict(orient="records")
 
@@ -43,37 +42,41 @@ class Command(BaseCommand):
                                      town=card_data[0]["Town"])
 
                 deck_instance.save()
-                self.stdout.write('Created deck named {} and id of {}...'.format(deck_name, deck_instance.id))
+                self.stdout.write(f'Created deck {deck_name} (id {deck_instance.id}...')
 
                 for entry in card_data:
                     if entry["Recto or Verso"] == 'V':
                         continue
 
-                    card_name = entry['Card']
-                    suit_name = entry["Suit"]
+                    rank = entry['Card']
+                    suit = entry["Suit"]
 
-                    if isinstance(suit_name, float):
+                    if isinstance(suit, float):
                         # pandas interprets empty columns as nan
-                        suit_name = ""
+                        suit = ""
 
                     # create and save each card
-                    recto_img=f'{period}/{deck_name}/{card_name}{suit_name}.1.jpeg'
-                    verso_img=f'{period}/{deck_name}/{card_name}{suit_name}.2.jpeg'
+                    recto_img=f'{period}/{deck_name}/{rank}{suit}.1.jpeg'
+                    verso_img=f'{period}/{deck_name}/{rank}{suit}.2.jpeg'
+
+                    sort_order = ABBREVIATIONS_TO_CARD_SORT[suit]*4 + ABBREVIATIONS_TO_CARD_SORT[rank]
 
                     card = Card(
                         deck=deck_instance,
                         db_id=entry["DB ID"],
-                        rank=card_name,
-                        suit=suit_name,
+                        rank=rank,
+                        suit=suit,
                         type=entry["Type"],
                         back_notes=entry["Back notes?"],
                         url=entry["BnF URL"],
                         recto_img=recto_img,
                         verso_img=verso_img,
+                        sort_order=sort_order
                     )
                     card.save()
-                    self.stdout.write('Created card {} with id of {}'.format(card.db_id, card.id))
-                    self.stdout.write('-------')
+                    # TODO(ra): Add a verbose flag (maybe? probably don't need it...)
+                    # self.stdout.write('Created card {} with id of {}'.format(card.db_id, card.id))
+                    # self.stdout.write('-------')
 
         self.stdout.write('End of printing cards.')
 

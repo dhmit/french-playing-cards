@@ -263,7 +263,7 @@ def search_results(request):
     if mode == 'card':
         print('card mode!')
         cards = Card.objects.filter(deck__in=decks)
-        cards = cards.order_by('deck__start_date', 'deck', 'suit')
+        cards = cards.order_by('deck__start_date', 'deck', 'sort_order')
 
         q_ranks = Q()
         q_suits = Q()
@@ -297,17 +297,21 @@ def search_results(request):
     
 
     if mode == 'deck':
+
         print('deck mode!')
+        import pprint
+        pp = pprint.PrettyPrinter(indent=4)
         decks = decks.order_by('start_date', 'end_date')
 
         result = []
         for deck in decks:
             cards = []
-            for card in deck.card_set.all():
+            for card in deck.card_set.all().order_by('sort_order'):
                 cards.append({
                     'image': card.recto_img,
                     'rank': card.rank,
                     'suit': card.suit,
+                    'order': card.sort_order,
                 })
 
             result.append({
@@ -318,7 +322,8 @@ def search_results(request):
                 'town': deck.town,
                 'cards': cards,
             })
-        print(result)
+
+            pp.pprint(cards)
 
         return JsonResponse(result, safe=False)
 
