@@ -64,6 +64,17 @@ def about(request):
 
     return render(request, 'index.html', context)
 
+
+def history(request):
+    context = {
+        'page_metadata': {
+            'title': 'History | French Playing Cards'
+        },
+        'component_name': 'History'
+    }
+
+    return render(request, 'index.html', context)
+
 def manufacture(request):
     """
     Manufacture page

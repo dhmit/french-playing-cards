@@ -6,6 +6,20 @@
     --border-color: var(--border-color);
 }
 
+
+
+button {
+    border-width: medium;
+    width: 8%;
+}
+
+button:hover {
+    background-color: #787878;
+    color: white;
+}
+
+
+
 .page-header {
     text-align: center;
     margin-top: 1.5%;
@@ -22,8 +36,7 @@
     justify-content: space-between;
 }
 
-
-.home-card-item {
+.link-card {
     display: flex; /* make this a flex container */
     flex-direction: column; /* stack children vertically */
     justify-content: flex-end; /* align children towards the end of the main axis */
@@ -37,135 +50,29 @@
     transition: color 0.3s ease;
 
     border-radius: 4px;
+    background-size: contain;
+    background-position: center;
+    text-decoration: none;
 }
 
-.home-card-item:hover {
+.link-card:hover {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
     transform: scale(1.02);
-}
-
-#home-card-grid a:hover {
     color: white;
 }
 
-.card-content {
-    background-color: rgba(1, 1, 1, 0.2);
-}
 
-.home-card-item .card-content {
+.link-card-content {
+    background-color: rgba(1, 1, 1, 0.4);
     padding: 1rem;
+    max-height: 50%;
 }
 
 
 @media (min-width: 768px) {
-    .home-card-item {
+    .link-card {
         flex-basis: 48%; /* for 2x2 grid */
-    }
-}
-
-
-
-/**********************************************************************
- * Manifacture
- **********************************************************************/
-
-#manufacture-header {
-    margin-top: 3%;
-    color: var(--border-color);
-    text-decoration: underline;
-}
-
-.manufacture-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    .manufacture-images {
-        display: flex;
-        justify-content: center;
-        margin-top: 3%;
-        width: 95%;
-
-        img {
-            max-width: 100%;
-            max-height: 500px;
-            padding: 10px;
-            text-align: center;
-        }
-    }
-
-    .manufacture-images-double {
-        display: flex;
-        justify-content: center;
-        margin-top: 3%;
-        width: 95%;
-
-        img {
-            max-width: 50%;
-            max-height: 500px;
-            padding: 10px;
-            text-align: center;
-        }
-    }
-
-    .manufacture-image-1-9-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 3%;
-    }
-
-    .manufacture-image-1-9 {
-        width: 95%;
-        text-align: center;
-    }
-
-    .manufacture-caption {
-        width: 60%;
-        padding-top: 1.5%;
-        font-size: 90%;
-        text-align: center;
-    }
-
-    p {
-        margin-right: 3%;
-        margin-left: 3%;
-        padding-top: 8px;
-        font-size: 125%;
-        font-weight: 300;
-        text-align: left;
-    }
-}
-
-
-/**********************************************************************
- * Manifacture
- **********************************************************************/
-#MaterialsMenu {
-    display: flex;
-}
-
-.MaterialsMenuItem {
-    text-align: center;
-    margin-bottom: 10px;
-
-    a {
-        p {
-            font-size: 150%;
-            font-weight: 200;
-            color: #787878;
-            text-decoration: underline;
-        }
-
-        img {
-            width: 50%;
-        }
-    }
-}
-
-@media screen and (max-width: 500px) {
-    #MaterialsMenu {
-        display: block;
     }
 }
 
@@ -189,144 +96,6 @@
     text-decoration: underline;
 }
 
-.material-subpage-intro {
-    display: inline-block;
-    margin: auto;
-    margin-top: 3%;
-    margin-bottom: 8%;
-
-    img {
-        width: 25%;
-        height: 25%;
-        margin-left: 1.5%;
-        margin-right: 3%;
-        float: left;
-    }
-
-    #back-intro {
-        float: right;
-        margin-right: 1.5%;
-        width: 22%;
-    }
-
-    p {
-        margin-right: 1.5%;
-        margin-left: 1.5%;
-        font-size: 150%;
-        font-weight: 200;
-    }
-
-    #back-text {
-        width: 43%;
-        float: left;
-        margin-left: 0%;
-    }
-
-    a {
-        color: var(--border-color);
-        text-decoration: underline;
-    }
-
-    @media screen and (max-width: 500px) {
-        img {
-            margin: auto;
-            width: 100%;
-            padding-bottom: 20px;
-        }
-
-        #back-text {
-            width: 100%;
-        }
-
-        #back-intro {
-            display: none;
-        }
-    }
-}
-
-.material-subpage-item {
-    margin-left: 3%;
-    margin-right: 3%;
-    color: var(--border-color);
-
-    h3 {
-        text-decoration: underline;
-    }
-
-    h4 {
-        text-decoration: underline;
-    }
-
-    .material-subpage-item-contents {
-        padding-left: 3%;
-        padding-right: 3%;
-        margin-top: 0.5%;
-        margin-bottom: 9%;
-
-        p {
-            font-size: 125%;
-            font-weight: 300;
-            margin-bottom: 3%;
-            text-align: left;
-        }
-
-        a {
-            color: var(--border-color);
-            text-decoration: underline;
-        }
-
-        .material-subpage-item-images {
-            display: flex;
-            justify-content: center;
-
-            .material-subpage-item-image-caption {
-                margin-left: 3%;
-                margin-right: 3%;
-                width: 30%;
-                text-align: center;
-                img {
-                    object-fit: scale-down;
-                    margin-bottom: 3%;
-                    height: 300px;
-                }
-
-                .popup-image {
-                    padding: 1%;
-                    margin: 1px;
-                    height: 90%;
-                }
-
-                p {
-                    font-size: 80%;
-                }
-            }
-        }
-
-        @media screen and (max-width: 1300px) {
-            .material-subpage-item-images {
-                display: block;
-                width: 95%;
-
-                .material-subpage-item-image-caption {
-                    width: 100%;
-
-                    img {
-                        max-width: 100%;
-                    }
-                }
-            }
-        }
-
-        .back-caption {
-            font-size: 90%;
-        }
-    }
-
-    #SourceFooter {
-        text-align: center;
-        font-weight: 300;
-    }
-}
 
 .iconography-header {
     color: var(--border-color);
@@ -677,29 +446,6 @@
 }
 
 /**********************************************************************
- * Bibliography
- **********************************************************************/
-#bibliography-mascot{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 500px;
-}
-
-.bibliography-content {
-    text-align: left;
-    font-weight: 200;
-}
-
-.bibliography-content a {
-    color: #707070;
-    text-decoration: underline;
-}
-
-
-
-/**********************************************************************
  * Games
  **********************************************************************/
 .games-header {
@@ -792,54 +538,6 @@
     }
 }
 
-
-
-// h2 {
-//     text-align: center;
-//     color: var(--border-color);
-// }
-
-// img {
-//     padding-top: 30px;
-//     max-width: 100%;
-// }
-
-// p {
-//     padding-top: 30px;
-//     font-size: large;
-//     color: var(--border-color);
-//     text-align: center;
-// }
-
-// .tab-list {
-//     margin-top: 3%;
-//     margin-bottom: 3%;
-//     border-bottom: 1px solid #ccc;
-//     padding-left: 0;
-// }
-
-// .tab-list-item {
-//     display: inline-block;
-//     list-style: none;
-//     margin-bottom: -1px;
-//     padding: 0.5rem 0.75rem;
-// }
-
-// .tab-list-active {
-//     background-color: white;
-//     border: solid #ccc;
-//     border-width: 1px 1px 0 1px;
-// }
-
-button {
-    border-width: medium;
-    width: 8%;
-}
-
-button:hover {
-    background-color: #787878;
-    color: white;
-}
 
 #Note {
     font-style: italic;

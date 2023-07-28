@@ -1,7 +1,6 @@
 import React from "react";
 import {Trans, useTranslation} from "react-i18next";
 import { Container, Col, Row, Figure }  from 'react-bootstrap';
-import Breadcrumbs from '../Breadcrumbs';
 import MaterialSubpageItem from "../MaterialSubpageItem";
 
 
@@ -14,11 +13,6 @@ const Backs = () => {
 
     return (
         <Container>
-            <Breadcrumbs crumbs={[
-                {name: 'History', path: '/history'},
-                {name: 'Material Aspects', path: '/material-aspects'},
-                {name: 'Backs', path: ''},
-            ]} />
             <Row className="mb-3">
                 <Col>
                     <h2 className="page-header">{t("material.backs.full_title")}</h2>

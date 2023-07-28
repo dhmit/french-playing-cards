@@ -1,6 +1,6 @@
 import React from "react";
 import {Trans, useTranslation} from "react-i18next";
-import { Container } from 'react-bootstrap';
+import { Row, Col, Figure, Container } from 'react-bootstrap';
 import MaterialSubpageItem from "../MaterialSubpageItem";
 
 const Envelopes = () => {
@@ -13,21 +13,30 @@ const Envelopes = () => {
 
     return (
         <Container>
-            <h2 className="page-header">{t("material.envelopes.title")}</h2>
+            <Row className="mb-3">
+                <Col>
+                    <h2 className="page-header">{t("material.envelopes.title")}</h2>
+                </Col>
+            </Row>
 
-            <div className="material-subpage-intro">
-                <img src={"/static/img/misc/mascot.jpg"}/>
-                <p className="material-subpage-blurb">
-                    {t("material.envelopes.intro")}
-                    <br/>
-                    <br/>
-                    <Trans i18nKey="material.envelopes.images">
-                The card images below and the associated metadata are courtesy of the <a href="https://gallica.bnf.fr/">Gallica</a> site of the Bibilothèque 
-                nationale de France.
-                    </Trans>
-                </p>
-            </div>
-
+            <Row className="mb-3">
+                <Col sm={4}>
+                    <Figure>
+                        <Figure.Image src={"/static/img/misc/mascot.jpg"} />
+                    </Figure>
+                </Col>
+                <Col sm={8}>
+                    <p>
+                        {t("material.envelopes.intro")}
+                        <br/>
+                        <br/>
+                        <Trans i18nKey="material.envelopes.images">
+                            The card images below and the associated metadata are courtesy of the <a href="https://gallica.bnf.fr/">Gallica</a> site of the Bibilothèque 
+                            nationale de France.
+                        </Trans>
+                    </p>
+                </Col>
+            </Row>
 
             <MaterialSubpageItem 
                 title={t("material.envelopes.epinal.title")}

@@ -1,47 +1,60 @@
 import React from "react";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { Container, Row, Col } from 'react-bootstrap';
+import LinkCard from "../LinkCard";
 
 const Material = () => {
 
     React.useEffect(() => {
-        document.title = "Material Aspects | French Playing Cards";        
+        document.title = "Material Aspects | French Playing Cards";
     }, []);
-    const {t} = useTranslation();
+
+    const { t } = useTranslation();
+
+    const cardData = [
+        {
+            img: "/static/img/materials/materialsFronts.jpeg",
+            title: t('material.fronts.title'),
+            link: "/material-aspects/fronts",
+        },
+        {
+            img: "/static/img/materials/materialsBacks.jpeg",
+            title: t('material.backs.title'),
+            link: "/material-aspects/backs",
+        },
+        {
+            img: "/static/img/materials/materialsEnvelopes.jpeg",
+            title: t('material.envelopes.title'),
+            link: "/material-aspects/envelopes",
+        },
+    ];
 
     return (
-        <>
-            <h2 className="page-header">{t("material.header")}</h2>
+        <Container>
+            <Row className="mb-3">
+                <Col>
+                    <h2 className="page-header">{t("material.header")}</h2>
+                </Col>
+            </Row>
 
-            <div className="material-subpage-intro">
-                <img src={"/static/img/misc/mascot.jpg"}/>
-                <p>
-                    { t("material.material_1") } 
-                </p>
-            </div>
+            <Row className="mb-3">
+                <Col sm={12}>
+                    <p>{t("material.material_1")}</p>
+                </Col>
+            </Row>
 
-            <div id='MaterialsMenu'>
-                <div className='MaterialsMenuItem'>
-                    <a href='material-aspects/fronts'> 
-                        <p> { t("material.fronts.title") } </p>
-                        <img src={"/static/img/materials/materialsFronts.jpeg"}/>
-                    </a>
-                </div>
-
-                <div className='MaterialsMenuItem'>
-                    <a href='material-aspects/backs'>
-                        <p> { t("material.backs.title") } </p>
-                        <img id='BackMenuImage' src={"/static/img/materials/materialsBacks.jpeg"}/>
-                    </a> 
-                </div>
-
-                <div className='MaterialsMenuItem'>
-                    <a href='material-aspects/envelopes'> 
-                        <p> { t("material.envelopes.title") } </p>
-                        <img src={"/static/img/materials/materialsEnvelopes.jpeg"}/>
-                    </a> 
-                </div>
-            </div>
-        </>
+            <Row className="mb-3">
+                {cardData.map((card, index) => (
+                    <Col sm={4} key={index}>
+                        <LinkCard
+                            img={card.img}
+                            title={card.title}
+                            link={card.link}
+                        />
+                    </Col>
+                ))}
+            </Row>
+        </Container>
     );
 };
 

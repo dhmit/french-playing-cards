@@ -1,19 +1,11 @@
 {
     "navigation" : {
-        "home": "Bienvenu",
         "about": "À propos",
-        "manufacture": "Fabrication",
-        "material": "Aspects matériels",
-        "fronts": "De face",
-        "backs": "De dos",
-        "envelopes": "Enveloppes",
-        "iconography": "Iconographie",
-        "search": "Recherche",
-        "tarot": "Tarot",
-        "deck": "Le jeu de tarot",
-        "history": "Une brève histoire de la cartomancie", 
-        "games": "Jouez !",
-        "bibliography": "Bibliographie"
+        "bibliography": "Bibliographie",
+        "explore": "explorer!",
+        "games": "Jouez!",
+        "history": "L'histoire", 
+        "home": "Bienvenu"
     },
     "home": {
         "header": "Cartes à jouer françaises, 1650-1850",

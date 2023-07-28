@@ -16,17 +16,13 @@ Including another URL configuration
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import index, about, manufacture, material, fronts, backs, envelopes, iconography, search, games, bibliography
-
-try:
-    from ..app import views
-except (ValueError, ImportError, ModuleNotFoundError):
-    from app import views
+from app import views
 
 
 urlpatterns = [
     # Django admin page
     path('admin/', admin.site.urls),
+
     # API endpoints
     path('example/', views.example),
     path('example/<example_id>', views.example),
@@ -34,19 +30,20 @@ urlpatterns = [
     path('divination-card/', views.divination_card_request),
     path('generate-prediction/', views.generate_prediction),
 
-    path('', index, name='home'),
-    path('about', about, name='about'),
-    path('manufacture', manufacture, name='manufacture'),
-    path('material-aspects', material, name='material'),
-    path('material-aspects/fronts', fronts, name='fronts'),
-    path('material-aspects/backs', backs, name='backs'),
-    path('material-aspects/envelopes', envelopes, name='envelopes'),
-    path('iconography', iconography, name='iconography'),
-    path('iconography/search', search, name='search'),
-    path('tarot', search, name='tarot'),
-    path('tarot/tarot-deck', search, name='TarotDeck'),
-    path('tarot/tarot-history', search, name='TarotHistory'),
-    # path('iconography/search', showCardSearch),
-    path('games', games, name='games'),
-    path('bibliography', bibliography, name='bibliography')
+    # Views
+    path('', views.index, name='home'),
+    path('about', views.about, name='about'),
+    path('history', views.history, name='history'),
+    path('manufacture', views.manufacture, name='manufacture'),
+    path('material-aspects', views.material, name='material'),
+    path('material-aspects/fronts', views.fronts, name='fronts'),
+    path('material-aspects/backs', views.backs, name='backs'),
+    path('material-aspects/envelopes', views.envelopes, name='envelopes'),
+    path('iconography', views.iconography, name='iconography'),
+    path('iconography/search', views.search, name='search'),
+    path('tarot', views.search, name='tarot'),
+    path('tarot/tarot-deck', views.search, name='TarotDeck'),
+    path('tarot/tarot-history', views.search, name='TarotHistory'),
+    path('games', views.games, name='games'),
+    path('bibliography', views.bibliography, name='bibliography')
 ]

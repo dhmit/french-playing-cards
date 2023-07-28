@@ -1,19 +1,11 @@
 {
     "navigation" : {
-        "home": "Home",
         "about": "About",
-        "manufacture": "Manufacture",
-        "material": "Material Aspects",
-        "fronts": "Fronts",
-        "backs": "Backs",
-        "envelopes": "Envelopes",
-        "iconography": "Iconography",
-        "search": "Search",
-        "tarot": "Tarot",
-        "deck": "The Tarot Deck",
-        "history": "A Brief History of Cartomancy",
-        "games": "Play Games!",
-        "bibliography": "Bibliography"
+        "bibliography": "Bibliography",
+        "explore": "Explore",
+        "games": "Play!",
+        "history": "History",
+        "home": "Home"
     },
     "home" : {
         "header": "French Playing Cards, 1650-1850",
@@ -50,6 +42,30 @@
             "tarot_consultant": "Consultant, Tarot Card Pages",
             "team": "MIT Digital Humanities Lab",
             "translation": "Translation, French Site"
+        }
+    },
+    "history" : {
+        "header": "History",
+        "intro": "The history of French playing cards from 1650 to 1850 is a fascinating journey through culture, art, and tradition. This section will guide you through different aspects of this history, including the manufacturing procedures, material aspects, changing iconography, the intriguing world of tarot cards, and a comprehensive bibliography for further reading.",
+        "manufacture": {
+            "title": "Manufacture",
+            "subtitle": "Learn about the techniques, materials used, and the challenges faced by the manufacturers."
+        },
+        "material": {
+            "title": "Material Aspects",
+            "subtitle": "Learn how French playing cards came to life. Explore the details of their fronts, backs, and the envelopes they were wrapped in."
+        },
+        "iconography": {
+            "title": "Iconography",
+            "subtitle": "Dive deep into the changing iconography of French face cards, which reflects the cultural, political, and societal shifts of the period."
+        },
+        "tarot": {
+            "title": "Tarot",
+            "subtitle": "Unravel the mystery and allure of tarot cards, their symbolism, and their role in fortune-telling and divination."
+        },
+        "bibliography": {
+            "title": "Bibliography",
+            "subtitle": "An extensive list of references for further reading and in-depth study of the history of French playing cards."
         }
     },
     "manufacture": {
