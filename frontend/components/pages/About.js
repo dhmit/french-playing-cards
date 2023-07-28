@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {Trans, useTranslation} from "react-i18next";
-import {ListGroup, Card, Row, Col} from 'react-bootstrap';
+import {ListGroup, Row, Col} from 'react-bootstrap';
 
 const About = () => {
     React.useEffect(() => {
@@ -19,7 +19,6 @@ const About = () => {
                     <img src={"/static/img/misc/mascot.jpg"} alt="mascot" className="img-fluid"/>
                 </Col>
                 <Col md={8}>
-                    <Card className="p-3">
                         <p>
                             {t("about.intro.1")}
                             <br/>
@@ -38,7 +37,6 @@ const About = () => {
                                 the <a href="https://digitalhumanities.mit.edu/">MIT Programs in the Digital Humanities</a> and <a href="https://www.performantsoftware.com">Performant Software</a> for technical support.
                             </Trans>
                         </p>
-                    </Card>
                 </Col>
             </Row>
 
