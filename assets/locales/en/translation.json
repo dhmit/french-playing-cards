@@ -44,10 +44,11 @@
             "3": "Professor Ravel and his team wish to thank the <1>Bibliothèque nationale de France</1> (BnF), which has provided the digital versions of playing cards and the metadata we make available on our site. Users are invited to explore the extensive digital reproductions of playing cards in the collections of the BnF, which the Library makes available on its <3>Gallica web site</3>. We are also grateful to the <5>MIT Programs in the Digital Humanities</5> and <7>Performant Software</7> for technical support."
         },
         "professor": "Professor",
+        "dh_director": "Associate Director, MIT Digital Humanities Lab",
         "profiles": {
             "editor": "Site Editor",
             "tarot_consultant": "Consultant, Tarot Card Pages",
-            "team": "Web Development Team",
+            "team": "MIT Digital Humanities Lab",
             "translation": "Translation, French Site"
         }
     },
@@ -56,11 +57,11 @@
         "intro": "Manufacturing Playing Cards in France Before 1800",
         "1": {
             "caption": "Image 1. <i>The Workshop of a Parisian Playing Card Maker</i>, gouache, early 1690s, <i>Musée Carnavalet</i>.",
-            "text": "The image above, painted to decorate a hand fan, depicts a lively, chaotic scene in a card-maker’s shop on the Ile de la Cité in Paris overlooking the Pont Neuf and the Seine River at the end of the seventeenth century. Some workers create the paper stock on which the cards are printed, while others paint the cards and then cut and sort them into decks.  Shopkeepers sell finished decks to well-appointed customers, while cats and dogs cavort in the foreground among the discards from the manufacturing process.  Although the shop looks disorderly, the steps involved in making commercial playing cards were well thought-out and efficient.  Thanks to two later, detailed discussions of the process, we have a good idea of how most playing cards in France were made before the French Revolution."
+            "text": "This image, painted to decorate a hand fan, depicts a lively, chaotic scene in a card-maker’s shop on the Ile de la Cité in Paris overlooking the Pont Neuf and the Seine River at the end of the seventeenth century. Some workers create the paper stock on which the cards are printed, while others paint the cards and then cut and sort them into decks.  Shopkeepers sell finished decks to well-appointed customers, while cats and dogs cavort in the foreground among the discards from the manufacturing process.  Although the shop looks disorderly, the steps involved in making commercial playing cards were well thought-out and efficient.  Thanks to two later, detailed discussions of the process, we have a good idea of how most playing cards in France were made before the French Revolution."
         },
         "2": {
             "caption": "Image 2. Detail from Plate 1 of Duhamel du Monceau, <i>Art du cartier</i> (Paris: Saillant & Nyon and Desaint, 1761).",
-            "text": "The first step in the process was to create the card stock.  Guildsmen combined three different types of paper into a composite that absorbed the paint used to decorate the cards, but also created enough flexibility that users could shuffle the cards without bending them. In the figure above, we see two workers on the left using a furnace to fabricate the glue that will bind the three different paper stocks together, while the figure on the right stirs the heated glue in preparation for joining the three layers of paper together."
+            "text": "The first step in the process was to create the card stock.  Guildsmen combined three different types of paper into a composite that absorbed the paint used to decorate the cards, but also created enough flexibility that users could shuffle the cards without bending them. In this figure, we see two workers on the left using a furnace to fabricate the glue that will bind the three different paper stocks together, while the figure on the right stirs the heated glue in preparation for joining the three layers of paper together."
         },
         "3": {
             "caption": "Image 3. Denis Diderot and Jean le Rond d’Alembert, <i>L’Encyclopédie, ou dictionnaire raisonnée des arts, des sciences, et des métiers</i> (Paris, 1763), vol. 19, 1763, article <i>cartier</i>, Plate 4.",
