@@ -10,33 +10,52 @@
     border-bottom: 1px solid #707070;
 }
 
-#HomeImage {
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
-    margin-bottom: 5%;
+/**********************************************************************
+ * Home
+ **********************************************************************/
+#home-card-grid {
+    justify-content: space-between;
 }
 
-#HomeBlurb {
-    //text-align: center;
-    font-size: 150%;
-    font-weight: 200;
-    line-height: 150%;
+a:hover {
+    color: white;
+}
 
-    a {
-        color: #707070;
-        text-decoration: underline;
+.home-card-item {
+    display: flex; /* make this a flex container */
+    flex-direction: column; /* stack children vertically */
+    justify-content: flex-end; /* align children towards the end of the main axis */
+
+    flex-basis: 100%; /* by default, 1x4 grid */
+    min-height: 300px; /* set to your desired minimum height */
+    margin-bottom: 1rem;
+
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    transition: color 0.3s ease;
+}
+
+.card-content {
+    background-color: rgba(1, 1, 1, 0.2);
+}
+
+.home-card-item .card-content {
+    padding: 1rem;
+}
+
+
+@media (min-width: 768px) {
+    .home-card-item {
+        flex-basis: 48%; /* for 2x2 grid */
     }
 }
 
-#home-divider {
-    text-align: center;
-    font-size: 150%;
-    font-weight: 200;
-    line-height: 150%;
-}
+
+
+
+/**********************************************************************
+ * About
+ **********************************************************************/
 
 #AboutIntro {
     margin-top: 3%;

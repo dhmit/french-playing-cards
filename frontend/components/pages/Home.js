@@ -1,41 +1,57 @@
 import React from "react";
-import {Trans, useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 
     React.useEffect(() => {
-        document.title = "Home | French Playing Cards";        
+        document.title = "Home | French Playing Cards";
     }, []);
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
+
+    // Card Data
+    const cardData = [
+        {
+            img: "/static/img/home/history.jpg",
+            title: t('home.history.title'),
+            subtitle: t('home.history.subtitle'),
+            link: "/history",
+        },
+        {
+            img: "/static/img/home/explore.jpg",
+            title: t('home.explore.title'),
+            subtitle: t('home.explore.subtitle'),
+            link: "/iconography/search",
+        },
+        {
+            img: "/static/img/home/play.png",
+            title: t('home.games.title'),
+            subtitle: t('home.games.subtitle'),
+            link: "/games",
+        },
+        {
+            img: "/static/img/home/about.jpg",
+            title: t('home.about.title'),
+            subtitle: t('home.about.subtitle'),
+            link: "/about",
+        },
+    ];
 
     return (
         <>
-            <h2 className="page-header"> {t("home.header")} </h2>
+            <h2 className="page-header">{t("home.header")}</h2>
 
-            <span id="Collage">
-                <img id="HomeImage" src={"/static/img/misc/homepageImg.png"}/>
-            </span>
-
-            <p id="HomeBlurb">
-                <Trans i18nKey="home.blurb">
-            From 1650 to 1850, the French spread enlightenment, gained and lost one empire and 
-            began another, and overthrew a centuries-old monarchy.  They also played card games.  This site explores 
-            the history of French playing cards in this period as an unusual and insightful source 
-            for the history of the Old Regime, the French Revolution, and early nineteenth-century 
-            France.  You will find details about <a href='manufacture'>manufacturing procedures</a>, 
-            the <a href='material-aspects'>material aspects</a> of the playing cards, the changing <a href='iconography'>iconography</a> of 
-            French face cards, and <a href='tarot'>tarot cards</a> and the history of <a href='tarot/tarot-history'>cartomancy</a>.  A <a href='bibliography'>bibliography</a> provides suggestions for further reading.  And for 
-            those of you interested in gaming, we will offer the opportunity to play a few of the most 
-            popular <a href='games'>card games</a> of the period, using the historical deck of cards of your choice!
-                </Trans>
-            </p>
-            <br />
-            <p id="home-divider">******************************************</p>
-            <br />
-            <p>
-                <b>{t("home.trans")}</b>
-            </p>
+            <div id="home-card-grid" className="d-flex flex-wrap justify-content-around">
+                {cardData.map((card, index) => (
+                    <Link to={card.link} key={index} className="home-card-item text-decoration-none" style={{ backgroundImage: `url(${card.img})`, backgroundSize: 'contain', backgroundPosition: 'center' }}>
+                        <div className="card-content">
+                            <h3 className="card-title">{card.title}</h3>
+                            <p className="card-text">{card.subtitle}</p>
+                        </div>
+                    </Link>
+                ))}
+            </div>
         </>
     );
 };
