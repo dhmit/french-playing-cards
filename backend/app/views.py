@@ -75,6 +75,7 @@ def history(request):
 
     return render(request, 'index.html', context)
 
+
 def manufacture(request):
     """
     Manufacture page
@@ -187,6 +188,18 @@ def games(request):
 
     return render(request, 'index.html', context)
 
+def solitaire(request):
+    context = {
+        'page_metadata': {
+            'title': 'Play Solitaire! | French Playing Cards'
+        },
+        'component_name': 'solitaire'
+    }
+
+    return render(request, 'index.html', context)
+
+
+
 def bibliography(request):
     """
     Bibliography page
@@ -231,7 +244,7 @@ def generate_prediction(request):
     question = json.loads(request.body.decode('utf-8')).get("question", None)
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
-    if question: 
+    if question:
         completion = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
@@ -248,7 +261,7 @@ def generate_prediction(request):
 
 
 def search_results(request):
-    # De-stringify    
+    # De-stringify
     query = json.loads(request.GET.get('query'))
     mode = request.GET.get('mode')
 
@@ -305,7 +318,7 @@ def search_results(request):
             result.append(card_dict)
 
         return JsonResponse(result, safe=False)
-    
+
 
     if mode == 'deck':
 

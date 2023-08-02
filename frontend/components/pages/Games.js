@@ -1,59 +1,58 @@
 import React from "react";
-import {useTranslation} from "react-i18next";
-// import DivinationGame from "../DivinationGame";
-// import SolitaireGame from "./SolitaireGame";
+import { useTranslation } from "react-i18next";
+import { Container, Row, Col } from 'react-bootstrap';
+import LinkCard from "../LinkCard";
 
 const Games = () => {
 
     React.useEffect(() => {
-        document.title = "Play Games! | French Playing Cards";        
+        document.title = "Play Games! | French Playing Cards";
     }, []);
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
+
+    const cardData = [
+        {
+            img: "/static/img/games/solitaire.jpg",
+            title: t('games.solitaire.title'),
+            subtitle: t('games.solitaire.subtitle'),
+            link: "/solitaire",
+        },
+        {
+            img: "/static/img/games/divination.jpg",
+            title: t('games.divination.title'),
+            subtitle: t('games.divination.subtitle'),
+            link: "/divination",
+        },
+    ];
 
     return (
-        <>
-            <h2 className="page-header">{t("games.header")}</h2>
+        <Container>
+            <Row className="mb-3">
+                <Col>
+                    <h2 className="page-header">{t("games.header")}</h2>
+                </Col>
+            </Row>
 
-            <div className="material-subpage-intro">
-                <img src={"/static/img/misc/mascot.jpg"}/>
-                <p className="material-subpage-blurb">
-                    {t("games.play")}
-                </p>
-            </div>
+            <Row className="mb-3">
+                <Col sm={12}>
+                    <p>{t("games.play")}</p>
+                </Col>
+            </Row>
 
-            {/*
-
-            <DivinationGame />
-            <SolitaireGame/>
-            
-
-            <p className="games-header">Select a deck to play Solitaire with:</p>
-            <br/>
-
-            <div id='Games-Menu'>
-                <div className='Games-Menu-Item'>
-                    <a href='<insert link to Portrait de Paris version>'>
-                        <p>Portrait de Paris</p>
-                        <img src={'/static/img/games/paris-menu.PNG'}/>
-                    </a>
-                </div>
-    
-                <div className='Games-Menu-Item'>
-                    <a href='<insert link to Jaume et Dugourc version>'>
-                        <p>Jaume et Dugourc</p>
-                        <img src={'/static/img/games/dugourc-menu.PNG'}/>
-                    </a> 
-                </div>
-    
-                <div className='Games-Menu-Item'>
-                    <a href='<insert link to J-L David version>'> 
-                        <p>J-L David</p>
-                        <img src={'/static/img/games/david-menu.PNG'}/>
-                    </a> 
-                </div>
-            </div> */}
-        </>
+            <Row className="mb-3">
+                {cardData.map((card, index) => (
+                    <Col sm={6} key={index}>
+                        <LinkCard
+                            img={card.img}
+                            title={card.title}
+                            subtitle={card.subtitle}
+                            link={card.link}
+                        />
+                    </Col>
+                ))}
+            </Row>
+        </Container>
     );
 };
 

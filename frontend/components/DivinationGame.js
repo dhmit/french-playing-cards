@@ -30,7 +30,7 @@ const DivinationGame = () => {
             let [cardNum, cardUp] = cardString.split(".");
             cardNum = parseInt(cardNum);
             cardUp = parseInt(cardUp);
-            
+
             let response = await axios.get("/divination-card/", {
                 params: {
                     number: cardNum,
@@ -38,7 +38,7 @@ const DivinationGame = () => {
                     language: i18next.language
                 }
             });
-              
+
             chosen.push(response.data.card);
         }
 
@@ -98,7 +98,7 @@ const DivinationGame = () => {
         return keywords;
     }
 
-    // TODO: French translation! 
+    // TODO: French translation!
     async function getReading(keywords) {
         let input = question.trim();
         const input_string = "Write a prediction in response to the question \"" + input + "\" using the following themes: " + [...keywords].join(", ");
@@ -106,7 +106,7 @@ const DivinationGame = () => {
 
         await axios({
             method: "post",
-            url: "/generate-prediction/", 
+            url: "/generate-prediction/",
             data: {
                 question: input_string
             }

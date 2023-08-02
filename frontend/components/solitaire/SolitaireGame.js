@@ -1,12 +1,16 @@
 import React from "react";
 import SolitaireCard from "./SolitaireCard";
+import StockWaste from "./StockWaste";
+import FoundationStack from "./FoundationStack";
+import TableauStack from "./TableauStack";
+import { Container, Row, Col } from 'react-bootstrap';
 
-/* 
+/*
 The const arrays cards, suits, and decks are used during `shuffle` to randomize the cards
 assigned to each tableau stack
 
 The vars t1, t2, etc. are used to help manage SolitaireGame component's state: they are
-variables used to store the randomized card objects assigned to each tableau, and in the constructor each variable 
+variables used to store the randomized card objects assigned to each tableau, and in the constructor each variable
 gets assigned to its corresponding state variable (e.g. t1 gets assigned to the state variable that manages the first
 tableau stack)
  */
@@ -39,10 +43,10 @@ function shuffle(array) {
     return array;
 }
 
-/* 
+/*
 Helper function to check if a card value is greater than the other
 c1 and c2 are both strings, e.g. "1" "2" "K" "A"
-Returns true if c1 = (c2 + 1) and false otherwise 
+Returns true if c1 = (c2 + 1) and false otherwise
 */
 function compareCards(c1, c2) {
     // if c1 and c2 are the same then return false
@@ -61,7 +65,7 @@ function compareCards(c1, c2) {
     return false;
 }
 
-/* 
+/*
 Helper function to check if the two cards have opposite colors (colors are always based on suits)
 c1 and c2 are both strings, e.g. "C" "D" "H" "S"
 Returns true they have opposite colors
@@ -77,10 +81,6 @@ function compareSuits(c1, c2) {
 }
 
 class SolitaireGame extends React.Component {
-    // NOTE (from Ryaan): This is the main controlling Component that
-    // will handle the main logic, particularly moving cards from
-    // stack to stack and initializing/managing the stacks.
-
     constructor(props) {
         super(props);
 
@@ -103,11 +103,11 @@ class SolitaireGame extends React.Component {
             var faceupCards = [0, 2, 5, 9, 14, 20, 27];
             var c = shuffledCards[i];
             // Assign exactly 1 faceup card to each tableau since that's how the game starts out
-            // When pushing each card to a tableu, format each card as an object so it's easy to pass 
+            // When pushing each card to a tableu, format each card as an object so it's easy to pass
             // into SolitaireCard constructor when rendering later: {"card", "suit", "deck", faceUp=1 (face up) or 0 (face down)}
             if (faceupCards.includes(i)) {
                 // Note (from Alyssa): set deck as Paris for now, deal with the other decks later (this needs to be changed to be dynamic!)
-                var cardProps = {card: c[0], suit: c[1], deck: "paris", faceUp: 1}; 
+                var cardProps = {card: c[0], suit: c[1], deck: "paris", faceUp: 1};
                 if (i === 0) {
                     t1.push(cardProps);
                 } if (i === 2) {
@@ -123,7 +123,7 @@ class SolitaireGame extends React.Component {
                 } if (i === 27) {
                     t7.push(cardProps);
                 }
-            } 
+            }
             // Assign cards that are facedown
             else {
                 var cardProps = {card: c[0], suit: c[1], deck: "paris", faceUp: 0};
@@ -143,7 +143,7 @@ class SolitaireGame extends React.Component {
                     st.push(cardProps);
                 }
             }
-            
+
         }
 
         // STATE
@@ -165,9 +165,9 @@ class SolitaireGame extends React.Component {
                 waste: [] // all cards in the waste will be face up, but remember only the most recently added card (at the end of the array) is accessible
             },
 
-            // Note (from Alyssa): use `activeStack` to keep track of the card that's being actively transferred from one stack to another, 
+            // Note (from Alyssa): use `activeStack` to keep track of the card that's being actively transferred from one stack to another,
             // Right now we have a 2-click method where the user clicks on deck A (the `active stack`) and then clicks on deck B,
-            // and the card at the top of deck A gets moved to the top of deck B. This should later be omitted b/c the ultimate goal is for the user to be able to click and drag cards. 
+            // and the card at the top of deck A gets moved to the top of deck B. This should later be omitted b/c the ultimate goal is for the user to be able to click and drag cards.
             // `activeStack` is the (string) name of the stack with the card that's being moved
             activeStack: 0
         };
@@ -176,8 +176,8 @@ class SolitaireGame extends React.Component {
         console.log(this.state.stacks);
     };
 
-    /* 
-    Only call this when the stock stack is clicked 
+    /*
+    Only call this when the stock stack is clicked
     Draws a card from the stock stack and puts it in the waste stack (up to the user whether or not to leave it in the waste
     or move it to a tableau or foundation)
     Returns a card in the format {card: "card", suit: "suit", deck: "paris", faceUp: 0 or 1}}
@@ -203,7 +203,7 @@ class SolitaireGame extends React.Component {
     Note (from Alyssa): when the 2-click transfer method is changed to be a click-and-drag method, this function should allow
     for multiple cards to be moved at once, e.g. moving a chunk of cards with values 6,5,4 from stack A to stack B that has a card with value 7 on top)
    */
-    handleTableauClick = (stackName) => { 
+    handleTableauClick = (stackName) => {
         // (1) If `this.state.activeStack` is 0, make the given `stackName` the activeStack.
         if (this.state.activeStack === 0) {
             this.setState({
@@ -212,7 +212,7 @@ class SolitaireGame extends React.Component {
             return;
         }
 
-        // (2) Otherwise, we already have an active stack, so that means the user wants to transfer a card to `stackName` 
+        // (2) Otherwise, we already have an active stack, so that means the user wants to transfer a card to `stackName`
 
         // Check that activeStack and stackName aren't the same (means that user double-clicked on same stack)
         // If so, reset activeStack to 0 and exit function
@@ -243,7 +243,7 @@ class SolitaireGame extends React.Component {
             return;
         }
 
-        // If stack2 is empty, make sure the transferCard is a King. 
+        // If stack2 is empty, make sure the transferCard is a King.
         // Otherwise, not a legal move so reset activeStack to 0 and exit function
         if (stack2.length === 0) {
             if (transferCard["card"] !== "K") {
@@ -254,14 +254,14 @@ class SolitaireGame extends React.Component {
                 return;
             }
             stack2 = [transferCard];
-        } 
+        }
 
         // If stack2 is not empty, we must compare make sure the user is trying to make a legal move by checking if
-        // 1. the top card of stack B is exactly 1 value above the transferCard's and that 
+        // 1. the top card of stack B is exactly 1 value above the transferCard's and that
         // 2. the color is the opposite of the transferCard's color
         else {
             // Compare stack1's and stack2's card values and colors
-            var stack2Card = stack2.pop(); 
+            var stack2Card = stack2.pop();
             stack2.push(stack2Card);
             // Illegal move: if the numbers aren't allowed for valid move, or the colors aren't opposite then reset activeSTack to 0 and exit function
             if (!compareCards(stack2Card["card"], transferCard["card"]) || !compareSuits(stack2Card["suit"], transferCard["suit"])) {
@@ -299,7 +299,7 @@ class SolitaireGame extends React.Component {
             // Reassign this.state.stacks to reflect the new changes
             stacks: stacks
         });
-        
+
         // For testing purposes
         console.log(stackName + " gained a card");
         console.log(stackName + ": " + this.state.stacks[stackName]);
@@ -323,7 +323,7 @@ class SolitaireGame extends React.Component {
            return;
        }
 
-       // (2) Otherwise, we already have an active stack, so that means the user wants to transfer a card to `stackName` 
+       // (2) Otherwise, we already have an active stack, so that means the user wants to transfer a card to `stackName`
 
        // Check that activeStack and stackName aren't the same (means that user double-clicked on same stack)
        // If so, reset activeStack to 0 and exit function
@@ -365,7 +365,7 @@ class SolitaireGame extends React.Component {
        // Illegal move checkpoint: if transfer card is not Ace && foundation stack is not empty, need to compare the card values first
        // Make sure that the transferCard's value is exactly 1 above that of the top card in stack2
        if (transferCard["card"] !== "A" && stack2.length > 0) {
-           var stack2Card = stack2.pop(); 
+           var stack2Card = stack2.pop();
            stack2.push(stack2Card);
            // If the numbers aren't allowed for valid move, this is an illegal move so reset activeStack to 0 and exit function
            if (!compareCards(transferCard["card"], stack2Card["card"])) {
@@ -377,7 +377,7 @@ class SolitaireGame extends React.Component {
            }
        }
        // Otherwise, transfer card is Ace && foundation stack is empty, so don't need to compare card values
-        
+
        // At this point, we know it's a legal move so we can transfer the card from stack1 to stack2
        stack2.push(transferCard);
 
@@ -424,7 +424,7 @@ class SolitaireGame extends React.Component {
        var stacks = this.state.stacks;
        stacks["stock"] = stock;
        stacks["waste"] = waste;
-        
+
        this.setState({
            // Reassign this.state.stacks to reflect the new changes
            stacks: stacks
@@ -469,7 +469,7 @@ class SolitaireGame extends React.Component {
        var stacks = this.state.stacks;
        stacks["stock"] = stock;
        stacks["waste"] = waste;
-    
+
        this.setState({
            // Reassign this.state.stacks to reflect the new changes
            stacks: stacks
@@ -482,252 +482,51 @@ class SolitaireGame extends React.Component {
        // but sometime during the rendering, one of the cards from the stock gets moved back to the waste
    };
 
-   render() {
-       var tableau1;
-       var tableau2;
-       var tableau3;
-       var tableau4;
-       var tableau5;
-       var tableau6;
-       var tableau7;
+    render() {
+        let tableauStacks = [];
+        let foundationStacks = [];
+        for (let i = 1; i <= 7; i++) {
+            tableauStacks.push(
+                <TableauStack
+                    stack={this.state.stacks[`tableau${i}`]}
+                    handleTableauClick={this.handleTableauClick}
+                    index={i}
+                />
+            );
+        }
+        ['C', 'D', 'H', 'S'].forEach((suit, index) => {
+            foundationStacks.push(
+                <FoundationStack
+                    stack={this.state.stacks[`foundation${suit}`]}
+                    handleFoundationClick={this.handleFoundationClick}
+                    suit={suit}
+                    index={index}
+                />
+            );
+        });
 
-       // For the tableau stacks, map each card object to a SolitaireCard component so it can be rendered
-
-       if (this.state.stacks.tableau1.length === 0) {
-           tableau1 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
-       } else {
-           tableau1 = this.state.stacks.tableau1?.map((c, index) => 
-               <SolitaireCard 
-                   key={index}
-                   card={c.card}
-                   suit={c.suit}
-                   deck={c.deck}
-                   faceUp={c.faceUp}
-               />
-           );
-       }
-
-       if (this.state.stacks.tableau2.length === 0) {
-           tableau2 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
-       } else {
-           tableau2 = this.state.stacks.tableau2?.map((c, index) => 
-               <SolitaireCard 
-                   key={index}
-                   card={c.card}
-                   suit={c.suit}
-                   deck={c.deck}
-                   faceUp={c.faceUp}
-               />
-           );
-       }
-
-       if (this.state.stacks.tableau3.length === 0) {
-           tableau3 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
-       } else {
-           tableau3 = this.state.stacks.tableau3?.map((c, index) => 
-               <SolitaireCard 
-                   key={index}
-                   card={c.card}
-                   suit={c.suit}
-                   deck={c.deck}
-                   faceUp={c.faceUp}
-               />
-           );
-       }
-
-       if (this.state.stacks.tableau4.length === 0) {
-           tableau4 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
-       } else {
-           tableau4 = this.state.stacks.tableau4?.map((c, index) => 
-               <SolitaireCard 
-                   key={index}
-                   card={c.card}
-                   suit={c.suit}
-                   deck={c.deck}
-                   faceUp={c.faceUp}
-               />
-           );
-       }
-
-       if (this.state.stacks.tableau5.length === 0) {
-           tableau5 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
-       } else {
-           tableau5 = this.state.stacks.tableau5?.map((c, index) => 
-               <SolitaireCard 
-                   key={index}
-                   card={c.card}
-                   suit={c.suit}
-                   deck={c.deck}
-                   faceUp={c.faceUp}
-               />
-           );
-       }
-
-       if (this.state.stacks.tableau6.length === 0) {
-           tableau6 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
-       } else {
-           tableau6 = this.state.stacks.tableau6?.map((c, index) => 
-               <SolitaireCard 
-                   key={index}
-                   card={c.card}
-                   suit={c.suit}
-                   deck={c.deck}
-                   faceUp={c.faceUp}
-               />
-           );
-       }
-
-       if (this.state.stacks.tableau7.length === 0) {
-           tableau7 = <img src='/static/img/games/solitaire/stack-placeholder.png'/>;
-       } else {
-           tableau7 = this.state.stacks.tableau7?.map((c, index) => 
-               <SolitaireCard 
-                   key={index}
-                   card={c.card}
-                   suit={c.suit}
-                   deck={c.deck}
-                   faceUp={c.faceUp}
-               />
-           );
-       }
-
-       // Check if foundations are empty. If they are, render a slightly transparent image to indicate
-       // to the user that the foundations are empty. Otherwise, just render the top card (face up) in each foundation stack
-       var foundationC;
-       var foundationD;
-       var foundationH;
-       var foundationS;
-       var Clength = this.state.stacks.foundationC.length;
-       var Dlength = this.state.stacks.foundationD.length;
-       var Hlength = this.state.stacks.foundationH.length;
-       var Slength = this.state.stacks.foundationS.length;
-       if (Clength === 0) {
-           foundationC = "/static/img/games/solitaire/paris/foundationC.png";
-       } else {
-           var top = this.state.stacks.foundationC[Clength-1];
-           foundationC = "/static/img/games/solitaire/paris/" + top["card"] + top["suit"] + ".1.jpeg";
-       }
-       if (Dlength === 0) {
-           foundationD = "/static/img/games/solitaire/paris/foundationD.png";
-       } else {
-           var top = this.state.stacks.foundationD[Dlength-1];
-           foundationD = "/static/img/games/solitaire/paris/" + top["card"] + top["suit"] + ".1.jpeg";
-            
-       }
-       if (Hlength === 0) {
-           foundationH = "/static/img/games/solitaire/paris/foundationH.png";
-       } else {
-           var top = this.state.stacks.foundationH[Hlength-1];
-           foundationH = "/static/img/games/solitaire/paris/" + top["card"] + top["suit"] + ".1.jpeg";
-            
-       }
-       if (Slength === 0) {
-           foundationS = "/static/img/games/solitaire/paris/foundationS.png";
-       } else {
-           var top = this.state.stacks.foundationS[Slength-1];
-           foundationS = "/static/img/games/solitaire/paris/" + top["card"] + top["suit"] + ".1.jpeg";
-            
-       }
-
-       // Render stock and waste piles
-       // If stock is empty, display the 'refresh stock' button so the user can refill the stock
-       var stock;
-       console.log("this.state.stacks.stock.length: " + this.state.stacks.stock.length);
-       if (this.state.stacks.stock.length > 0) {
-           stock = <img src='/static/img/games/solitaire/blue-back.jpeg'/>;
-       } else {
-           stock = <button onClick={this.refreshStock}>Refresh Stock</button>;
-       }
-
-       // If the waste is empty, display a placeholder image to indicate it's empty
-       // Otherwise, just render the top card (card up)
-       var waste;
-       console.log("this.state.stacks.waste.length: " + this.state.stacks.waste.length);
-       if (this.state.stacks.waste.length > 0) {
-           var Wlength = this.state.stacks.waste.length;
-           var top = this.state.stacks.waste[Wlength-1];
-           waste = "/static/img/games/solitaire/paris/" + top["card"] + top["suit"] + ".1.jpeg";
-       } else if (this.state.stacks.waste.length === 0) {
-           waste = "/static/img/games/solitaire/stack-placeholder.png";
-       }
-        
-       return (
-           <div className='solitaireBoard'>
-
-               <div className='stockWaste'>
-                   <div className='solitaireStock' onClick={() => this.handleStockClick()}>
-                       {stock}
-                   </div>
-
-                   <div className='solitaireWaste' onClick={() => this.handleWasteClick()}>
-                       <img src={waste}></img>
-                   </div>
-               </div>
-
-               <div className='tableaus'>
-                   <div className='solitaireStack' onClick={() => this.handleTableauClick("tableau1")}>
-                       {tableau1}
-                   </div>
-
-                   <div className='solitaireStack' onClick={() => this.handleTableauClick("tableau2")}>
-                       {tableau2}
-                   </div>
-
-                   <div className='solitaireStack' onClick={() => this.handleTableauClick("tableau3")}>
-                       {tableau3}
-                   </div>
-
-                   <div className='solitaireStack' onClick={() => this.handleTableauClick("tableau4")}>
-                       {tableau4}
-                   </div>
-
-                   <div className='solitaireStack' onClick={() => this.handleTableauClick("tableau5")}>
-                       {tableau5}
-                   </div>
-
-                   <div className='solitaireStack' onClick={() => this.handleTableauClick("tableau6")}>
-                       {tableau6}
-                   </div>
-
-                   <div className='solitaireStack' onClick={() => this.handleTableauClick("tableau7")}>
-                       {tableau7}
-                   </div>
-               </div>
-
-               <div className='foundations'>
-                   <div className='solitaireFoundation' onClick={() => this.handleFoundationClick("foundationC")}>
-                       <img src={foundationC}/>
-                   </div>
-                   <div className='solitaireFoundation' onClick={() => this.handleFoundationClick("foundationD")}>
-                       <img src={foundationD}/>
-                   </div>
-                   <div className='solitaireFoundation' onClick={() => this.handleFoundationClick("foundationH")}>
-                       <img src={foundationH}/>
-                   </div>
-                   <div className='solitaireFoundation' onClick={() => this.handleFoundationClick("foundationS")}>
-                       <img src={foundationS}/>
-                   </div>
-               </div>
-
-
-               {/* <div className='solitaireStack'>
-                    <SolitaireCard
-                        card={"J"}
-                        suit={"C"}
-                        deck={"paris"}
-                        faceUp={1}
-                    />
-                    <SolitaireCard
-                        card={"J"}
-                        suit={"C"}
-                        deck={"paris"}
-                        faceUp={1}
-                    />
-                </div> */}
-
-           </div>
-       );
-   };
+        return (
+            <Container>
+                <Row className="justify-content-md-center">
+                    <Col md={4} className='stockWaste'>
+                        <StockWaste
+                            stock={this.state.stacks.stock}
+                            waste={this.state.stacks.waste}
+                            handleStockClick={this.handleStockClick}
+                            handleWasteClick={this.handleWasteClick}
+                            refreshStock={this.refreshStock}
+                        />
+                    </Col>
+                    <Col md={4} className='tableaus'>
+                        {tableauStacks}
+                    </Col>
+                    <Col md={4} className='foundations'>
+                        {foundationStacks}
+                    </Col>
+                </Row>
+            </Container>
+        );
+    };
 }
 
 export default SolitaireGame;

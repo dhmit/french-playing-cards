@@ -45,5 +45,7 @@ urlpatterns = [
     path('tarot/tarot-deck', views.search, name='TarotDeck'),
     path('tarot/tarot-history', views.search, name='TarotHistory'),
     path('games', views.games, name='games'),
+    path('solitaire', views.solitaire, name='solitaire'),
+    path('divination', views.games, name='divination'),
     path('bibliography', views.bibliography, name='bibliography')
 ]

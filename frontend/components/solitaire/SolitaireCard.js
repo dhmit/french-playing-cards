@@ -8,9 +8,7 @@ Fetches the correct card image from the Soliatire img directory `/static/img/gam
 */
 
 const SolitaireCard = ({card, suit, _deck, faceUp}) => {
-    
     // TODO(ra): use deck to choose image image
-    //
     if (Boolean(faceUp)) {
         var cardStr = String(card);
         var suitStr = String(suit);

@@ -22,6 +22,8 @@ import TarotHistory from "./components/pages/TarotHistory";
 
 import Search from "./components/pages/DatabaseSearch";
 import Games from "./components/pages/Games";
+import Solitaire from "./components/pages/Solitaire";
+import DivinationGame from "./components/DivinationGame";
 import Bibliography from "./components/pages/Bibliography";
 
 ReactDOM.render(
@@ -35,6 +37,8 @@ ReactDOM.render(
                         <Route exact path="/about" element={<About />} />
                         <Route exact path="/history" element={<History />} />
                         <Route exact path="/manufacture" element={<Manufacture />} />
+                        <Route exact path="/solitaire" element={<Solitaire />} />
+                        <Route exact path="/divination" element={<DivinationGame />} />
                         <Route exact path="/material-aspects" element={<Material />} />
                         <Route exact path="/material-aspects/fronts" element={<Fronts />} />
                         <Route exact path="/material-aspects/backs" element={<Backs />} />
