@@ -1,5 +1,4 @@
 import React from "react";
-import SolitaireCard from "./SolitaireCard";
 import StockWaste from "./StockWaste";
 import FoundationStack from "./FoundationStack";
 import TableauStack from "./TableauStack";
