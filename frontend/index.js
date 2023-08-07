@@ -22,7 +22,8 @@ import TarotHistory from "./components/pages/TarotHistory";
 
 import Search from "./components/pages/DatabaseSearch";
 import Games from "./components/pages/Games";
-import Solitaire from "./components/pages/Solitaire";
+import SolitaireSelect from "./components/pages/Solitaire";
+import SolitaireGame from "./components/solitaire/SolitaireGame";
 import DivinationGame from "./components/DivinationGame";
 import Bibliography from "./components/pages/Bibliography";
 
@@ -37,7 +38,10 @@ ReactDOM.render(
                         <Route exact path="/about" element={<About />} />
                         <Route exact path="/history" element={<History />} />
                         <Route exact path="/manufacture" element={<Manufacture />} />
-                        <Route exact path="/solitaire" element={<Solitaire />} />
+                        <Route exact path="/solitaire/select" element={<SolitaireSelect />} />
+                        <Route exact path="/solitaire/play/paris" element={<SolitaireGame deck="paris"/>} />
+                        <Route exact path="/solitaire/play/dugourc" element={<SolitaireGame deck="dugourc"/>} />
+                        <Route exact path="/solitaire/play/david" element={<SolitaireGame deck="david"/>} />
                         <Route exact path="/divination" element={<DivinationGame />} />
                         <Route exact path="/material-aspects" element={<Material />} />
                         <Route exact path="/material-aspects/fronts" element={<Fronts />} />

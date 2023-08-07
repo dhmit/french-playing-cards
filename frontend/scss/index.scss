@@ -50,8 +50,8 @@ button:hover {
     transition: color 0.3s ease;
 
     border-radius: 4px;
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: top;
     text-decoration: none;
 }
 
@@ -453,12 +453,17 @@ button:hover {
 .solitaire-game {
     max-height: 80vh;
     margin-top: 1rem;
+    padding: 1rem;
     border: 1px solid black;
 
     .game-card {
         max-width: 8vw;
-        padding: 1rem;
+        margin-right: 1rem;
         border: 0;
+
+        &.active {
+            border: 2px solid black;
+        }
     }
 
     .stock-waste-container {
@@ -478,10 +483,13 @@ button:hover {
     }
 
     .tableaus {
+        padding: 1rem;
         display: flex;
     }
 
     .tableau-stack {
+        margin-right: 2rem;
+
         .game-card:not(:first-child) {
             margin-top: -10vh;
         }
@@ -493,5 +501,8 @@ button:hover {
     }
 
     .foundation-stack {
+        &.empty {
+            opacity: 0.5;
+        }
     }
 }

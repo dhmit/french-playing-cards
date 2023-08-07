@@ -1,13 +1,32 @@
 import React from 'react';
+import SolitaireCard from './SolitaireCard';
 
-const StockWaste = ({ stock, waste, handleStockClick, handleWasteClick, refreshStock }) => {
+const StockWaste = ({
+    stock,
+    waste,
+    handleStockClick,
+    handleWasteClick,
+    refreshStock,
+    wasteActive,
+    deck
+}) => {
     const stockCard = stock.length > 0
         ? <img className="game-card" src='/static/img/games/solitaire/blue-back.jpeg'/>
         : <button onClick={refreshStock}>Refresh Stock</button>;
 
-    const wasteCard = waste.length > 0
-        ? `/static/img/games/solitaire/paris/${waste[waste.length-1]["card"]}${waste[waste.length-1]["suit"]}.1.jpeg`
-        : "/static/img/games/solitaire/stack-placeholder.png";
+    let wasteCard;
+    if (waste.length > 0) {
+        const wasteCardData = waste[waste.length-1];
+        wasteCard = <SolitaireCard
+                        card={wasteCardData.card}
+                        suit={wasteCardData.suit}
+                        deck={deck}
+                        faceUp={true}
+                        active={wasteActive}
+                    />;
+    } else {
+        wasteCard = <img className="game-card" src="/static/img/games/solitaire/stack-placeholder.png" />;
+    }
 
     return (
         <React.Fragment>
@@ -15,7 +34,7 @@ const StockWaste = ({ stock, waste, handleStockClick, handleWasteClick, refreshS
                 {stockCard}
             </div>
             <div className='waste' onClick={handleWasteClick}>
-                <img className="game-card" src={wasteCard}></img>
+                {wasteCard}
             </div>
         </React.Fragment>
     );

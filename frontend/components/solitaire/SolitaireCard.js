@@ -1,5 +1,4 @@
 import React from "react";
-import {PropTypes} from "prop-types";
 
 /*
 This functional component does not manage any state or data, it only renders the card image based
@@ -7,24 +6,31 @@ on whether the card is face up or face down
 Fetches the correct card image from the Soliatire img directory `/static/img/games/solitaire/`
 */
 
-const SolitaireCard = ({card, suit, _deck, faceUp}) => {
-    // TODO(ra): use deck to choose image image
-    let imgSrc;
-    if (Boolean(faceUp)) {
-        var cardStr = String(card);
-        var suitStr = String(suit);
-        imgSrc = "/static/img/games/solitaire/paris/" + cardStr + suitStr + ".1.jpeg";
-    } else {
-        imgSrc = "/static/img/games/solitaire/blue-back.jpeg";
+const SolitaireCard = ({card, suit, deck, faceUp, active}) => {
+    let imgSrc = "/static/img/games/solitaire/blue-back.jpeg";
+    if (faceUp) {
+        if (["K", "Q", "J"].indexOf(card) === -1) {
+            // normal number cards from generic deck
+            imgSrc = "/static/img/games/solitaire/paris/" + card + suit + ".1.jpeg";
+        } else {
+            // face cards from specific decks
+            let baseUrl;
+            if (deck === "paris") {
+                baseUrl = "/static/img/B/paris/";
+            } else if (deck === "dugourc") {
+                baseUrl = "/static/img/D/dugourc/";
+            } else if (deck === "david") {
+                baseUrl = "/static/img/A/david/";
+            }
+
+            imgSrc = baseUrl + card + suit + ".1.jpeg";
+        }
     }
 
-    return <img className='game-card' src={imgSrc}/>;
-};
-SolitaireCard.propTypes = {
-    card: PropTypes.any, // TODO(ra): @NOCHECKIN fix this!
-    suit: PropTypes.any, // TODO(ra): @NOCHECKIN fix this!
-    _deck: PropTypes.any, // TODO(ra): @NOCHECKIN fix this!
-    faceUp: PropTypes.boolean
+    let className = 'game-card';
+    if (active) className += ' active';
+
+    return <img className={className} src={imgSrc}/>;
 };
 
 export default SolitaireCard;

@@ -16,7 +16,7 @@ const Games = () => {
             img: "/static/img/games/solitaire.jpg",
             title: t('games.solitaire.title'),
             subtitle: t('games.solitaire.subtitle'),
-            link: "/solitaire",
+            link: "/solitaire/select",
         },
         {
             img: "/static/img/games/divination.jpg",
