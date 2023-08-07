@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import csv
 
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
@@ -11,12 +12,13 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         try:
-            self.populate_db()
+            self.populate_playing_cards()
+            self.populate_tarot()
             self.stdout.write(self.style.SUCCESS('Successfully populated the database'))
         except Exception as e:
             raise CommandError('Failed to populate the database: "%s"' % e)
 
-    def populate_db(self):
+    def populate_playing_cards(self):
         data_folder = os.path.join(settings.PROJECT_ROOT, 'card_data')
         periods = ["A", "B", "D"]
         for period in periods:
@@ -26,14 +28,14 @@ class Command(BaseCommand):
 
             for file_name in os.listdir(period_folder):
                 if not file_name.endswith(".xlsx"):
-                    continue 
+                    continue
 
                 deck_name = os.path.splitext(file_name)[0]
                 deck_data_frame = pd.read_excel(os.path.join(period_folder, file_name))
                 card_data = deck_data_frame.to_dict(orient="records")
 
                 # create and save the deck
-                deck_instance = Deck(name=deck_name, 
+                deck_instance = Deck(name=deck_name,
                                      period=period,
                                      start_date=card_data[0]["Start Date"],
                                      end_date=card_data[0]["End Date"],
@@ -83,12 +85,12 @@ class Command(BaseCommand):
     def populate_tarot(self):
         tarot_cards = []
         data_folder = os.path.join(settings.PROJECT_ROOT, 'card_data')
-        tarot_english_csv_path =  os.path.join(data_folder, 'tarot', 'tarot_english.csv')
-        tarot_francais_csv_path =  os.path.join(data_folder, 'tarot', 'tarot_francais.csv')
+        tarot_english_csv_path = os.path.join(data_folder, 'tarot', 'tarot_english.csv')
+        tarot_francais_csv_path = os.path.join(data_folder, 'tarot', 'tarot_francais.csv')
 
         with open(tarot_english_csv_path, newline='', encoding='utf-8') as csvfile:
             tarot_cards = list(csv.DictReader(csvfile))
-        
+
         for card in tarot_cards:
             image_string = card["number"] + card["orientation"] + ".jpeg"
 
@@ -105,7 +107,7 @@ class Command(BaseCommand):
 
         with open(tarot_francais_csv_path, newline='', encoding='utf-8') as csvfile:
             tarot_cards = list(csv.DictReader(csvfile))
-        
+
         for card in tarot_cards:
             image_string = card["number"] + card["orientation"] + ".jpeg"
 

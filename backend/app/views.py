@@ -32,6 +32,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.forms.models import model_to_dict
 from django.db.models import Q
+from django.conf import settings
 
 from .models import Card, Deck, Tarot
 
@@ -62,7 +63,12 @@ def divination_card_request(request):
 
 def generate_prediction(request):
     question = json.loads(request.body.decode('utf-8')).get("question", None)
-    openai.api_key = os.getenv("OPENAI_API_KEY")
+
+    # Grab api key from file
+    api_key_file = os.path.join(settings.PROJECT_ROOT, "openai_key")
+    with open(api_key_file, 'r', encoding='utf-8') as file:
+        openai_key = file.readline().strip()
+    openai.api_key = openai_key
 
     if question:
         completion = openai.ChatCompletion.create(

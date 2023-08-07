@@ -126,7 +126,7 @@ const DivinationGame = () => {
 
             // compute keywords
             const keywords = getKeywords(chosen);
-            const keyword_string = "Your keywords are: " + [...keywords].join(", ");
+            const keyword_string = "The keywords based on your cards are: " + [...keywords].join(", ");
             setKeywords(keyword_string);
 
             // get reading from keywords
