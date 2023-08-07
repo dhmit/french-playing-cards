@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import LinkCard from "../LinkCard";
+import { Row, Col, Container } from "react-bootstrap";
 
 const Home = () => {
 
@@ -38,20 +39,36 @@ const Home = () => {
         },
     ];
 
-    return (<>
+    return (<Container>
         <h2 className="page-header">{t("home.header")}</h2>
-        <div id="home-card-grid" className="d-flex flex-wrap justify-content-around">
-            {cardData.map((card, index) => (
-                <LinkCard 
-                    key={index} 
-                    img={card.img} 
-                    title={card.title} 
-                    subtitle={card.subtitle} 
-                    link={card.link} 
-                />
-            ))}
-        </div>
-    </>);
+        <Row>
+            <Col
+                xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }}
+                id="home-card-grid" className="d-flex flex-wrap justify-content-around">
+                {cardData.map((card, index) => (
+                    <LinkCard
+                        key={index}
+                        img={card.img}
+                        title={card.title}
+                        subtitle={card.subtitle}
+                        link={card.link}
+                    />
+                ))}
+            </Col>
+            <Col
+                xs={{ span: 12, order: 1 }} md={{ span: 6, order: 2 }}>
+                <p className="lead">
+                    {t('home.blurb.p1')}
+                </p>
+                <p className="lead">
+                    {t('home.blurb.p2')}
+                </p>
+                <p className="lead">
+                    {t('home.blurb.p3')}
+                </p>
+            </Col>
+        </Row>
+    </Container>);
 };
 
 export default Home;

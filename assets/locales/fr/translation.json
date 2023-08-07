@@ -2,15 +2,59 @@
     "navigation" : {
         "about": "À propos",
         "bibliography": "Bibliographie",
-        "explore": "explorer!",
+        "explore": "Explorer",
         "games": "Jouez!",
-        "history": "L'histoire", 
-        "home": "Bienvenu"
+        "history": "Histoire",
+        "home": "Bienvenue"
     },
     "home": {
         "header": "Cartes à jouer françaises, 1650-1850",
-        "blurb": "De 1650 à 1850, les Français ont propagé les Lumières. Ils ont gagné et perdu un empire, puis en ont commencé un autre, et ont renversé une monarchie vieille de plusieurs siècles. Ils ont également joué aux cartes. Ce site explore l'histoire des cartes à jouer françaises de cette période comme une source inhabituelle et éclairante pour l'histoire de l'Ancien Régime, de la Révolution française et du début du XIXe siècle en France. Vous y trouverez des détails sur <1>les procédures de fabrication</1>, <3>les aspects matériels</3> des cartes à jouer, l'évolution de leur <5>iconographie</5> et un aperçu sur des <7>tarots</7> et l’histoire de <9>cartomancie</9>. <11>Une bibliographie</11> fournit des suggestions de lectures complémentaires. Et pour ceux d'entre vous qui souhaitent faire une partie, nous vous proposerons de vous essayer à certains <13>des jeux</13> les plus populaires de l'époque, en utilisant le paquet de cartes historique de votre choix !",
-        "trans": "For the English language version of the site, please click on “en” at the top of the page on the right." 
+        "blurb": {
+            "p1": "De 1650 à 1850, les Français ont propagé les Lumières. Ils ont gagné et perdu un empire, puis en ont commencé un autre, et ont renversé une monarchie vieille de plusieurs siècles.",
+            "p2": "Ils ont également joué aux cartes.",
+            "p3": "Ce site explore l'histoire des cartes à jouer françaises de cette période comme une source inhabituelle et éclairante pour l'histoire de l'Ancien Régime, de la Révolution française et du début du XIXe siècle en France."
+        },
+        "trans": "For the English language version of the site, please click on “en” at the top of the page on the right.",
+        "games": {
+            "title": "Jouez!",
+            "subtitle": "Vivez l'expérience des jeux de solitaire et de tarot historiques de l'époque en utilisant le jeu de cartes de votre choix !"
+        },
+        "about": {
+            "title": "À propos",
+            "subtitle": "Découvrez le projet et rencontrez l'équipe qui en est à l'origine."
+        },
+        "explore": {
+            "title": "Explorer",
+            "subtitle": "Feuilletez et recherchez à travers les différents jeux de cartes et images, et explorez comment l'iconographie évolue avec le temps."
+        },
+        "history": {
+            "title": "Histoire",
+            "subtitle": "Apprenez comment les cartes à jouer étaient fabriquées et utilisées, y compris les origines de la divination moderne par les cartes de tarot, et étudiez l'évolution de l'iconographie des cartes pendant cette période."
+        }
+    },
+    "history" : {
+        "header": "History",
+        "intro": "L'iconographie, la taxation, la fabrication et l'utilisation des cartes à jouer en France ont subi des changements importants entre 1650 et 1850. Vous pouvez suivre ces évolutions en vous rendant aux pages liées ci-dessous. Notre bibliographie propose des suggestions de lectures complémentaires.",
+        "manufacture": {
+            "title": "Fabrication",
+            "subtitle": "Découvrez les techniques, les matériaux utilisés et les défis auxquels font face les fabricants de cartes à jouer."
+        },
+        "material": {
+            "title": "Aspects matériels",
+            "subtitle": "Découvrez comment les cartes ont été fabriquées. Explorez les détails de leurs faces, de leurs dos et des enveloppes dans lesquelles elles étaient emballées."
+        },
+        "iconography": {
+            "title": "Iconographie",
+            "subtitle": "Étudiez l'évolution de l'iconographie des jeux de cartes français, qui reflète des changements culturels, politiques et sociaux de l'époque."
+        },
+        "tarot": {
+            "title": "Cartes de tarot",
+            "subtitle": "Découvrez comment les Français ont remodelé le jeu populaire de tarot en un outil de divination pendant cette période."
+        },
+        "bibliography": {
+            "title": "Bibliographie",
+            "subtitle": "Une liste étendue de références pour approfondir vos lectures et étudier en profondeur l'histoire des cartes à jouer françaises."
+        }
     },
     "about": {
         "header": "À propos de ce site web",
@@ -337,7 +381,7 @@
     },
     "games": {
         "header": "Jouez !",
-        "play": "En cours de réalisation"
+        "play": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elit purus, molestie in quam id, luctus dignissim lectus. Proin mattis facilisis est, vel pretium urna. Vivamus eu accumsan est. Vestibulum eu risus nec tortor lobortis tristique eget vitae elit. Sed consequat mollis condimentum. Praesent accumsan, orci vitae rhoncus finibus, mi ipsum mollis nisi, vitae sollicitudin dolor metus ut enim. Donec tempor velit et orci viverra bibendum. Nam massa quam, volutpat tincidunt ligula in, varius volutpat metus. Duis fringilla dui a arcu scelerisque, ac finibus risus rhoncus. Donec dictum hendrerit ipsum, eu eleifend massa vestibulum id. Quisque sit amet malesuada ligula, sit amet ultrices nunc."
     },
     "bibliography": {
         "header": "Bibliographie",

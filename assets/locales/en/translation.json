@@ -9,10 +9,14 @@
     },
     "home" : {
         "header": "French Playing Cards, 1650-1850",
-        "blurb": "From 1650 to 1850, the French spread enlightenment, gained and lost one empire and began another, and overthrew a centuries-old monarchy.  They also played card games.  This site explores the history of French playing cards in this period as an unusual and insightful source for the history of the Old Regime, the French Revolution, and early nineteenth-century France.  You will find details about <1>manufacturing procedures</1>, the <3>material aspects</3> of the playing cards, the changing <5>iconography</5> of French face cards, and <7>tarot cards</7> and the history of <9>cartomancy</9>.  A <11>bibliography</11> provides suggestions for further reading.  And for those of you interested in gaming, we will offer the opportunity to play a few of the most popular <13>card games</13> of the period, using the historical deck of cards of your choice!",
+        "blurb": {
+            "p1": "From 1650 to 1850, the French spread enlightenment, gained and lost one empire and began another, and overthrew a centuries-old monarchy.",
+            "p2": "They also played card games.",
+            "p3": "This site explores the history of French playing cards in this period as an unusual and insightful source for the history of the Old Regime, the French Revolution, and early nineteenth-century France."
+        },
         "trans": "Pour accéder à la version française du site, cliquez sur “fr” en haut de la page à droit.",
         "games": {
-            "title": "Games",
+            "title": "Play!",
             "subtitle": "Experience historical tarot and solitaire games of the period, using the deck of cards of your choice!"
         },
         "about": {
@@ -25,7 +29,7 @@
         },
         "history": {
             "title": "History",
-            "subtitle": "Trace the trajectory of the Old Regime, the French Revolution, and early nineteenth-century France through the lens of its popular card games."
+            "subtitle": "Learn how playing cards were made and used, including the origins of modern tarot card divination, and study the changing iconography of face cards in this period."
         }
     },
     "about": {
@@ -46,7 +50,7 @@
     },
     "history" : {
         "header": "History",
-        "intro": "The history of French playing cards from 1650 to 1850 is a fascinating journey through culture, art, and tradition. This section will guide you through different aspects of this history, including the manufacturing procedures, material aspects, changing iconography, the intriguing world of tarot cards, and a comprehensive bibliography for further reading.",
+        "intro": "The iconography, taxation, manufacture, and uses of playing cards in France underwent substantial changes from 1650 to 1850. You can follow these changes by visiting the pages linked below.  Our bibliography page provides suggestions for further reading.",
         "manufacture": {
             "title": "Manufacture",
             "subtitle": "Learn about the techniques, materials used, and the challenges faced by the manufacturers."
@@ -61,7 +65,7 @@
         },
         "tarot": {
             "title": "Tarot",
-            "subtitle": "Unravel the mystery and allure of tarot cards, their symbolism, and their role in fortune-telling and divination."
+            "subtitle": "Discover how the French refashioned the centuries-old deck of tarot cards into a divination tool in this period."
         },
         "bibliography": {
             "title": "Bibliography",
