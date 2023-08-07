@@ -2,7 +2,7 @@ import React from 'react';
 
 const StockWaste = ({ stock, waste, handleStockClick, handleWasteClick, refreshStock }) => {
     const stockCard = stock.length > 0
-        ? <img src='/static/img/games/solitaire/blue-back.jpeg'/>
+        ? <img className="game-card" src='/static/img/games/solitaire/blue-back.jpeg'/>
         : <button onClick={refreshStock}>Refresh Stock</button>;
 
     const wasteCard = waste.length > 0
@@ -11,11 +11,11 @@ const StockWaste = ({ stock, waste, handleStockClick, handleWasteClick, refreshS
 
     return (
         <React.Fragment>
-            <div className='solitaireStock' onClick={handleStockClick}>
+            <div className='stock' onClick={handleStockClick}>
                 {stockCard}
             </div>
-            <div className='solitaireWaste' onClick={handleWasteClick}>
-                <img src={wasteCard}></img>
+            <div className='waste' onClick={handleWasteClick}>
+                <img className="game-card" src={wasteCard}></img>
             </div>
         </React.Fragment>
     );

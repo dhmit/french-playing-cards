@@ -505,9 +505,9 @@ class SolitaireGame extends React.Component {
         });
 
         return (
-            <Container>
-                <Row className="justify-content-md-center">
-                    <Col md={4} className='stockWaste'>
+            <Container className="solitaire-game">
+                <Row className="stock-waste-foundations">
+                    <Col md={4} className='stock-waste-container'>
                         <StockWaste
                             stock={this.state.stacks.stock}
                             waste={this.state.stacks.waste}
@@ -516,12 +516,13 @@ class SolitaireGame extends React.Component {
                             refreshStock={this.refreshStock}
                         />
                     </Col>
-                    <Col md={4} className='tableaus'>
-                        {tableauStacks}
-                    </Col>
-                    <Col md={4} className='foundations'>
+                    <Col md={8} className='foundations justify-content-end'>
                         {foundationStacks}
                     </Col>
+                </Row>
+                <Row className="tableaus">
+                    <Col xs={1}></Col>
+                    {tableauStacks}
                 </Row>
             </Container>
         );

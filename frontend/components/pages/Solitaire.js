@@ -7,6 +7,7 @@ const Solitaire = () => {
     }, []);
 
     return (<>
+        <h1>Solitaire</h1>
         <SolitaireGame/>
         <p className="games-header">Select a deck to play Solitaire with:</p>
         <br/>

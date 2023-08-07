@@ -9,22 +9,16 @@ Fetches the correct card image from the Soliatire img directory `/static/img/gam
 
 const SolitaireCard = ({card, suit, _deck, faceUp}) => {
     // TODO(ra): use deck to choose image image
+    let imgSrc;
     if (Boolean(faceUp)) {
         var cardStr = String(card);
         var suitStr = String(suit);
-        var imageName = "/static/img/games/solitaire/paris/" + cardStr + suitStr + ".1.jpeg";
-        return (
-            <div className='solitaireCard'>
-                <img src={imageName}/>
-            </div>
-        );
+        imgSrc = "/static/img/games/solitaire/paris/" + cardStr + suitStr + ".1.jpeg";
     } else {
-        return (
-            <div className='solitaireCard'>
-                <img src={"/static/img/games/solitaire/blue-back.jpeg"}/>
-            </div>
-        );
+        imgSrc = "/static/img/games/solitaire/blue-back.jpeg";
     }
+
+    return <img className='game-card' src={imgSrc}/>;
 };
 SolitaireCard.propTypes = {
     card: PropTypes.any, // TODO(ra): @NOCHECKIN fix this!

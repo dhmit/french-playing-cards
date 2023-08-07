@@ -37,12 +37,12 @@ button:hover {
 }
 
 .link-card {
-    display: flex; /* make this a flex container */
-    flex-direction: column; /* stack children vertically */
-    justify-content: flex-end; /* align children towards the end of the main axis */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     flex-basis: 100%; /* by default, 1x4 grid */
-    min-height: 300px; /* set to your desired minimum height */
+    min-height: 300px;
     margin-bottom: 1rem;
 
     color: white;
@@ -446,104 +446,52 @@ button:hover {
 }
 
 /**********************************************************************
- * Games
- **********************************************************************/
-.games-header {
-    font-size: 150%;
-    font-weight: 200;
-    text-align: center;
-    margin-top: 1.5%;
-    color:var(--border-color);
-}
-
-#Games-Menu {
-    display: flex;
-}
-
-.Games-Menu-Item {
-    text-align: center;
-    margin-bottom: 10px;
-
-    a {
-        p {
-            font-size: 150%;
-            font-weight: 200;
-            color: #787878;
-            text-decoration: underline;
-        }
-
-        img {
-            width: 50%;
-        }
-    }
-}
-
-@media screen and (max-width: 500px) {
-    #Games-Menu {
-        display: block;
-    }
-}
-
-/**********************************************************************
  * Solitaire
  **********************************************************************/
-.solitaireBoard {
-    display: flex;
-    padding: 3%;
-    justify-content: center;
-    align-items: center;
+// NOTE(ryaan) 2023-08-07:
+// It might be better to just draw the layout in JS on mount and after the window is resized.
+.solitaire-game {
     max-height: 80vh;
-}
+    margin-top: 1rem;
+    border: 1px solid black;
 
-
-.stockWaste {
-    display: block;
-    background-color: transparent;
-    img {
-        width: 37%;
-        margin-bottom: 20%;
-        margin-top: 0%;
+    .game-card {
+        max-width: 8vw;
+        padding: 1rem;
+        border: 0;
     }
-    button {
-        width: 50%;
-        font-size: 14px;
-        padding-right: 20%;
-        margin-bottom: 20%;
+
+    .stock-waste-container {
+        display: flex;
+        button {
+            width: 50%;
+            font-size: 14px;
+            padding-right: 20%;
+            margin-bottom: 20%;
+        }
     }
-}
 
-.tableaus {
-    display: flex;
-    img {
-        margin-top: -150px;
-        max-width: 100%;
-        position: relative;
+    .stock {
     }
-}
 
-.solitaireStack {
-    display: block;
-}
-
-.foundations {
-    display: block;
-    background-color: transparent;
-    img {
-        width: 37%;
-        margin: 20%;
-        border: 2px solid var(--border-color);
+    .waste {
     }
-}
 
-.solitaireCard {
-    img {
-        width: 33%;
+    .tableaus {
+        display: flex;
     }
-}
 
+    .tableau-stack {
+        .game-card:not(:first-child) {
+            margin-top: -10vh;
+        }
+    }
 
-#Note {
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 2%;
+    .foundations {
+        display: flex;
+        background-color: transparent;
+    }
+
+    .foundation-stack {
+    }
 }

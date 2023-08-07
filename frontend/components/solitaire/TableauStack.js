@@ -14,7 +14,7 @@ const TableauStack = ({ stack, handleTableauClick, index }) => {
     );
 
     return (
-        <div key={index} className='solitaireStack' onClick={() => handleTableauClick(`tableau${index+1}`)}>
+        <div key={index} className='tableau-stack col-1' onClick={() => handleTableauClick(`tableau${index+1}`)}>
             {stackIsEmpty ? <img src='/static/img/games/solitaire/stack-placeholder.png'/> : stackCards}
         </div>
     );
