@@ -292,6 +292,8 @@
     },
     "search": {
         "header": "Vous pouvez utiliser cet outil pour feuilleter et rechercher à travers les différents jeux de cartes et images, et explorez comment l'iconographie évolue avec le temps.",
+        "cardSearch": "Recherche par carte",
+        "deckSearch": "Recherche par jeu",
         "placeholder": "Sélectionner...",
         "categories": {
             "period": {

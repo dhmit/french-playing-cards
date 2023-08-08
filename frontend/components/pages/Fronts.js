@@ -6,7 +6,7 @@ import { Container, Row, Col, Figure } from 'react-bootstrap';
 const Fronts = () => {
 
     React.useEffect(() => {
-        document.title = "Fronts | French Playing Cards";        
+        document.title = "Fronts | French Playing Cards";
     }, []);
     const {t} = useTranslation();
 
@@ -30,8 +30,8 @@ const Fronts = () => {
                         {t("material.fronts.intro.1")}
                         <br/>
                         <br/>
-                        {t("material.fronts.intro.2")} <a href='../iconography'>{t("material.fronts.intro.3")} </a>
-                        {t("material.fronts.intro.4")}  <a href='../iconography/search'>{t("material.fronts.intro.5")} </a>.
+                        {t("material.fronts.intro.2")} <a href='/iconography'>{t("material.fronts.intro.3")} </a>
+                        {t("material.fronts.intro.4")}  <a href='/explore'>{t("material.fronts.intro.5")} </a>.
                     </p>
                 </Col>
             </Row>

@@ -3,7 +3,7 @@ import axios from "axios";
 import Select from "react-select";
 import {withTranslation} from "react-i18next";
 import {PropTypes} from "prop-types";
-import {Loading} from  "./Loading";
+import {Loading} from  "../Loading";
 
 const SUIT_SYMBOLS = {
     H: "♥",

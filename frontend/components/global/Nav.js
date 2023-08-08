@@ -15,12 +15,12 @@ const NavBar = () => {
                     <Nav.Link as={NavLink} to="/">{t("navigation.home")}</Nav.Link>
                     <Nav.Link as={NavLink} to="/about">{t("navigation.about")}</Nav.Link>
                     <Nav.Link as={NavLink} to="/history">{t("navigation.history")}</Nav.Link>
-                    <Nav.Link as={NavLink} to="/iconography/search/">{t("navigation.explore")}</Nav.Link>
+                    <Nav.Link as={NavLink} to="/explore">{t("navigation.explore")}</Nav.Link>
                     <Nav.Link as={NavLink} to="/games">{t("navigation.games")}</Nav.Link>
                     <Nav.Link as={NavLink} to="/bibliography">{t("navigation.bibliography")}</Nav.Link>
                 </Nav>
                 <Nav className="ml-auto lang-button">
-                    <Nav.Link onClick={() => i18next.changeLanguage("en")} active={i18next.language === "en"}>EN</Nav.Link> 
+                    <Nav.Link onClick={() => i18next.changeLanguage("en")} active={i18next.language === "en"}>EN</Nav.Link>
                     <Nav.Link onClick={() => i18next.changeLanguage("fr")} active={i18next.language === "fr"}>FR</Nav.Link>
                 </Nav>
             </Navbar.Collapse>

@@ -23,7 +23,7 @@ const Home = () => {
             img: "/static/img/home/explore.jpg",
             title: t('home.explore.title'),
             subtitle: t('home.explore.subtitle'),
-            link: "/iconography/search",
+            link: "/explore",
         },
         {
             img: "/static/img/home/play.png",

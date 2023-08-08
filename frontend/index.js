@@ -20,7 +20,7 @@ import Tarot from "./components/pages/Tarot";
 import TarotDeck from "./components/pages/TarotDeck";
 import TarotHistory from "./components/pages/TarotHistory";
 
-import Search from "./components/pages/DatabaseSearch";
+import Explore from "./components/pages/Explore";
 import Games from "./components/pages/Games";
 import SolitaireSelect from "./components/pages/Solitaire";
 import SolitaireGame from "./components/solitaire/SolitaireGame";
@@ -48,7 +48,7 @@ ReactDOM.render(
                         <Route exact path="/material-aspects/backs" element={<Backs />} />
                         <Route exact path="/material-aspects/envelopes" element={<Envelopes />} />
                         <Route exact path="/iconography" element={<Iconography />} />
-                        <Route exact path="/iconography/search" element={<Search />} />
+                        <Route exact path="/explore" element={<Explore />} />
                         <Route exact path="/tarot" element={<Tarot />} />
                         <Route exact path="/tarot/tarot-deck" element={<TarotDeck />} />
                         <Route exact path="/tarot/tarot-history" element={<TarotHistory />} />

@@ -5,7 +5,7 @@ import {Trans, useTranslation} from "react-i18next";
 const Iconography = () => {
 
     React.useEffect(() => {
-        document.title = "Face Card Iconography | French Playing Cards";        
+        document.title = "Face Card Iconography | French Playing Cards";
     }, []);
 
     const {t} = useTranslation();
@@ -14,26 +14,26 @@ const Iconography = () => {
         <>
             <h2 className="page-header"> {t("iconography.header")} </h2>
 
-            <p className="search-link"><Trans i18nKey="iconography.linkUpper">Click <a href="iconography/search">HERE</a> to search our face card database</Trans></p>
+            <p className="search-link"><Trans i18nKey="iconography.linkUpper">Click <a href="/explore">HERE</a> to explore our face card database</Trans></p>
 
             <h3 className="iconography-header">{t("iconography.introduction.header")}</h3>
             <div id='IconographyIntro'>
                 <img src={"/static/img/misc/iconography-image.jpeg"}/>
                 <p>
                     <Trans i18nKey="iconography.introduction.blurb">
-                Our page on the changing “<a href="../material-aspects/fronts">fronts</a>” of playing cards offers variations on the Queen of Hearts 
-                manufactured in France from the Old Regime to the middle of the nineteenth century. In 
-                addition, we have a compiled a database of face card images for kings, queens, jacks, and 
-                some aces in all four suits during this time period, along with the accompanying metadata 
-                from the web site of the Bibliothèque nationale de France. Our database contains images and 
-                data from 24 decks of cards created during this period. The accompanying search tool allows 
-                users to search these images by filtering for time period, face card, suit, town, maker, and 
-                the fronts and backs of the cards. Users can thus customize comparisons of French face card 
+                Our page on the changing “<a href="../material-aspects/fronts">fronts</a>” of playing cards offers variations on the Queen of Hearts
+                manufactured in France from the Old Regime to the middle of the nineteenth century. In
+                addition, we have a compiled a database of face card images for kings, queens, jacks, and
+                some aces in all four suits during this time period, along with the accompanying metadata
+                from the web site of the Bibliothèque nationale de France. Our database contains images and
+                data from 24 decks of cards created during this period. The accompanying search tool allows
+                users to search these images by filtering for time period, face card, suit, town, maker, and
+                the fronts and backs of the cards. Users can thus customize comparisons of French face card
                 iconography during the 1644-1848 time period.
                     </Trans>
                     <br /> <br />
                     <Trans i18nKey="iconography.linkLower">
-                Click <a href="iconography/search">here</a> to search our face card database
+                Click <a href="/explore">here</a> to explore our face card database
                     </Trans>
                 </p>
             </div>
@@ -150,10 +150,6 @@ const Iconography = () => {
                         </div>
                     </div>
                 </div>
-
-                <p className="search-link"><Trans i18nKey="iconography.linkLower">
-                Click <a href="iconography/search">here</a> to search our face card database
-                </Trans></p>
             </div>
 
         </>

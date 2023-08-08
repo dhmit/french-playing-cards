@@ -293,6 +293,8 @@
     },
     "search": {
         "header": "Use this tool to browse and search through the different decks and images, and explore how the iconography changes over time.",
+        "cardSearch": "Card search",
+        "deckSearch": "Deck search",
         "placeholder": "Select...",
         "categories": {
             "period": {
