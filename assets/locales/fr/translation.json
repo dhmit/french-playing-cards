@@ -295,6 +295,11 @@
         "cardSearch": "Recherche par carte",
         "deckSearch": "Recherche par jeu",
         "placeholder": "Sélectionner...",
+        "ranks" : {
+            "K": "R",
+            "Q": "D",
+            "J": "V"
+        },
         "categories": {
             "period": {
                 "title": "Période",

@@ -129,6 +129,8 @@ class CardSearch extends React.Component {
                     cardNameClass += " red";
                 }
 
+                const cardRank = t("search.ranks." + card.rank);
+
                 return (
                     <li key={idx}>
                         <div style={styles}>
@@ -137,7 +139,7 @@ class CardSearch extends React.Component {
                                 {dates}
                             </p>
                             <p className={cardNameClass}>
-                                {card.rank}
+                                {cardRank}
                                 {SUIT_SYMBOLS[card.suit]}
                             </p>
                             <img className="card-image" src={"/static/img/" + card.image}/>
@@ -156,10 +158,11 @@ class CardSearch extends React.Component {
                     if (['H', 'D'].includes(card.suit)) {
                         cardNameClass += " red";
                     }
+                    const cardRank = t("search.ranks." + card.rank);
                     return (
                         <div className="deck-card" key={idx}>
                             <p className={cardNameClass}>
-                                {card.rank}
+                                {cardRank}
                                 {SUIT_SYMBOLS[card.suit]}
                             </p>
                             <p>
@@ -196,11 +199,11 @@ class CardSearch extends React.Component {
                     <div className="btn-group">
                         <a onClick={() => this.setMode(SearchMode.CARD)}
                            href="#" className={`btn btn-outline ${(this.state.mode === SearchMode.CARD) ? 'active' : ''}`}>
-                            Card Search
+                            {t('search.cardSearch')}
                         </a>
                         <a onClick={() => this.setMode(SearchMode.DECK)}
                            href="#" className={`btn btn-outline ${(this.state.mode === SearchMode.DECK) ? 'active' : ''}`}>
-                            Deck Search
+                            {t('search.deckSearch')}
                         </a>
                     </div>
 

@@ -1,17 +1,49 @@
 import React from "react";
 import axios from "axios";
 import i18next from "i18next";
+import { useTranslation } from "react-i18next";
+import {Modal} from "react-bootstrap";
 
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
 axios.defaults.xsrfCookieName = "csrftoken";
 
 const NUM_CARDS = 33;
 
+const WorkInProgressModal = ({showModal, handleClose}) => {
+    const { t } = useTranslation();
+    return (
+        <Modal show={showModal} onHide={handleClose}>
+            <Modal.Header closeButton></Modal.Header>
+            <Modal.Body>
+                <p>
+                    {t("divination.disclaimer.salutation")}
+                </p>
+                <p>
+                    {t("divination.disclaimer.p0")}
+                </p>
+                <p>
+                    {t("divination.disclaimer.p1")}
+                </p>
+                <p>
+                    {t("divination.disclaimer.p2")}
+                </p>
+                <p>
+                    {t("divination.disclaimer.signOff")}
+                </p>
+                <p>
+                    {t("divination.disclaimer.team")}
+                </p>
+            </Modal.Body>
+        </Modal>
+    );
+};
+
 const DivinationGame = () => {
     const [question, setQuestion] = React.useState("");
     const [cards, setCards] = React.useState([]);
     const [keywords, setKeywords] = React.useState("");
     const [reading, setReading] = React.useState("");
+    const [showModal, setShowModal] = React.useState(true);
 
     async function getCards(num) {
         let cardStrings = new Set();
@@ -137,8 +169,10 @@ const DivinationGame = () => {
         }
     }
 
-    return (
-        <div id="gamespace">
+    return (<>
+        <WorkInProgressModal showModal={showModal} handleClose={() => setShowModal(false)} />
+
+        <div id="divination">
             <h3>Ask a question to get a tarot reading!</h3>
             <input type="text" placeholder="Ask a question..." onChange={(e) => setQuestion(e.target.value)}/>
             <br />
@@ -153,11 +187,12 @@ const DivinationGame = () => {
             </div>
             <p>
                 {keywords}
-                <br /><br />
+            </p>
+            <p>
                 {reading}
             </p>
         </div>
-    );
+    </>);
 };
 
 export default DivinationGame;
