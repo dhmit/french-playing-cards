@@ -7,7 +7,7 @@ import MaterialSubpageItem from "../MaterialSubpageItem";
 const Backs = () => {
 
     React.useEffect(() => {
-        document.title = "Backs | French Playing Cards";        
+        document.title = "Backs | French Playing Cards";
     }, []);
     const {t} = useTranslation();
 
@@ -38,11 +38,11 @@ const Backs = () => {
             </Row>
 
 
-            <MaterialSubpageItem 
+            <MaterialSubpageItem
                 title={t("material.backs.catalogue.title")}
                 intro={t("material.backs.catalogue.1")}
-                image1="/static/img/materials/backs/library-card-catalogue/Loudun.JPEG"
-                image2="/static/img/materials/backs/library-card-catalogue/Loudon-front.JPEG"
+                image1="/static/img/materials/backs/library-card-catalogue/Loudun.jpeg"
+                image2="/static/img/materials/backs/library-card-catalogue/Loudon-front.jpeg"
                 caption1="Back Side"
                 caption2="Front Side"
                 text2={t("material.backs.catalogue.2")}
@@ -50,11 +50,11 @@ const Backs = () => {
                 span={4}
             />
 
-            <MaterialSubpageItem 
+            <MaterialSubpageItem
                 title={t("material.backs.legal.title")}
                 intro={t("material.backs.legal.1")}
                 image1="/static/img/materials/backs/legal-case/legal-case.jpg"
-                image2="/static/img/materials/backs/legal-case/Legal case front.JPEG"
+                image2="/static/img/materials/backs/legal-case/Legal case front.jpeg"
                 caption1="Back Side"
                 caption2="Front Side"
                 text2={t("material.backs.legal.2")}
@@ -62,11 +62,11 @@ const Backs = () => {
                 span={4}
             />
 
-            <MaterialSubpageItem 
+            <MaterialSubpageItem
                 title={t("material.backs.money.title")}
                 intro={<Trans i18nKey="material.backs.money.text">During the French Revolution, the government printed <i>billets de confiance</i>, or small denomination bills, on the backs of used playing cards to supplement the printed bills known as <i>assignats</i></Trans>}
-                image1="/static/img/materials/backs/money/money.JPEG"
-                image2="/static/img/materials/backs/money/Money front.JPEG"
+                image1="/static/img/materials/backs/money/money.jpeg"
+                image2="/static/img/materials/backs/money/Money front.jpeg"
                 caption1="Back Side"
                 caption2="Front Side"
                 text2={t("material.backs.money.2")}
@@ -75,11 +75,11 @@ const Backs = () => {
             />
 
 
-            <MaterialSubpageItem 
+            <MaterialSubpageItem
                 title={t("material.backs.meat.title")}
                 intro={t("material.backs.meat.1")}
-                image1="/static/img/materials/backs/meat-ration/ration.JPEG"
-                image2="/static/img/materials/backs/meat-ration/ration-front.JPEG"
+                image1="/static/img/materials/backs/meat-ration/ration.jpeg"
+                image2="/static/img/materials/backs/meat-ration/ration-front.jpeg"
                 caption1="Back Side"
                 caption2="Front Side"
                 text2={t("material.backs.meat.2")}
@@ -87,11 +87,11 @@ const Backs = () => {
                 span={4}
             />
 
-            <MaterialSubpageItem 
+            <MaterialSubpageItem
                 title={t("material.backs.business_cards.title")}
                 intro={t("material.backs.business_cards.1")}
-                image1="/static/img/materials/backs/business-cards/Business.JPEG"
-                image2="/static/img/materials/backs/business-cards/business front.JPEG"
+                image1="/static/img/materials/backs/business-cards/Business.jpeg"
+                image2="/static/img/materials/backs/business-cards/business front.jpeg"
                 caption1="Back Side"
                 caption2="Front Side"
                 text2={t("material.backs.business_cards.2")}
@@ -99,11 +99,11 @@ const Backs = () => {
                 span={4}
             />
 
-            <MaterialSubpageItem 
+            <MaterialSubpageItem
                 title={t("material.backs.flash_cards.title")}
                 intro={t("material.backs.flash_cards.1")}
                 image1="/static/img/materials/backs/flash-cards/flash card.jpg"
-                image2="/static/img/materials/backs/flash-cards/flash card front.JPEG"
+                image2="/static/img/materials/backs/flash-cards/flash card front.jpeg"
                 caption1="Back Side"
                 caption2="Front Side"
                 text2={t("material.backs.flash_cards.2")}
@@ -111,11 +111,11 @@ const Backs = () => {
                 span={4}
             />
 
-            <MaterialSubpageItem 
+            <MaterialSubpageItem
                 title={t("material.backs.call_response.title")}
                 intro={t("material.backs.call_response.1")}
-                image1="/static/img/materials/backs/call-and-response/89-99 Bezu.JPEG"
-                image2="/static/img/materials/backs/call-and-response/Bezu front.JPEG"
+                image1="/static/img/materials/backs/call-and-response/89-99 Bezu.jpeg"
+                image2="/static/img/materials/backs/call-and-response/Bezu front.jpeg"
                 caption1="Back Side"
                 caption2="Front Side"
                 text2={t("material.backs.call_response.2")}
@@ -123,7 +123,7 @@ const Backs = () => {
                 span={4}
             />
 
-            <MaterialSubpageItem 
+            <MaterialSubpageItem
                 title={t("material.backs.pastoral_drawing.title")}
                 intro={t("material.backs.pastoral_drawing.1")}
                 image1="/static/img/materials/backs/pastoral-drawing/Pastoral Drawing.jpg"

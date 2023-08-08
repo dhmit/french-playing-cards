@@ -9,17 +9,17 @@ const Solitaire = () => {
 
     const cardData = [
         {
-            img: "/static/img/games/paris-menu.PNG",
+            img: "/static/img/games/paris-menu.png",
             title: "Portrait de Paris",
             link: "/solitaire/play/paris"
         },
         {
-            img: "/static/img/games/dugourc-menu.PNG",
+            img: "/static/img/games/dugourc-menu.png",
             title: "Jaume et Dugourc",
             link: "/solitaire/play/dugourc"
         },
         {
-            img: "/static/img/games/david-menu.PNG",
+            img: "/static/img/games/david-menu.png",
             title: "J-L David",
             link: "/solitaire/play/david"
         }
