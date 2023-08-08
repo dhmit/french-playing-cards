@@ -16,8 +16,8 @@ echo 'Building frontend'
 npm ci
 npm run build
 
-cd ./backend
+cd backend
 
-python manage.py collectstatic --noinput
+python3 manage.py collectstatic --noinput
 
 systemctl restart gunicorn
