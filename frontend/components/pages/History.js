@@ -19,25 +19,25 @@ const History = () => {
             link: "/manufacture",
         },
         {
-            img: "/static/img/history/material-aspects.jpg",
+            img: "/static/img/history/materials.jpeg",
             title: t('history.material.title'),
             subtitle: t('history.material.subtitle'),
             link: "/material-aspects",
         },
         {
-            img: "/static/img/history/iconography.jpg",
+            img: "/static/img/history/iconography.jpeg",
             title: t('history.iconography.title'),
             subtitle: t('history.iconography.subtitle'),
             link: "/iconography",
         },
         {
-            img: "/static/img/history/tarot.jpg",
+            img: "/static/img/history/tarot.jpeg",
             title: t('history.tarot.title'),
             subtitle: t('history.tarot.subtitle'),
             link: "/tarot",
         },
         {
-            img: "/static/img/history/bibliography.jpg",
+            img: "/static/img/history/bibliography.jpeg",
             title: t('history.bibliography.title'),
             subtitle: t('history.bibliography.subtitle'),
             link: "/bibliography",
@@ -65,7 +65,7 @@ const History = () => {
                             img={card.img}
                             title={card.title}
                             subtitle={card.subtitle}
-                            link={card.link} 
+                            link={card.link}
                         />
                     </Col>
                 ))}
