@@ -19,9 +19,9 @@ const options = {
         {label: "post", value: "A"}
     ],
     ranks: [
-        {label: "ace", value: "A"}, 
+        {label: "ace", value: "A"},
         {label: "king", value: "K"},
-        {label: "queen", value: "Q"}, 
+        {label: "queen", value: "Q"},
         {label: "jack", value: "J"}
     ],
     suits: [
@@ -103,7 +103,7 @@ class CardSearch extends React.Component {
     setMode = (mode) => {
         this.setState({mode, searching: true}, this.handleSearch);
     };
-    
+
 
     render() {
         const {t} = this.props;
@@ -187,7 +187,10 @@ class CardSearch extends React.Component {
         }
 
 
-        return (
+        return (<>
+            <div className="lead p-4">
+                {t("search.header")}
+            </div>
             <div id='search-page'>
                 <div id="search-column">
                     <div className="btn-group">
@@ -203,59 +206,59 @@ class CardSearch extends React.Component {
 
 
                     <div className='search-filter'>
-                        {t("iconography.search.categories.period.title")}
+                        {t("search.categories.period.title")}
                         <Select
                             name={"periods"}
                             isMulti
                             value={this.state.selected.periods}
-                            getOptionLabel={option => t("iconography.search.categories.period." + option.label)}
+                            getOptionLabel={option => t("search.categories.period." + option.label)}
                             options={options.periods}
                             onChange={this.handleChange}
-                            placeholder={t("iconography.search.placeholder")}
+                            placeholder={t("search.placeholder")}
                             classNames={{control: (_state) => 'search-select'}}
                         />
                     </div>
 
-                    {this.state.mode === SearchMode.CARD && 
+                    {this.state.mode === SearchMode.CARD &&
                         <>
                             <div className='search-filter'>
-                                {t("iconography.search.categories.card.title")}
+                                {t("search.categories.card.title")}
                                 <Select
                                     isMulti
                                     name={"ranks"}
                                     value={this.state.selected.ranks}
-                                    getOptionLabel={option => t("iconography.search.categories.card." + option.label)}
+                                    getOptionLabel={option => t("search.categories.card." + option.label)}
                                     options={options.ranks}
                                     onChange={this.handleChange}
-                                    placeholder={t("iconography.search.placeholder")}
+                                    placeholder={t("search.placeholder")}
                                 />
                             </div>
 
                             <div className='search-filter'>
-                                {t("iconography.search.categories.suit.title")}
+                                {t("search.categories.suit.title")}
                                 <Select
                                     isMulti
                                     name={"suits"}
                                     value={this.state.selected.suits}
-                                    getOptionLabel={option => t("iconography.search.categories.suit." + option.label)}
+                                    getOptionLabel={option => t("search.categories.suit." + option.label)}
                                     options={options.suits}
                                     onChange={this.handleChange}
-                                    placeholder={t("iconography.search.placeholder")}
+                                    placeholder={t("search.placeholder")}
                                 />
                                     </div>
                         </>
                     }
 
                     <div className='search-filter'>
-                        {t("iconography.search.categories.town")}
+                        {t("search.categories.town")}
                         <Select
                             isMulti
                             name={"towns"}
                             value={this.state.selected.towns}
-                            getOptionLabel={option => t("iconography.search.categories." + option.label, option.label)}
+                            getOptionLabel={option => t("search.categories." + option.label, option.label)}
                             options={options.towns}
                             onChange={this.handleChange}
-                            placeholder={t("iconography.search.placeholder")}
+                            placeholder={t("search.placeholder")}
                         />
                     </div>
                 </div>
@@ -266,7 +269,7 @@ class CardSearch extends React.Component {
                 </div>
 
             </div>
-        );
+        </>);
     }
 }
 

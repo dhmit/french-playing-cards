@@ -288,48 +288,49 @@
             "wise-virtuous": "Figures des sages, des vertueuses, des courageux",
             "barricades": "Jeu de cartes « barricades »",
             "liberators": "Jeu de cartes « libérateurs »"
-        },
-        "search": {
-            "placeholder": "Sélectionner...",
-            "categories": {
-                "period": {
-                    "title": "Période",
-                    "pre": "Pré-révolutionnaire",
-                    "revolutionary": "Révolutionnaire",
-                    "post": "Post-révolutionnaire"
-                },
-                "card": {
-                    "title": "Carte",
-                    "ace": "As",
-                    "king": "Roi",
-                    "queen": "Dame",
-                    "jack": "Valet"
-                },
-                "suit":{
-                    "title": "Couleur",
-                    "heart": "Coeurs",
-                    "club": "Trèfles",
-                    "diamond": "Carreaux",
-                    "spade": "Piques"
-                },
-                "rectoVerso": {
-                    "title": "Recto ou verso",
-                    "front": "Face",
-                    "back": "Dos"
-                },
-                "notes": {
-                    "title": "Notes au dos",
-                    "none": "Rien",
-                    "catalogue": "Catalogue bibliothèque",
-                    "call_response": "Demande et réponse",
-                    "typographical": "Lettres typographiques"
-                },
-                "town": "Ville",
-                "maker": "Auteur",
-                "unknown": "Inconnu"
-            },
-            "button": "Rechercher"
         }
+    },
+    "search": {
+        "header": "Vous pouvez utiliser cet outil pour feuilleter et rechercher à travers les différents jeux de cartes et images, et explorez comment l'iconographie évolue avec le temps.",
+        "placeholder": "Sélectionner...",
+        "categories": {
+            "period": {
+                "title": "Période",
+                "pre": "Pré-révolutionnaire",
+                "revolutionary": "Révolutionnaire",
+                "post": "Post-révolutionnaire"
+            },
+            "card": {
+                "title": "Carte",
+                "ace": "As",
+                "king": "Roi",
+                "queen": "Dame",
+                "jack": "Valet"
+            },
+            "suit":{
+                "title": "Couleur",
+                "heart": "Coeurs",
+                "club": "Trèfles",
+                "diamond": "Carreaux",
+                "spade": "Piques"
+            },
+            "rectoVerso": {
+                "title": "Recto ou verso",
+                "front": "Face",
+                "back": "Dos"
+            },
+            "notes": {
+                "title": "Notes au dos",
+                "none": "Rien",
+                "catalogue": "Catalogue bibliothèque",
+                "call_response": "Demande et réponse",
+                "typographical": "Lettres typographiques"
+            },
+            "town": "Ville",
+            "maker": "Auteur",
+            "unknown": "Inconnu"
+        },
+        "button": "Rechercher"
     },
     "tarot": {
         "header": "Cartes de tarot",

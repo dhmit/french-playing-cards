@@ -289,50 +289,50 @@
             "wise-virtuous": "Wise men, virtuous women, brave men face cards",
             "barricades": "Barricades deck",
             "liberators": "Liberators deck"
-        },
-        "search": {
-            "header": "Filter search by selecting the features of the cards you want to see:",
-            "placeholder": "Select...",
-            "categories": {
-                "period": {
-                    "title": "Time period",
-                    "pre": "Pre-Revolutionary",
-                    "revolutionary": "Revolutionary",
-                    "post": "Post-Revolutionary"
-                },
-                "card": {
-                    "title": "Card",
-                    "ace": "Ace",
-                    "king": "King",
-                    "queen": "Queen",
-                    "jack": "Jack"
-                },
-                "suit":{
-                    "title": "Suit",
-                    "heart": "Hearts",
-                    "club": "Clubs",
-                    "diamond": "Diamonds",
-                    "spade": "Spades"
-                },
-                "rectoVerso": {
-                    "title": "Front or back",
-                    "front": "Front",
-                    "back": "Back"
-                },
-                "notes": {
-                    "title": "Back Notes",
-                    "none": "None",
-                    "catalogue": "Library card catalogue",
-                    "call_response": "Call and Response",
-                    "typographical": "Typographical letters"
-                },
-                "town": "Town",
-                "maker": "Maker",
-                "unknown": "Unknown"
-            },
-            "button": "Search",
-            "note": "To view an card image in greater detail, right click on it and select 'Open Image in New Tab'"
         }
+    },
+    "search": {
+        "header": "Use this tool to browse and search through the different decks and images, and explore how the iconography changes over time.",
+        "placeholder": "Select...",
+        "categories": {
+            "period": {
+                "title": "Time period",
+                "pre": "Pre-Revolutionary",
+                "revolutionary": "Revolutionary",
+                "post": "Post-Revolutionary"
+            },
+            "card": {
+                "title": "Card",
+                "ace": "Ace",
+                "king": "King",
+                "queen": "Queen",
+                "jack": "Jack"
+            },
+            "suit":{
+                "title": "Suit",
+                "heart": "Hearts",
+                "club": "Clubs",
+                "diamond": "Diamonds",
+                "spade": "Spades"
+            },
+            "rectoVerso": {
+                "title": "Front or back",
+                "front": "Front",
+                "back": "Back"
+            },
+            "notes": {
+                "title": "Back Notes",
+                "none": "None",
+                "catalogue": "Library card catalogue",
+                "call_response": "Call and Response",
+                "typographical": "Typographical letters"
+            },
+            "town": "Town",
+            "maker": "Maker",
+            "unknown": "Unknown"
+        },
+        "button": "Search",
+        "note": "To view an card image in greater detail, right click on it and select 'Open Image in New Tab'"
     },
     "tarot": {
         "header": "Tarot Cards",
