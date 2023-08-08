@@ -33,6 +33,7 @@ from django.http import JsonResponse
 from django.forms.models import model_to_dict
 from django.db.models import Q
 from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Card, Deck, Tarot
 
@@ -61,6 +62,7 @@ def divination_card_request(request):
 
     return JsonResponse({'card': model_to_dict(card)})
 
+@csrf_exempt
 def generate_prediction(request):
     question = json.loads(request.body.decode('utf-8')).get("question", None)
 

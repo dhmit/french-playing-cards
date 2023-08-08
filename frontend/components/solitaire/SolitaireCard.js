@@ -11,16 +11,16 @@ const SolitaireCard = ({card, suit, deck, faceUp, active}) => {
     if (faceUp) {
         if (["K", "Q", "J"].indexOf(card) === -1) {
             // normal number cards from generic deck
-            imgSrc = "/static/img/games/solitaire/paris/" + card + suit + ".1.jpeg";
+            imgSrc = "/static/img/games/solitaire/Paris/" + card + suit + ".1.jpeg";
         } else {
             // face cards from specific decks
             let baseUrl;
             if (deck === "paris") {
-                baseUrl = "/static/img/B/paris/";
+                baseUrl = "/static/img/B/Paris/";
             } else if (deck === "dugourc") {
-                baseUrl = "/static/img/D/dugourc/";
+                baseUrl = "/static/img/D/Dugourc/";
             } else if (deck === "david") {
-                baseUrl = "/static/img/A/david/";
+                baseUrl = "/static/img/A/David/";
             }
 
             imgSrc = baseUrl + card + suit + ".1.jpeg";
