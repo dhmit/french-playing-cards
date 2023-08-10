@@ -13,15 +13,13 @@ const Games = () => {
 
     const cardData = [
         {
-            img: "/static/img/games/solitaire.jpg",
-            title: t('games.solitaire.title'),
-            subtitle: t('games.solitaire.subtitle'),
+            img: "/static/img/games/solitaire.png",
+            title: t('games.solitaire'),
             link: "/solitaire/select",
         },
         {
-            img: "/static/img/games/divination.jpg",
-            title: t('games.divination.title'),
-            subtitle: t('games.divination.subtitle'),
+            img: "/static/img/games/cartomancy.jpg",
+            title: t('games.cartomancy'),
             link: "/divination",
         },
     ];

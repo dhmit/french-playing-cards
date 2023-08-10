@@ -391,7 +391,9 @@
     },
     "games" : {
         "header": "Play Games!",
-        "play": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elit purus, molestie in quam id, luctus dignissim lectus. Proin mattis facilisis est, vel pretium urna. Vivamus eu accumsan est. Vestibulum eu risus nec tortor lobortis tristique eget vitae elit. Sed consequat mollis condimentum. Praesent accumsan, orci vitae rhoncus finibus, mi ipsum mollis nisi, vitae sollicitudin dolor metus ut enim. Donec tempor velit et orci viverra bibendum. Nam massa quam, volutpat tincidunt ligula in, varius volutpat metus. Duis fringilla dui a arcu scelerisque, ac finibus risus rhoncus. Donec dictum hendrerit ipsum, eu eleifend massa vestibulum id. Quisque sit amet malesuada ligula, sit amet ultrices nunc."
+        "play": "We offer you the opportunity to play two types of card games with historical French playing cards: Klondike Solitaire and Cartomancy.  If you choose to play our solitaire game, you may select one of three historical decks with which to play.  If you choose to play our cartomancy game, you will use a cartomancer's deck of 32 cards first designed by Jean-Baptiste Alliette in the 1770s.  For more background, game rules, and access to the online games, please select one of the two options below.",
+        "solitaire": "Solitaire",
+        "cartomancy": "Cartomancy"
     },
     "divination": {
         "disclaimer": {

@@ -389,7 +389,9 @@
     },
     "games": {
         "header": "Jouez !",
-        "play": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elit purus, molestie in quam id, luctus dignissim lectus. Proin mattis facilisis est, vel pretium urna. Vivamus eu accumsan est. Vestibulum eu risus nec tortor lobortis tristique eget vitae elit. Sed consequat mollis condimentum. Praesent accumsan, orci vitae rhoncus finibus, mi ipsum mollis nisi, vitae sollicitudin dolor metus ut enim. Donec tempor velit et orci viverra bibendum. Nam massa quam, volutpat tincidunt ligula in, varius volutpat metus. Duis fringilla dui a arcu scelerisque, ac finibus risus rhoncus. Donec dictum hendrerit ipsum, eu eleifend massa vestibulum id. Quisque sit amet malesuada ligula, sit amet ultrices nunc."
+        "play": "Nous vous offrons la possibilité de jouer à deux types de jeux de cartes avec des cartes à jouer historiques françaises : le solitaire Klondike et la cartomancie. Si vous choisissez de jouer à notre jeu de solitaire, vous pouvez sélectionner l'un des trois jeux historiques pour jouer. Si vous choisissez de jouer à notre jeu de cartomancie, vous utiliserez un jeu de cartes de 32 cartes conçu à l'origine par Jean-Baptiste Alliette dans les années 1770. Pour plus d'informations sur le contexte historique, les règles du jeu et l'accès aux jeux en ligne, veuillez sélectionner l'une des deux options ci-dessous.",
+        "solitaire": "Solitaire",
+        "cartomancy": "Cartomancie"
     },
     "bibliography": {
         "header": "Bibliographie",
