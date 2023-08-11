@@ -23,6 +23,7 @@ const StockWaste = ({
                         deck={deck}
                         faceUp={true}
                         active={wasteActive}
+                        stack="waste"
                     />;
     } else {
         wasteCard = <img className="game-card" src="/static/img/games/solitaire/stack-placeholder.png" />;
