@@ -11,8 +11,9 @@ const StockWaste = ({
     deck
 }) => {
     const stockCard = stock.length > 0
-        ? <img className="game-card" src='/static/img/games/solitaire/blue-back.jpeg'/>
-        : <button onClick={refreshStock}>Refresh Stock</button>;
+        ? <img onClick={handleStockClick} className="game-card" src='/static/img/games/solitaire/blue-back.jpeg'/>
+        : <button className="btn btn-outline-dark mr-4"
+                  onClick={refreshStock}>Refresh <br/>Stock</button>;
 
     let wasteCard;
     if (waste.length > 0) {
@@ -31,7 +32,7 @@ const StockWaste = ({
 
     return (
         <React.Fragment>
-            <div className='stock' onClick={handleStockClick}>
+            <div className='stock'>
                 {stockCard}
             </div>
             <div className='waste' onClick={handleWasteClick}>

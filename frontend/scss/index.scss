@@ -8,11 +8,6 @@
 
 
 
-button {
-    border-width: medium;
-    width: 8%;
-}
-
 button:hover {
     background-color: #787878;
     color: white;
@@ -443,12 +438,6 @@ button:hover {
 
     .stock-waste-container {
         display: flex;
-        button {
-            width: 50%;
-            font-size: 14px;
-            padding-right: 20%;
-            margin-bottom: 20%;
-        }
     }
 
     .stock {

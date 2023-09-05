@@ -227,7 +227,6 @@ class SolitaireGame extends React.Component {
    /*
     Handle a foundation stack being clicked: when a foundation gets clicked on, there are two possibilities:
     (1) the stack clicked contains a card that will be moved, or (2) the stack clicked will get a card moved to it.
-    The argument `stackName` is a string
    */
    handleFoundationDrop = (suit, draggedCardData) => {
         const destStackName = 'foundation' + suit;
@@ -278,11 +277,8 @@ class SolitaireGame extends React.Component {
 
    };
 
-    /*
-    Handle the stock pile being clicked (drawing a new card):
-   1. Pop a card from the top of the stack and re-render it to be face up
-   2. Transfer (push) the card to the top of the waste
-   User can only draw a card FROM the stock and should never be able to move a card TO the stock
+   /*
+   Handle the stock pile being clicked (drawing a new card to the waste pile):
    */
    handleStockClick = () => {
        // console.log("Clicking stock");
@@ -327,8 +323,6 @@ class SolitaireGame extends React.Component {
    This will get called when the user clicks on the 'refresh stock' button
    */
    refreshStock = () => {
-       // console.log("Refreshing stock");
-
        // If the waste is empty, do nothing
        if (this.state.waste.length === 0) {
            return;
