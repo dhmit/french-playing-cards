@@ -395,6 +395,17 @@
         "solitaire": "Solitaire",
         "cartomancy": "Cartomancy"
     },
+    "solitaire": {
+      "title": "Solitaire",
+      "selectDeck": "Select a deck to play Solitaire",
+      "description": "Although the version of solitaire we offer here, called \"Klondike Solitaire,\" is extremely popular today, it did not become common in France, England, or elsewhere in the west until well into the nineteenth century. The virtual deck of cards with which you will play is a composite of the fronts and backs of several different eighteenth and nineteenth-century decks. The ace through ten cards in all four suits are reproduced from <0>a deck manufactured in Paris before 1789</0>. The design on the back of the cards comes from a deck manufactured in the last quarter if the nineteenth century. (The backs of French playing cards were blank until ca. 1815.) Finally, you may choose one of three face card designs with which to play the game:",
+      "faceCardDescription1": "The \"Portrait de Paris\" deck features face card designs that the French monarchy required cardmakers to use in Paris and its surroundings from 1701 until the Revolution of 1789.",
+      "faceCardDescription2": "The \"Jaume et Dugourc\" deck was designed and marketed by Étienne Jaume and Jean-Démosthène Dugourc in 1793. In this deck kings become \"geniuses,\" queens \"liberties,\" and jacks \"equalities.\" The idea was to replace kings, queens, and jacks, which were considered to be \"Old Regime\" designations.",
+      "faceCardDescription3": "The \"J-L David\" deck was designed in 1808-1809 by the studio of the famous revolutionary artist Jacques-Louis David at the request of the Imperial government of Napoleon Bonaparte. David returned to the old triad of kings, queens, and jacks, but redesigned them for greater historical veracity.",
+      "infoLink": "For more information on the changing face card iconography of these years, please visit our <0>\"Fronts\" page</0>.",
+      "rules": "Click here for the rules of Klondike Solitaire.",
+      "rulesHref": "/static/solitaire-rules-english.docx"
+    },
     "divination": {
         "disclaimer": {
             "salutation": "Dear User,",
