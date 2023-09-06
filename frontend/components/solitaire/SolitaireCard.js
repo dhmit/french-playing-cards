@@ -6,7 +6,9 @@ on whether the card is face up or face down
 Fetches the correct card image from the Soliatire img directory `/static/img/games/solitaire/`
 */
 
-const SolitaireCard = ({card, suit, deck, faceUp, draggable, stack}) => {
+const SolitaireCard = ({
+    index, card, suit, deck, faceUp, draggable, setDragCardIndex, transparent
+}) => {
     let imgSrc = "/static/img/games/solitaire/blue-back.jpeg";
     if (faceUp) {
         if (["K", "Q", "J"].indexOf(card) === -1) {
@@ -27,16 +29,14 @@ const SolitaireCard = ({card, suit, deck, faceUp, draggable, stack}) => {
         }
     }
 
-    const handleDragStart = (e) => {
-        e.dataTransfer.setData('application/json', JSON.stringify({ srcStack: stack }));
-        e.dataTransfer.effectAllowed = "move";
-    };
-
     return <img
                 className='game-card'
                 src={imgSrc}
                 draggable={draggable}
-                onDragStart={handleDragStart}
+                style={transparent ? { opacity: 0.5 } : {}}
+                onDragStart={() => setDragCardIndex(index)}
+                onMouseUp={() => setDragCardIndex(-1)}
+                onDragEnd={() => setDragCardIndex(-1)}
            />;
 };
 

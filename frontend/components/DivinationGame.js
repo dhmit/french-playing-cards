@@ -247,7 +247,15 @@ const EndingScreen = ({ goToNext }) => {
         <>
             <Row>
                 <Col>
-                    <p>{t("divination.screen4.p")}</p>
+                    <h2>{t("divination.screen4.title")}</h2>
+                    <p>{t("divination.screen4.p0")}</p>
+                    <p>{t("divination.screen4.p1")}</p>
+                    <ul>
+                        <li>{t("divination.screen4.li0")}</li>
+                        <li>{t("divination.screen4.li1")}</li>
+                        <li>{t("divination.screen4.li2")}</li>
+                    </ul>
+                    <p>{t("divination.screen4.p2")}</p>
                 </Col>
             </Row>
 
@@ -256,7 +264,7 @@ const EndingScreen = ({ goToNext }) => {
                     <a className="btn btn-outline-dark" onClick={goToNext}>{t("divination.screen4.nextButton")}</a>
                 </Col>
                 <Col xs="auto">
-                    <a className="btn btn-outline-dark" onClick={goToNext}>{t("divination.screen4.moreInfo")}</a>
+                    <a className="btn btn-outline-dark" href="/tarot">{t("divination.screen4.moreInfo")}</a>
                 </Col>
             </Row>
         </>

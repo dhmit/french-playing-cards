@@ -1,7 +1,7 @@
 import React from 'react';
 import SolitaireCard from './SolitaireCard';
 
-const FoundationStack = ({ stack, handleFoundationDrop, suit, deck }) => {
+const FoundationStack = ({ stack, handleFoundationDrop, suit, deck, dragState, setDragState }) => {
     let cardData;
 
     if (stack.length === 0) {
@@ -10,14 +10,26 @@ const FoundationStack = ({ stack, handleFoundationDrop, suit, deck }) => {
         cardData = stack[stack.length-1];
     }
 
+    const stackName = `foundation${suit}`;
+    // Foundation cards are going to have cardIndex undefined
+    // so they only fire a -1 here for dragEnd and mouseUp
+    const setDragCardIndex = (cardIndex) => {
+        if (cardIndex === -1) {
+            setDragState('', -1);
+        } else {
+            setDragState(stackName, -1);
+        }
+    };
+
     const card = <SolitaireCard
                     card={cardData.card}
                     suit={suit}
                     deck={deck}
                     faceUp={true}
                     active={false}
-                    draggable={true}
-                    stack={`foundation${suit}`}
+                    draggable={stack.length > 0}
+                    setDragCardIndex={setDragCardIndex}
+                    transparent={dragState.stackName === stackName}
                 />;
 
     const className =
@@ -28,9 +40,7 @@ const FoundationStack = ({ stack, handleFoundationDrop, suit, deck }) => {
 
     const handleDrop = (e) => {
         e.preventDefault();
-        const draggedCardData = JSON.parse(e.dataTransfer.getData('application/json'));
-        console.log(draggedCardData);
-        handleFoundationDrop(suit, draggedCardData);
+        handleFoundationDrop(suit);
     };
 
     // required to allow dropping

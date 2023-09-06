@@ -66,11 +66,8 @@ def divination_card_request(request):
 def generate_prediction(request):
     question = json.loads(request.body.decode('utf-8')).get("question", None)
 
-    # Grab api key from file
-    api_key_file = os.path.join(settings.PROJECT_ROOT, "openai_key")
-    with open(api_key_file, 'r', encoding='utf-8') as file:
-        openai_key = file.readline().strip()
-    openai.api_key = openai_key
+    openai.api_key = settings.OPENAI_KEY
+
 
     if question:
         completion = openai.ChatCompletion.create(

@@ -143,9 +143,22 @@ class SolitaireGame extends React.Component {
             tableau6: t6,  // initial size 6
             tableau7: t7,  // initial size 7
             stock: stock, // all cards in the stock will be face down
-            waste: [] // all cards in the waste will be face up, but remember only the most recently added card (at the end of the array) is accessible
+            waste: [], // all cards in the waste will be face up, but remember only the most recently added card (at the end of the array) is accessible
+            dragState: {
+                stackName: '',
+                cardIndex: -1,
+            }
         };
     };
+
+    setDragState = (stackName, cardIndex) => {
+        console.log("Setting drag state: ", stackName, cardIndex);
+        this.setState(
+            {dragState: {stackName, cardIndex }}
+        );
+    };
+
+    clearDragState = () => { console.log("Clearing drag state"); this.setDragState('', -1); };
 
     /*
     Only call this when the stock stack is clicked
@@ -165,43 +178,39 @@ class SolitaireGame extends React.Component {
         });
     };
 
-    /*
-    Handle a tableau stack being clicked: when a tableau gets clicked on, there are two possibilities:
-    (1) the stack clicked contains a card that will be moved, or (2) the stack clicked will get a card moved to it.
-    The argument `stackName` is a string
-    Note (from Alyssa): when the 2-click transfer method is changed to be a click-and-drag method, this function should allow
-    for multiple cards to be moved at once, e.g. moving a chunk of cards with values 6,5,4 from stack A to stack B that has a card with value 7 on top)
-   */
-    handleTableauDrop = (tableauIndex, draggedCardData) => {
-        const destStackName = 'tableau' + tableauIndex.toString();
-        const srcStackName = draggedCardData.srcStack;
+    handleTableauDrop = (destTableauIndex) => {
+        const destStackName = 'tableau' + destTableauIndex.toString();
+        const srcStackName = this.state.dragState.stackName;
         const srcStack = this.state[srcStackName];
         const destStack = this.state[destStackName];
-        const transferCard = srcStack.pop();
+
+        const transferCard =
+            srcStackName.startsWith('tableau')
+            ? srcStack[this.state.dragState.cardIndex]
+            : srcStack[srcStack.length-1];
+
+        this.clearDragState();
 
         if (srcStack === destStack) {
-            srcStack.push(transferCard);
+            // If source and destination stacks are the same, no further action needed
             return;
         }
 
-        // Only kings go on empty stacks
+
+        let isValidTransfer = false;
         if (destStack.length === 0) {
-            if (transferCard["card"] === "K") {
-                destStack.push(transferCard);
-            } else {
-                srcStack.push(transferCard);
-                return;
-            }
+            // Only kings go on empty stacks
+            isValidTransfer = transferCard["card"] === "K";
         } else {
             // Stack isn't empty, so check stacking rules
             const destStackTopCard = destStack[destStack.length-1];
-            if (!(compareCards(destStackTopCard["card"], transferCard["card"]) &&
-                  compareSuits(destStackTopCard["suit"], transferCard["suit"]))) {
-                srcStack.push(transferCard);
-                return;
-            }
+            isValidTransfer = compareCards(destStackTopCard["card"], transferCard["card"]) &&
+                              compareSuits(destStackTopCard["suit"], transferCard["suit"]);
+        }
 
-            destStack.push(transferCard);
+        if (isValidTransfer) {
+            const cardsToTransfer = srcStack.splice(this.state.dragState.cardIndex);
+            destStack.push(...cardsToTransfer);
         }
 
         if (srcStack.length > 0) {
@@ -218,42 +227,42 @@ class SolitaireGame extends React.Component {
         // For testing purposes
         // console.log(stackName + " gained a card");
         // console.log(stackName + ": " + this.state[stackName]);
-        // console.log("activeStack set to 0");
-        // console.log("activeStack: " + this.state.activeStack);
         // console.log(this.state);
-
     };
 
-   /*
-    Handle a foundation stack being clicked: when a foundation gets clicked on, there are two possibilities:
-    (1) the stack clicked contains a card that will be moved, or (2) the stack clicked will get a card moved to it.
-   */
-   handleFoundationDrop = (suit, draggedCardData) => {
-        const destStackName = 'foundation' + suit;
-        const srcStackName = draggedCardData.srcStack;
+
+    handleFoundationDrop = (suit) => {
+        const srcStackName = this.state.dragState.stackName;
         const srcStack = this.state[srcStackName];
+
+        // can't drop multiple cards on to a foundation
+        if (srcStack.length-1 !== this.state.dragState.cardIndex) return;
+
+        const destStackName = 'foundation' + suit;
         const destStack = this.state[destStackName];
         const transferCard = srcStack.pop();
+
+        this.clearDragState();
 
         if (srcStack === destStack) {
             srcStack.push(transferCard);
             return;
         }
 
-       // Card must be same suit as foundation
-       if (transferCard["suit"] !== suit) {
-           srcStack.push(transferCard);
-           return;
-       }
+        // Card must be same suit as foundation
+        if (transferCard["suit"] !== suit) {
+            srcStack.push(transferCard);
+            return;
+        }
 
-       if (destStack.length === 0) {
-           // Aces can only go on empty stacks
-           if (transferCard["card"] === "A") {
-               destStack.push(transferCard);
-           } else {
-               srcStack.push(transferCard);
-               return;
-           }
+        if (destStack.length === 0) {
+            // Aces can only go on empty stacks
+            if (transferCard["card"] === "A") {
+                destStack.push(transferCard);
+            } else {
+                srcStack.push(transferCard);
+                return;
+            }
        } else {
            const destStackTopCard = destStack[destStack.length-1];
            if (!compareCards(transferCard["card"], destStackTopCard["card"])) {
@@ -295,27 +304,8 @@ class SolitaireGame extends React.Component {
        stacks["waste"] = waste;
 
        this.setState({
-           activeStack: 0,
            stacks: stacks
        });
-   };
-
-   /*
-   Handle the waste pile being clicked
-   Opposite of logic for handleFoundationDrop: user can move a card FROM waste, but can't move a card TO waste
-   */
-   handleWasteClick = () => {
-       // console.log("Clicking waste stack");
-
-       // If `this.state.activeStack` is null, make the given `stackName` the activeStack.
-       if (this.state.activeStack === 0) {
-           this.setState({
-               activeStack: "waste"
-           });
-           return;
-       }
-
-       // Otherwise, `this.state.activeStack` is not null, so do nothing
    };
 
    /*
@@ -370,6 +360,8 @@ class SolitaireGame extends React.Component {
                     index={i}
                     key={i}
                     deck={deck}
+                    dragState={this.state.dragState}
+                    setDragState={this.setDragState}
                 />
             );
         }
@@ -381,6 +373,8 @@ class SolitaireGame extends React.Component {
                     suit={suit}
                     key={suit}
                     deck={deck}
+                    dragState={this.state.dragState}
+                    setDragState={this.setDragState}
                 />
             );
         });
@@ -397,7 +391,8 @@ class SolitaireGame extends React.Component {
                             handleWasteClick={this.handleWasteClick}
                             refreshStock={this.refreshStock}
                             deck={deck}
-                            wasteActive={this.state.activeStack === "waste"}
+                            dragState={this.state.dragState}
+                            setDragState={this.setDragState}
                         />
                     </Col>
                     <Col md={8} className='foundations justify-content-end'>

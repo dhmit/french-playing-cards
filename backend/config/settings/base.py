@@ -18,6 +18,10 @@ SETTINGS_DIR = os.path.join(CONFIG_DIR, 'settings')
 DB_PATH = os.path.join(BACKEND_DIR, 'db.sqlite3')
 PROJECT_ROOT = os.path.dirname(BACKEND_DIR)
 
+OPENAI_API_KEY_PATH = os.path.join(PROJECT_ROOT, "openai_key")
+with open(OPENAI_API_KEY_PATH, 'r', encoding='utf-8') as file:
+    OPENAI_KEY = file.readline().strip()
+
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 
