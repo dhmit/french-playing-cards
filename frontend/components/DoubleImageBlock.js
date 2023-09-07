@@ -9,22 +9,28 @@ export const DoubleImageBlock = ({ imgSrc1, imgSrc2, captionKey, textKey }) => {
     return (
         <Row className="justify-content-center mt-5">
             <Col xs={12} md={4}>
-                <Figure>
-                    <Figure.Image
-                        width="100%"
-                        height="auto"
-                        src={imgSrc1}
-                    />
-                </Figure>
+                <a href={imgSrc1} target="_blank" rel="noreferrer">
+                    <Figure>
+                        <Figure.Image
+                            width="100%"
+                            height="auto"
+                            src={imgSrc1}
+                            title="Click to Expand"
+                        />
+                    </Figure>
+                </a>
             </Col>
             <Col xs={12} md={4}>
-                <Figure>
-                    <Figure.Image
-                        width="100%"
-                        height="auto"
-                        src={imgSrc2}
-                    />
-                </Figure>
+                <a href={imgSrc2} target="_blank" rel="noreferrer">
+                    <Figure>
+                        <Figure.Image
+                            width="100%"
+                            height="auto"
+                            src={imgSrc2}
+                            title="Click to Expand"
+                        />
+                    </Figure>
+                </a>
             </Col>
             <Col xs={12} md={4}>
                 <Figure.Caption>

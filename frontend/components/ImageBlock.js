@@ -7,25 +7,31 @@ export const ImageBlock = ({ imgSrc, captionKey, textKey }) => {
     const { t } = useTranslation();
 
     return (
-        <Row className="justify-content-center mt-5">
-            <Col xs={12} md={8}>
-                <Figure>
-                    <Figure.Image
-                        width="100%"
-                        height="auto"
-                        src={imgSrc}
-                    />
-                    <Figure.Caption>
-                        <Trans i18nKey={captionKey} />
-                    </Figure.Caption>
-                </Figure>
-            </Col>
-            <Col xs={12} md={4}>
-                <p>{t(textKey)}</p>
-            </Col>
-        </Row>
+        <>
+            <Row className="justify-content-center mt-5">
+                <Col xs={12} md={8}>
+                    <Figure>
+                        <a href={imgSrc} target="_blank" rel="noreferrer">
+                            <Figure.Image
+                                width="100%"
+                                height="auto"
+                                src={imgSrc}
+                                title="Click to Expand"
+                            />
+                        </a>
+                        <Figure.Caption>
+                            <Trans i18nKey={captionKey} />
+                        </Figure.Caption>
+                    </Figure>
+                </Col>
+                <Col xs={12} md={4}>
+                    <p>{t(textKey)}</p>
+                </Col>
+            </Row>
+        </>
     );
 };
+
 ImageBlock.propTypes = {
     imgSrc: PropTypes.string.isRequired,
     captionKey: PropTypes.string.isRequired,
