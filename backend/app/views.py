@@ -23,10 +23,9 @@ context = {
     'component_name': 'ExampleId'
 }
 """
-import os
-import openai
-
+from random import randint, sample
 import json
+import os
 
 from django.shortcuts import render
 from django.http import JsonResponse
@@ -34,6 +33,8 @@ from django.forms.models import model_to_dict
 from django.db.models import Q
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
+
+import openai
 
 from .models import Card, Deck, Tarot
 
@@ -53,14 +54,25 @@ def index(request):
     return render(request, 'index.html', context)
 
 
+@csrf_exempt
 def divination_card_request(request):
-    num = int(request.GET.get('number'))
-    up = bool(int(request.GET.get('orientation')))
+    num_cards = int(request.GET.get('num'))
     lang = "fr" if "fr" in request.GET.get('language') else "en"
 
-    card = Tarot.objects.filter(number__exact=num).filter(lang__exact=lang).get(orientation=up)
+    # Fetch all Tarot objects with the given language
+    all_cards = list(Tarot.objects.filter(lang__exact=lang))
 
-    return JsonResponse({'card': model_to_dict(card)})
+    # Randomly sample cards
+    chosen_cards = sample(all_cards, num_cards)
+
+    # Add random orientation to each card
+    for card in chosen_cards:
+        card.orientation = bool(randint(0, 1))
+
+    cards_data = [model_to_dict(card) for card in chosen_cards]
+
+    return JsonResponse({'cards': cards_data})
+
 
 @csrf_exempt
 def generate_prediction(request):

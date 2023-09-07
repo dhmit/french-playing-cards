@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { Container, Row, Col, Form, Alert } from 'react-bootstrap';
 import Loading from "./Loading";
-
-axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
-axios.defaults.xsrfCookieName = "csrftoken";
-
-const NUM_CARDS = 33;
 
 const DisclaimerScreen = ({ goToNext }) => {
     const { t } = useTranslation();
@@ -123,7 +117,6 @@ const Screen2 = ({ goToNext }) => {
 async function getReading(question, keywords) {
     let input = question.trim();
 
-
     const input_string =
         `Generate a cartomancy reading based on the practices of Jean-Baptiste Alliette from the 18th century.
          Pretend you are an online cartomancer, interpreting the mystical themes of Alliette's historic teachings.
@@ -144,19 +137,28 @@ async function getReading(question, keywords) {
          Overcome them, and prosperity is assured."`;
 
     try {
-        console.log("Sending request and waiting...");
-        let response = await axios({
-            method: "post",
-            url: "/generate-prediction/",
-            data: {
+        const response = await fetch("/generate-prediction/", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
                 question: input_string
-            }
+            })
         });
-        console.log("Got our response...");
-        return response.data.response;
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        return data.response;
     } catch (error) {
         console.log(error);
     }
+
+
+
 }
 
 
@@ -280,35 +282,15 @@ const DivinationGame = () => {
     const [keywords, setKeywords] = React.useState("");
 
     async function getCards(num) {
-        let cardStrings = new Set();
+        const response = await fetch(`/divination-card/?num=${num}&language=${i18next.language}`);
 
-        while(cardStrings.size < num) {
-            let cardNum = Math.floor(Math.random() * (NUM_CARDS)) + 1;
-            let cardUp = Math.round(Math.random());
-            cardStrings.add(cardNum + "." + cardUp);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const chosenCards = [];
-
-        // TODO(ra): this makes a request per card -- simplify to a single request!
-        for (const cardString of cardStrings) {
-            let [cardNum, cardUp] = cardString.split(".");
-            cardNum = parseInt(cardNum);
-            cardUp = parseInt(cardUp);
-
-            let response = await axios.get("/divination-card/", {
-                params: {
-                    number: cardNum,
-                    orientation: cardUp,
-                    language: i18next.language
-                }
-            });
-
-            chosenCards.push(response.data.card);
-        }
-
-        setCards(chosenCards);
-        return chosenCards;
+        const data = await response.json();
+        setCards(data.cards);
+        return data.cards;
     };
 
     // TODO: I think we could expose much more richness about the cards in the display

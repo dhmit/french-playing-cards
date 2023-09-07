@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { ImageBlock } from '../ImageBlock';
 import { DoubleImageBlock } from '../DoubleImageBlock';
 
@@ -25,48 +25,48 @@ const Manufacture = () => {
                 </Col>
             </Row>
 
-            <ImageBlock 
+            <ImageBlock
                 imgSrc="/static/img/manufacture/Image 1.jpg"
                 captionKey="manufacture.1.caption"
-                textKey="manufacture.1.text"
+                text={t("manufacture.1.text")}
             />
 
-            <ImageBlock 
+            <ImageBlock
                 imgSrc="/static/img/manufacture/Image 2.jpg"
                 captionKey="manufacture.2.caption"
-                textKey="manufacture.2.text"
+                text={t("manufacture.2.text")}
             />
 
-            <ImageBlock 
+            <ImageBlock
                 imgSrc="/static/img/manufacture/Image 3.jpg"
                 captionKey="manufacture.3.caption"
-                textKey="manufacture.3.text"
+                text={t("manufacture.3.text")}
             />
 
-            <ImageBlock 
+            <ImageBlock
                 imgSrc="/static/img/manufacture/Image 4.jpg"
                 captionKey="manufacture.4.caption"
-                textKey="manufacture.4.text"
+                text={t("manufacture.4.text")}
             />
 
-            <DoubleImageBlock 
+            <DoubleImageBlock
                 imgSrc1="/static/img/manufacture/Image 5.jpg"
                 imgSrc2="/static/img/manufacture/Image 6.jpg"
                 captionKey="manufacture.5-6.caption"
-                textKey="manufacture.5-6.text"
+                text={t("manufacture.5-6.text")}
             />
 
-            <DoubleImageBlock 
+            <DoubleImageBlock
                 imgSrc1="/static/img/manufacture/Image 7.jpg"
                 imgSrc2="/static/img/manufacture/Image 8.jpg"
                 captionKey="manufacture.7-8.caption"
-                textKey="manufacture.7-8.text"
+                text={t("manufacture.7-8.text")}
             />
 
-            <ImageBlock 
+            <ImageBlock
                 imgSrc="/static/img/manufacture/Image 9.jpg"
                 captionKey="manufacture.9.caption"
-                textKey="manufacture.9.text"
+                text={<Trans i18nKey="manufacture.9.text" />}
             />
         </Container>
     );

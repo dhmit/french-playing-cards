@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import React from "react";
 import { Row, Col, Figure } from "react-bootstrap";
-import { Trans, useTranslation } from "react-i18next";
+import { Trans } from "react-i18next";
 
-export const ImageBlock = ({ imgSrc, captionKey, textKey }) => {
-    const { t } = useTranslation();
-
+export const ImageBlock = ({ imgSrc, captionKey, text }) => {
     return (
         <>
             <Row className="justify-content-center mt-5">
@@ -25,7 +23,7 @@ export const ImageBlock = ({ imgSrc, captionKey, textKey }) => {
                     </Figure>
                 </Col>
                 <Col xs={12} md={4}>
-                    <p>{t(textKey)}</p>
+                    <p>{text}</p>
                 </Col>
             </Row>
         </>
