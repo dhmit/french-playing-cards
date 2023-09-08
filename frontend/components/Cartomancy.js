@@ -10,18 +10,18 @@ const DisclaimerScreen = ({ goToNext }) => {
         <>
             <Row>
                 <Col>
-                    <p>{t("divination.disclaimer.salutation")}</p>
-                    <p>{t("divination.disclaimer.p0")}</p>
-                    <p>{t("divination.disclaimer.p1")}</p>
-                    <p>{t("divination.disclaimer.p2")}</p>
-                    <p>{t("divination.disclaimer.signOff")}</p>
-                    <p>{t("divination.disclaimer.team")}</p>
+                    <p>{t("cartomancy.disclaimer.salutation")}</p>
+                    <p>{t("cartomancy.disclaimer.p0")}</p>
+                    <p>{t("cartomancy.disclaimer.p1")}</p>
+                    <p>{t("cartomancy.disclaimer.p2")}</p>
+                    <p>{t("cartomancy.disclaimer.signOff")}</p>
+                    <p>{t("cartomancy.disclaimer.team")}</p>
                 </Col>
             </Row>
 
             <Row className="justify-content-end">
                 <Col xs="auto">
-                    <a className="btn btn-outline-dark" onClick={goToNext}>{t("divination.disclaimer.nextButton")}</a>
+                    <a className="btn btn-outline-dark" onClick={goToNext}>{t("cartomancy.disclaimer.nextButton")}</a>
                 </Col>
             </Row>
         </>
@@ -36,16 +36,16 @@ const Screen1 = ({ goToNext }) => {
         <>
             <Row>
                 <Col>
-                    <p>{t("divination.screen1.p0")}</p>
-                    <p>{t("divination.screen1.p1")}</p>
-                    <p>{t("divination.screen1.p2")}</p>
-                    <p>{t("divination.screen1.p3")}</p>
+                    <p>{t("cartomancy.screen1.p0")}</p>
+                    <p>{t("cartomancy.screen1.p1")}</p>
+                    <p>{t("cartomancy.screen1.p2")}</p>
+                    <p>{t("cartomancy.screen1.p3")}</p>
                 </Col>
             </Row>
 
             <Row className="justify-content-end">
                 <Col xs="auto">
-                    <a className="btn btn-outline-dark" onClick={goToNext}>{t("divination.screen1.nextButton")}</a>
+                    <a className="btn btn-outline-dark" onClick={goToNext}>{t("cartomancy.screen1.nextButton")}</a>
                 </Col>
             </Row>
         </>
@@ -72,13 +72,13 @@ const Screen2 = ({ goToNext }) => {
         <>
             <Row>
                 <Col>
-                    <p>{t("divination.screen2.p0")}</p>
-                    <p>{t("divination.screen2.p1")}</p>
-                    <p>{t("divination.screen2.p2")}</p>
+                    <p>{t("cartomancy.screen2.p0")}</p>
+                    <p>{t("cartomancy.screen2.p1")}</p>
+                    <p>{t("cartomancy.screen2.p2")}</p>
                     <ul>
-                        <li>{t("divination.screen2.example1")}</li>
-                        <li>{t("divination.screen2.example2")}</li>
-                        <li>{t("divination.screen2.example3")}</li>
+                        <li>{t("cartomancy.screen2.example1")}</li>
+                        <li>{t("cartomancy.screen2.example2")}</li>
+                        <li>{t("cartomancy.screen2.example3")}</li>
                     </ul>
                 </Col>
             </Row>
@@ -191,7 +191,7 @@ const CardReadingScreen = ({ question, cards, keywords, goToNext }) => {
 
     return (
         <div>
-            <p>{t("divination.screen3.p")}</p>
+            <p>{t("cartomancy.screen3.p")}</p>
 
             <Row className="justify-content-center mb-2">
                 <h2>Your Question</h2>
@@ -218,7 +218,7 @@ const CardReadingScreen = ({ question, cards, keywords, goToNext }) => {
 
             {!showReading && (
                 <Row className="justify-content-center mb-4">
-                    <button className="btn btn-outline-dark" onClick={generateReading}>{t("divination.screen3.generateButton")}</button>
+                    <button className="btn btn-outline-dark" onClick={generateReading}>{t("cartomancy.screen3.generateButton")}</button>
                 </Row>
             )}
 
@@ -234,7 +234,7 @@ const CardReadingScreen = ({ question, cards, keywords, goToNext }) => {
             {showReading && !loading && (
                 <Row className="justify-content-end">
                     <Col xs="auto">
-                        <a className="btn btn-outline-dark" onClick={goToNext}>{t("divination.screen3.nextButton")}</a>
+                        <a className="btn btn-outline-dark" onClick={goToNext}>{t("cartomancy.screen3.nextButton")}</a>
                     </Col>
                 </Row>
             )}
@@ -249,24 +249,24 @@ const EndingScreen = ({ goToNext }) => {
         <>
             <Row>
                 <Col>
-                    <h2>{t("divination.screen4.title")}</h2>
-                    <p>{t("divination.screen4.p0")}</p>
-                    <p>{t("divination.screen4.p1")}</p>
+                    <h2>{t("cartomancy.screen4.title")}</h2>
+                    <p>{t("cartomancy.screen4.p0")}</p>
+                    <p>{t("cartomancy.screen4.p1")}</p>
                     <ul>
-                        <li>{t("divination.screen4.li0")}</li>
-                        <li>{t("divination.screen4.li1")}</li>
-                        <li>{t("divination.screen4.li2")}</li>
+                        <li>{t("cartomancy.screen4.li0")}</li>
+                        <li>{t("cartomancy.screen4.li1")}</li>
+                        <li>{t("cartomancy.screen4.li2")}</li>
                     </ul>
-                    <p>{t("divination.screen4.p2")}</p>
+                    <p>{t("cartomancy.screen4.p2")}</p>
                 </Col>
             </Row>
 
             <Row className="justify-content-end">
                 <Col xs="auto">
-                    <a className="btn btn-outline-dark" onClick={goToNext}>{t("divination.screen4.nextButton")}</a>
+                    <a className="btn btn-outline-dark" onClick={goToNext}>{t("cartomancy.screen4.nextButton")}</a>
                 </Col>
                 <Col xs="auto">
-                    <a className="btn btn-outline-dark" href="/tarot">{t("divination.screen4.moreInfo")}</a>
+                    <a className="btn btn-outline-dark" href="/tarot">{t("cartomancy.screen4.moreInfo")}</a>
                 </Col>
             </Row>
         </>
@@ -293,20 +293,18 @@ const Cartomancy = () => {
         return data.cards;
     };
 
-    // TODO: I think we could expose much more richness about the cards in the display
-    // maybe not just "keywords", but indicate orientation.
     function getKeywords(cards) {
         let keywords = new Set();
 
         // check multiples
-        for(let i = 0; i < cards.length; i++) {
-            let card = cards[i].card;
+        for (let i = 0; i < cards.length; i++) {
+            let card = cards[i].rank;
             let up = cards[i].orientation;
             let matches = [card];
 
             for(let j = 0; j < cards.length; j++) {
-                if(i !== j && card === cards[j].card && up === cards[j].orientation) {
-                    matches.push(cards[j].card);
+                if(i !== j && card === cards[j].rank && up === cards[j].orientation) {
+                    matches.push(cards[j].rank);
                 }
             }
 
@@ -330,7 +328,7 @@ const Cartomancy = () => {
 
         // choose keyword: 1. check eteilla 2. choose title/subtitle
         for (let i = cards.length - 1; i >= 0; i--) {
-            if(i !== cards.length - 1 && cards[i+1].card === "E") {
+            if(i !== cards.length - 1 && cards[i+1].rank === "E") {
                 keywords.add(cards[i].etteilla);
             }
             else if (cards[i].number !== 1) {

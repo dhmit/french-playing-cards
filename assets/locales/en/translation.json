@@ -406,7 +406,7 @@
       "rules": "Click here for the rules of Klondike Solitaire.",
       "rulesHref": "/static/solitaire-rules-english.docx"
     },
-    "divination": {
+    "cartomancy": {
         "disclaimer": {
             "salutation": "Dear User,",
             "p0": "The game you are about to play follows rules created by the French cartomancer Jean-Baptiste Alliette in the 1770s and 1780s. It is intended as a historical reconstruction of one use of playing cards enjoyed by individuals in the eighteenth and nineteenth centuries.",

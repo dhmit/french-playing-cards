@@ -19,6 +19,8 @@ class Command(BaseCommand):
             raise CommandError('Failed to populate the database: "%s"' % e)
 
     def populate_playing_cards(self):
+        print("Populating playing cards")
+
         data_folder = os.path.join(settings.PROJECT_ROOT, 'card_data')
         periods = ["A", "B", "D"]
         for period in periods:
@@ -83,6 +85,8 @@ class Command(BaseCommand):
         self.stdout.write('End of printing cards.')
 
     def populate_tarot(self):
+        self.stdout.write('Populating tarot cards')
+
         tarot_cards = []
         data_folder = os.path.join(settings.PROJECT_ROOT, 'card_data')
         tarot_english_csv_path = os.path.join(data_folder, 'tarot', 'tarot_english.csv')
@@ -119,3 +123,5 @@ class Command(BaseCommand):
 
             tarot_model = Tarot(lang="fr", image=image_string, **card)
             tarot_model.save()
+
+        self.stdout.write('Done populating tarot cards')

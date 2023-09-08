@@ -1,4 +1,4 @@
-number,orientation,card,title,subtitle,pair,etteilla,quad,triple,double
+number,orientation,rank,title,subtitle,pair,etteilla,quad,triple,double
 1,1,E,,,,,,,
 1,0,E,,,,,,,
 2,1,K,a man,loyalty,thief,gold on you,great honor,consultation,minor advice

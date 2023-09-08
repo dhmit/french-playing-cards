@@ -97,29 +97,26 @@ def generate_prediction(request):
     return JsonResponse(response)
 
 
+
 def search_results(request):
-    # De-stringify
     query = json.loads(request.GET.get('query'))
     mode = request.GET.get('mode')
 
-    periods = query.get('periods')
+    start_date = query.get('start')
+    end_date = query.get('end')
     ranks = query.get('ranks')
     towns = query.get('towns')
     suits = query.get('suits')
 
-    decks = Deck.objects.all()
-
-    q_periods= Q()
-    if periods:
-        for period in periods:
-            q_periods |= Q(period=period)
+    # Filter based on the start_date and end_date
+    decks = Deck.objects.filter(start_date__gte=start_date, start_date__lte=end_date)
 
     q_towns = Q()
     if towns:
         for town in towns:
             q_towns |= Q(town=town)
 
-    decks = decks.filter(q_periods & q_towns)
+    decks = decks.filter(q_towns)
 
     if mode == 'card':
         print('card mode!')
@@ -154,14 +151,7 @@ def search_results(request):
             }
             result.append(card_dict)
 
-        return JsonResponse(result, safe=False)
-
-
     if mode == 'deck':
-
-        print('deck mode!')
-        import pprint
-        pp = pprint.PrettyPrinter(indent=4)
         decks = decks.order_by('start_date', 'end_date')
 
         result = []
@@ -184,8 +174,4 @@ def search_results(request):
                 'cards': cards,
             })
 
-            pp.pprint(cards)
-
-        return JsonResponse(result, safe=False)
-
-
+    return JsonResponse(result, safe=False)

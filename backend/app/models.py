@@ -2,10 +2,11 @@
 Models for the the PLAYING CARDS web app.
 Django docs here: https://docs.djangoproject.com/en/3.2/topics/db/models/
 """
+import os
+from enum import Enum
 
 from django.db import models
 from django.conf import settings
-from enum import Enum
 
 ABBREVIATIONS_TO_CARD_SORT = {
     # ranks
@@ -74,7 +75,7 @@ class Tarot(models.Model):
     lang = models.CharField(max_length=2)
     number = models.IntegerField()
     orientation = models.BooleanField(blank=True, null=True)
-    card = models.CharField(max_length=1)
+    rank = models.CharField(max_length=1)
     title = models.CharField(max_length=30, blank=True)
     subtitle = models.CharField(max_length=30, blank=True)
     pair = models.CharField(max_length=20, blank=True)
@@ -82,7 +83,9 @@ class Tarot(models.Model):
     quad = models.CharField(max_length=20, blank=True)
     triple = models.CharField(max_length=20, blank=True)
     double = models.CharField(max_length=20, blank=True)
-    image = models.FilePathField(path="assets/img/divination/", null=True)
+
+    IMG_PATH = os.path.join(settings.PROJECT_ROOT, "assets", "img", "cartomancy")
+    image = models.FilePathField(path=IMG_PATH, null=True)
 
     def __str__(self):
-        return f"{self.card}"
+        return f"{self.card} ({self.lang})"

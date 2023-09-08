@@ -1,9 +1,18 @@
 import React from "react";
 import axios from "axios";
+
+import ReactSlider from 'react-slider';
 import Select from "react-select";
+
 import {withTranslation} from "react-i18next";
+
 import {PropTypes} from "prop-types";
 import {Loading} from  "../Loading";
+
+const MIN_YEAR = 1640;
+const MAX_YEAR = 1850;
+const REVOLUTION_START = 1789;
+const REVOLUTION_END = 1799;
 
 const SUIT_SYMBOLS = {
     H: "♥",
@@ -50,30 +59,34 @@ class CardSearch extends React.Component {
         super(props);
         this.state = {
             selected: {
-                periods: [],
                 ranks: [],
                 suits: [],
                 towns: [],
+                start: MIN_YEAR,
+                end: MAX_YEAR,
             },
             results: [],
             searching: true,
             mode: SearchMode.CARD,
         };
+        this.searchTimeout = null;
     }
 
     componentDidMount() {
         this.handleSearch();
     }
 
+
     handleSearch = () => {
         let selected = {};
+
         for (let item in this.state.selected) {
-            if (this.state.selected[item].length) {
-                selected[item] = [];
-                this.state.selected[item].map((obj) => {
-                    selected[item].push(obj.value);
-                });
-                selected[item] = selected[item];
+            if (Array.isArray(this.state.selected[item]) && this.state.selected[item].length) {
+                // For array items like ranks, suits, and towns
+                selected[item] = this.state.selected[item].map(obj => obj.value);
+            } else if (item === "start" || item === "end") {
+                // Directly assign numeric values for start and end
+                selected[item] = this.state.selected[item];
             }
         }
 
@@ -83,27 +96,67 @@ class CardSearch extends React.Component {
         };
         axios.get("/search-results/", {params})
              .then((results) => { this.setState({results: results.data, searching: false}); })
-             .catch(() => { console.log(error); });
+             .catch(error => { console.log(error); }); // Adjusted the error callback to reference the 'error' parameter
     };
 
     handleChange = (selectedItems, context) => {
         // deep copy the state object to be able to modify it
         let stateToModify = JSON.parse(JSON.stringify(this.state.selected));
-        // overwrite only the choice that was just updated
-        stateToModify[context["name"]] = selectedItems;
-        this.setState(
-            {
-                selected: stateToModify,
-                searching: true
-            },
-            this.handleSearch
-        );
+
+        if (context.name === "periods") {
+            // Check the selected period and adjust the start and end years
+            let selectedPeriod = selectedItems ? selectedItems.value : null;
+            switch (selectedPeriod) {
+                case "B": // pre-revolutionary
+                    stateToModify.start = MIN_YEAR;
+                    stateToModify.end = REVOLUTION_START;
+                    break;
+                case "D": // revolutionary
+                    stateToModify.start = REVOLUTION_START;
+                    stateToModify.end = REVOLUTION_END;
+                    break;
+                case "A": // post
+                    stateToModify.start = REVOLUTION_END;
+                    stateToModify.end = MAX_YEAR;
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            // overwrite only the choice that was just updated
+            stateToModify[context["name"]] = selectedItems;
+        }
+
+        this.setState({
+            selected: stateToModify,
+            searching: true
+        }, this.handleSearch);
     };
+
+    handleSliderChange = (values) => {
+        // The values array contains two integers: [startYear, endYear]
+        this.setState(prevState => ({
+            selected: {
+                ...prevState.selected,
+                start: values[0],
+                end: values[1]
+            }
+            }),
+        );
+
+        if (this.searchTimeout) {
+            clearTimeout(this.searchTimeout);
+        }
+        this.searchTimeout = setTimeout(this.handleSearch, 100);
+    };
+
 
     setMode = (mode) => {
         this.setState({mode, searching: true}, this.handleSearch);
     };
 
+
+    sliderRenderThumb = (props, state) => <div {...props}>{state.valueNow}</div>;
 
     render() {
         const {t} = this.props;
@@ -207,12 +260,28 @@ class CardSearch extends React.Component {
                         </a>
                     </div>
 
+                    <div className='search-filter'>
+                        <ReactSlider
+                            className="explore-slider"
+                            thumbClassName="explore-slider-thumb"
+                            trackClassName="explore-slider-track"
+                            defaultValue={[this.state.selected.start, this.state.selected.end]}
+                            value={[this.state.selected.start, this.state.selected.end]}
+                            ariaLabel={['Lower thumb', 'Upper thumb']}
+                            ariaValuetext={state => `Year ${state.valueNow}`}
+                            renderThumb={this.sliderRenderThumb}
+                            onChange={this.handleSliderChange}
+                            min={MIN_YEAR}
+                            max={MAX_YEAR}
+                            pearling
+                            minDistance={1}  // At least 1 year difference
+                        />
+                        </div>
 
                     <div className='search-filter'>
                         {t("search.categories.period.title")}
                         <Select
                             name={"periods"}
-                            isMulti
                             value={this.state.selected.periods}
                             getOptionLabel={option => t("search.categories.period." + option.label)}
                             options={options.periods}

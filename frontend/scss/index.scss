@@ -282,8 +282,31 @@ button:hover {
 }
 
 .search-filter {
+    position: relative;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.explore-slider {
+    width: 100%;
+    background: #dfdfdf;
+    outline: none;
+    height: 2rem;
+}
+
+.explore-slider-thumb {
+    text-align: center;
+    background-color: white;
+    cursor: grab;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.explore-slider-track {
+    top: 45%;
+    bottom: 0;
+    background: #4286f4;
+    height: 10%;
 }
 
 #search-select {
