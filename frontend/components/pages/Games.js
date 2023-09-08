@@ -20,7 +20,7 @@ const Games = () => {
         {
             img: "/static/img/games/cartomancy.jpg",
             title: t('games.cartomancy'),
-            link: "/divination",
+            link: "/cartomancy",
         },
     ];
 

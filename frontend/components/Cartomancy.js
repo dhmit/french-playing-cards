@@ -275,7 +275,7 @@ const EndingScreen = ({ goToNext }) => {
 };
 
 
-const DivinationGame = () => {
+const Cartomancy = () => {
     const [screen, setScreen] = useState(0);
     const [question, setQuestion] = React.useState(null);
     const [cards, setCards] = React.useState(null);
@@ -375,4 +375,4 @@ const DivinationGame = () => {
 
 };
 
-export default DivinationGame;
+export default Cartomancy;

@@ -46,7 +46,7 @@ class Card(models.Model):
 
 
     def __str__(self):
-        return f'{self.deck.name} - {self.card}{self.suit}'
+        return f'{self.deck.name} - {self.rank}{self.suit}'
 
     class Meta:
         ordering = ['sort_order']
@@ -68,11 +68,7 @@ class Deck(models.Model):
     # period is either B, D, or A (before, during, after revolution)
 
     def __str__(self):
-        # this just prints a helpful string in python console.
-        # Can be whatever you need (like printing the name if it exists)
-        if self.name:
-            return f"{self.id}: {self.name}"
-        return f"{self.id}"
+        return f"{self.name} ({self.start_date})"
 
 class Tarot(models.Model):
     lang = models.CharField(max_length=2)
@@ -87,3 +83,6 @@ class Tarot(models.Model):
     triple = models.CharField(max_length=20, blank=True)
     double = models.CharField(max_length=20, blank=True)
     image = models.FilePathField(path="assets/img/divination/", null=True)
+
+    def __str__(self):
+        return f"{self.card}"
