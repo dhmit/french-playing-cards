@@ -26,16 +26,13 @@ class Card(models.Model):
     """
     The Card model
     """
-    # auto id generated
     deck = models.ForeignKey('Deck', null=True, on_delete=models.DO_NOTHING)
-    db_id = models.CharField(max_length=30, null=True)
     rank = models.CharField(max_length=1, null=True)
     suit = models.CharField(max_length=1, null=True)
-    type = models.CharField(max_length=30, null=True)
     back_notes = models.CharField(max_length=30, null=True)
     url = models.URLField(max_length=200, null=True)
     recto_img = models.FilePathField()
-    verso_img = models.FilePathField()
+    verso_img = models.FilePathField(null=True)
 
     # So that we don't have to do any sorting in Python, we define a sort order
     # for cards within a deck as follows:
@@ -51,6 +48,7 @@ class Card(models.Model):
 
     class Meta:
         ordering = ['sort_order']
+        unique_together = ['deck', 'rank', 'suit']
 
 
 class Deck(models.Model):

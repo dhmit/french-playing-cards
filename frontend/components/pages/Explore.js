@@ -268,9 +268,11 @@ class CardSearch extends React.Component {
                             <img className="card-modal-image img-fluid" src={"/static/img/" + this.state.modalCard.image} alt="Card Front"/>
                             </Col>
 
-                            <Col>
-                            <img className="card-modal-image img-fluid" src={"/static/img/" + this.state.modalCard.back} alt="Card Back"/>
-                            </Col>
+                            {this.state.modalCard.back &&
+                                <Col>
+                                <img className="card-modal-image img-fluid" src={"/static/img/" + this.state.modalCard.back} alt="Card Back"/>
+                                </Col>
+                            }
                         </Row>
                         <Row className="p-4">
                             <p>

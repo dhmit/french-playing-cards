@@ -37,21 +37,18 @@ class Command(BaseCommand):
                 card_data = deck_data_frame.to_dict(orient="records")
 
                 # create and save the deck
-                deck_instance = Deck(name=deck_name,
-                                     period=period,
-                                     start_date=card_data[0]["Start Date"],
-                                     end_date=card_data[0]["End Date"],
-                                     maker=card_data[0]["Maker"],
-                                     title=card_data[0]["Title"],
-                                     town=card_data[0]["Town"])
+                deck = Deck(name=deck_name,
+                            period=period,
+                            start_date=card_data[0]["Start Date"],
+                            end_date=card_data[0]["End Date"],
+                            maker=card_data[0]["Maker"],
+                            title=card_data[0]["Title"],
+                            town=card_data[0]["Town"])
 
-                deck_instance.save()
-                self.stdout.write(f'Created deck {deck_name} (id {deck_instance.id}...')
+                deck.save()
+                self.stdout.write(f'Created deck {deck_name} (id {deck.id}...')
 
                 for entry in card_data:
-                    if entry["Recto or Verso"] == 'V':
-                        continue
-
                     rank = entry['Card']
                     suit = entry["Suit"]
 
@@ -60,25 +57,32 @@ class Command(BaseCommand):
                         suit = ""
 
                     # create and save each card
-                    recto_img=f'{period}/{deck_name}/{rank}{suit}.1.jpeg'
-                    verso_img=f'{period}/{deck_name}/{rank}{suit}.2.jpeg'
+                    recto_img = f'{period}/{deck_name}/{rank}{suit}.1.jpeg'
 
                     sort_order = ABBREVIATIONS_TO_CARD_SORT[suit]*4 + ABBREVIATIONS_TO_CARD_SORT[rank]
 
-                    card = Card(
-                        deck=deck_instance,
-                        db_id=entry["DB ID"],
-                        rank=rank,
-                        suit=suit,
-                        type=entry["Type"],
-                        back_notes=entry["Back notes?"],
-                        url=entry["BnF URL"],
-                        recto_img=recto_img,
-                        verso_img=verso_img,
-                        sort_order=sort_order
-                    )
-                    card.save()
-                    # TODO(ra): Add a verbose flag (maybe? probably don't need it...)
+                    if entry["Recto or Verso"] == 'R':
+                        card = Card(
+                            deck=deck,
+                            rank=rank,
+                            suit=suit,
+                            back_notes=entry["Back notes?"],
+                            url=entry["BnF URL"],
+                            recto_img=recto_img,
+                            sort_order=sort_order
+                        )
+                        card.save()
+
+                    elif entry["Recto or Verso"] == 'V':
+                        card = Card.objects.get(
+                            deck=deck,
+                            rank=rank,
+                            suit=suit
+                        )
+                        card.verso_img = f'{period}/{deck_name}/{rank}{suit}.2.jpeg'
+                        card.save()
+
+
                     # self.stdout.write('Created card {} with id of {}'.format(card.db_id, card.id))
                     # self.stdout.write('-------')
 
