@@ -141,7 +141,9 @@ def search_results(request):
             card_dict = {
                 'title': card.deck.title,
                 'image': card.recto_img,
+                'back': card.verso_img,
                 'rank': card.rank,
+                'url': card.url,
                 'suit': card.suit,
                 'start_date': card.deck.start_date,
                 'end_date': card.deck.end_date,
@@ -160,9 +162,11 @@ def search_results(request):
             for card in deck.card_set.all().order_by('sort_order'):
                 cards.append({
                     'image': card.recto_img,
+                    'back': card.verso_img,
                     'rank': card.rank,
                     'suit': card.suit,
                     'order': card.sort_order,
+                    'url': card.url,
                 })
 
             result.append({

@@ -339,7 +339,8 @@
             "unknown": "Unknown"
         },
         "button": "Search",
-        "note": "To view an card image in greater detail, right click on it and select 'Open Image in New Tab'"
+        "note": "To view an card image in greater detail, right click on it and select 'Open Image in New Tab'",
+        "bnf": "Bibliothèque nationale de France entry for this deck"
     },
     "tarot": {
         "header": "Tarot Cards",

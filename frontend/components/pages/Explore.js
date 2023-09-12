@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 
+import { Modal, Button, Row, Col } from 'react-bootstrap';
 import ReactSlider from 'react-slider';
 import Select from "react-select";
 
@@ -68,14 +69,25 @@ class CardSearch extends React.Component {
             results: [],
             searching: true,
             mode: SearchMode.CARD,
+            modalCard: null,
         };
         this.searchTimeout = null;
+        this.t = this.props.t;
     }
 
     componentDidMount() {
         this.handleSearch();
     }
 
+    showModal = (card) => {
+        this.setState({
+            modalCard: card
+        });
+    };
+
+    hideModal = () => {
+        this.setState({ modalCard: null });
+    };
 
     handleSearch = () => {
         let selected = {};
@@ -158,11 +170,20 @@ class CardSearch extends React.Component {
 
     sliderRenderThumb = (props, state) => <div {...props}>{state.valueNow}</div>;
 
+    getCardNamePara = (rank, suit) => {
+        const cardRank = this.t("search.ranks." + rank);
+        let cardNameClass = "card-name";
+        if (['H', 'D'].includes(suit)) {
+            cardNameClass += " red";
+        }
+
+        return (<p className={cardNameClass}>
+            {cardRank}
+            {SUIT_SYMBOLS[suit]}
+        </p>);
+    };
+
     render() {
-        const {t} = this.props;
-
-        // TODO(ra): This is a bit of a mess, so maybe factor these out into separate components later
-
         let results;
         if (this.state.searching) {
             results = <Loading />;
@@ -177,12 +198,6 @@ class CardSearch extends React.Component {
                     padding: "10%"
                 };
 
-                let cardNameClass = "card-name";
-                if (['H', 'D'].includes(card.suit)) {
-                    cardNameClass += " red";
-                }
-
-                const cardRank = t("search.ranks." + card.rank);
 
                 return (
                     <li key={idx}>
@@ -191,11 +206,12 @@ class CardSearch extends React.Component {
                                 {town && town + ', '}
                                 {dates}
                             </p>
-                            <p className={cardNameClass}>
-                                {cardRank}
-                                {SUIT_SYMBOLS[card.suit]}
-                            </p>
-                            <img className="card-image" src={"/static/img/" + card.image}/>
+                            {this.getCardNamePara(card.rank, card.suit)}
+
+                            <img className="card-image" src={"/static/img/" + card.image}
+                                 style={{cursor: 'pointer '}}
+                                 onClick={() => this.showModal(card)}/>
+
                             <p><em>{card.title}</em></p>
                             {maker && <p>{"Maker: " + maker}</p>}
                         </div>
@@ -207,19 +223,13 @@ class CardSearch extends React.Component {
         } else if (this.state.mode === SearchMode.DECK) {
             const decks = this.state.results.map((deck, idx) => {
                 const cards = deck.cards.map((card, idx) => {
-                    let cardNameClass = "card-name";
-                    if (['H', 'D'].includes(card.suit)) {
-                        cardNameClass += " red";
-                    }
-                    const cardRank = t("search.ranks." + card.rank);
                     return (
                         <div className="deck-card" key={idx}>
-                            <p className={cardNameClass}>
-                                {cardRank}
-                                {SUIT_SYMBOLS[card.suit]}
-                            </p>
+                            {this.getCardNamePara(card.rank, card.suit)}
                             <p>
-                            <img className="card-image" src={"/static/img/" + card.image}/>
+                            <img className="card-image" src={"/static/img/" + card.image}
+                                 style={{cursor: 'pointer '}}
+                                 onClick={() => this.showModal(card)}/>
                             </p>
                             <p><em>{card.title}</em></p>
                         </div>
@@ -243,20 +253,59 @@ class CardSearch extends React.Component {
         }
 
 
+        const modal = this.state.modalCard && (
+            <Modal show={this.state.modalCard !== null} onHide={this.hideModal} size="lg" centered>
+                <Modal.Header closeButton>
+                    <Modal.Title>
+                        {this.state.modalCard.title} ({this.state.modalCard.start_date})<br/>
+                        {this.getCardNamePara(this.state.modalCard.rank, this.state.modalCard.suit)}
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    {this.state.modalCard && (<>
+                        <Row>
+                            <Col>
+                            <img className="card-modal-image img-fluid" src={"/static/img/" + this.state.modalCard.image} alt="Card Front"/>
+                            </Col>
+
+                            <Col>
+                            <img className="card-modal-image img-fluid" src={"/static/img/" + this.state.modalCard.back} alt="Card Back"/>
+                            </Col>
+                        </Row>
+                        <Row className="p-4">
+                            <p>
+                            {this.t("search.note")}
+                            </p>
+                            <p>
+                            <a href={this.state.modalCard.url} target="_blank" rel="noreferrer">
+                                {this.t("search.bnf")}
+                            </a>
+                            </p>
+                        </Row>
+                    </>)}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={this.hideModal}>Close</Button>
+                </Modal.Footer>
+            </Modal>
+        );
+
         return (<>
+            {modal}
+
             <div className="lead p-4">
-                {t("search.header")}
+                {this.t("search.header")}
             </div>
             <div id='search-page'>
                 <div id="search-column">
                     <div className="btn-group">
                         <a onClick={() => this.setMode(SearchMode.CARD)}
                            href="#" className={`btn btn-outline ${(this.state.mode === SearchMode.CARD) ? 'active' : ''}`}>
-                            {t('search.cardSearch')}
+                            {this.t('search.cardSearch')}
                         </a>
                         <a onClick={() => this.setMode(SearchMode.DECK)}
                            href="#" className={`btn btn-outline ${(this.state.mode === SearchMode.DECK) ? 'active' : ''}`}>
-                            {t('search.deckSearch')}
+                            {this.t('search.deckSearch')}
                         </a>
                     </div>
 
@@ -279,14 +328,14 @@ class CardSearch extends React.Component {
                         </div>
 
                     <div className='search-filter'>
-                        {t("search.categories.period.title")}
+                        {this.t("search.categories.period.title")}
                         <Select
                             name={"periods"}
                             value={this.state.selected.periods}
-                            getOptionLabel={option => t("search.categories.period." + option.label)}
+                            getOptionLabel={option => this.t("search.categories.period." + option.label)}
                             options={options.periods}
                             onChange={this.handleChange}
-                            placeholder={t("search.placeholder")}
+                            placeholder={this.t("search.placeholder")}
                             classNames={{control: (_state) => 'search-select'}}
                         />
                     </div>
@@ -294,43 +343,43 @@ class CardSearch extends React.Component {
                     {this.state.mode === SearchMode.CARD &&
                         <>
                             <div className='search-filter'>
-                                {t("search.categories.card.title")}
+                                {this.t("search.categories.card.title")}
                                 <Select
                                     isMulti
                                     name={"ranks"}
                                     value={this.state.selected.ranks}
-                                    getOptionLabel={option => t("search.categories.card." + option.label)}
+                                    getOptionLabel={option => this.t("search.categories.card." + option.label)}
                                     options={options.ranks}
                                     onChange={this.handleChange}
-                                    placeholder={t("search.placeholder")}
+                                    placeholder={this.t("search.placeholder")}
                                 />
                             </div>
 
                             <div className='search-filter'>
-                                {t("search.categories.suit.title")}
+                                {this.t("search.categories.suit.title")}
                                 <Select
                                     isMulti
                                     name={"suits"}
                                     value={this.state.selected.suits}
-                                    getOptionLabel={option => t("search.categories.suit." + option.label)}
+                                    getOptionLabel={option => this.t("search.categories.suit." + option.label)}
                                     options={options.suits}
                                     onChange={this.handleChange}
-                                    placeholder={t("search.placeholder")}
+                                    placeholder={this.t("search.placeholder")}
                                 />
                                     </div>
                         </>
                     }
 
                     <div className='search-filter'>
-                        {t("search.categories.town")}
+                        {this.t("search.categories.town")}
                         <Select
                             isMulti
                             name={"towns"}
                             value={this.state.selected.towns}
-                            getOptionLabel={option => t("search.categories." + option.label, option.label)}
+                            getOptionLabel={option => this.t("search.categories." + option.label, option.label)}
                             options={options.towns}
                             onChange={this.handleChange}
-                            placeholder={t("search.placeholder")}
+                            placeholder={this.t("search.placeholder")}
                         />
                     </div>
                 </div>
