@@ -9,7 +9,7 @@ from .base import *  # pylint: disable=unused-wildcard-import, wildcard-import
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-SECRET_KEY = os.environ['DJANGO_SECRET_KEY']  # set in venv activate
+SECRET_KEY = "qqucn931x78rx054n(6g(s_3vxppjw$f24e(9&v6rsbd0&0$2e"
 
 # ADMINS = ['rahmed@mit.edu']  # Django will email Ryaan on internal server errors
 
