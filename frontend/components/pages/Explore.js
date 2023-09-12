@@ -29,7 +29,6 @@ const options = {
         {label: "post", value: "A"}
     ],
     ranks: [
-        {label: "ace", value: "A"},
         {label: "king", value: "K"},
         {label: "queen", value: "Q"},
         {label: "jack", value: "J"}
