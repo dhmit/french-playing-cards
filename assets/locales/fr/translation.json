@@ -389,21 +389,73 @@
     },
     "games": {
         "header": "Jouez !",
-        "play": "Nous vous offrons la possibilité de jouer à deux types de jeux de cartes avec des cartes à jouer historiques françaises : le solitaire Klondike et la cartomancie. Si vous choisissez de jouer à notre jeu de solitaire, vous pouvez sélectionner l'un des trois jeux historiques pour jouer. Si vous choisissez de jouer à notre jeu de cartomancie, vous utiliserez un jeu de cartes de 32 cartes conçu à l'origine par Jean-Baptiste Alliette dans les années 1770. Pour plus d'informations sur le contexte historique, les règles du jeu et l'accès aux jeux en ligne, veuillez sélectionner l'une des deux options ci-dessous.",
+        "play": "Nous vous offrons la possibilité de jouer à deux types de jeux de cartes avec des cartes à jouer historiques françaises : le solitaire Klondike et la cartomancie. Si vous choisissez de jouer à notre jeu de solitaire, vous pouvez sélectionner l'un des trois jeux historiques pour jouer. Si vous choisissez de jouer à notre jeu de cartomancie, vous utiliserez un jeu de cartes de 33 cartes conçu à l'origine par Jean-Baptiste Alliette dans les années 1770. Pour plus d'informations sur le contexte historique, les règles du jeu et l'accès aux jeux en ligne, veuillez sélectionner l'une des deux options ci-dessous.",
         "solitaire": "Solitaire",
         "cartomancy": "Cartomancie"
     },
     "solitaire": {
-          "title": "Solitaire",
-          "selectDeck": "Choisissez un jeu pour jouer au Solitaire",
-          "description": "Bien que la version du solitaire que nous proposons ici, appelée \"Solitaire Klondike\", soit extrêmement populaire de nos jours, elle ne s'est pas répandue ni en France, ni en Angleterre, ni ailleurs dans l'ouest avant le milieu du XIXe siècle. Le jeu de cartes virtuel avec lequel vous jouerez est un assemblage des faces et des dos de plusieurs jeux de cartes différents des XVIIIe et XIXe siècles. Les cartes allant de l'as au dix dans les quatre couleurs sont reproduites à partir <0>d'un jeu fabriqué à Paris avant 1789</0>. Le motif au dos des cartes provient d'un jeu fabriqué au dernier quart du XIXe siècle. (Les dos des cartes à jouer françaises étaient vierges jusqu'environ 1815.) Enfin, vous pouvez choisir l'un des trois motifs de cartes à figures pour jouer au jeu:",
-          "faceCardDescription1": "Le jeu de cartes \"Portrait de Paris\" présente des dessins de cartes à jouer que la monarchie française a imposé aux fabricants de cartes à Paris et dans ses environs de 1701 jusqu'à la Révolution de 1789.",
-          "faceCardDescription2": "Le jeu de cartes \"Jaume et Dugourc\" a été conçu et commercialisé par Étienne Jaume et Jean-Démosthène Dugourc en 1793. Dans ce jeu, les rois deviennent des \"génies\", les dames des \"libertés\" et les valets des \"égalités\". L'idée était de remplacer les rois, les dames et les valets, considérés comme des désignations de l'\"Ancien Régime\".",
-          "faceCardDescription3": "Le jeu de cartes \"J-L David\" a été conçu en 1808-1809 par l'atelier du célèbre artiste révolutionnaire Jacques-Louis David, à la demande du gouvernement impérial de Napoléon Bonaparte. David est revenu à la vieille triade de rois, dames et valets, mais les a redessinés pour une plus grande véracité historique.",
-          "infoLink": "Pour plus d'informations sur l'évolution de l'iconographie des figures de ces années-là, veuillez consulter notre <0>page \"De face\"</0>.",
-          "rules": "Cliquez ici pour les règles du Solitaire Klondike.",
-          "rulesHref": "/static/solitaire-rules-french.docx"
+      "title": "Solitaire",
+      "selectDeck": "Choisissez un jeu pour jouer au Solitaire",
+      "description": "Bien que la version du solitaire que nous proposons ici, appelée \"Solitaire Klondike\", soit extrêmement populaire de nos jours, elle ne s'est pas répandue ni en France, ni en Angleterre, ni ailleurs dans l'ouest avant le milieu du XIXe siècle. Le jeu de cartes virtuel avec lequel vous jouerez est un assemblage des faces et des dos de plusieurs jeux de cartes différents des XVIIIe et XIXe siècles. Les cartes allant de l'as au dix dans les quatre couleurs sont reproduites à partir <0>d'un jeu fabriqué à Paris avant 1789</0>. Le motif au dos des cartes provient d'un jeu fabriqué au dernier quart du XIXe siècle. (Les dos des cartes à jouer françaises étaient vierges jusqu'environ 1815.) Enfin, vous pouvez choisir l'un des trois motifs de cartes à figures pour jouer au jeu:",
+      "faceCardDescription1": "Le jeu de cartes \"Portrait de Paris\" présente des dessins de cartes à jouer que la monarchie française a imposé aux fabricants de cartes à Paris et dans ses environs de 1701 jusqu'à la Révolution de 1789.",
+      "faceCardDescription2": "Le jeu de cartes \"Jaume et Dugourc\" a été conçu et commercialisé par Étienne Jaume et Jean-Démosthène Dugourc en 1793. Dans ce jeu, les rois deviennent des \"génies\", les dames des \"libertés\" et les valets des \"égalités\". L'idée était de remplacer les rois, les dames et les valets, considérés comme des désignations de l'\"Ancien Régime\".",
+      "faceCardDescription3": "Le jeu de cartes \"J-L David\" a été conçu en 1808-1809 par l'atelier du célèbre artiste révolutionnaire Jacques-Louis David, à la demande du gouvernement impérial de Napoléon Bonaparte. David est revenu à la vieille triade de rois, dames et valets, mais les a redessinés pour une plus grande véracité historique.",
+      "infoLink": "Pour plus d'informations sur l'évolution de l'iconographie des figures de ces années-là, veuillez consulter notre <0>page \"De face\"</0>.",
+      "rules": "Cliquez ici pour les règles du Solitaire Klondike.",
+      "rulesHref": "/static/solitaire-rules-french.docx"
+    },
+    "cartomancy": {
+        "disclaimer": {
+            "salutation": "Cher utilisateur,",
+            "p0": "Le jeu que vous êtes sur le point de jouer suit les règles créées par le cartomancien français Jean-Baptiste Alliette dans les années 1770 et 1780. Il s'agit d'une reconstruction historique d'une utilisation des cartes à jouer appréciée par les individus aux XVIIIe et XIXe siècles.",
+            "p1": "Il n'est pas destiné à vous offrir des conseils sur les problèmes actuels. Ne prenez pas de décisions concernant votre carrière, vos finances, votre vie personnelle ou tout autre sujet en vous basant sur les lectures de cartes générées par ce jeu en ligne.",
+            "p2": "Le Massachusetts Institute of Technology ne recommande pas ce jeu en ligne comme guide pour les décisions personnelles ni comme moyen de prédire l'avenir.",
+            "signOff": "Cordialement,",
+            "team": "L'équipe du site Web des cartes à jouer françaises",
+            "nextButton": "Entendu"
         },
+        "screen1": {
+            "p0": "Vous êtes sur le point de consulter une version moderne en ligne d'un jeu de cartomancie créé par Jean-Baptiste Alliette, un occultiste et chercheur en tarot actif en France vers la fin du dix-huitième siècle.",
+            "p1": "Alliette, qui utilisait le pseudonyme \"Etteilla\" (son nom inversé), a publié des ouvrages expliquant comment prédire l'avenir à l'aide d'un jeu de 32 cartes à jouer standard avec une carte joker supplémentaire (cartomancie), ou d'un jeu de 78 cartes de tarot (lectures de tarot).",
+            "p2": "Cette version en ligne de la pratique de la cartomancie d'Alliette tire ses principes d'un ouvrage qu'il a publié en 1773 ; Alliette lui-même réalisait des consultations de cartomancie pour lesquelles il facturait ses clients.",
+            "p3": "Les cartes que nous reproduisons ici sont des images haute résolution provenant d'un jeu de 1860 en possession de la Bibliothèque nationale de France, qui recrée les cartes conçues par Etteilla dans les années 1770. Pour en savoir plus sur Alliette et la cartomancie, veuillez consulter notre <0>page \"Brève histoire de la cartomancie\"</0>.",
+            "nextButton": "Commençons!"
+        },
+        "screen2": {
+            "p0": "Posez une question à notre cartomancien numérique !",
+            "p1": "Vous pouvez choisir trois ou cinq cartes. Dans ses publications, Alliette recommandait d'utiliser un minimum de 12 cartes, mais nous avons décidé de réduire le nombre de cartes pour simplifier l'interprétation.",
+            "p2": "Vous pouvez poser des questions sur n'importe quel sujet. Par exemple :",
+            "example1": "Quelle saison me sera la plus favorable cette année ?",
+            "example2": "Quels méfaits mon chat prépare-t-il contre moi ?",
+            "example3": "Y a-t-il une rencontre fortuite avec un vieil ami à l'horizon ?",
+            "questionPlaceholder": "Posez votre question",
+            "questionError": "Veuillez poser votre question avant de tirer des cartes.",
+            "drawThree": "Tirez trois cartes",
+            "drawFive": "Tirez cinq cartes"
+        },
+        "screen3": {
+            "p": "Les cartes ont été générées de manière aléatoire par notre jeu. Les mots sous les cartes représentent les valeurs attribuées à cette combinaison de cartes en se basant sur les interprétations qu'Alliette a publiées et utilisées dans sa pratique de la cartomancie. Ensuite, nous générerons une lecture de vos cartes en nous basant sur ces mots-clés.",
+            "question": "Votre question",
+            "cards": "Vos cartes",
+            "keywords": "Vos mots-clés",
+            "reading": "Votre lecture",
+            "generateButton": "Produisez une lecture",
+            "loadingReading": "Cela pourrait prendre jusqu'aux 20 secondes.  Merci de patienter.",
+            "nextButton": "Curieux de connaître la source de cette lecture ? Cliquez ici."
+        },
+        "getReadingLanguage": "Produce the text in French.",
+        "screen4": {
+            "title": "An Explanation of Your Reading",
+            "p0": "Les trois ou cinq cartes interprétées par notre cartomancien en ligne ont été sélectionnées au hasard parmi le jeu de 33 cartes conçu par Alliette avant la Révolution. Notez que toutes les cartes du jeu peuvent être retournées à l'envers ou à l'endroit. Alliette attribuait différentes valeurs à chaque carte en fonction de son orientation ; cette caractéristique est l'une des nombreuses règles qui régissent les valeurs générées par les relations entre les cartes.",
+            "p1": "Voici trois autres règles d'Alliette qui structurent les valeurs des cartes :",
+            "li0": "Si la carte \"Etteilla\", ou carte joker, est retournée, la valeur sur la carte à sa gauche devient celle associée à la lettre \"E\" en haut de la carte. Chaque carte a une valeur entre 1 et 31.",
+            "li1": "Si deux cartes ensemble totalisent 31, la valeur de la carte devient celle à côté de la lettre \"R\" en haut de la carte.",
+            "li2": "S'il y a deux cartes ou plus avec la même valeur, par exemple, deux rois ou trois 7, le jeu utilise les valeurs du côté droit de la carte pour ajouter un élément prédictif supplémentaire à la combinaison.",
+            "p2": "Bien que notre équipe ait créé le programme qui a randomisé les cartes tirées du jeu de cartomancie d'Alliette et attribué des valeurs à ces cartes en fonction de ces règles, l'interprétation de ces valeurs fournie par notre jeu est générée par une requête nuancée que nous avons soumise à ChatGPT 3.5.",
+            "nextButton": "Jouez encore une fois!",
+            "moreInfo": "Renseignez-vous sur l'histoire des tarots"
+        }
+    },
     "bibliography": {
         "header": "Bibliographie",
         "collections": {

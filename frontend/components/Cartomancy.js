@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import i18next from "i18next";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Container, Row, Col, Form, Alert } from 'react-bootstrap';
 import Loading from "./Loading";
 
@@ -39,7 +39,11 @@ const Screen1 = ({ goToNext }) => {
                     <p>{t("cartomancy.screen1.p0")}</p>
                     <p>{t("cartomancy.screen1.p1")}</p>
                     <p>{t("cartomancy.screen1.p2")}</p>
-                    <p>{t("cartomancy.screen1.p3")}</p>
+                    <p>{
+                        <Trans i18nKey="cartomancy.screen1.p3" components={[
+                            <a href="/tarot/tarot-history" key="0"></a>
+                        ]} />
+                    }</p>
                 </Col>
             </Row>
 
@@ -89,21 +93,21 @@ const Screen2 = ({ goToNext }) => {
                         <Form.Group controlId="textInput">
                             <Form.Control
                                 type="text"
-                                placeholder="Enter your question"
+                                placeholder={t("cartomancy.screen2.questionPlaceholder")}
                                 value={inputData}
                                 onChange={(e) => {
                                     setInputData(e.target.value);
                                     setError(false);
                                 }}
                             />
-                            {error && <Alert variant="danger">Please enter some text before drawing cards.</Alert>}
+                            {error && <Alert variant="danger">{t("cartomancy.screen2.questionError")}</Alert>}
                         </Form.Group>
 
                         <a className="btn btn-outline-secondary" onClick={() => handleDrawCards('3')}>
-                            Draw 3 Cards
+                            {t("cartomancy.screen2.drawThree")}
                         </a>
                         <a className="btn btn-outline-secondary" onClick={() => handleDrawCards('5')}>
-                            Draw 5 Cards
+                            {t("cartomancy.screen2.drawFive")}
                         </a>
                     </Form>
                 </Col>
@@ -114,7 +118,7 @@ const Screen2 = ({ goToNext }) => {
 
 
 
-async function getReading(question, keywords) {
+async function getReading(question, keywords, readingLanguageString) {
     let input = question.trim();
 
     const input_string =
@@ -134,7 +138,12 @@ async function getReading(question, keywords) {
          Emphasize a narrative coherence in the prediction while maintaining a neutral yet mystic tone.
          For instance, if the themes are "journey, obstacles, prosperity" and the question is about career prospects,
          You might say, "A journey awaits you in your career, but obstacles will test your resolve.
-         Overcome them, and prosperity is assured."`;
+         Overcome them, and prosperity is assured."
+
+         ` + readingLanguageString;
+
+
+
 
     try {
         const response = await fetch("/generate-prediction/", {
@@ -175,7 +184,7 @@ const CardReadingScreen = ({ question, cards, keywords, goToNext }) => {
     async function fetchReading() {
         try {
             setLoading(true); // Set loading to true when fetching starts
-            const fetchedReading = await getReading(question, keywords);
+            const fetchedReading = await getReading(question, keywords, t("cartomancy.getReadingLanguage"));
             setReading(fetchedReading);
         } catch (error) {
             console.log("Error fetching reading:", error);
@@ -194,12 +203,12 @@ const CardReadingScreen = ({ question, cards, keywords, goToNext }) => {
             <p>{t("cartomancy.screen3.p")}</p>
 
             <Row className="justify-content-center mb-2">
-                <h2>Your Question</h2>
+                <h2>{t("cartomancy.screen3.question")}</h2>
                 <p className="lead">{question}</p>
             </Row>
 
             <Row className="justify-content-center mb-4">
-                <h2>Your Cards</h2>
+                <h2>{t("cartomancy.screen3.cards")}</h2>
                 {cards.map(card => (
                     <Col md={2} sm={4} key={card.id} className="mb-2">
                         <img className="img-fluid" src={"/static/img/cartomancy/" + card.image} alt={`Card ${card.id}`} />
@@ -208,7 +217,7 @@ const CardReadingScreen = ({ question, cards, keywords, goToNext }) => {
             </Row>
 
             <Row className="mb-4">
-                <h2>Your Keywords</h2>
+                <h2>{t("cartomancy.screen3.keywords")}</h2>
                 <div className="d-flex flex-wrap justify-content-center">
                     {[...keywords].map((keyword, i) => (
                         <div key={i} className="keyword-bubble mr-2 mb-2">{keyword}</div>
@@ -224,9 +233,9 @@ const CardReadingScreen = ({ question, cards, keywords, goToNext }) => {
 
             {showReading && (
                 <Row className="justify-content-center mb-2">
-                    <h2>Your Reading</h2>
+                    <h2>{t("cartomancy.screen3.reading")}</h2>
                     {loading
-                        ? <><p>This may take up to 20 seconds. Thanks for your patience.</p><Loading /> </>
+                        ? <><p>{t("cartomancy.screen3.loadingReading")}</p><Loading /> </>
                         : <p className="lead">{reading}</p>}
                 </Row>
             )}
