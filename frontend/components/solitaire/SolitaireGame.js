@@ -152,13 +152,12 @@ class SolitaireGame extends React.Component {
     };
 
     setDragState = (stackName, cardIndex) => {
-        console.log("Setting drag state: ", stackName, cardIndex);
         this.setState(
             {dragState: {stackName, cardIndex }}
         );
     };
 
-    clearDragState = () => { console.log("Clearing drag state"); this.setDragState('', -1); };
+    clearDragState = () => this.setDragState('', -1);
 
     /*
     Only call this when the stock stack is clicked
@@ -180,9 +179,12 @@ class SolitaireGame extends React.Component {
 
     handleTableauDrop = (destTableauIndex) => {
         const destStackName = 'tableau' + destTableauIndex.toString();
+        const destStack = this.state[destStackName];
+
         const srcStackName = this.state.dragState.stackName;
         const srcStack = this.state[srcStackName];
-        const destStack = this.state[destStackName];
+
+        if (srcStack === destStack) return;
 
         const transferCard =
             srcStackName.startsWith('tableau')
@@ -190,11 +192,6 @@ class SolitaireGame extends React.Component {
             : srcStack[srcStack.length-1];
 
         this.clearDragState();
-
-        if (srcStack === destStack) {
-            // If source and destination stacks are the same, no further action needed
-            return;
-        }
 
 
         let isValidTransfer = false;
@@ -208,10 +205,10 @@ class SolitaireGame extends React.Component {
                               compareSuits(destStackTopCard["suit"], transferCard["suit"]);
         }
 
-        if (isValidTransfer) {
-            const cardsToTransfer = srcStack.splice(this.state.dragState.cardIndex);
-            destStack.push(...cardsToTransfer);
-        }
+        if (!isValidTransfer) return;
+
+        const cardsToTransfer = srcStack.splice(this.state.dragState.cardIndex);
+        destStack.push(...cardsToTransfer);
 
         if (srcStack.length > 0) {
             const srcStackNextCard = srcStack[srcStack.length-1];
@@ -220,14 +217,7 @@ class SolitaireGame extends React.Component {
 
         var stacks = {...this.state};
         stacks[destStackName] = destStack;
-        this.setState({
-            stacks: stacks
-        });
-
-        // For testing purposes
-        // console.log(stackName + " gained a card");
-        // console.log(stackName + ": " + this.state[stackName]);
-        // console.log(this.state);
+        this.setState({ stacks });
     };
 
 
@@ -235,43 +225,33 @@ class SolitaireGame extends React.Component {
         const srcStackName = this.state.dragState.stackName;
         const srcStack = this.state[srcStackName];
 
-        // can't drop multiple cards on to a foundation
-        if (srcStack.length-1 !== this.state.dragState.cardIndex) return;
-
         const destStackName = 'foundation' + suit;
         const destStack = this.state[destStackName];
-        const transferCard = srcStack.pop();
+
+        if (srcStack === destStack) return;
+
+        if (srcStackName.startsWith('tableau') && srcStack.length-1 !== this.state.dragState.cardIndex) {
+            // can't drop multiple cards on to a foundation
+            return;
+        }
+
+        const transferCard = srcStack[srcStack.length-1];
 
         this.clearDragState();
 
-        if (srcStack === destStack) {
-            srcStack.push(transferCard);
-            return;
-        }
+        if (transferCard["suit"] !== suit) return;
 
-        // Card must be same suit as foundation
-        if (transferCard["suit"] !== suit) {
-            srcStack.push(transferCard);
-            return;
-        }
-
+        let isValidTransfer = false;
         if (destStack.length === 0) {
             // Aces can only go on empty stacks
-            if (transferCard["card"] === "A") {
-                destStack.push(transferCard);
-            } else {
-                srcStack.push(transferCard);
-                return;
-            }
+            isValidTransfer = transferCard["card"] === "A";
        } else {
            const destStackTopCard = destStack[destStack.length-1];
-           if (!compareCards(transferCard["card"], destStackTopCard["card"])) {
-               srcStack.push(transferCard);
-               return;
-           }
-
-           destStack.push(transferCard);
+           isValidTransfer = compareCards(transferCard["card"], destStackTopCard["card"]);
        }
+
+       if (!isValidTransfer) return;
+       destStack.push(srcStack.pop());
 
        if (srcStack.length > 0) {
            const srcStackNextCard = srcStack[srcStack.length-1];
@@ -280,18 +260,13 @@ class SolitaireGame extends React.Component {
 
        var stacks = {...this.state};
        stacks[destStackName] = destStack;
-       this.setState({
-           stacks: stacks
-       });
-
+       this.setState({ stacks });
    };
 
    /*
    Handle the stock pile being clicked (drawing a new card to the waste pile):
    */
    handleStockClick = () => {
-       // console.log("Clicking stock");
-
        var stock = this.state.stock;
        var stockCard = stock.pop();
        stockCard.faceUp = true;
@@ -335,12 +310,6 @@ class SolitaireGame extends React.Component {
            // Reassign this.state to reflect the new changes
            stacks: stacks
        });
-       // console.log("Length of this.state.waste after refill: " + this.state.waste.length);
-
-       // Note (from Alyssa): there's a weird bug where the waste doesn't fully empty out and there's still
-       // one card left in the waste after refreshing the stock.
-       // I ran a bunch of print statements and it seems that the stack correctly fully empties out at the end of this function,
-       // but sometime during the rendering, one of the cards from the stock gets moved back to the waste
    };
 
     render() {
