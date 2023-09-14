@@ -1,8 +1,9 @@
 import React from "react";
+import { Trans, withTranslation } from "react-i18next";
 import StockWaste from "./StockWaste";
 import FoundationStack from "./FoundationStack";
 import TableauStack from "./TableauStack";
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 const suits = ["C", "D", "H", "S"];
@@ -349,7 +350,14 @@ class SolitaireGame extends React.Component {
         });
 
         return (<>
-            <h1>Solitaire</h1>
+            <div className="d-flex justify-content-between align-items-center">
+                <h1>Solitaire</h1>
+                <a href="/games">
+                    <Button variant="outline-dark">
+                        {<Trans i18nKey="solitaire.returnToGames" />}
+                    </Button>
+                </a>
+            </div>
             <Container className="solitaire-game">
                 <Row className="stock-waste-foundations">
                     <Col md={4} className='stock-waste-container'>
@@ -377,4 +385,4 @@ class SolitaireGame extends React.Component {
     };
 }
 
-export default SolitaireGame;
+export default withTranslation()(SolitaireGame);

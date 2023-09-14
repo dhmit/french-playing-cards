@@ -402,7 +402,8 @@
       "faceCardDescription3": "Le jeu de cartes \"J-L David\" a été conçu en 1808-1809 par l'atelier du célèbre artiste révolutionnaire Jacques-Louis David, à la demande du gouvernement impérial de Napoléon Bonaparte. David est revenu à la vieille triade de rois, dames et valets, mais les a redessinés pour une plus grande véracité historique.",
       "infoLink": "Pour plus d'informations sur l'évolution de l'iconographie des figures de ces années-là, veuillez consulter notre <0>page \"De face\"</0>.",
       "rules": "Cliquez ici pour les règles du Solitaire Klondike.",
-      "rulesHref": "/static/solitaire-rules-french.docx"
+      "rulesHref": "/static/solitaire-rules-french.docx",
+      "returnToGames": "Retour à la page \"Jouez !\""
     },
     "cartomancy": {
         "disclaimer": {

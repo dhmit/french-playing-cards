@@ -405,7 +405,8 @@
       "faceCardDescription3": "The \"J-L David\" deck was designed in 1808-1809 by the studio of the famous revolutionary artist Jacques-Louis David at the request of the Imperial government of Napoleon Bonaparte. David returned to the old triad of kings, queens, and jacks, but redesigned them for greater historical veracity.",
       "infoLink": "For more information on the changing face card iconography of these years, please visit our <0>\"Fronts\" page</0>.",
       "rules": "Click here for the rules of Klondike Solitaire.",
-      "rulesHref": "/static/solitaire-rules-english.docx"
+      "rulesHref": "/static/solitaire-rules-english.docx",
+      "returnToGames": "Return to Games page"
     },
     "cartomancy": {
         "disclaimer": {
