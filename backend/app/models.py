@@ -69,14 +69,15 @@ class Deck(models.Model):
     def __str__(self):
         return f"{self.name} ({self.start_date})"
 
+
 class Tarot(models.Model):
-    lang = models.CharField(max_length=2)
+    language = models.CharField(max_length=2)
     number = models.IntegerField()
     orientation = models.BooleanField(blank=True, null=True)
     rank = models.CharField(max_length=1)
-    title = models.CharField(max_length=30, blank=True)
-    subtitle = models.CharField(max_length=30, blank=True)
-    pair = models.CharField(max_length=20, blank=True)
+    name = models.CharField(max_length=30, blank=True)
+    value = models.CharField(max_length=30, blank=True)
+    thirty_one = models.CharField(max_length=20, blank=True)
     etteilla = models.CharField(max_length=25, blank=True)
     quad = models.CharField(max_length=20, blank=True)
     triple = models.CharField(max_length=20, blank=True)

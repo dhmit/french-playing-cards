@@ -396,7 +396,7 @@
     "solitaire": {
       "title": "Solitaire",
       "selectDeck": "Choisissez un jeu pour jouer au Solitaire",
-      "description": "Bien que la version du solitaire que nous proposons ici, appelée \"Solitaire Klondike\", soit extrêmement populaire de nos jours, elle ne s'est pas répandue ni en France, ni en Angleterre, ni ailleurs dans l'ouest avant le milieu du XIXe siècle. Le jeu de cartes virtuel avec lequel vous jouerez est un assemblage des faces et des dos de plusieurs jeux de cartes différents des XVIIIe et XIXe siècles. Les cartes allant de l'as au dix dans les quatre couleurs sont reproduites à partir <0>d'un jeu fabriqué à Paris avant 1789</0>. Le motif au dos des cartes provient d'un jeu fabriqué au dernier quart du XIXe siècle. (Les dos des cartes à jouer françaises étaient vierges jusqu'environ 1815.) Enfin, vous pouvez choisir l'un des trois motifs de cartes à figures pour jouer au jeu:",
+      "description": "Bien que la version du solitaire que nous proposons ici, appelée \"Solitaire Klondike\", soit extrêmement populaire de nos jours, elle ne s'est pas répandue ni en France, ni en Angleterre, ni ailleurs dans l'ouest avant le milieu du XIXe siècle. Le jeu de cartes virtuel avec lequel vous jouerez est un assemblage des faces et des dos de plusieurs jeux de cartes différents des XVIIIe et XIXe siècles. Les cartes allant de l'as au dix dans les quatre couleurs sont reproduites à partir d'un jeu fabriqué à Paris avant 1789. Le motif au dos des cartes provient <0>d'un jeu fabriqué au dernier quart du XIXe siècle</0>. (Les dos des cartes à jouer françaises étaient vierges jusqu'environ 1815.) Enfin, vous pouvez choisir l'un des trois motifs de cartes à figures pour jouer au jeu:",
       "faceCardDescription1": "Le jeu de cartes \"Portrait de Paris\" présente des dessins de cartes à jouer que la monarchie française a imposé aux fabricants de cartes à Paris et dans ses environs de 1701 jusqu'à la Révolution de 1789.",
       "faceCardDescription2": "Le jeu de cartes \"Jaume et Dugourc\" a été conçu et commercialisé par Étienne Jaume et Jean-Démosthène Dugourc en 1793. Dans ce jeu, les rois deviennent des \"génies\", les dames des \"libertés\" et les valets des \"égalités\". L'idée était de remplacer les rois, les dames et les valets, considérés comme des désignations de l'\"Ancien Régime\".",
       "faceCardDescription3": "Le jeu de cartes \"J-L David\" a été conçu en 1808-1809 par l'atelier du célèbre artiste révolutionnaire Jacques-Louis David, à la demande du gouvernement impérial de Napoléon Bonaparte. David est revenu à la vieille triade de rois, dames et valets, mais les a redessinés pour une plus grande véracité historique.",
@@ -436,8 +436,7 @@
         "screen3": {
             "p": "Les cartes ont été générées de manière aléatoire par notre jeu. Les mots sous les cartes représentent les valeurs attribuées à cette combinaison de cartes en se basant sur les interprétations qu'Alliette a publiées et utilisées dans sa pratique de la cartomancie. Ensuite, nous générerons une lecture de vos cartes en nous basant sur ces mots-clés.",
             "question": "Votre question",
-            "cards": "Vos cartes",
-            "keywords": "Vos mots-clés",
+            "cards": "Vos cartes et mots-clés",
             "reading": "Votre lecture",
             "generateButton": "Produisez une lecture",
             "loadingReading": "Cela pourrait prendre jusqu'aux 20 secondes.  Merci de patienter.",
@@ -445,7 +444,7 @@
         },
         "getReadingLanguage": "Produce the text in French.",
         "screen4": {
-            "title": "An Explanation of Your Reading",
+            "title": "Explication de votre lecture",
             "p0": "Les trois ou cinq cartes interprétées par notre cartomancien en ligne ont été sélectionnées au hasard parmi le jeu de 33 cartes conçu par Alliette avant la Révolution. Notez que toutes les cartes du jeu peuvent être retournées à l'envers ou à l'endroit. Alliette attribuait différentes valeurs à chaque carte en fonction de son orientation ; cette caractéristique est l'une des nombreuses règles qui régissent les valeurs générées par les relations entre les cartes.",
             "p1": "Voici trois autres règles d'Alliette qui structurent les valeurs des cartes :",
             "li0": "Si la carte \"Etteilla\", ou carte joker, est retournée, la valeur sur la carte à sa gauche devient celle associée à la lettre \"E\" en haut de la carte. Chaque carte a une valeur entre 1 et 31.",

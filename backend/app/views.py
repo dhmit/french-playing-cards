@@ -23,9 +23,8 @@ context = {
     'component_name': 'ExampleId'
 }
 """
-from random import randint, sample
+from random import sample, choice
 import json
-import os
 
 from django.shortcuts import render
 from django.http import JsonResponse
@@ -54,24 +53,31 @@ def index(request):
     return render(request, 'index.html', context)
 
 
+
 @csrf_exempt
 def divination_card_request(request):
     num_cards = int(request.GET.get('num'))
-    lang = "fr" if "fr" in request.GET.get('language') else "en"
+    language = "fr" if "fr" in request.GET.get('language') else "en"
 
-    # Fetch all Tarot objects with the given language
-    all_cards = list(Tarot.objects.filter(lang__exact=lang))
+    # Fetch distinct cards based on key fields.
+    distinct_cards = Tarot.objects.filter(language=language).values('number', 'rank', 'name').distinct()
+    chosen_distinct_cards = sample(list(distinct_cards), num_cards)
 
-    # Randomly sample cards
-    chosen_cards = sample(all_cards, num_cards)
-
-    # Add random orientation to each card
-    for card in chosen_cards:
-        card.orientation = bool(randint(0, 1))
+    chosen_cards = []
+    for card in chosen_distinct_cards:
+        orientation = choice([True, False])
+        print(language, card['number'], orientation)
+        full_card = Tarot.objects.get(
+            language=language,
+            number=card['number'],
+            orientation=orientation
+        )
+        chosen_cards.append(full_card)
 
     cards_data = [model_to_dict(card) for card in chosen_cards]
 
     return JsonResponse({'cards': cards_data})
+
 
 
 @csrf_exempt

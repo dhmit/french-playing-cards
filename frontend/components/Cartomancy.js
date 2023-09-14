@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import i18next from "i18next";
 import { Trans, useTranslation } from "react-i18next";
 import { Container, Row, Col, Form, Alert } from 'react-bootstrap';
 import Loading from "./Loading";
@@ -142,6 +141,8 @@ async function getReading(question, keywords, readingLanguageString) {
 
          ` + readingLanguageString;
 
+    console.log(input_string);
+
 
 
 
@@ -208,21 +209,18 @@ const CardReadingScreen = ({ question, cards, keywords, goToNext }) => {
             </Row>
 
             <Row className="justify-content-center mb-4">
-                <h2>{t("cartomancy.screen3.cards")}</h2>
-                {cards.map(card => (
-                    <Col md={2} sm={4} key={card.id} className="mb-2">
+                <h2 className="mb-4">{t("cartomancy.screen3.cards")}</h2>
+                {cards.map((card, i) => (
+                    <Col md={2} sm={4} key={i} className="mb-2">
+                            <div className="card-name">{card.name}</div>
                         <img className="img-fluid" src={"/static/img/cartomancy/" + card.image} alt={`Card ${card.id}`} />
+                        <div>
+                        {keywords[i].map((keyword, i) => (
+                            <div key={i} className="keyword-bubble mt-2">{keyword}</div>
+                        ))}
+                        </div>
                     </Col>
                 ))}
-            </Row>
-
-            <Row className="mb-4">
-                <h2>{t("cartomancy.screen3.keywords")}</h2>
-                <div className="d-flex flex-wrap justify-content-center">
-                    {[...keywords].map((keyword, i) => (
-                        <div key={i} className="keyword-bubble mr-2 mb-2">{keyword}</div>
-                    ))}
-                </div>
             </Row>
 
             {!showReading && (
@@ -284,82 +282,79 @@ const EndingScreen = ({ goToNext }) => {
 };
 
 
-const Cartomancy = () => {
-    const [screen, setScreen] = useState(0);
-    const [question, setQuestion] = React.useState(null);
-    const [cards, setCards] = React.useState(null);
-    const [keywords, setKeywords] = React.useState("");
 
-    async function getCards(num) {
-        const response = await fetch(`/divination-card/?num=${num}&language=${i18next.language}`);
+function getKeywords(cards) {
+    const keywords = [];
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+    for (let i = 0; i < cards.length; i++) {
+        const thisCardKeywords = [];
+        keywords.push(thisCardKeywords);
 
-        const data = await response.json();
-        setCards(data.cards);
-        return data.cards;
-    };
+        const currentCard = cards[i];
+        if (currentCard.rank === 'E') continue;
+        thisCardKeywords.push(currentCard.value);
 
-    function getKeywords(cards) {
-        let keywords = new Set();
-
-        // check multiples
-        for (let i = 0; i < cards.length; i++) {
-            let card = cards[i].rank;
-            let up = cards[i].orientation;
-            let matches = [card];
-
-            for(let j = 0; j < cards.length; j++) {
-                if(i !== j && card === cards[j].rank && up === cards[j].orientation) {
-                    matches.push(cards[j].rank);
-                }
+        // Check for multiples
+        const matches = [currentCard.rank];
+        for (let j = 0; j < cards.length; j++) {
+            const otherCard = cards[j];
+            if (i !== j &&
+                currentCard.rank === otherCard.rank &&
+                currentCard.orientation === otherCard.orientation
+            ) {
+                matches.push(otherCard.rank);
             }
-
-            let repeats = matches.length;
-            if (repeats === 4) keywords.add(cards[i].quad);
-            if (repeats === 3) keywords.add(cards[i].triple);
-            if (repeats === 2) keywords.add(cards[i].double);
         }
+        let repeats = matches.length;
+        if (repeats === 4) thisCardKeywords.push(currentCard.quad);
+        if (repeats === 3) thisCardKeywords.push(currentCard.triple);
+        if (repeats === 2) thisCardKeywords.push(currentCard.double);
 
-        // check pairs
-        for(let i = 0; i < cards.length; i++) {
-            let num = cards[i].number;
-            for(let j = i; j < cards.length; j++) {
-                if (num + cards[j].number === 31) {
-                    keywords.add(cards[i].pair);
-                    keywords.add(cards[j].pair);
-                    break;
-                }
+        // Check for 31s
+        for (let j = 0; j < cards.length; j++) {
+            if (currentCard.number + cards[j].number === 31) {
+                thisCardKeywords.push(currentCard.thirty_one);
+                break;
             }
         }
 
-        // choose keyword: 1. check eteilla 2. choose title/subtitle
-        for (let i = cards.length - 1; i >= 0; i--) {
-            if(i !== cards.length - 1 && cards[i+1].rank === "E") {
-                keywords.add(cards[i].etteilla);
-            }
-            else if (cards[i].number !== 1) {
-                let pick_title = Math.round(Math.random()); // randomly pick title or subtitles
-                if(pick_title) {
-                    keywords.add(cards[i].title);
-                }
-                else {
-                    keywords.add(cards[i].subtitle);
-                }
-            }
+        // Check for Etteilla on the left of the current card
+        let etteillaIndex = i+1;
+        if (etteillaIndex === cards.length) etteillaIndex = 0;
+        if (cards[etteillaIndex].rank === 'E') {
+            thisCardKeywords.push(currentCard.etteilla);
         }
 
-        setKeywords(keywords);
-        return keywords;
     }
 
+    return keywords;
+}
+
+async function getCards(num, language) {
+    const response = await fetch(`/divination-card/?num=${num}&language=${language}`);
+
+    if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.cards;
+};
+
+
+const Cartomancy = () => {
+    const [screen, setScreen] = useState(0);
+    const [question, setQuestion] = useState(null);
+    const [cards, setCards] = useState(null);
+    const [keywords, setKeywords] = useState("");
+    const { i18n } = useTranslation();
 
     const handleScreen2Submit = async (questionInput, numCardsInput) => {
         setQuestion(questionInput);
-        const cards = await getCards(numCardsInput);
-        getKeywords(cards);
+        const cards = await getCards(numCardsInput, i18n.language);
+        const keywords = getKeywords(cards);
+        setCards(cards);
+        setKeywords(keywords);
         setScreen(3);
     };
 

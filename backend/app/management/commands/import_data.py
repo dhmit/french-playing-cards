@@ -13,7 +13,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         try:
             self.populate_playing_cards()
-            self.populate_tarot()
+            self.populate_cartomancy()
             self.stdout.write(self.style.SUCCESS('Successfully populated the database'))
         except Exception as e:
             raise CommandError('Failed to populate the database: "%s"' % e)
@@ -88,44 +88,24 @@ class Command(BaseCommand):
 
         self.stdout.write('End of printing cards.')
 
-    def populate_tarot(self):
-        self.stdout.write('Populating tarot cards')
 
-        tarot_cards = []
-        data_folder = os.path.join(settings.PROJECT_ROOT, 'card_data')
-        tarot_english_csv_path = os.path.join(data_folder, 'tarot', 'tarot_english.csv')
-        tarot_francais_csv_path = os.path.join(data_folder, 'tarot', 'tarot_francais.csv')
+    def populate_cartomancy(self):
+        self.stdout.write('Populating cartomancy cards')
 
-        with open(tarot_english_csv_path, newline='', encoding='utf-8') as csvfile:
-            tarot_cards = list(csv.DictReader(csvfile))
+        cartomancy_xlsx_path = os.path.join(settings.PROJECT_ROOT, 'card_data', 'cartomancy.xlsx')
+        cartomancy_data_df = pd.read_excel(cartomancy_xlsx_path)
+        cartomancy_data = cartomancy_data_df.to_dict(orient='records')
 
-        for card in tarot_cards:
-            image_string = card["number"] + card["orientation"] + ".jpeg"
+        for card in cartomancy_data:
+            orientation = card["orientation"]
+            image_string = f"{card['number']}_{orientation}.jpeg"
 
-            card = {k: v for k, v in card.items() if v}
+            card = {k: v for k, v in card.items() if pd.notna(v)}
             card["number"] = int(card["number"])
             if "orientation" in card:
-                card["orientation"] = bool(int(card["orientation"]))
+                card["orientation"] = True if card["orientation"] == 'up' else False
 
-
-            tarot_model = Tarot(lang="en", image=image_string, **card)
+            tarot_model = Tarot(image=image_string, **card)
             tarot_model.save()
 
-        tarot_cards = []
-
-        with open(tarot_francais_csv_path, newline='', encoding='utf-8') as csvfile:
-            tarot_cards = list(csv.DictReader(csvfile))
-
-        for card in tarot_cards:
-            image_string = card["number"] + card["orientation"] + ".jpeg"
-
-            card = {k: v for k, v in card.items() if v}
-            card["number"] = int(card["number"])
-            if "orientation" in card:
-                card["orientation"] = bool(int(card["orientation"]))
-
-
-            tarot_model = Tarot(lang="fr", image=image_string, **card)
-            tarot_model.save()
-
-        self.stdout.write('Done populating tarot cards')
+        self.stdout.write('Done populating cartomancy cards')

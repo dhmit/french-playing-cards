@@ -441,13 +441,19 @@ button:hover {
  **********************************************************************/
 #divination {
     .keyword-bubble {
-        display: inline-block;
+        display: block;
         padding: 5px 10px;
         border: 1px solid black;
         border-radius: 2px;
         background-color: #f7f7f7;
         transition: background-color 0.3s ease;
-        margin-right: 0.5rem;
+        text-align: center;
+    }
+
+    .card-name {
+        text-align: center;
+        height: 3rem;
+        font-weight: bold;
     }
 
     .keyword-bubble:hover {
