@@ -165,6 +165,7 @@ async function getReading(question, keywords, readingLanguageString) {
         return data.response;
     } catch (error) {
         console.log(error);
+        return "Something went wrong. Please try again later.";
     }
 
 

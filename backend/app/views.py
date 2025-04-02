@@ -92,22 +92,28 @@ def generate_prediction(request):
         Questions.objects.create(question=user_input)
     
     if question:
-        moderation = openai.Moderation.create(input=question)
-        flagged = moderation['results'][0]['flagged']
+        try:
+            moderation = openai.Moderation.create(input=question)
+            flagged = moderation['results'][0]['flagged']
 
-        if not flagged:
-            completion = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
-                messages=[
-                    {"role": "user", "content": question}
-                ],
-                temperature=0.6,
-                max_tokens=500
-            )
-            response = {'response': completion['choices'][0]['message']['content']}
-            
-        else:
-            response = {'response': "Your question was flagged as inappropriate. Please try again with a different question."}
+            if not flagged:
+                completion = openai.ChatCompletion.create(
+                    model="gpt-3.5-turbo",
+                    messages=[
+                        {"role": "user", "content": question}
+                    ],
+                    temperature=0.6,
+                    max_tokens=500
+                )
+                response = {'response': completion['choices'][0]['message']['content']}
+                
+            else:
+                response = {'response': "Your question was flagged as inappropriate. Please try again with a different question."}
+        except openai.OpenAIError as e:
+            print(e.error)
+            response = JsonResponse(e.json_body)
+            response.status_code = e.http_status
+            return response
     else:
         response = {'response': ""}
 
